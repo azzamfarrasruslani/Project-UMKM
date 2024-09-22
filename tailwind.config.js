@@ -49,6 +49,13 @@ export default {
             850: "#111c44",
             900: "#051139",
           },
+
+          custonWhite: {
+            DEFAULT: colors.white,
+            50: "#FAF9F6",
+           
+          },
+    
     
           gray: {
             DEFAULT: colors.gray,
