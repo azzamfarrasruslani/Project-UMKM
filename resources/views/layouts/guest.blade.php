@@ -20,7 +20,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="m-0 font-sans antialiased font-normal bg-custonWhite-50 text-start text-base leading-default text-slate-900">
+<body class="m-0 font-sans antialiased font-normal bg-customWhite-50 text-start text-base leading-default text-slate-900">
     
         <!-- <div>
             <a href="/">
@@ -32,6 +32,7 @@
            
         </div> -->
     </div>
+      <x-footer />
 </body>
 
 </html>
