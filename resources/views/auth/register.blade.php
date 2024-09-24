@@ -1,3 +1,4 @@
+@section('title', 'Sign up')
 <x-guest-layout>
   <!-- Session Status -->
   <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -30,7 +31,7 @@
 
               <div class="mx-5 max-w-full px-10">
                 <!-- Tombol Login dengan Google -->
-                <a href="{{''}}"
+                <a href="{{ route('google.login') }}"
                   class="flex items-center justify-center w-full px-5 py-2.5 mb-2 font-bold text-center text-gray-200 capitalize transition-all border-2 border-red-300 rounded-lg cursor-pointer hover:-translate-y-px hover:border-red-300 hover:text-blue-500 ease-in-out duration-200">
                   <!-- Ikon Google -->
                   <svg width="24px" height="24px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
