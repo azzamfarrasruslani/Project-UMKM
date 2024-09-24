@@ -1,3 +1,4 @@
+@section('title', 'Home')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -5,7 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.jpg') }}">
+
+<title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

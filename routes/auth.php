@@ -22,7 +22,9 @@ Route::middleware('guest')->group(function () {
         ->name('login');
 
 
-    Route::get('auth/google', [GoogleAuthController::class, 'redirectToGoogle']);
+    Route::get('auth/google', [GoogleAuthController::class, 'redirectToGoogle'])
+        ->name('google.login');
+
     Route::get('auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback']);
 
 
