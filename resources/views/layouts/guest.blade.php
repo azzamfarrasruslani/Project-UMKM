@@ -22,7 +22,7 @@
 </head>
 
 <body class="m-0 font-sans antialiased font-normal bg-customWhite-50 text-start text-base leading-default text-slate-900">
-    
+
         <!-- <div>
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -33,7 +33,7 @@
            
         </div> -->
     </div>
-      <x-footer />
+    
 </body>
 
 </html>
