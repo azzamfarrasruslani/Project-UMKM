@@ -53,9 +53,19 @@ module.exports = {
                 1100: "#202020",
             },
 
+            customBlack: {
+                DEFAULT: colors.black,
+                50: "#2C251E",
+                100: "#202329",
+               
+            },
+
             customWhite: {
                 DEFAULT: colors.white,
                 50: "#FAF9F6",
+                100: "#FDF5DF",
+                200: "#F9FBE7",
+                300: "#F6F6F6",
             },
 
             gray: {
@@ -127,6 +137,11 @@ module.exports = {
                 700: "#b91c1c",
                 800: "#991b1b",
                 900: "#7f1d1d",
+                1000: "#EE3224",
+            },
+            redCustom: {
+                DEFAULT: colors.red,
+                50: "#DD4A48",
             },
 
             orange: {
@@ -772,6 +787,7 @@ module.exports = {
             montserrat: ["Montserrat", "sans-serif"],
             poppins: ["Poppins", "sans-serif"],
             roboto: ["Roboto", "sans-serif"],
+            notoSans: ['Noto+Sans+JP'],
             body: ["Roboto", "sans-serif"],
             awesome: ["FontAwesome"],
             sans: ["Figtree", ...defaultTheme.fontFamily.sans],

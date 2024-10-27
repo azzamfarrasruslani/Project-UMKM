@@ -1,4 +1,10 @@
-<footer class="bg-slate-1100 text-white py-12">
+<div class="bg-red-500 w-full ">
+  <div class="p-5">
+    
+  </div>
+
+</div>
+<footer class="bg-customBlack-100 text-white py-12">
   <div class="container mx-auto">
     <!-- Bagian link navigasi -->
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-8">

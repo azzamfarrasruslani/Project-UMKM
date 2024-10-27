@@ -1,6 +1,6 @@
 @section('title', 'Home')
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Open+Sans:300,400,600,700|Baloo+Thambi+2|Barlow+Semi+Condensed:ital,wght@1,100|Montserrat:wght@200;300;500;700|Poppins:wght@100;200;300;500;700|Roboto:wght@300&display=swap"
+        href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Open+Sans:300,400,600,700|Baloo+Thambi+2|Barlow+Semi+Condensed:ital,wght@1,100|Montserrat:wght@200;300;500;700|Poppins:wght@100;200;300;500;700|Roboto:wght@300|Noto+Sans+JP:wght@100&display=swap"
         rel="stylesheet" />
     <script src="https://kit.fontawesome.com/c23fedd423.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
@@ -26,181 +26,195 @@
 
 </head>
 
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <div class="bg-customWhite-50 text-black/50 dark:bg-black dark:text-white/50">
+<body class="font-sans antialiased dark:bg-black dark:text-white/50 ">
+    <div class="bg-customWhite-300 text-black/50 dark:bg-black dark:text-white/50">
         @include('layouts.navbar')
 
         <main class="transition-all duration-200 ease-in-out">
             <!-- Container Carousel -->
-            <div class="bg-customWhite-50">
-                <section class="relative min-h-screen flex items-center justify-center">
-                    <div class="carousel-container bg-no-repeat relative w-full overflow-hidden">
-                        <!-- Carousel Items -->
-                        <div class="carousel w-full flex transition-transform duration-500 ease-in-out mb-12">
-                            <img src="https://files.kfcku.com/uploads/media/kfcku-jagoan-puas-fanta-2000x650px.jpg"
-                                class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                            <img src="https://files.kfcku.com/uploads/media/kfcku-jagoan-hemat-fanta-2024-2000x650px.jpg"
-                                class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        </div>
 
-                        <!-- Indicator Circles -->
-                        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20  mb-4">
-                            <span class="indicator p-1 bg-orange-300 rounded-full cursor-pointer"></span>
-                            <span class="indicator p-1 bg-orange-300 rounded-full cursor-pointer"></span>
-                        </div>
+            <section class="relative mt-20 min-h-screen flex items-center justify-center flex-col">
+                <div class="carousel-container bg-no-repeat relative w-full overflow-hidden mb-3">
+                    <!-- Carousel Items -->
+                    <div class="carousel w-full flex transition-transform duration-500 ease-in-out mb-12">
+                        <img src="https://www.kfckorea.com/nas/banner/2024/08/30/TIxTsOHAm0SA.png"
+                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
+                        <img src="https://www.kfckorea.com/nas/banner/2024/09/09/3owwgyuQs0YB.png"
+                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
+                        <img src="https://www.kfckorea.com/nas/banner/2024/08/14/ddggpiDQyzHX.png"
+                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
                     </div>
-                </section>
-                <script>
-                    let currentIndex = 0;
-                    const images = document.querySelectorAll('.carousel img');
-                    const totalImages = images.length;
-                    const carousel = document.querySelector('.carousel');
-                    const indicators = document.querySelectorAll('.indicator');
 
-                    // Function for automatic scrolling
-                    function autoScroll() {
+                    <!-- Indicator Circles -->
+                    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20 mb-4">
+                        <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
+                        <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
+                        <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
+                    </div>
+                </div>
+                <!-- Tambahkan class untuk memutus flex -->
+                <div class="flex mt-5 flex-row gap-8">
+                    <a href="" class="bg-red-500 px-56 py-19 justify-start rounded-xl flex items-center"></a>
+                    <a href="" class="bg-red-500 px-56 py-19 justify-start rounded-xl flex items-center"></a>
+                    <a href="" class="bg-red-500 px-56 py-19 justify-start rounded-xl flex items-center"></a>
+                </div>
+
+
+
+            </section>
+
+            <script>
+                let currentIndex = 0;
+                const images = document.querySelectorAll('.carousel img');
+                const totalImages = images.length;
+                const carousel = document.querySelector('.carousel');
+                const indicators = document.querySelectorAll('.indicator');
+
+                // Function for automatic scrolling
+                function autoScroll() {
+                    currentIndex++;
+                    if (currentIndex >= totalImages) {
+                        currentIndex = 0;
+                    }
+                    updateCarousel();
+                }
+
+                // Function to update carousel position and active indicator
+                function updateCarousel() {
+                    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    indicators.forEach((indicator, index) => {
+                        indicator.style.backgroundColor = index === currentIndex ? '#fb6340' : '#fca5a5'; // Warna oranye saat aktif, lebih terang ketika tidak aktif
+                    });
+                }
+
+                // Event listener for image click
+                images.forEach((image) => {
+                    image.addEventListener('click', () => {
                         currentIndex++;
                         if (currentIndex >= totalImages) {
                             currentIndex = 0;
                         }
                         updateCarousel();
-                    }
-
-                    // Function to update carousel position and active indicator
-                    function updateCarousel() {
-                        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-                        indicators.forEach((indicator, index) => {
-                            indicator.style.backgroundColor = index === currentIndex ? '#FF4500' : '#FFB74D'; // Warna oranye saat aktif, lebih terang ketika tidak aktif
-                        });
-                    }
-
-                    // Event listener for image click
-                    images.forEach((image) => {
-                        image.addEventListener('click', () => {
-                            currentIndex++;
-                            if (currentIndex >= totalImages) {
-                                currentIndex = 0;
-                            }
-                            updateCarousel();
-                        });
                     });
+                });
 
-                    // Update carousel when indicator is clicked
-                    indicators.forEach((indicator, index) => {
-                        indicator.addEventListener('click', () => {
-                            currentIndex = index;
-                            updateCarousel();
-                        });
+                // Update carousel when indicator is clicked
+                indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateCarousel();
                     });
+                });
 
-                    // Automatic scrolling every 5 seconds
-                    setInterval(autoScroll, 5000);
-                </script>
+                // Automatic scrolling every 5 seconds
+                setInterval(autoScroll, 5000);
+            </script>
 
-                <section class="menu-section py-8">
-                    <div class="flex flex-row justify-between mb-8 mx-5">
-                        <h2 class="text-start  text-3xl font-bold">Menu Terbaru</h2>
-                        <div class="ml-10 flex">
-                            <button id="swiper-button-prev"
-                                class=" border border-solid border-red-500 py-2 px-4 rounded-lg">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-                            <button id="swiper-button-next"
-                                class=" border border-solid border-red-500 py-2 px-4 rounded-lg ml-2">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </div>
+            <section id="menu" class="menu-section py-8 min-h-screen ">
+                <div class="flex flex-row justify-between mb-8 mx-5 mt-20">
+                    <h2 class="text-start  text-4xl font-extrabold font-notoSans ">Daftar Menu</h2>
+                    <div class="ml-10 flex">
+                        <button id="swiper-button-prev"
+                            class="border border-solid border-red-500 py-2 px-4 rounded-lg">
+                            <i class="fa-solid fa-chevron-left text-red-500"></i>
+                        </button>
+                        <button id="swiper-button-next"
+                            class="border border-solid border-red-500 py-2 px-4 rounded-lg ml-2">
+                            <i class="fa-solid fa-chevron-right text-red-500"></i>
+                        </button>
                     </div>
+                </div>
 
-                    <div class="swiper-container overflow-x-hidden mx-5">
-                        <div class="swiper-wrapper flex">
-                            <div class="swiper-slide bg-customWhite-50 shadow-2xl rounded-xl mb-5 ">
-                                <a href="/delivery/detail/N/2342857" class="block">
-                                    <div class="relative">
-                                        <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2342857_20240314100636809.png"
-                                            alt="버터 비스켓" class="w-full h-auto object-cover">
-                                    </div>
-                                    <div class="text-center mt-2">
-                                        <h3 class="font-bold text-xl">버터 비스켓</h3>
-                                        <!-- <p class="text-gray-600">버터비스켓+딸기잼</p> -->
-                                        <p class="font-bold text-lg">2,600₩</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide bg-customWhite-50 shadow-2xl rounded-xl mb-5 ">
-                                <a href="/delivery/detail/N/1345860" class="block">
-                                    <div class="relative">
-                                        <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_1345860_20240314100906670.png"
-                                            alt="코울슬로" class="w-full h-auto object-cover">
-                                    </div>
-                                    <div class="text-center mt-2">
-                                        <h3 class="font-bold text-xl">코울슬로</h3>
-                                        <p class="font-bold text-lg">2,100₩</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide bg-customWhite-50 shadow-2xl rounded-xl mb-5 ">
-                                <a href="/delivery/detail/N/1345860" class="block">
-                                    <div class="relative">
-                                        <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_1345860_20240314100906670.png"
-                                            alt="코울슬로" class="w-full h-auto object-cover">
-                                    </div>
-                                    <div class="text-center mt-2">
-                                        <h3 class="font-bold text-xl">코울슬로</h3>
-                                        <p class="font-bold text-lg">2,100₩</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide bg-customWhite-50 shadow-2xl rounded-xl mb-5 ">
-                                <a href="/delivery/detail/N/1345860" class="block">
-                                    <div class="relative">
-                                        <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_1345860_20240314100906670.png"
-                                            alt="코울슬로" class="w-full h-auto object-cover">
-                                    </div>
-                                    <div class="text-center mt-2">
-                                        <h3 class="font-bold text-xl">코울슬로</h3>
-                                        <p class="font-bold text-lg">2,100₩</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- Tambahkan slide lainnya di sini -->
+                <div class="swiper-container overflow-x-hidden mx-4">
+                    <div class="swiper-wrapper flex w-1/2">
+                        <div class="swiper-slide bg-white shadow-3xl rounded-xl mb-5 ">
+                            <a href="/delivery/detail/N/2342857" class="block">
+                                <div class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
+                                    <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2176810_20240613171511036.png"
+                                        alt="버터 비스켓" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="text-center mt-2">
+                                    <h3 class="font-bold text-xl">버터 비스켓</h3>
+                                    <!-- <p class="text-gray-600">버터비스켓+딸기잼</p> -->
+                                    <p class="font-bold text-lg">2,600₩</p>
+                                </div>
+                            </a>
                         </div>
+                        <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
+                            <a href="/delivery/detail/N/1345860" class="block">
+                                <div class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
+                                    <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_1345860_20240314100906670.png"
+                                        alt="코울슬로" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="text-center mt-2">
+                                    <h3 class="font-bold text-xl">코울슬로</h3>
+                                    <p class="font-bold text-lg">2,100₩</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
+                            <a href="/delivery/detail/N/1345860" class="block">
+                                <div class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
+                                    <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2176811_20240613171555352.png"
+                                        alt="코울슬로" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="text-center mt-2">
+                                    <h3 class="font-bold text-xl">코울슬로</h3>
+                                    <p class="font-bold text-lg">2,100₩</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
+                            <a href="/delivery/detail/N/1345860" class="block">
+                                <div class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
+                                    <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2278056_20240819141659065.png"
+                                        alt="코울슬로" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="text-center mt-2">
+                                    <h3 class="font-bold text-xl">코울슬로</h3>
+                                    <p class="font-bold text-lg">2,100₩</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Tambahkan slide lainnya di sini -->
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <script>
-                    var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3, // Menampilkan 3 card pada desktop
-                        spaceBetween: 30, // Jarak antar card
-                        navigation: {
-                            nextEl: '#swiper-button-next',  // Ganti kelas dengan ID
-                            prevEl: '#swiper-button-prev',  // Ganti kelas dengan ID
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 3, // Menampilkan 3 card pada desktop
+                    spaceBetween: 30, // Jarak antar card
+                    navigation: {
+                        nextEl: '#swiper-button-next',  // Ganti kelas dengan ID
+                        prevEl: '#swiper-button-prev',  // Ganti kelas dengan ID
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
                         },
-                        breakpoints: {
-                            640: {
-                                slidesPerView: 1,
-                                spaceBetween: 10,
-                            },
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 20,
-                            },
-                            1024: {
-                                slidesPerView: 3,
-                                spaceBetween: 30,
-                            },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
                         },
-                        touchEventsTarget: 'container',
-                        simulateTouch: true,
-                        grabCursor: true,
-                    });
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    },
+                    touchEventsTarget: 'container',
+                    simulateTouch: true,
+                    grabCursor: true,
+                });
 
-                </script>
+            </script>
 
-            </div>
+    </div>
 
-        </main>
-        @include('layouts.footer')
+    </main>
+    @include('layouts.footer')
+    </div>
 </body>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
