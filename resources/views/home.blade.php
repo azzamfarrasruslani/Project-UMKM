@@ -212,23 +212,46 @@
 
     </div>
 
-    <section id="about-us" class="py-12 bg-white ">
-        <div class="container mx-auto text-center ">
-            <h2 class="text-3xl font-bold mb-4">About Us</h2>
-            <p class="text-lg  text-gray-700 border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
-                Ayam Geprek Keysia adalah sebuah UMKM yang berdiri untuk mendukung masyarakat kelas menengah ke bawah.
-                Usaha ini didirikan oleh seorang ibu rumah tangga bernama Lina, yang mengambil nama usaha dari anak ketiganya, Keysia.
-                Berdirinya Ayam Geprek Keysia bermula dari iseng mencoba resep ayam geprek yang ternyata sangat disukai oleh keluarga besarnya.
-                Hal ini mendorong Lina untuk memulai usaha resmi pada 17 Agustus 2019.
+    <section id="about-us" class="py-12 bg-white">
+        <div class="container mx-auto flex items-center justify-between px-4">
+            <div class="w-full md:w-1/2 px-4">
+                <h2 class="text-3xl font-bold mb-4">About Us</h2>
+                <p class="text-lg text-gray-700 border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
+                    Ayam Geprek Keysia adalah UMKM yang didirikan pada 17 Agustus 2019 oleh Lina,
+                    seorang ibu rumah tangga. Nama "Keysia" diambil dari anak ketiganya, yang menjadi inspirasi utama
+                    usaha ini. Berawal dari hobi memasak, Ayam Geprek Keysia kini telah berkembang dengan tiga cabang di Pekanbaru.
+                    Kami berkomitmen menjaga kualitas dan memberikan harga terjangkau, dengan setiap porsi hanya seharga 10 ribu,
+                    menjadikan kami pilihan favorit bagi anak kos dan masyarakat sekitar.
+                </p>
+            </div>
 
-                Sejak awal berdiri, Ayam Geprek Keysia terus menarik perhatian masyarakat.
-                Hingga kini, usaha ini telah berkembang dengan membuka tiga cabang yang tersebar di kota Pekanbaru.
-                Salah satu ciri khas dari Ayam Geprek Keysia yang tetap dipertahankan adalah harga satu porsi
-                hanya 10 ribu rupiah, sehingga menjadi favorit, terutama bagi anak kos.
-                Dengan rasa autentik dan harga terjangkau, Ayam Geprek Keysia terus tumbuh dan menjadi pilihan banyak orang.
-            </p>
+            <div class="w-full md:w-1/2 px-4 mt-8 md:mt-0">
+                <div class="border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
+                    <img src="{{ asset('assets/images/ayam_geprek.jpg') }}" class="w-full h-auto object-cover rounded-lg" alt="Ayam Geprek Keysia">
+                </div>
+            </div>
         </div>
     </section>
+
+
+    <section id="contact-us" class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            Kami siap membantu Anda! Jika ada pertanyaan atau ingin melakukan pemesanan, jangan ragu untuk menghubungi kami.
+          </p>
+          <div class="flex justify-center space-x-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Phone</h3>
+              <p><a href="tel:+628123456789" class="text-blue-500 hover:underline">+62 812-6639-6750</a></p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Address</h3>
+              <p>Jalan Merpati No. 10, Pekanbaru</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
     @include('layouts.footer')

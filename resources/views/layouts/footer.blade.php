@@ -1,6 +1,6 @@
 <div class="bg-red-500 w-full ">
   <div class="p-5">
-    
+
   </div>
 
 </div>
@@ -11,7 +11,7 @@
       <div>
         <h3 class="text-lg font-bold mb-4">Company</h3>
         <ul>
-          <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+          <li><a href="#about-us" class="text-gray-400 hover:text-white">About Us</a></li>
           <li><a href="#" class="text-gray-400 hover:text-white">Team</a></li>
           <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
           <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
@@ -29,7 +29,7 @@
         <h3 class="text-lg font-bold mb-4">Support</h3>
         <ul>
           <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+          <li><a href="#contact-us" class="text-gray-400 hover:text-white">Contact Us</a></li>
           <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
         </ul>
       </div>
