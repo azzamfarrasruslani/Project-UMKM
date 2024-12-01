@@ -233,6 +233,18 @@
         </div>
     </section>
 
+    <section id="map" class="py-12 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Find Us</h2>
+            <div class="w-full md:w-3/4 mx-auto">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15168.906621331404!2d101.43766803933399!3d0.5563404730342257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ac94477c2907%3A0x523c34397522bc97!2sAyam%20Geprek%20%22Keysia%202%22!5e1!3m2!1sen!2sid!4v1733042736620!5m2!1sen!2sid"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
 
     <section id="contact-us" class="py-12 bg-gray-100">
         <div class="container mx-auto text-center">
