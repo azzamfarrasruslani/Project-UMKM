@@ -212,6 +212,24 @@
 
     </div>
 
+    <section id="about-us" class="py-12 bg-white ">
+        <div class="container mx-auto text-center ">
+            <h2 class="text-3xl font-bold mb-4">About Us</h2>
+            <p class="text-lg  text-gray-700 border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
+                Ayam Geprek Keysia adalah sebuah UMKM yang berdiri untuk mendukung masyarakat kelas menengah ke bawah.
+                Usaha ini didirikan oleh seorang ibu rumah tangga bernama Lina, yang mengambil nama usaha dari anak ketiganya, Keysia.
+                Berdirinya Ayam Geprek Keysia bermula dari iseng mencoba resep ayam geprek yang ternyata sangat disukai oleh keluarga besarnya.
+                Hal ini mendorong Lina untuk memulai usaha resmi pada 17 Agustus 2019.
+
+                Sejak awal berdiri, Ayam Geprek Keysia terus menarik perhatian masyarakat.
+                Hingga kini, usaha ini telah berkembang dengan membuka tiga cabang yang tersebar di kota Pekanbaru.
+                Salah satu ciri khas dari Ayam Geprek Keysia yang tetap dipertahankan adalah harga satu porsi
+                hanya 10 ribu rupiah, sehingga menjadi favorit, terutama bagi anak kos.
+                Dengan rasa autentik dan harga terjangkau, Ayam Geprek Keysia terus tumbuh dan menjadi pilihan banyak orang.
+            </p>
+        </div>
+    </section>
+
     </main>
     @include('layouts.footer')
     </div>
@@ -228,10 +246,10 @@
         //     reset: true
     });
 
-    // sr.reveal('.about, .ket',{}); 
+    // sr.reveal('.about, .ket',{});
     sr.reveal('.judul1, .judul2', { delay: 400 });
     sr.reveal('.home__social-icon', { interval: 200 });
-    sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 }); 
+    sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 });
 </script>
 
 <!-- Script Java -->
