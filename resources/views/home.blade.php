@@ -161,7 +161,7 @@
                                 <div
                                     class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
                                     <img src="{{ asset('assets/images/menu/menu1.png') }}" alt="버터 비스켓"
-                                        class="w-full h-auto object-cover">
+                                        class="w-full h-75 object-cover">
                                 </div>
                                 <div class="text-center mt-2">
                                     <h3 class="font-bold text-xl">Ayam Geprek Saus Keju</h3>
@@ -175,7 +175,7 @@
                                 <div
                                     class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
                                     <img src="{{ asset('assets/images/menu/menu2.png') }}" alt="코울슬로"
-                                        class="w-full h-auto object-cover">
+                                        class="w-full h-75 object-cover">
                                 </div>
                                 <div class="text-center mt-2">
                                     <h3 class="font-bold text-xl">Ayam Geprek Saus Terasi</h3>
@@ -189,7 +189,7 @@
                                 <div
                                     class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
                                     <img src="{{ asset('assets/images/menu/menu3.png') }}" alt="코울슬로"
-                                        class="w-full h-auto object-cover">
+                                        class="w-full h-75 object-cover">
                                 </div>
                                 <div class="text-center mt-2">
                                     <h3 class="font-bold text-xl">Ayam Geprek Mozarella</h3>
@@ -203,7 +203,7 @@
                                 <div
                                     class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
                                     <img src="{{ asset('assets/images/menu/menu4.png') }}" alt="코울슬로"
-                                        class="w-full h-auto object-cover">
+                                        class="w-full h-75 object-cover">
                                 </div>
                                 <div class="text-center mt-2">
                                     <h3 class="font-bold text-xl">Ayam Geprek Original</h3>
