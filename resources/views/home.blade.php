@@ -6,11 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="">
-
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.jpg') }}">
-
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/LogoAyamGeprek.png') }}">
     <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -27,6 +24,13 @@
 </head>
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50 ">
+    {{-- Link ke WA --}}
+    <a href=""
+        class="fixed px-4 py-2 text-xl bg-white shadow-lg cursor-pointer bottom-8 right-8 z-990 rounded-circle text-green-500 transition-transform duration-300 ease-in-out hover:scale-105">
+        <i class="py-6 pointer-events-none fa-brands fa-whatsapp fa-2xl"></i>
+    </a>
+
+    {{-- Layout Utama --}}
     <div class="bg-customWhite-300 text-black/50 dark:bg-black dark:text-white/50">
         @include('layouts.navbar')
 
@@ -34,14 +38,16 @@
             <!-- Container Carousel -->
 
             <section class="relative mt-20 min-h-screen flex items-center justify-center flex-col">
-                <div class="carousel-container bg-no-repeat relative w-full overflow-hidden mb-3">
+                <div class="carousel-container bg-no-repeat relative w-full overflow-hidden">
                     <!-- Carousel Items -->
                     <div class="carousel w-full flex transition-transform duration-500 ease-in-out mb-12">
                         <img src="https://www.kfckorea.com/nas/banner/2024/08/30/TIxTsOHAm0SA.png"
                             class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        <img src="https://www.kfckorea.com/nas/banner/2024/09/09/3owwgyuQs0YB.png"
+                        <img src="https://www.kfckorea.com/nas/banner/2024/10/29/fWve1unP3mEJ.png"
                             class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        <img src="https://www.kfckorea.com/nas/banner/2024/08/14/ddggpiDQyzHX.png"
+                        <img src="https://www.preksu.com/assets/img/slider/P2.png"
+                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
+                        <img src="{{ asset('assets/images/banner/Banner1.png') }}"
                             class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
                     </div>
 
@@ -50,14 +56,38 @@
                         <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
                         <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
                         <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
+                        <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
                     </div>
                 </div>
-                <!-- Tambahkan class untuk memutus flex -->
-                <div class="flex mt-5 flex-row gap-8">
-                    <a href="" class="bg-red-500 px-56 py-19 justify-start rounded-xl flex items-center"></a>
-                    <a href="" class="bg-red-500 px-56 py-19 justify-start rounded-xl flex items-center"></a>
-                    <a href="" class="bg-red-500 px-56 py-19 justify-start rounded-xl flex items-center"></a>
+                <div class="max-w-full lg:px-10 mb-6 w-full flex-none">
+                    <div
+                        class="relative flex flex-col min-w-0 mt-6 break-words  border-0 border-transparent border-solid  dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+                        <div class="flex-auto p-4">
+                            <div class="flex flex-wrap lg:flex-nowrap justify-between -mx-3">
+                                <!-- Di sini diubah menjadi flex-nowrap dan justify-between -->
+                                <div class="w-full max-w-full px-3 mb-6">
+                                    <a a href="javascript:;" onclick="openAddTelur()"
+                                        class="relative flex flex-row items-center p-6 py-16 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                        {{-- <h6 class="mb-0 dark:text-white">Tambah Telur</h6> --}}
+                                    </a>
+                                </div>
+                                <div class="w-full max-w-full px-3 mb-6">
+                                    <a a href="javascript:;" onclick="openAddTelur()"
+                                        class="relative flex flex-row items-center p-6 py-16 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+
+                                    </a>
+                                </div>
+                                <div class="w-full max-w-full px-3 mb-6">
+                                    <a a href="javascript:;" onclick="openAddTelur()"
+                                        class="relative flex flex-row items-center p-6 py-16 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
 
 
 
@@ -83,7 +113,8 @@
                 function updateCarousel() {
                     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
                     indicators.forEach((indicator, index) => {
-                        indicator.style.backgroundColor = index === currentIndex ? '#fb6340' : '#fca5a5'; // Warna oranye saat aktif, lebih terang ketika tidak aktif
+                        indicator.style.backgroundColor = index === currentIndex ? '#fb6340' :
+                            '#fca5a5'; // Warna oranye saat aktif, lebih terang ketika tidak aktif
                     });
                 }
 
@@ -110,12 +141,11 @@
                 setInterval(autoScroll, 5000);
             </script>
 
-            <section id="menu" class="menu-section py-8 min-h-screen ">
+            <section id="menu" class="menu-section py-8 px-6 min-h-screen ">
                 <div class="flex flex-row justify-between mb-8 mx-5 mt-20">
                     <h2 class="text-start  text-4xl font-extrabold font-notoSans ">Daftar Menu</h2>
                     <div class="ml-10 flex">
-                        <button id="swiper-button-prev"
-                            class="border border-solid border-red-500 py-2 px-4 rounded-lg">
+                        <button id="swiper-button-prev" class="border border-solid border-red-500 py-2 px-4 rounded-lg">
                             <i class="fa-solid fa-chevron-left text-red-500"></i>
                         </button>
                         <button id="swiper-button-next"
@@ -124,54 +154,60 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="swiper-container overflow-x-hidden mx-4">
                     <div class="swiper-wrapper flex w-1/2">
                         <div class="swiper-slide bg-white shadow-3xl rounded-xl mb-5 ">
                             <a href="/delivery/detail/N/2342857" class="block">
-                                <div class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
-                                    <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2176810_20240613171511036.png"
-                                        alt="버터 비스켓" class="w-full h-auto object-cover">
+                                <div
+                                    class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
+                                    <img src="{{ asset('assets/images/menu/menu1.png') }}" alt="버터 비스켓"
+                                        class="w-full h-auto object-cover">
                                 </div>
                                 <div class="text-center mt-2">
-                                    <h3 class="font-bold text-xl">버터 비스켓</h3>
-                                    <!-- <p class="text-gray-600">버터비스켓+딸기잼</p> -->
+                                    <h3 class="font-bold text-xl">Ayam Geprek Saus Keju</h3>
+                                    <p class="text-gray-600">버터비스켓+딸기잼</p>
                                     <p class="font-bold text-lg">2,600₩</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
                             <a href="/delivery/detail/N/1345860" class="block">
-                                <div class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
-                                    <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_1345860_20240314100906670.png"
-                                        alt="코울슬로" class="w-full h-auto object-cover">
+                                <div
+                                    class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
+                                    <img src="{{ asset('assets/images/menu/menu2.png') }}" alt="코울슬로"
+                                        class="w-full h-auto object-cover">
                                 </div>
                                 <div class="text-center mt-2">
-                                    <h3 class="font-bold text-xl">코울슬로</h3>
+                                    <h3 class="font-bold text-xl">Ayam Geprek Saus Terasi</h3>
+                                    <p class="text-gray-600">버터비스켓+딸기잼</p>
                                     <p class="font-bold text-lg">2,100₩</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
                             <a href="/delivery/detail/N/1345860" class="block">
-                                <div class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
-                                    <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2176811_20240613171555352.png"
-                                        alt="코울슬로" class="w-full h-auto object-cover">
+                                <div
+                                    class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
+                                    <img src="{{ asset('assets/images/menu/menu3.png') }}" alt="코울슬로"
+                                        class="w-full h-auto object-cover">
                                 </div>
                                 <div class="text-center mt-2">
-                                    <h3 class="font-bold text-xl">코울슬로</h3>
+                                    <h3 class="font-bold text-xl">Ayam Geprek Mozarella</h3>
+                                    <p class="text-gray-600">버터비스켓+딸기잼</p>
                                     <p class="font-bold text-lg">2,100₩</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
                             <a href="/delivery/detail/N/1345860" class="block">
-                                <div class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
-                                    <img src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2278056_20240819141659065.png"
-                                        alt="코울슬로" class="w-full h-auto object-cover">
+                                <div
+                                    class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
+                                    <img src="{{ asset('assets/images/menu/menu4.png') }}" alt="코울슬로"
+                                        class="w-full h-auto object-cover">
                                 </div>
                                 <div class="text-center mt-2">
-                                    <h3 class="font-bold text-xl">코울슬로</h3>
+                                    <h3 class="font-bold text-xl">Ayam Geprek Original</h3>
+                                    <p class="text-gray-600">버터비스켓+딸기잼</p>
                                     <p class="font-bold text-lg">2,100₩</p>
                                 </div>
                             </a>
@@ -183,22 +219,18 @@
 
             <script>
                 var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 3, // Menampilkan 3 card pada desktop
-                    spaceBetween: 30, // Jarak antar card
+                    slidesPerView: 1, // Default untuk semua ukuran
+                    spaceBetween: 10, // Default jarak antar card
                     navigation: {
-                        nextEl: '#swiper-button-next',  // Ganti kelas dengan ID
-                        prevEl: '#swiper-button-prev',  // Ganti kelas dengan ID
+                        nextEl: '#swiper-button-next',
+                        prevEl: '#swiper-button-prev',
                     },
                     breakpoints: {
-                        640: {
-                            slidesPerView: 1,
-                            spaceBetween: 10,
-                        },
-                        768: {
+                        641: { // Ukuran 641 ke atas
                             slidesPerView: 2,
                             spaceBetween: 20,
                         },
-                        1024: {
+                        1024: { // Ukuran 1024 ke atas
                             slidesPerView: 3,
                             spaceBetween: 30,
                         },
@@ -207,7 +239,6 @@
                     simulateTouch: true,
                     grabCursor: true,
                 });
-
             </script>
 
     </div>
@@ -216,38 +247,5 @@
     @include('layouts.footer')
     </div>
 </body>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-
-    /*===== SCROLL REVEAL ANIMATION =====*/
-    const sr = ScrollReveal({
-        origin: 'top',
-        distance: '60px',
-        duration: 2000,
-        delay: 200,
-        //     reset: true
-    });
-
-    // sr.reveal('.about, .ket',{}); 
-    sr.reveal('.judul1, .judul2', { delay: 400 });
-    sr.reveal('.home__social-icon', { interval: 200 });
-    sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 }); 
-</script>
-
-<!-- Script Java -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        function parallaxEffect() {
-            let scrollPosition = $(window).scrollTop();
-            let elementHeight = $('.parallax-section').outerHeight();
-            let offset = scrollPosition / elementHeight * 0.5; // Adjust this value for different speed
-
-            $('.parallax-section').css('background-position', `center calc(50% + ${offset}px)`);
-        }
-
-        $(window).on('scroll', parallaxEffect);
-    });
-</script>
 
 </html>
