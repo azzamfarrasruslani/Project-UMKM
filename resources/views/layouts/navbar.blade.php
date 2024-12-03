@@ -57,13 +57,13 @@
                                 <span class="pr-1"><i class="fa-solid fa-user"></i></span>
                                 Sign In</a> --}}
                             <a href="javascript:;" dropdown-trigger aria-expanded="false"
-                                class="relative w-12 h-12 bg-white  rounded-full flex items-center justify-center  transition duration-300 sm:mr-4 shadow-2xl">
+                                class="relative w-12 h-12 bg-white  rounded-full flex items-center justify-center sm:mr-4 shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105">
                                 <img class="w-6 h-6" src="{{ asset('assets/icon/shop.png') }}" alt="login">
                                 <span
                                     class="absolute top-0 right-0 inline-block w-3 h-3 bg-red-600 rounded-full border-2 border-white"></span>
                             </a>
                             <a href="{{ 'login' }}"
-                                class="relative w-12 h-12 bg-white  rounded-full flex items-center justify-center  transition duration-300 sm:mr-4 shadow-2xl">
+                                class="relative w-12 h-12 bg-white  rounded-full flex items-center justify-center  sm:mr-4 shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105">
                                 <img class="w-6 h-6" src="{{ asset('assets/icon/user.png') }}" alt="login">
                             </a>
                         </li>
