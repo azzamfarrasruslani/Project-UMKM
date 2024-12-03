@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuController;
 
 Route::get('/', function () {
     return view('home');
@@ -18,6 +18,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
 
 // Route untuk Google login
 // Route::get('auth/google', function () {
