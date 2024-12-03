@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('promo', function (Blueprint $table) {
             $table->id('id_promo');
-            $table->string('title'); // Judul promo
-            $table->text('description'); // Deskripsi promo
-            $table->decimal('discount', 5, 2)->nullable(); // Diskon dalam persen
-            $table->date('start_date'); // Tanggal mulai promo
-            $table->date('end_date'); // Tanggal akhir promo
-            $table->string('image')->nullable(); // Gambar promo
-            $table->boolean('is_active')->default(true); // Status promo aktif atau tidak
+            $table->string('judul'); // Judul promo
+            $table->text('deskripsi'); // Deskripsi promo
+            $table->decimal('diskon', 5, 2)->nullable(); // Diskon dalam persen
+            $table->date('tanggal_mulai'); // Tanggal mulai promo
+            $table->date('tanggal_akhir'); // Tanggal akhir promo
+            $table->string('gambar')->nullable(); // Gambar promo
+            $table->boolean('status')->default(true); // Status promo aktif atau tidak
             $table->timestamps(); // Kolom created_at dan updated_at
         });
     }
