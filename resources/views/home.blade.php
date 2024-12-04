@@ -39,8 +39,9 @@
 
             <section class="relative mt-20 min-h-screen flex items-center justify-center flex-col">
                 <div class="carousel-container bg-no-repeat relative w-full overflow-hidden">
-                    <!-- Carousel Items -->
-                    <div class="carousel w-full flex transition-transform duration-500 ease-in-out mb-12">
+                    <!-- Carousel Items Desktop -->
+                    <div
+                        class="carousel carousel1 w-full  transition-transform duration-500 ease-in-out mb-12 hidden sm:flex">
                         <img src="https://www.kfckorea.com/nas/banner/2024/08/30/TIxTsOHAm0SA.png"
                             class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
                         <img src="https://www.kfckorea.com/nas/banner/2024/10/29/fWve1unP3mEJ.png"
@@ -51,35 +52,127 @@
                             class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
                     </div>
 
+                    <!-- Carousel Items Mobile -->
+                    <div
+                        class="carousel carousel2 w-full flex transition-transform duration-500 ease-in-out mb-12 sm:hidden">
+                        <img src="{{ asset('assets/images/banner/Banner2.png') }}"
+                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
+                        <img src="{{ asset('assets/images/banner/Banner2.png') }}"
+                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
+                        <img src="{{ asset('assets/images/banner/Banner2.png') }}"
+                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
+                        <img src="{{ asset('assets/images/banner/Banner2.png') }}"
+                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
+                    </div>
+
                     <!-- Indicator Circles -->
                     <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20 mb-4">
-                        <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
-                        <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
-                        <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
-                        <span class="indicator p-1 bg-red-500 rounded-full cursor-pointer"></span>
+                        <span class="indicator w-3 h-3 bg-red-500 rounded-full cursor-pointer"></span>
+                        <span class="indicator w-3 h-3 bg-red-500 rounded-full cursor-pointer"></span>
+                        <span class="indicator w-3 h-3 bg-red-500 rounded-full cursor-pointer"></span>
+                        <span class="indicator w-3 h-3 bg-red-500 rounded-full cursor-pointer"></span>
                     </div>
                 </div>
+
+
+
+                <script>
+                    let currentIndex = 0;
+
+                    // Get carousel containers
+                    const carouselDesktop = document.querySelector('.carousel1');
+                    const carouselMobile = document.querySelector('.carousel2');
+                    const indicators = document.querySelectorAll('.indicator');
+
+                    // Update carousel position and indicators
+                    function updateCarousel(container) {
+                        const images = container.querySelectorAll('img');
+                        const totalImages = images.length;
+
+                        // Auto scroll functionality
+                        function autoScroll() {
+                            currentIndex++;
+                            if (currentIndex >= totalImages) {
+                                currentIndex = 0;
+                            }
+                            moveCarousel();
+                        }
+
+                        // Move the carousel
+                        function moveCarousel() {
+                            container.style.transform = `translateX(-${currentIndex * 100}%)`;
+                            updateIndicators();
+                        }
+
+                        // Update indicator styles
+                        function updateIndicators() {
+                            indicators.forEach((indicator, index) => {
+                                indicator.classList.toggle('bg-orange-500', index === currentIndex);
+                                indicator.classList.toggle('bg-red-500', index !== currentIndex);
+                            });
+                        }
+
+                        // Event listener for image click
+                        images.forEach((image, index) => {
+                            image.addEventListener('click', () => {
+                                currentIndex = index;
+                                moveCarousel();
+                            });
+                        });
+
+                        // Indicator click functionality
+                        indicators.forEach((indicator, index) => {
+                            indicator.addEventListener('click', () => {
+                                currentIndex = index;
+                                moveCarousel();
+                            });
+                        });
+
+                        // Start auto scroll
+                        setInterval(autoScroll, 5000);
+                    }
+
+                    // Initialize carousel based on screen size
+                    function initializeCarousel() {
+                        if (window.innerWidth >= 640) {
+                            updateCarousel(carouselDesktop);
+                        } else {
+                            updateCarousel(carouselMobile);
+                        }
+                    }
+
+                    // Reinitialize on resize
+                    window.addEventListener('resize', () => {
+                        currentIndex = 0; // Reset index
+                        initializeCarousel();
+                    });
+
+                    // Initial call
+                    initializeCarousel();
+                </script>
+
+
                 <div class="max-w-full lg:px-10 mb-6 w-full flex-none">
                     <div
-                        class="relative flex flex-col min-w-0 mt-6 break-words  border-0 border-transparent border-solid  dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+                        class="relative flex flex-col min-w-0  break-words  border-0 border-transparent border-solid  dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
                         <div class="flex-auto p-4">
-                            <div class="flex flex-wrap lg:flex-nowrap justify-between -mx-3">
+                            <div class="flex flex-wrap lg:flex-nowrap justify-between">
                                 <!-- Di sini diubah menjadi flex-nowrap dan justify-between -->
                                 <div class="w-full max-w-full px-3 mb-6">
                                     <a a href="javascript:;" onclick="openAddTelur()"
-                                        class="relative flex flex-row items-center p-6 py-16 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                        class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                                         {{-- <h6 class="mb-0 dark:text-white">Tambah Telur</h6> --}}
                                     </a>
                                 </div>
                                 <div class="w-full max-w-full px-3 mb-6">
                                     <a a href="javascript:;" onclick="openAddTelur()"
-                                        class="relative flex flex-row items-center p-6 py-16 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                        class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-black border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
 
                                     </a>
                                 </div>
                                 <div class="w-full max-w-full px-3 mb-6">
                                     <a a href="javascript:;" onclick="openAddTelur()"
-                                        class="relative flex flex-row items-center p-6 py-16 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                        class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-gray-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
 
                                     </a>
                                 </div>
@@ -93,57 +186,11 @@
 
             </section>
 
-            <script>
-                let currentIndex = 0;
-                const images = document.querySelectorAll('.carousel img');
-                const totalImages = images.length;
-                const carousel = document.querySelector('.carousel');
-                const indicators = document.querySelectorAll('.indicator');
 
-                // Function for automatic scrolling
-                function autoScroll() {
-                    currentIndex++;
-                    if (currentIndex >= totalImages) {
-                        currentIndex = 0;
-                    }
-                    updateCarousel();
-                }
-
-                // Function to update carousel position and active indicator
-                function updateCarousel() {
-                    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-                    indicators.forEach((indicator, index) => {
-                        indicator.style.backgroundColor = index === currentIndex ? '#fb6340' :
-                            '#fca5a5'; // Warna oranye saat aktif, lebih terang ketika tidak aktif
-                    });
-                }
-
-                // Event listener for image click
-                images.forEach((image) => {
-                    image.addEventListener('click', () => {
-                        currentIndex++;
-                        if (currentIndex >= totalImages) {
-                            currentIndex = 0;
-                        }
-                        updateCarousel();
-                    });
-                });
-
-                // Update carousel when indicator is clicked
-                indicators.forEach((indicator, index) => {
-                    indicator.addEventListener('click', () => {
-                        currentIndex = index;
-                        updateCarousel();
-                    });
-                });
-
-                // Automatic scrolling every 5 seconds
-                setInterval(autoScroll, 5000);
-            </script>
 
             <section id="menu" class="menu-section py-8 px-6 min-h-screen ">
                 <div class="flex flex-row justify-between mb-8 mx-5 mt-20">
-                    <h2 class="text-start  text-4xl font-extrabold font-notoSans ">Daftar Menu</h2>
+                    <h2 class="text-start  text-4xl font-extrabold font-notoSans ">Menu Kami</h2>
                     <div class="ml-10 flex">
                         <button id="swiper-button-prev" class="border border-solid border-red-500 py-2 px-4 rounded-lg">
                             <i class="fa-solid fa-chevron-left text-red-500"></i>
