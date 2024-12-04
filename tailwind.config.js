@@ -57,7 +57,7 @@ module.exports = {
                 DEFAULT: colors.black,
                 50: "#2C251E",
                 100: "#202329",
-               
+
             },
 
             customWhite: {
@@ -66,6 +66,11 @@ module.exports = {
                 100: "#FDF5DF",
                 200: "#F9FBE7",
                 300: "#F6F6F6",
+            },
+
+            customRed: {
+                DEFAULT: colors.red,
+                50: "#E4002B",
             },
 
             gray: {
