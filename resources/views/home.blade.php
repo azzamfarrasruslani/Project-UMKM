@@ -290,9 +290,61 @@
 
     </div>
 
+    <section id="about-us" class="py-12 bg-white">
+        <div class="container mx-auto flex items-center justify-between px-4">
+            <div class="w-full md:w-1/2 px-4">
+                <h2 class="text-3xl font-bold mb-4">About Us</h2>
+                <p class="text-lg text-gray-700 border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
+                    Ayam Geprek Keysia adalah UMKM yang didirikan pada 17 Agustus 2019 oleh Lina,
+                    seorang ibu rumah tangga. Nama "Keysia" diambil dari anak ketiganya, yang menjadi inspirasi utama
+                    usaha ini. Berawal dari hobi memasak, Ayam Geprek Keysia kini telah berkembang dengan tiga cabang di Pekanbaru.
+                    Kami berkomitmen menjaga kualitas dan memberikan harga terjangkau, dengan setiap porsi hanya seharga 10 ribu,
+                    menjadikan kami pilihan favorit bagi anak kos dan masyarakat sekitar.
+                </p>
+            </div>
+
+            <div class="w-full md:w-1/2 px-4 mt-8 md:mt-0">
+                <div class="border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
+                    <img src="{{ asset('assets/images/ayam_geprek.jpg') }}" class="w-full h-auto object-cover rounded-lg" alt="Ayam Geprek Keysia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="py-12 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Find Us</h2>
+            <div class="w-full md:w-3/4 mx-auto">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15168.906621331404!2d101.43766803933399!3d0.5563404730342257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ac94477c2907%3A0x523c34397522bc97!2sAyam%20Geprek%20%22Keysia%202%22!5e1!3m2!1sen!2sid!4v1733042736620!5m2!1sen!2sid"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact-us" class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            Kami siap membantu Anda! Jika ada pertanyaan atau ingin melakukan pemesanan, jangan ragu untuk menghubungi kami.
+          </p>
+          <div class="flex justify-center space-x-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Phone</h3>
+              <p><a href="tel:+628123456789" class="text-blue-500 hover:underline">+62 812-6639-6750</a></p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Address</h3>
+              <p>Jalan Merpati No. 10, Pekanbaru</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
     @include('layouts.footer')
     </div>
 </body>
-
 </html>
