@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use Illuminate\Http\Request;
-use Storage;
+use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {
@@ -25,7 +25,7 @@ class MenuController extends Controller
     {
         return view('menu.create');
     }
-    
+
     /**
      * Store a newly created resource in storage.
      */
