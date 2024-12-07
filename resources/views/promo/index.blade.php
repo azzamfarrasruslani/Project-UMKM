@@ -1,4 +1,4 @@
-@section('title', 'Data Promo')
+@section('title', 'Promo')
 <x-app-layout>
     @include('promo.modalAdd')
     <!-- Data Table Section -->
@@ -11,35 +11,45 @@
                     <div class="p-6 pb-3 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                         <div class="flex flex-wrap -mx-3">
                             <div class="flex items-center w-full max-w-full px-3">
-                                <h6 class="text-xl md:text-2xl font-bold mb-4">Data Promo</h6>
+                                <h6 class="text-xl md:text-2xl font-bold mb-4">Daftar Promo</h6>
 
                             </div>
                             <div class="w-full max-w-full px-3 text-right">
                                 <a href="javascript:;" onclick="openAddPromo()"
-                                    class="bg-red-400 text-white py-2 px-4 rounded-lg  focus:outline-none hover:shadow-xs hover:-translate-y-px active:opacity-85">
+                                    class="bg-customRed-50 text-white py-2 px-4 rounded-lg  focus:outline-none hover:shadow-xs hover:-translate-y-px active:opacity-85">
                                     Tambah Promo
                                 </a>
                             </div>
                         </div>
                     </div>
+
                     <div class=" mx-5 py-4">
-                        <div class="flex-col grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             @foreach ($promo as $item)
-                                <div class="bg-white shadow-md rounded-lg overflow-hidden mb-2">
-                                    @if ($item->gambar)
-                                        <img src="{{ Storage::url($item->gambar) }}" class="w-full h-48 object-cover" alt="Gambar Promo" />
-                                    @endif
-                                    <div class="p-4">
-                                        <h2 class="text-lg font-bold">{{ $item->judul }}</h2>
-                                        <p class="text-gray-600 mt-2">{{ Str::limit($item->deskripsi, 100) }}</p>
-                                        <div class="mt-4">
-                                            <a href="{{ route('promo.edit', $item->id_promo) }}" class="text-white bg-blue-500 px-4 py-1 rounded-lg">
+                                <!-- Promo Card -->
+                                <div class="bg-white shadow-2xl rounded-md flex items-start p-4">
+                                    <img src="{{ Storage::url($item->gambar) }}" alt="Promo Thumbnail"
+                                        class="w-24 h-24 rounded-md object-cover mr-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-2">{{ $item->judul }}</h3>
+                                        <p class="text-sm text-gray-700 mb-4">
+                                            <i class="fa-regular fa-clock"></i>
+                                            {{ date('d m Y', strtotime($item->tanggal_mulai)) }} -
+                                            {{ date('d m Y', strtotime($item->tanggal_akhir)) }}
+                                        </p>
+
+                                        <p class="text-sm text-gray-700 mb-4">{{ $item->deskripsi }}</p>
+                                        <div class="flex gap-2 items-center">
+                                            <a href="{{ route('promo.edit', $item->id_promo) }}"
+                                                class="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 transition">
                                                 Edit
                                             </a>
-                                            <form action="{{ route('promo.destroy', $item->id_promo) }}" method="POST" class="inline">
+                                            <form action="{{ route('promo.destroy', $item->id_promo) }}" method="POST"
+                                                class="inline">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="bg-red-500 text-white px-4 py-1 rounded-lg">
+                                                <button type="submit"
+                                                    class="bg-red-500 text-white px-4 py-1 rounded-md hover:bg-red-600 transition">
                                                     Hapus
                                                 </button>
                                             </form>
@@ -48,15 +58,16 @@
                                 </div>
                             @endforeach
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-<style>
+    <style>
 
-</style>
+    </style>
 
     <!-- Script JS DataTables -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -64,7 +75,7 @@
     <script src="https://cdn.datatables.net/2.1.4/js/dataTables.tailwindcss.js"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#example').DataTable({
                 scrollX: true, // Mengaktifkan scroll horizontal
                 responsive: true, // Mengaktifkan tabel responsif
