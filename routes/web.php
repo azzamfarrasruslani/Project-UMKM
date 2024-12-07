@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PromoController;
 use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuController;
 
 Route::get('/', function () {
     return view('home');
@@ -26,6 +26,8 @@ Route::middleware('auth')->group(function () {
 Route::resource('promo', PromoController::class)
     ->only(['index','create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
+Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
 
 // Route untuk Google login
 // Route::get('auth/google', function () {
