@@ -56,7 +56,4 @@
         </div>
     </div>
 
-    <script>
-        // You can add any JavaScript you need here for pagination or other functionality
-    </script>
 </x-app-layout>
