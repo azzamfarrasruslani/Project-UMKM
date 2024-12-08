@@ -5,6 +5,7 @@ use App\Http\Controllers\PromoController;
 use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\BlogController;
 
 Route::get('/', function () {
     return view('home');
@@ -27,6 +28,8 @@ Route::resource('promo', PromoController::class)
     ->only(['index','create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
 Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
 // Route untuk Google login
