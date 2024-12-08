@@ -1,6 +1,6 @@
 <!-- sidenav  -->
 <aside
-    class="fixed inset-y-0 flex-wrap items-center justify-between block w-full p-2   overflow-y-auto antialiased transition-transform duration-200 -translate-x-full bg-customWhite-300 border-0 shadow-2xl dark:shadow-none dark:bg-slate-850 max-w-64 ease-nav-brand z-990   xl:left-0 xl:translate-x-0"
+    class="fixed inset-y-0 flex-wrap items-center justify-between block w-full p-2   overflow-y-auto antialiased transition-transform duration-200 -translate-x-full bg-white border-0 shadow-2xl dark:shadow-none dark:bg-slate-850 max-w-64 ease-nav-brand z-990   xl:left-0 xl:translate-x-0"
     aria-expanded="false">
     <div class="flex flex-col h-full">
         <div class="sticky top-0 h-20">
@@ -35,9 +35,9 @@
                 <li class="w-full mt-4">
                     <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">Data</h6>
                 </li>
-                <!-- Data Kandang -->
+                <!-- Menu -->
                 <li class="mt-0.5 w-full">
-                    <x-nav-link>
+                    <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                             <i class="fa-solid fa-utensils fa-lg" ></i>
@@ -46,6 +46,7 @@
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Menu</span>
                     </x-nav-link>
                 </li>
+                {{-- Promo --}}
                 <li class="mt-0.5 w-full">
                     <x-nav-link :href="route('promo.index')" :active="request()->routeIs('promo.index')">
                         <div
