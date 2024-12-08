@@ -29,6 +29,7 @@ Route::resource('promo', PromoController::class)
     ->middleware(['auth', 'verified']);
 Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
+
 Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
