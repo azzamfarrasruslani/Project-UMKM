@@ -1,4 +1,3 @@
-<!-- Blog Modal -->
 <div id="addBlogModal" class="w-full fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75 opacity-0 invisible transition-opacity duration-300" onclick="closeModalOnOutsideClick(event)">
     <div class="flex items-center justify-center min-h-screen px-4">
         <div class="bg-white rounded-2xl px-8 py-6 text-slate-700" id="modalBlog">
