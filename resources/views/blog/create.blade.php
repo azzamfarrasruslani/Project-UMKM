@@ -37,7 +37,7 @@
             .create(document.querySelector('#editor'))
             .then(editor => {
                 editor.model.document.on('change:data', () => {
-                    // Update the textarea value when the content changes
+                  
                     document.querySelector('textarea[name="konten_blog"]').value = editor.getData();
                 });
             })
