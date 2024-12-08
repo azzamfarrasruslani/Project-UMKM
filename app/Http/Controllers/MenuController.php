@@ -13,8 +13,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus = Menu::all();
-        return view('menu.index', compact('menus'));
+        $menu = Menu::all();
+        return view('menu.index', compact('menu'));
     }
 
 
@@ -32,19 +32,19 @@ class MenuController extends Controller
     public function store(Request $request)
     {
        $request -> validate([
-        'nama' => 'required|string|max:255',
-        'deskripsi' => 'required|string|max:255',
-        'harga' => 'required|string|max:255',
-        'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+        'nama_menu' => 'required|string|max:255',
+        'deskripsi_menu' => 'required|string|max:255',
+        'harga_menu' => 'required|string|max:255',
+        'gambar_menu' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
        ]);
 
        $menu = new Menu();
-       $menu -> nama = $request -> nama;
-       $menu -> deskripsi = $request -> deskripsi;
-       $menu -> harga = $request -> harga;
+       $menu -> nama_menu = $request -> nama_menu;
+       $menu -> deskripsi_menu = $request -> deskripsi_menu;
+       $menu -> harga_menu = $request -> harga_menu;
 
-       if ($request -> hasFile('gambar')) {
-        $menu -> gambar = $request -> file ('gambar') -> store ('images', 'public');
+       if ($request -> hasFile('gambar_menu')) {
+        $menu -> gambar_menu = $request -> file ('gambar_menu') -> store ('images', 'public');
 
        }
 
@@ -77,23 +77,21 @@ class MenuController extends Controller
     public function update(Request $request, Menu $menu)
     {
         $request -> validate( [
-        'nama' => 'required|string|max:255',
-        'deskripsi' => 'required|string|max:255',
-        'harga' => 'required|integer|max:255',
-        'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-
+        'nama_menu' => 'required|string|max:255',
+        'deskripsi_menu' => 'required|string|max:255',
+        'harga_menu' => 'required|string|max:255',
+        'gambar_menu' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
-       $menu = new Menu();
        $menu -> nama = $request -> nama;
        $menu -> deskripsi = $request -> deskripsi;
        $menu -> harga = $request -> harga;
 
-       if ($request -> hasFile('gambar')) {
+       if ($request -> hasFile('gambar_menu')) {
             if ($menu -> gambar) {
                 Storage::delete('public/' . $menu->gambar );
             }
-        $menu -> gambar = $request -> file ('gambar') -> store ('images', 'public');
+        $menu -> gambar = $request -> file ('gambar_menu') -> store ('images', 'public');
 
        }
 
@@ -111,8 +109,6 @@ class MenuController extends Controller
     {
         if ($menu -> gambar) {
             Storage::delete($menu->gambar);
-
-
         }
 
         $menu -> delete();
