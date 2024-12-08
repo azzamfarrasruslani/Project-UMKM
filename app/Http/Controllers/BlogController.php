@@ -9,8 +9,8 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::all(); // Ubah variabel menjadi plural
-        return view('blog.index', compact('blogs')); // Pastikan menggunakan 'blogs' pada view
+        $blogs = Blog::all();
+        return view('blog.index', compact('blogs'));
     }
 
     public function create()
@@ -46,7 +46,7 @@ class BlogController extends Controller
 
     public function edit(Blog $blog)
     {
-        return view('blog.edit', compact('blog')); // Pastikan menggunakan 'blog'
+        return view('blog.edit', compact('blog')); 
     }
 
     public function update(Request $request, Blog $blog)
