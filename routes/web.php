@@ -24,10 +24,14 @@ Route::middleware('auth')->group(function () {
 
 
 Route::resource('promo', PromoController::class)
-    ->only(['index','create', 'store', 'edit', 'destroy', 'update'])
+    ->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
-Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
-->middleware(['auth','verified']);
+
+
+
+
+Route::resource('menu', MenuController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
 
 // Route untuk Google login
 // Route::get('auth/google', function () {
