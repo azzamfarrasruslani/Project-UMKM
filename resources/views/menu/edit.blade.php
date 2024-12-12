@@ -10,7 +10,7 @@
                 <input type="text" name="nama" class="mt-1 block w-full border-gray-300 rounded-md" required />
 
                 {{-- @error('judul')
-                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                    <span class="text-red   -500 text-sm">{{ $message }}</span>
                 @enderror --}}
                 @error('nama')
                     <span class="text-red-500 text-sm">Judul tidak boleh melebhi 255 Karakter</span>

@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\JobController;
+
 
 Route::get('/', function () {
     return view('home');
@@ -20,6 +22,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
+Route::resource('job', JobController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
 // Route untuk Google login
