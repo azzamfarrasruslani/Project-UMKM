@@ -39,6 +39,18 @@ Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
     ->name('outlet.detail')
     ->middleware(['auth', 'verified']);
 
+
+Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
+
+Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
+->middleware(['auth','verified']);
+
+Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
+    ->name('outlet.detail')
+    ->middleware(['auth', 'verified']);
+
 Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 

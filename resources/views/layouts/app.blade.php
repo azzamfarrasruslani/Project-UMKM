@@ -20,6 +20,10 @@
     <script src="https://kit.fontawesome.com/c23fedd423.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- Link CSS DataTables -->
+    <link href="https://cdn.datatables.net/2.1.4/css/dataTables.tailwindcss.css" rel="stylesheet">
+    <link href="{{ asset('build/assets/css/dataTableCustom.css') }}" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Link CSS DataTables -->
     {{-- <link href="https://cdn.datatables.net/2.1.4/css/dataTables.tailwindcss.css" rel="stylesheet"> --}}
     <link href="https://cdn.datatables.net/2.1.8/css/dataTables.tailwindcss.css" rel="stylesheet">
     <link href="{{asset('build/assets/css/dataTableCustom.css')}}" rel="stylesheet">
