@@ -23,6 +23,15 @@
     <!-- Link CSS DataTables -->
     <link href="https://cdn.datatables.net/2.1.4/css/dataTables.tailwindcss.css" rel="stylesheet">
     <link href="{{ asset('build/assets/css/dataTableCustom.css') }}" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Link CSS DataTables -->
+    <link href="https://cdn.datatables.net/2.1.4/css/dataTables.tailwindcss.css" rel="stylesheet">
+    <link href="{{ asset('build/assets/css/dataTableCustom.css') }}" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Link CSS DataTables -->
+    {{-- <link href="https://cdn.datatables.net/2.1.4/css/dataTables.tailwindcss.css" rel="stylesheet"> --}}
+    <link href="https://cdn.datatables.net/2.1.8/css/dataTables.tailwindcss.css" rel="stylesheet">
+    <link href="{{asset('build/assets/css/dataTableCustom.css')}}" rel="stylesheet">
     <!-- Calendar -->
     <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/main.min.css" rel="stylesheet" />
     <!-- axios -->

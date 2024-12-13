@@ -27,7 +27,7 @@
                             <div class="w-full max-w-full px-3 text-right">
                                 <a href="javascript:;" onclick="openAddMenu()"
                                     class="bg-white text-customRed-50 py-2 px-4 rounded-lg  focus:outline-none hover:shadow-xs hover:-translate-y-px active:opacity-85">
-                                    Tambah Promo
+                                    Tambah Menu
                                 </a>
                             </div>
                         </div>

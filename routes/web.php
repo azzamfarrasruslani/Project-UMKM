@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PromoController;
+use App\Http\Controllers\OutletController;
 use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\BlogController;
 
 Route::get('/', function () {
     return view('home');
@@ -32,6 +34,31 @@ Route::resource('promo', PromoController::class)
 
 Route::resource('menu', MenuController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
+
+Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
+Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
+->middleware(['auth','verified']);
+
+Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
+    ->name('outlet.detail')
+    ->middleware(['auth', 'verified']);
+
+
+Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
+
+Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
+->middleware(['auth','verified']);
+
+Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
+    ->name('outlet.detail')
+    ->middleware(['auth', 'verified']);
+
+Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
 
 // Route untuk Google login
 // Route::get('auth/google', function () {
