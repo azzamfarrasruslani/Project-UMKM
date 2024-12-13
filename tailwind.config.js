@@ -8,6 +8,8 @@ module.exports = {
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
+        "./src/**/*.{html,js}",
+        "./node_modules/preline/dist/*.js",
     ],
     darkMode: "class",
     theme: {
@@ -57,7 +59,6 @@ module.exports = {
                 DEFAULT: colors.black,
                 50: "#2C251E",
                 100: "#202329",
-
             },
 
             customWhite: {
@@ -792,7 +793,7 @@ module.exports = {
             montserrat: ["Montserrat", "sans-serif"],
             poppins: ["Poppins", "sans-serif"],
             roboto: ["Roboto", "sans-serif"],
-            notoSans: ['Noto+Sans+JP'],
+            notoSans: ["Noto+Sans+JP"],
             body: ["Roboto", "sans-serif"],
             awesome: ["FontAwesome"],
             sans: ["Figtree", ...defaultTheme.fontFamily.sans],

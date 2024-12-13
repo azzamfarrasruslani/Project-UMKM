@@ -18,10 +18,10 @@
         href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Open+Sans:300,400,600,700|Baloo+Thambi+2|Barlow+Semi+Condensed:ital,wght@1,100|Montserrat:wght@200;300;500;700|Poppins:wght@100;200;300;500;700|Roboto:wght@300&display=swap"
         rel="stylesheet" />
     <script src="https://kit.fontawesome.com/c23fedd423.js" crossorigin="anonymous"></script>
-    <link href="{{asset('build/assets/css/nucleo-icons.css')}}" rel="stylesheet">
-
+    <script src="https://unpkg.com/feather-icons"></script>
     <!-- Link CSS DataTables -->
-    <link href="https://cdn.datatables.net/2.1.4/css/dataTables.tailwindcss.css" rel="stylesheet">
+    {{-- <link href="https://cdn.datatables.net/2.1.4/css/dataTables.tailwindcss.css" rel="stylesheet"> --}}
+    <link href="https://cdn.datatables.net/2.1.8/css/dataTables.tailwindcss.css" rel="stylesheet">
     <link href="{{asset('build/assets/css/dataTableCustom.css')}}" rel="stylesheet">
     <!-- Calendar -->
     <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/main.min.css" rel="stylesheet" />
@@ -157,8 +157,8 @@
         </div>
     </main>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>
-    <script src="https://cdn.datatables.net/2.1.4/js/dataTables.tailwindcss.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.tailwindcss.js"></script>
     <script src="{{'build/assets/js/plugins/perfect-scrollbar.min.js'}}"></script>
 
     <!-- Tambahkan file JS argon -->
