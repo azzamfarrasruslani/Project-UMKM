@@ -8,19 +8,17 @@
 
 
                 <!-- Link ke Data Kandang jika berada di halaman detail kandang -->
-                @if (Route::currentRouteName() == 'kandang.detailKandang')
-                    <li
-                        class="text-sm capitalize leading-normal text-white before:text-gray-DEFAULT-400">
+                @if (Route::currentRouteName() == 'outlet.detail' ||Route::currentRouteName() == 'outlet.edit')
+                    <li class="text-sm capitalize leading-normal text-slate-700 before:text-gray-DEFAULT-400">
                         <a href="{{ route('dashboard') }}"
-                        class="text-green-700 opacity-75 hover:opacity-100 after:content-['/'] after:p-2"> <i
-                            class="fa-solid fa-house text-green-700 hover:opacity-100"></i> </a>
-                        <a href="{{ route('kandang.index') }}"
-                            class="text-green-700 opacity-75 hover:opacity-100 after:content-['/'] after:p-2">Data
-                            Kandang </a> @yield('title')
+                            class="text-slate-600 opacity-75 hover:opacity-100 after:content-['/'] after:p-2"> <i
+                                class="fa-solid fa-house text-slate-600 hover:opacity-100"></i> </a>
+                        <a href="{{ route('outlet.index') }}"
+                            class="text-slate-600 opacity-75 hover:opacity-100 after:content-['/'] after:p-2">Outlet
+                        </a> @yield('title')
                     </li>
                 @else
-                    <li
-                        class="text-sm  capitalize leading-normal text-slate-700 before:text-gray-DEFAULT-400">
+                    <li class="text-sm  capitalize leading-normal text-slate-700 before:text-gray-DEFAULT-400">
                         <a href="{{ route('dashboard') }}"
                             class="text-slate-700 opacity-75 hover:opacity-100 after:content-['/'] after:p-2"> <i
                                 class="fa-solid fa-house text-slate-700 hover:opacity-100"></i> </a> @yield('title')
