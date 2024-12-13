@@ -67,6 +67,17 @@
                     </x-nav-link>
                 </li>
 
+                 {{-- Blog--}}
+                 <li class="mt-0.5 w-full">
+                    <x-nav-link :href="route('blog.index')" :active="request()->routeIs('blog.index')">
+                        <div
+                            class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                            <i class="fa-solid fa-ticket fa-lg"></i>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease" >Blog</span>
+                    </x-nav-link>
+                </li>
+
 
 
                 <!-- <li class="mt-0.5 w-full">
