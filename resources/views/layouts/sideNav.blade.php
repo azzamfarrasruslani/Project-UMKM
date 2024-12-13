@@ -15,7 +15,7 @@
         <hr
             class="h-px mt-4 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
 
-        <div class="items-center block w-auto max-h-screen  grow basis-full">
+        <div class="items-center block w-auto max-h-screen  grow basis-full  overflow-hidden">
             <ul class="flex flex-col pl-0 mb-0">
                 <!-- Dashboard -->
                 <li class="mt-0.5 w-full">
@@ -128,7 +128,7 @@
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">{{ __('Profile') }}</span>
                     </x-nav-link>
                 </li>
-                <form method="POST" action="{{ route('logout') }}" class="lg:mt-50 mt-36">
+                <form method="POST" action="{{ route('logout') }}" class="lg:mt-30 mt-10">
                     @csrf
                     <a class="py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors dark:text-white dark:opacity-80 "
                         href="route('logout')"
