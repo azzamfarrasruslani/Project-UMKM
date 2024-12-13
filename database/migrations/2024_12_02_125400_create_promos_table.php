@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('tanggal_mulai'); // Tanggal mulai promo
             $table->date('tanggal_akhir'); // Tanggal akhir promo
             $table->string('gambar')->nullable(); // Gambar promo
-            $table->boolean('status')->default(true); // Status promo aktif atau tidak
+            $table->enum('status', ['aktif', 'tidak aktif'])->default('aktif')->nullable();
             $table->timestamps(); // Kolom created_at dan updated_at
         });
     }
