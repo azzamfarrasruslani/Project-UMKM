@@ -18,7 +18,7 @@
                             </div> --}}
                         </div>
                     </div>
-                    <div class="px-8 mt-6 lg:mt-0 bg-white">
+                    <div class="px-8 mt-6 text-slate-700 lg:mt-0 bg-white">
                         <form action="{{ route('outlet.update', $outlet->id_outlet) }}" method="POST">
                             @csrf
                             @method('PUT')
