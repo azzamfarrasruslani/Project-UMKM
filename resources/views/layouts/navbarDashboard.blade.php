@@ -2,11 +2,9 @@
     navbar-main navbar-scroll="false">
     <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
         <!-- Breadcrumb di bagian navigasi -->
-        <nav class="hidden sm:block">
+        <nav class="sm:block">
             <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
                 <!-- Icon Home yang mengarah ke dashboard.index -->
-
-
                 <!-- Link ke Data Kandang jika berada di halaman detail kandang -->
                 @if (Route::currentRouteName() == 'outlet.detail' ||Route::currentRouteName() == 'outlet.edit')
                     <li class="text-sm capitalize leading-normal text-slate-700 before:text-gray-DEFAULT-400">
@@ -24,10 +22,7 @@
                                 class="fa-solid fa-house text-slate-700 hover:opacity-100"></i> </a> @yield('title')
                     </li>
                 @endif
-
-
             </ol>
-
             <!-- Judul halaman -->
             <h6 class="mb-4 font-bold text-slate-700 capitalize">
                 @yield('title')
