@@ -108,7 +108,24 @@ class OutletController extends Controller
         $outlet->status = $request->status;
         $outlet->iframe_map = $request->iframe_map;
         $outlet->save();
-        return redirect()->route('outlet.index')->with('success', 'Berita berhasil diperbaharui');
+        return redirect()->route('outlet.index')->with('success', 'Outlet berhasil diperbaharui');
+    }
+
+
+    public function updateStatus(Request $request, $id_outlet)
+    {
+        // Mengambil berita berdasarkan ID yang diberikan
+        $outlet = Outlet::findOrFail($id_outlet);
+
+        // Validasi
+        $request->validate([
+            'status' => 'required|in:aktif,non-aktif',
+        ]);
+
+        // Mengupdate data berita
+        $outlet->status = $request->status;
+        $outlet->save();
+        return redirect()->route('outlet.index')->with('success', 'Status berhasil diperbaharui');
     }
 
     /**
