@@ -45,6 +45,10 @@ Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
     ->name('outlet.detail')
     ->middleware(['auth', 'verified']);
 
+Route::get('/outlet/{id_outlet}/updateStatus', [OutletController::class, 'updateStatus'])
+    ->name('outlet.updateStatus')
+    ->middleware(['auth', 'verified']);
+
 
 Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
@@ -59,6 +63,14 @@ Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
 
 Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
+
+
+
+
+
+
+
+
 
 // Route untuk Google login
 // Route::get('auth/google', function () {
