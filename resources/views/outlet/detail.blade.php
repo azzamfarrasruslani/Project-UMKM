@@ -18,7 +18,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="px-8 mt-6 lg:mt-0 bg-white">
+                    <div class="px-8 mt-6 lg:mt-0 bg-white text-slate-700">
+                        <p>Map</p>
                         {!! $outlet->iframe_map !!}
                     </div>
                 </div>
