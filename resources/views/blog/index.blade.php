@@ -12,7 +12,7 @@
                             <div class="flex-none w-2/3 max-w-full px-3">
                                 <div>
                                     <p class="mb-0 font-sans font-extrabold text-4xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
-                                        Daftar Blog
+                                        Daftar Blog 
                                     </p>
                                 </div>
                             </div>
