@@ -45,7 +45,6 @@ Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
 Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
-
 Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
 ->middleware(['auth','verified']);
 
