@@ -36,12 +36,21 @@
 
         <main class="transition-all duration-200 ease-in-out">
             <!-- Container Carousel -->
-
-            <section class="relative mt-20 min-h-screen flex items-center justify-center flex-col">
+            <section class="relative  min-h-screen flex items-center justify-center flex-col">
                 <div class="carousel-container bg-no-repeat relative w-full overflow-hidden">
+                    <!-- Left and Right Buttons -->
+                    <button id="prevButton"
+                        class="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-red-500 text-white p-3 rounded-full">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="nextButton"
+                        class="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-red-500 text-white p-3 rounded-full">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
                     <!-- Carousel Items Desktop -->
                     <div
-                        class="carousel carousel1 w-full  transition-transform duration-500 ease-in-out mb-12 hidden sm:flex">
+                        class="carousel carousel1 w-full transition-transform duration-500 ease-in-out mb-12 hidden sm:flex">
                         <img src="https://www.kfckorea.com/nas/banner/2024/08/30/TIxTsOHAm0SA.png"
                             class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
                         <img src="https://www.kfckorea.com/nas/banner/2024/10/29/fWve1unP3mEJ.png"
@@ -74,15 +83,15 @@
                     </div>
                 </div>
 
-
-
                 <script>
                     let currentIndex = 0;
 
-                    // Get carousel containers
+                    // Get carousel containers and buttons
                     const carouselDesktop = document.querySelector('.carousel1');
                     const carouselMobile = document.querySelector('.carousel2');
                     const indicators = document.querySelectorAll('.indicator');
+                    const prevButton = document.getElementById('prevButton');
+                    const nextButton = document.getElementById('nextButton');
 
                     // Update carousel position and indicators
                     function updateCarousel(container) {
@@ -107,17 +116,39 @@
                         // Update indicator styles
                         function updateIndicators() {
                             indicators.forEach((indicator, index) => {
-                                indicator.classList.toggle('bg-orange-500', index === currentIndex);
-                                indicator.classList.toggle('bg-red-500', index !== currentIndex);
+                                const isActive = index === currentIndex;
+
+                                // Tambahkan ukuran berbeda untuk indikator aktif
+                                indicator.classList.toggle('w-4', isActive);
+                                indicator.classList.toggle('h-4', isActive);
+
+                                // Ukuran default untuk indikator tidak aktif
+                                indicator.classList.toggle('w-3', !isActive);
+                                indicator.classList.toggle('h-3', !isActive);
+
+                                // Warna untuk indikator
+                                indicator.classList.toggle('bg-orange-500', isActive);
+                                indicator.classList.toggle('bg-red-500', !isActive);
                             });
                         }
 
-                        // Event listener for image click
-                        images.forEach((image, index) => {
-                            image.addEventListener('click', () => {
-                                currentIndex = index;
-                                moveCarousel();
-                            });
+
+                        // Navigate to next image
+                        nextButton.addEventListener('click', () => {
+                            currentIndex++;
+                            if (currentIndex >= totalImages) {
+                                currentIndex = 0;
+                            }
+                            moveCarousel();
+                        });
+
+                        // Navigate to previous image
+                        prevButton.addEventListener('click', () => {
+                            currentIndex--;
+                            if (currentIndex < 0) {
+                                currentIndex = totalImages - 1;
+                            }
+                            moveCarousel();
                         });
 
                         // Indicator click functionality
@@ -150,36 +181,38 @@
                     // Initial call
                     initializeCarousel();
                 </script>
+            </section>
 
 
-                <div class="max-w-full lg:px-10 mb-6 w-full flex-none">
-                    <div
-                        class="relative flex flex-col min-w-0  break-words  border-0 border-transparent border-solid  dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
-                        <div class="flex-auto p-4">
-                            <div class="flex flex-wrap lg:flex-nowrap justify-between">
-                                <!-- Di sini diubah menjadi flex-nowrap dan justify-between -->
-                                <div class="w-full max-w-full px-3 mb-6">
-                                    <a a href="javascript:;" onclick="openAddTelur()"
-                                        class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
-                                        {{-- <h6 class="mb-0 dark:text-white">Tambah Telur</h6> --}}
-                                    </a>
-                                </div>
-                                <div class="w-full max-w-full px-3 mb-6">
-                                    <a a href="javascript:;" onclick="openAddTelur()"
-                                        class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-black border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
 
-                                    </a>
-                                </div>
-                                <div class="w-full max-w-full px-3 mb-6">
-                                    <a a href="javascript:;" onclick="openAddTelur()"
-                                        class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-gray-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+            <div class="max-w-full lg:px-10 mb-6 w-full flex-none">
+                <div
+                    class="relative flex flex-col min-w-0  break-words  border-0 border-transparent border-solid  dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+                    <div class="flex-auto p-4">
+                        <div class="flex flex-wrap lg:flex-nowrap justify-between">
+                            <!-- Di sini diubah menjadi flex-nowrap dan justify-between -->
+                            <div class="w-full max-w-full px-3 mb-6">
+                                <a a href="javascript:;" onclick="openAddTelur()"
+                                    class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                    {{-- <h6 class="mb-0 dark:text-white">Tambah Telur</h6> --}}
+                                </a>
+                            </div>
+                            <div class="w-full max-w-full px-3 mb-6">
+                                <a a href="javascript:;" onclick="openAddTelur()"
+                                    class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-black border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
 
-                                    </a>
-                                </div>
+                                </a>
+                            </div>
+                            <div class="w-full max-w-full px-3 mb-6">
+                                <a a href="javascript:;" onclick="openAddTelur()"
+                                    class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-gray-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
 
@@ -290,22 +323,25 @@
 
     </div>
 
-    <section id="about-us" class="py-12 bg-white">
+    {{-- <section id="about-us" class="py-12 bg-white">
         <div class="container mx-auto flex items-center justify-between px-4">
             <div class="w-full md:w-1/2 px-4">
                 <h2 class="text-3xl font-bold mb-4">About Us</h2>
                 <p class="text-lg text-gray-700 border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
                     Ayam Geprek Keysia adalah UMKM yang didirikan pada 17 Agustus 2019 oleh Lina,
                     seorang ibu rumah tangga. Nama "Keysia" diambil dari anak ketiganya, yang menjadi inspirasi utama
-                    usaha ini. Berawal dari hobi memasak, Ayam Geprek Keysia kini telah berkembang dengan tiga cabang di Pekanbaru.
-                    Kami berkomitmen menjaga kualitas dan memberikan harga terjangkau, dengan setiap porsi hanya seharga 10 ribu,
+                    usaha ini. Berawal dari hobi memasak, Ayam Geprek Keysia kini telah berkembang dengan tiga cabang di
+                    Pekanbaru.
+                    Kami berkomitmen menjaga kualitas dan memberikan harga terjangkau, dengan setiap porsi hanya seharga
+                    10 ribu,
                     menjadikan kami pilihan favorit bagi anak kos dan masyarakat sekitar.
                 </p>
             </div>
 
             <div class="w-full md:w-1/2 px-4 mt-8 md:mt-0">
                 <div class="border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
-                    <img src="{{ asset('assets/images/ayam_geprek.jpg') }}" class="w-full h-auto object-cover rounded-lg" alt="Ayam Geprek Keysia">
+                    <img src="{{ asset('assets/images/ayam_geprek.jpg') }}"
+                        class="w-full h-auto object-cover rounded-lg" alt="Ayam Geprek Keysia">
                 </div>
             </div>
         </div>
@@ -326,25 +362,27 @@
 
     <section id="contact-us" class="py-12 bg-gray-100">
         <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-          <p class="text-lg text-gray-700 mb-6">
-            Kami siap membantu Anda! Jika ada pertanyaan atau ingin melakukan pemesanan, jangan ragu untuk menghubungi kami.
-          </p>
-          <div class="flex justify-center space-x-8">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Phone</h3>
-              <p><a href="tel:+628123456789" class="text-blue-500 hover:underline">+62 812-6639-6750</a></p>
+            <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Kami siap membantu Anda! Jika ada pertanyaan atau ingin melakukan pemesanan, jangan ragu untuk
+                menghubungi kami.
+            </p>
+            <div class="flex justify-center space-x-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                    <p><a href="tel:+628123456789" class="text-blue-500 hover:underline">+62 812-6639-6750</a></p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Address</h3>
+                    <p>Jalan Merpati No. 10, Pekanbaru</p>
+                </div>
             </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Address</h3>
-              <p>Jalan Merpati No. 10, Pekanbaru</p>
-            </div>
-          </div>
         </div>
-      </section>
+    </section> --}}
 
     </main>
     @include('layouts.footer')
     </div>
 </body>
+
 </html>
