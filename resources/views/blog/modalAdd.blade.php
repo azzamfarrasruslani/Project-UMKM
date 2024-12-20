@@ -19,6 +19,7 @@
                                 <label for="konten_blog" class="block text-sm font-medium">Konten Blog</label>
                                 <textarea name="konten_blog" id="konten_blog" rows="5" class="mt-1 block w-full border-gray-800 rounded-md" required></textarea>
                             </div>
+                            
                             <!-- Blog Image -->
                             <div class="mb-4">
                                 <label for="gambar_blog" class="block text-sm font-medium">Gambar Blog</label>
