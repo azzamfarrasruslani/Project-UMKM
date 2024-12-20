@@ -23,8 +23,7 @@
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                             <x-icon-link :active="request()->routeIs('dashboard')">
-                                <i
-                                    class="relative top-0 text-sm leading-normal fa-solid fa-gauge fa-lg"></i>
+                                <i class="relative top-0 text-sm leading-normal fa-solid fa-gauge fa-lg"></i>
                             </x-icon-link>
                         </div>
                         <span
@@ -40,7 +39,7 @@
                     <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
-                            <i class="fa-solid fa-utensils fa-lg" ></i>
+                            <i class="fa-solid fa-utensils fa-lg"></i>
 
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Menu</span>
@@ -58,7 +57,9 @@
                 </li>
                 {{-- Outlet --}}
                 <li class="mt-0.5 w-full">
-                    <x-nav-link :href="route('outlet.index')" :active="request()->routeIs('outlet.index') ||request()->routeIs('outlet.detail')||request()->routeIs('outlet.edit') " >
+                    <x-nav-link :href="route('outlet.index')" :active="request()->routeIs('outlet.index') ||
+                        request()->routeIs('outlet.detail') ||
+                        request()->routeIs('outlet.edit')">
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                             <i class="fa-solid fa-building fa-lg"></i>
@@ -67,17 +68,27 @@
                     </x-nav-link>
                 </li>
 
-                 {{-- Blog--}}
-                 <li class="mt-0.5 w-full">
+                {{-- Blog --}}
+                <li class="mt-0.5 w-full">
                     <x-nav-link :href="route('blog.index')" :active="request()->routeIs('blog.index')">
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
-                            <i class="fa-solid fa-ticket fa-lg"></i>
+                            <i class="fa-solid fa-blog fa-lg"></i>
                         </div>
-                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease" >Blog</span>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Blog</span>
                     </x-nav-link>
                 </li>
 
+                {{-- Tentang Kami --}}
+                <li class="mt-0.5 w-full">
+                    <x-nav-link :href="route('tentangKami.index')" :active="request()->routeIs('tentangKami.index')">
+                        <div
+                            class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                            <i class="fa-solid fa-info-circle fa-lg"></i> 
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Tentang Kami</span>
+                    </x-nav-link>
+                </li>
 
 
                 <!-- <li class="mt-0.5 w-full">

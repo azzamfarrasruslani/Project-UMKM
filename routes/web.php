@@ -7,6 +7,8 @@ use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TentangKamiController;
+
 
 Route::get('/', function () {
     return view('home');
@@ -53,6 +55,10 @@ Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
 
 Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
+
+Route::resource('tentangKami', TentangKamiController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
 
 // Route untuk Google login
 // Route::get('auth/google', function () {
