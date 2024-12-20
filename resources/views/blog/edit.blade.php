@@ -38,7 +38,7 @@
             .create(document.querySelector('#editor'))
             .then(editor => {
                 editor.model.document.on('change:data', () => {
-             
+
                     document.querySelector('textarea[name="konten_blog"]').value = editor.getData();
                 });
             })
