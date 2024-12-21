@@ -7,10 +7,11 @@ use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HeroController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -62,6 +63,9 @@ Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
     ->middleware(['auth', 'verified']);
 
 Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
+Route::resource('hero', HeroController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
 
