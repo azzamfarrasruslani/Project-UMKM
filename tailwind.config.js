@@ -16,6 +16,7 @@ module.exports = {
         extend: {
             backgroundImage: {
                 "custom-bg1": "url('/assets/images/login-bg.svg')", // Gunakan path relatif dari root public
+                "Outlet-bg": "url('@images/OutletBG.png')",
             },
         },
         screens: {
@@ -72,6 +73,7 @@ module.exports = {
             customRed: {
                 DEFAULT: colors.red,
                 50: "#E4002B",
+                100: "#961916",
             },
 
             gray: {
