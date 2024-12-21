@@ -8,6 +8,10 @@
     <meta name="csrf-token" content="">
     <link rel="icon" type="image/png" href="{{ asset('assets/images/LogoAyamGeprek.png') }}">
     <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Animation on Scroll css -->
+    <link href="{{ asset('build/assets/libs/aos/aos.css') }}" rel="stylesheet" type="text/css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -17,9 +21,9 @@
         rel="stylesheet" />
     <script src="https://kit.fontawesome.com/c23fedd423.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
@@ -29,203 +33,236 @@
         class="fixed px-4 py-2 text-xl bg-white shadow-lg cursor-pointer bottom-8 right-8 z-990 rounded-circle text-green-500 transition-transform duration-300 ease-in-out hover:scale-105">
         <i class="py-6 pointer-events-none fa-brands fa-whatsapp fa-2xl"></i>
     </a>
-
     {{-- Layout Utama --}}
     <div class="bg-customWhite-300 text-black/50 dark:bg-black dark:text-white/50">
         @include('layouts.navbar')
-
         <main class="transition-all duration-200 ease-in-out">
-            <!-- Container Carousel -->
-            <section class="relative  min-h-screen flex items-center justify-center flex-col">
-                <div class="carousel-container bg-no-repeat relative w-full overflow-hidden">
-                    <!-- Left and Right Buttons -->
-                    <button id="prevButton"
-                        class="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-red-500 text-white p-3 rounded-full">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <button id="nextButton"
-                        class="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-red-500 text-white p-3 rounded-full">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
+            <!-- Main Visual Section -->
 
-                    <!-- Carousel Items Desktop -->
-                    <div
-                        class="carousel carousel1 w-full transition-transform duration-500 ease-in-out mb-12 hidden sm:flex">
-                        <img src="https://www.kfckorea.com/nas/banner/2024/08/30/TIxTsOHAm0SA.png"
-                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        <img src="https://www.kfckorea.com/nas/banner/2024/10/29/fWve1unP3mEJ.png"
-                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        <img src="https://www.preksu.com/assets/img/slider/P2.png"
-                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        <img src="{{ asset('assets/images/banner/Banner1.png') }}"
-                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                    </div>
+            <section class="main_visual relative h-auto overflow-hidden mt-20">
+                <div class="swiper-container1 visSwiper relative">
+                    @if (!empty($hero) && $hero->count() > 0)
+                        <!-- Wrapper -->
+                        <div class="swiper-wrapper">
+                            @foreach ($hero as $item)
+                                <div class="swiper-slide">
+                                    <a data-promotion-id="606" data-promotion-location="top-main"
+                                        data-promotion-title="하프앤하프" href="">
+                                        <span class="img block">
+                                            <img class="w-full object-cover  h-[300px] max-h-[690px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[660px] "
+                                                src="{{ Storage::url($item->gambar_hero) }}" alt="하프앤하프">
+                                        </span>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
 
-                    <!-- Carousel Items Mobile -->
-                    <div
-                        class="carousel carousel2 w-full flex transition-transform duration-500 ease-in-out mb-12 sm:hidden">
-                        <img src="{{ asset('assets/images/banner/Banner2.png') }}"
-                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        <img src="{{ asset('assets/images/banner/Banner2.png') }}"
-                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        <img src="{{ asset('assets/images/banner/Banner2.png') }}"
-                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                        <img src="{{ asset('assets/images/banner/Banner2.png') }}"
-                            class="object-cover w-full h-[486px] flex-shrink-0 cursor-pointer">
-                    </div>
-
-                    <!-- Indicator Circles -->
-                    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20 mb-4">
-                        <span class="indicator w-3 h-3 bg-red-500 rounded-full cursor-pointer"></span>
-                        <span class="indicator w-3 h-3 bg-red-500 rounded-full cursor-pointer"></span>
-                        <span class="indicator w-3 h-3 bg-red-500 rounded-full cursor-pointer"></span>
-                        <span class="indicator w-3 h-3 bg-red-500 rounded-full cursor-pointer"></span>
-                    </div>
+                        <!-- Pagination and Navigation Controls -->
+                        <div
+                            class="swiper-pagination mx-20 my-10 flex justify-start absolute left-1/2 transform -translate-x-1/2 z-10 text-white text-xl">
+                            <span class="swiper-pagination-current">1</span> / <span
+                                class="swiper-pagination-total">6</span>
+                            {{-- <button class="swiper-state stop"><span>sdfsd</span></button> --}}
+                        </div>
+                        <div
+                            class="swiper-button-prev absolute top-1/2 left-5 transform -translate-y-1/2 bg-opacity-50 text-white rounded-full p-2 invisible sm:visible">
+                        </div>
+                        <div
+                            class="swiper-button-next absolute top-1/2 right-5 transform -translate-y-1/2 bg-opacity-50 text-white rounded-full p-2 invisible sm:visible">
+                        </div>
+                    @else
+                        <p class="text-gray-600">Tidak ada gambar yang tersedia.</p>
+                    @endif
                 </div>
-
-                <script>
-                    let currentIndex = 0;
-
-                    // Get carousel containers and buttons
-                    const carouselDesktop = document.querySelector('.carousel1');
-                    const carouselMobile = document.querySelector('.carousel2');
-                    const indicators = document.querySelectorAll('.indicator');
-                    const prevButton = document.getElementById('prevButton');
-                    const nextButton = document.getElementById('nextButton');
-
-                    // Update carousel position and indicators
-                    function updateCarousel(container) {
-                        const images = container.querySelectorAll('img');
-                        const totalImages = images.length;
-
-                        // Auto scroll functionality
-                        function autoScroll() {
-                            currentIndex++;
-                            if (currentIndex >= totalImages) {
-                                currentIndex = 0;
-                            }
-                            moveCarousel();
-                        }
-
-                        // Move the carousel
-                        function moveCarousel() {
-                            container.style.transform = `translateX(-${currentIndex * 100}%)`;
-                            updateIndicators();
-                        }
-
-                        // Update indicator styles
-                        function updateIndicators() {
-                            indicators.forEach((indicator, index) => {
-                                const isActive = index === currentIndex;
-
-                                // Tambahkan ukuran berbeda untuk indikator aktif
-                                indicator.classList.toggle('w-4', isActive);
-                                indicator.classList.toggle('h-4', isActive);
-
-                                // Ukuran default untuk indikator tidak aktif
-                                indicator.classList.toggle('w-3', !isActive);
-                                indicator.classList.toggle('h-3', !isActive);
-
-                                // Warna untuk indikator
-                                indicator.classList.toggle('bg-orange-500', isActive);
-                                indicator.classList.toggle('bg-red-500', !isActive);
-                            });
-                        }
-
-
-                        // Navigate to next image
-                        nextButton.addEventListener('click', () => {
-                            currentIndex++;
-                            if (currentIndex >= totalImages) {
-                                currentIndex = 0;
-                            }
-                            moveCarousel();
-                        });
-
-                        // Navigate to previous image
-                        prevButton.addEventListener('click', () => {
-                            currentIndex--;
-                            if (currentIndex < 0) {
-                                currentIndex = totalImages - 1;
-                            }
-                            moveCarousel();
-                        });
-
-                        // Indicator click functionality
-                        indicators.forEach((indicator, index) => {
-                            indicator.addEventListener('click', () => {
-                                currentIndex = index;
-                                moveCarousel();
-                            });
-                        });
-
-                        // Start auto scroll
-                        setInterval(autoScroll, 5000);
-                    }
-
-                    // Initialize carousel based on screen size
-                    function initializeCarousel() {
-                        if (window.innerWidth >= 640) {
-                            updateCarousel(carouselDesktop);
-                        } else {
-                            updateCarousel(carouselMobile);
-                        }
-                    }
-
-                    // Reinitialize on resize
-                    window.addEventListener('resize', () => {
-                        currentIndex = 0; // Reset index
-                        initializeCarousel();
-                    });
-
-                    // Initial call
-                    initializeCarousel();
-                </script>
             </section>
 
 
-
-            <div class="max-w-full lg:px-10 mb-6 w-full flex-none">
-                <div
-                    class="relative flex flex-col min-w-0  break-words  border-0 border-transparent border-solid  dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
-                    <div class="flex-auto p-4">
-                        <div class="flex flex-wrap lg:flex-nowrap justify-between">
-                            <!-- Di sini diubah menjadi flex-nowrap dan justify-between -->
-                            <div class="w-full max-w-full px-3 mb-6">
-                                <a a href="javascript:;" onclick="openAddTelur()"
-                                    class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-red-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
-                                    {{-- <h6 class="mb-0 dark:text-white">Tambah Telur</h6> --}}
-                                </a>
-                            </div>
-                            <div class="w-full max-w-full px-3 mb-6">
-                                <a a href="javascript:;" onclick="openAddTelur()"
-                                    class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-black border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
-
-                                </a>
-                            </div>
-                            <div class="w-full max-w-full px-3 mb-6">
-                                <a a href="javascript:;" onclick="openAddTelur()"
-                                    class="relative flex flex-row items-center p-6 py-19 break-words shadow-lg bg-gray-500 border border-solid rounded-xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
-
-                                </a>
+            <script>
+                var swiper1 = new Swiper('.swiper-container1', {
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'fraction',
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            </script>
+            {{-- Card --}}
+            <section class="mb-20">
+                <div class="max-w-full lg:px-10 w-full flex-none top-0 left-0 right-0">
+                    <div
+                        class="relative flex flex-col min-w-0 break-words border-0 border-transparent dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+                        <div class="flex-auto p-4">
+                            <div class="flex flex-wrap lg:flex-nowrap justify-between ">
+                                <div data-aos="fade-up" class="w-full max-w-full px-3 mb-6">
+                                    <div
+                                        class="relative flex flex-row break-words py-5 lg:py-8 bg-white shadow-2xl rounded-2xl overflow-hidden bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                        <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="pattern"
+                                            class="absolute inset-0 w-full h-full object-cover opacity-50 z-0">
+                                        <div class="relative z-10 p-9">
+                                            <a href="javascript:;" onclick=""
+                                                class="relative flex flex-row items-center p-6  break-words shadow-md bg-white border border-solid rounded-2xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" class="w-full max-w-full px-3 mb-6">
+                                    <div
+                                        class="relative flex flex-row break-words py-5 lg:py-8 bg-red-500 shadow-2xl rounded-2xl overflow-hidden bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                        <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="pattern"
+                                            class="absolute inset-0 w-full h-full object-cover opacity-50 z-0">
+                                        <div class="relative z-10 p-9">
+                                            <a href="javascript:;" onclick=""
+                                                class="relative flex flex-row items-center p-6  break-words shadow-md bg-white border border-solid rounded-2xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" class="w-full max-w-full px-3 mb-6">
+                                    <div
+                                        class="relative flex flex-row break-words py-5 lg:py-8 bg-red-500 shadow-2xl rounded-2xl overflow-hidden bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                        <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="pattern"
+                                            class="absolute inset-0 w-full h-full object-cover opacity-50 z-0">
+                                        <div class="relative z-10 p-9">
+                                            <a href="javascript:;" onclick=""
+                                                class="relative flex flex-row items-center p-6  break-words shadow-md bg-white border border-solid rounded-2xl border-slate-100 dark:border-slate-700 bg-clip-border hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-
-
             </section>
 
 
 
-            <section id="menu" class="menu-section py-8 px-6 min-h-screen ">
+            <section id="outlet">
+                <div class="mx-2 lg:mx-30 py-16 bg-Outlet-bg bg-red-700 bg-cover bg-no-repeat rounded-3xl">
+                    <div class="container mx-auto px-6">
+                        <div class="flex flex-wrap mx-6">
+                            <!-- Left Column -->
+                            <div class="w-full lg:w-1/2 px-6 flex flex-col justify-center text-white">
+                                <h1 class="text-yellow-400 text-4xl font-extrabold">Ayam Geprek</h1>
+                                <h1 class="text-5xl text-white font-bold">Keysia</h1>
+                                <h1 class="text-yellow-400 text-4xl font-bold">Outlets</h1>
+                                <div class="my-4">
+                                    <p>
+                                        Menyebarkan kebahagiaan di sekitar kota dengan 3 cabang Ayam Geprek Keysia dan
+                                        terus berkembang! Bergabunglah dalam perjalanan penuh cita rasa bersama kami!
+                                    </p>
+                                </div>
+                                <a href="/about-us/#outlet"
+                                    class="inline-block bg-yellow-500 text-white font-semibold py-3 px-4 rounded-lg hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                                    <i class="fa-solid fa-store mr-3"></i>Lihat Outlets Kami
+                                </a>
+                            </div>
+                            <!-- Right Column -->
+                            <div data-aos="zoom-in" class="w-full lg:w-1/2 px-6 flex justify-center">
+                                <img class="max-w-full" src="{{ asset('assets/images/Riau Map.png') }}"
+                                    alt="Map of outlets" />
+                            </div>
+                        </div>
+
+                        <!-- Branch Statistics -->
+                        <div
+                            class="mt-10 mx-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center text-white">
+                            <!-- Total Cabang -->
+                            <div  data-aos="zoom-in" class="py-6 rounded-lg ">
+                                <h3 class="text-xl font-semibold text-white">TOTAL CABANG</h3>
+                                <div class="text-5xl font-bold text-yellow-400"id="totalCabang">0</div>
+                                <p class="text-lg font-semibold">AYAM GEPREK KEYSIA</p>
+                                <p class="text-sm mt-2">Di Jalan Nelayan, Jalan Kuburan, dan Jalan Umban Sari</p>
+                            </div>
+
+                            <!-- Jumlah Karyawan -->
+                            <div data-aos="zoom-in" class="py-6 rounded-lg ">
+                                <h3 class="text-xl font-semibold text-white">TOTAL KARYAWAN</h3>
+                                <div class="text-5xl font-bold text-yellow-400"id="totalKaryawan">0</div>
+                                <p class="text-lg font-semibold">DI SEMUA CABANG</p>
+                                <p class="text-sm mt-2">Bekerja untuk memberikan pelayanan terbaik</p>
+                            </div>
+
+                            <!-- Tanggal Berdiri -->
+                            <div data-aos="zoom-in"  n class="py-6 rounded-lg ">
+                                <h3 class="text-xl font-semibold text-white">BERDIRI SEJAK</h3>
+                                <div class="text-5xl font-bold text-yellow-400" id="berdiriSejak">0</div>
+                                <p class="text-lg font-semibold">AYAM GEPREK KEYSIA</p>
+                                <p class="text-sm mt-2">Mulai dari Jalan Nelayan hingga terus berkembang</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <script>
+                // Fungsi untuk menginisialisasi animasi counter
+                function animateCounter(id, targetValue, duration) {
+                    const counter = { value: 0 };
+                    gsap.to(counter, {
+                        value: targetValue,
+                        duration: duration,
+                        onUpdate: () => {
+                            document.getElementById(id).textContent = Math.floor(counter.value);
+                        }
+                    });
+                }
+
+                // Menggunakan Intersection Observer untuk mendeteksi elemen
+                document.addEventListener("DOMContentLoaded", () => {
+                    const observerOptions = {
+                        root: null, // viewport
+                        rootMargin: "0px",
+                        threshold: 0.5 // 50% elemen terlihat
+                    };
+
+                    const counters = [
+                        { id: "totalCabang", targetValue: 3, duration: 2 },
+                        { id: "totalKaryawan", targetValue: 6, duration: 2 },
+                        { id: "berdiriSejak", targetValue: 2019, duration: 2 }
+                    ];
+
+                    const observer = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const target = entry.target;
+                                const counterData = counters.find(c => c.id === target.id);
+                                if (counterData) {
+                                    animateCounter(counterData.id, counterData.targetValue, counterData.duration);
+                                    observer.unobserve(target); // Hentikan pengamatan setelah animasi selesai
+                                }
+                            }
+                        });
+                    }, observerOptions);
+
+                    // Memulai pengamatan untuk setiap elemen counter
+                    counters.forEach(counter => {
+                        const element = document.getElementById(counter.id);
+                        if (element) {
+                            observer.observe(element);
+                        }
+                    });
+                });
+            </script>
+
+
+
+
+
+
+            <section id="menu" class="menu-section py-8 px-6 min-h-screen">
                 <div class="flex flex-row justify-between mb-8 mx-5 mt-20">
                     <h2 class="text-start  text-4xl font-extrabold font-notoSans ">Menu Kami</h2>
                     <div class="ml-10 flex">
-                        <button id="swiper-button-prev" class="border border-solid border-red-500 py-2 px-4 rounded-lg">
+                        <button id="swiper-button-prev"
+                            class="border border-solid border-red-500 py-2 px-4 rounded-lg">
                             <i class="fa-solid fa-chevron-left text-red-500"></i>
                         </button>
                         <button id="swiper-button-next"
@@ -245,7 +282,7 @@
                                 </div>
                                 <div class="text-center mt-2">
                                     <h3 class="font-bold text-xl">Ayam Geprek Saus Keju</h3>
-                                    <p class="text-gray-600">버터비스켓+딸기잼</p>
+                                    <p class="text-gray-600"></p>
                                     <p class="font-bold text-lg">2,600₩</p>
                                 </div>
                             </a>
@@ -259,7 +296,7 @@
                                 </div>
                                 <div class="text-center mt-2">
                                     <h3 class="font-bold text-xl">Ayam Geprek Saus Terasi</h3>
-                                    <p class="text-gray-600">버터비스켓+딸기잼</p>
+                                    <p class="text-gray-600"></p>
                                     <p class="font-bold text-lg">2,100₩</p>
                                 </div>
                             </a>
@@ -273,7 +310,7 @@
                                 </div>
                                 <div class="text-center mt-2">
                                     <h3 class="font-bold text-xl">Ayam Geprek Mozarella</h3>
-                                    <p class="text-gray-600">버터비스켓+딸기잼</p>
+                                    <p class="text-gray-600"></p>
                                     <p class="font-bold text-lg">2,100₩</p>
                                 </div>
                             </a>
@@ -287,7 +324,7 @@
                                 </div>
                                 <div class="text-center mt-2">
                                     <h3 class="font-bold text-xl">Ayam Geprek Original</h3>
-                                    <p class="text-gray-600">버터비스켓+딸기잼</p>
+                                    <p class="text-gray-600"></p>
                                     <p class="font-bold text-lg">2,100₩</p>
                                 </div>
                             </a>
@@ -320,67 +357,14 @@
                     grabCursor: true,
                 });
             </script>
-
     </div>
-
-    {{-- <section id="about-us" class="py-12 bg-white">
-        <div class="container mx-auto flex items-center justify-between px-4">
-            <div class="w-full md:w-1/2 px-4">
-                <h2 class="text-3xl font-bold mb-4">About Us</h2>
-                <p class="text-lg text-gray-700 border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
-                    Ayam Geprek Keysia adalah UMKM yang didirikan pada 17 Agustus 2019 oleh Lina,
-                    seorang ibu rumah tangga. Nama "Keysia" diambil dari anak ketiganya, yang menjadi inspirasi utama
-                    usaha ini. Berawal dari hobi memasak, Ayam Geprek Keysia kini telah berkembang dengan tiga cabang di
-                    Pekanbaru.
-                    Kami berkomitmen menjaga kualitas dan memberikan harga terjangkau, dengan setiap porsi hanya seharga
-                    10 ribu,
-                    menjadikan kami pilihan favorit bagi anak kos dan masyarakat sekitar.
-                </p>
-            </div>
-
-            <div class="w-full md:w-1/2 px-4 mt-8 md:mt-0">
-                <div class="border border-gray-300 p-6 rounded-lg shadow-md bg-gray-50">
-                    <img src="{{ asset('assets/images/ayam_geprek.jpg') }}"
-                        class="w-full h-auto object-cover rounded-lg" alt="Ayam Geprek Keysia">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="map" class="py-12 bg-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Find Us</h2>
-            <div class="w-full md:w-3/4 mx-auto">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15168.906621331404!2d101.43766803933399!3d0.5563404730342257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ac94477c2907%3A0x523c34397522bc97!2sAyam%20Geprek%20%22Keysia%202%22!5e1!3m2!1sen!2sid!4v1733042736620!5m2!1sen!2sid"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="contact-us" class="py-12 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-            <p class="text-lg text-gray-700 mb-6">
-                Kami siap membantu Anda! Jika ada pertanyaan atau ingin melakukan pemesanan, jangan ragu untuk
-                menghubungi kami.
-            </p>
-            <div class="flex justify-center space-x-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">Phone</h3>
-                    <p><a href="tel:+628123456789" class="text-blue-500 hover:underline">+62 812-6639-6750</a></p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">Address</h3>
-                    <p>Jalan Merpati No. 10, Pekanbaru</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
     </main>
+    <!-- Script untuk AOS -->
+    <script src="{{ asset('build/assets/libs/aos/aos.js') }}"></script>
+    <script>
+        // Animation on Scroll (Plugin)
+        AOS.init();
+    </script>
     @include('layouts.footer')
     </div>
 </body>
