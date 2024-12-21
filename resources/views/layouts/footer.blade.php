@@ -1,54 +1,51 @@
-<div class="bg-red-500 w-full ">
-  <div class="p-5">
+<footer class="bg-customRed-100 py-12">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Logo Section -->
+        <div class="flex justify-center md:justify-start">
+          <img src="{{ asset('assets/images/LogoAPP.png') }}" alt="Logo" class="w-40 h-40">
+        </div>
 
-  </div>
+        <!-- Social Media Section -->
+        <div class="text-center md:text-left">
+          <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="https://www.facebook.com/Ayamgepuktopglobal" target="_blank">
+              <img src="https://ayamgepuktopglobal.my/wp-content/uploads/2023/12/fb.png" alt="Facebook" class="w-8 h-8">
+            </a>
+            <a href="https://www.instagram.com/ayamgepuktopglobal/?hl=en" target="_blank">
+              <img src="https://ayamgepuktopglobal.my/wp-content/uploads/2023/12/ig.png" alt="Instagram" class="w-8 h-8">
+            </a>
+            <a href="https://www.tiktok.com/@ayamgepuktopglobal?is_from_webapp=1&amp;sender_device=pc" target="_blank">
+              <img src="https://ayamgepuktopglobal.my/wp-content/uploads/2023/12/tt.png" alt="TikTok" class="w-8 h-8">
+            </a>
+            <a href="#" target="_blank">
+              <img src="https://ayamgepuktopglobal.my/wp-content/uploads/2023/12/yt.png" alt="YouTube" class="w-8 h-8">
+            </a>
+          </div>
+        </div>
 
-</div>
-<footer class="bg-customBlack-100 text-white py-12">
-  <div class="container mx-auto">
-    <!-- Bagian link navigasi -->
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-8">
-      <div>
-        <h3 class="text-lg font-bold mb-4">Company</h3>
-        <ul>
-          <li><a href="#about-us" class="text-gray-400 hover:text-white">About Us</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Team</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg font-bold mb-4">Products</h3>
-        <ul>
-          <li><a href="#" class="text-gray-400 hover:text-white">Menu</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Special Offers</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Nutrition</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg font-bold mb-4">Support</h3>
-        <ul>
-          <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
-          <li><a href="#contact-us" class="text-gray-400 hover:text-white">Contact Us</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg font-bold mb-4">Follow Us</h3>
-        <div class="flex space-x-4">
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+        <!-- Quick Links Section -->
+        <div class="text-center md:text-left ">
+          <h4 class="text-lg font-semibold mb-3 text-white">Quicklinks</h4>
+          <ul class="space-y-2">
+            <li><a href="https://ayamgepuktopglobal.my/about-us/" class="text-white hover:underline">About</a></li>
+            <li><a href="https://ayamgepuktopglobal.my/menu/" class="text-white hover:underline">Menu</a></li>
+            <li><a href="https://ayamgepuktopglobal.my/licensing/" class="text-white hover:underline">Licensing</a></li>
+            <li><a href="https://ayamgepuktopglobal.my/career/" class="text-white hover:underline">Career</a></li>
+            <li><a href="https://ayamgepuktopglobal.my/news/" class="text-white hover:underline">News</a></li>
+            <li><a href="https://ayamgepuktopglobal.my/contact-us/" class="text-white hover:underline">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Bagian Copyright -->
-    <div class="border-t border-gray-700 pt-6">
-      <p class="text-center text-gray-500 text-sm">
-        © <script>document.write(new Date().getFullYear());</script> Politeknik Caltex Riau. All rights reserved.
-      </p>
+      <!-- Copyright Section -->
+      <div class="mt-12 border-t pt-6 text-center md:text-left">
+        <p class="text-sm text-white">
+          <b>&copy; 2024 Ayam Geprek Keysia. All rights reserved.</b>
+          <br><br>
+          <a href="https://www.designville.studio/" target="_blank" class="text-whitehover:underline">Web design by Tim 1</a>
+        </p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
