@@ -3,214 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Promo - Ayam Geprek Keysia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Number Animation with GSAP</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        #testCounter {
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
-
-    <!-- Header -->
-    <header class="bg-yellow-500 text-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold">Ayam Geprek Keysia - Promo Management</h1>
-            <button class="bg-white text-yellow-500 px-4 py-2 rounded-md shadow hover:bg-gray-200">Dashboard</button>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
-        <!-- Add Promo Button -->
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-lg font-semibold">Daftar Promo</h2>
-            <button
-                class="bg-yellow-500 text-white px-4 py-2 rounded-md shadow hover:bg-yellow-600 transition"
-                onclick="showModal('addPromoModal')">
-                + Tambah Promo
-            </button>
-        </div>
-
-        <!-- Promo List -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Promo Card -->
-            <div class="bg-white shadow rounded-md flex items-start p-4">
-                <img
-                    src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2278174_20241018160339156.png"
-                    alt="Promo Thumbnail"
-                    class="w-24 h-24 rounded-md object-cover mr-4">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Promo Ayam Geprek Hemat</h3>
-                    <p class="text-sm text-gray-700 mb-4">Diskon 20% untuk pembelian paket hemat!</p>
-                    <div class="flex justify-between items-center">
-                        <button
-                            class="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 transition"
-                            onclick="showModal('editPromoModal')">
-                            Edit
-                        </button>
-                        <button
-                            class="bg-red-500 text-white px-4 py-1 rounded-md hover:bg-red-600 transition">
-                            Hapus
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white shadow rounded-md flex items-start p-4">
-                <img
-                    src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2278174_20241018160339156.png"
-                    alt="Promo Thumbnail"
-                    class="w-24 h-24 rounded-md object-cover mr-4">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Promo Ayam Geprek Hemat</h3>
-                    <p class="text-sm text-gray-700 mb-4">Diskon 20% untuk pembelian paket hemat!</p>
-                    <div class="flex justify-between items-center">
-                        <button
-                            class="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 transition"
-                            onclick="showModal('editPromoModal')">
-                            Edit
-                        </button>
-                        <button
-                            class="bg-red-500 text-white px-4 py-1 rounded-md hover:bg-red-600 transition">
-                            Hapus
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white shadow rounded-md flex items-start p-4">
-                <img
-                    src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2278174_20241018160339156.png"
-                    alt="Promo Thumbnail"
-                    class="w-24 h-24 rounded-md object-cover mr-4">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Promo Ayam Geprek Hemat</h3>
-                    <p class="text-sm text-gray-700 mb-4">Diskon 20% untuk pembelian paket hemat!</p>
-                    <div class="flex justify-between items-center">
-                        <button
-                            class="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 transition"
-                            onclick="showModal('editPromoModal')">
-                            Edit
-                        </button>
-                        <button
-                            class="bg-red-500 text-white px-4 py-1 rounded-md hover:bg-red-600 transition">
-                            Hapus
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white shadow rounded-md flex items-start p-4">
-                <img
-                    src="https://kfcapi.inicis.com/kfcs_api_img/KFCS/goods/DL_2278174_20241018160339156.png"
-                    alt="Promo Thumbnail"
-                    class="w-24 h-24 rounded-md object-cover mr-4">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Promo Ayam Geprek Hemat</h3>
-                    <p class="text-sm text-gray-700 mb-4">Diskon 20% untuk pembelian paket hemat!</p>
-                    <div class="flex justify-between items-center">
-                        <button
-                            class="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 transition"
-                            onclick="showModal('editPromoModal')">
-                            Edit
-                        </button>
-                        <button
-                            class="bg-red-500 text-white px-4 py-1 rounded-md hover:bg-red-600 transition">
-                            Hapus
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Tambahkan lebih banyak card promo di sini -->
-        </div>
-    </main>
-
-    <!-- Add Promo Modal -->
-    <div id="addPromoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-        <div class="bg-white rounded-lg shadow-lg p-6 w-11/12 md:w-1/2">
-            <h2 class="text-lg font-semibold mb-4">Tambah Promo Baru</h2>
-            <form>
-                <div class="mb-4">
-                    <label for="promoTitle" class="block text-sm font-medium mb-2">Judul Promo</label>
-                    <input
-                        type="text"
-                        id="promoTitle"
-                        class="w-full border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500">
-                </div>
-                <div class="mb-4">
-                    <label for="promoImage" class="block text-sm font-medium mb-2">Gambar Promo</label>
-                    <input
-                        type="file"
-                        id="promoImage"
-                        class="w-full border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500">
-                </div>
-                <div class="mb-4">
-                    <label for="promoDescription" class="block text-sm font-medium mb-2">Deskripsi</label>
-                    <textarea
-                        id="promoDescription"
-                        rows="4"
-                        class="w-full border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500"></textarea>
-                </div>
-                <div class="flex justify-end">
-                    <button type="button"
-                        class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md mr-2"
-                        onclick="closeModal('addPromoModal')">
-                        Batal
-                    </button>
-                    <button type="submit"
-                        class="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition">
-                        Simpan
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Edit Promo Modal -->
-    <div id="editPromoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-        <div class="bg-white rounded-lg shadow-lg p-6 w-11/12 md:w-1/2">
-            <h2 class="text-lg font-semibold mb-4">Edit Promo</h2>
-            <form>
-                <div class="mb-4">
-                    <label for="editPromoTitle" class="block text-sm font-medium mb-2">Judul Promo</label>
-                    <input
-                        type="text"
-                        id="editPromoTitle"
-                        class="w-full border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500"
-                        value="Promo Ayam Geprek Hemat">
-                </div>
-                <div class="mb-4">
-                    <label for="editPromoImage" class="block text-sm font-medium mb-2">Gambar Promo</label>
-                    <input
-                        type="file"
-                        id="editPromoImage"
-                        class="w-full border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500">
-                </div>
-                <div class="mb-4">
-                    <label for="editPromoDescription" class="block text-sm font-medium mb-2">Deskripsi</label>
-                    <textarea
-                        id="editPromoDescription"
-                        rows="4"
-                        class="w-full border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500">Diskon 20% untuk pembelian paket hemat!</textarea>
-                </div>
-                <div class="flex justify-end">
-                    <button type="button"
-                        class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md mr-2"
-                        onclick="closeModal('editPromoModal')">
-                        Batal
-                    </button>
-                    <button type="submit"
-                        class="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition">
-                        Simpan
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
+<body>
+    <div id="testCounter">0</div>
 
     <script>
-        function showModal(id) {
-            document.getElementById(id).classList.remove('hidden');
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const counter = { value: 0 }; // Initial value as an object
+            gsap.to(counter, {
+                value: 100, // Target value
+                duration: 2, // Animation duration in seconds
+                onUpdate: () => {
+                    document.getElementById("testCounter").textContent = Math.floor(counter.value);
+                }
+            });
+        });
     </script>
-
 </body>
 </html>
