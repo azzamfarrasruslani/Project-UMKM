@@ -9,6 +9,9 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TentangKamiController;
+
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -54,7 +57,6 @@ Route::get('/outlet/{id_outlet}/updateStatus', [OutletController::class, 'update
 Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
-
 Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
 ->middleware(['auth','verified']);
 
@@ -74,6 +76,10 @@ Route::resource('hero', HeroController::class)->only(['index','create','store','
 
 
 
+
+
+Route::resource('tentangKami', TentangKamiController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
 
 
 // Route untuk Google login

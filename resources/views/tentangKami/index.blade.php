@@ -1,5 +1,5 @@
 <x-app-layout>
-    @include('blog.modalAdd') <!-- Include the modal here -->
+    @include('tentangKami.modalAdd') <!-- Include the modal here -->
 
     <div class="flex flex-wrap justify-center">
         <div class="w-full px-6 py-6 mx-auto">
@@ -12,13 +12,13 @@
                             <div class="flex-none w-2/3 max-w-full px-3">
                                 <div>
                                     <p class="mb-0 font-sans font-extrabold text-4xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
-                                        Daftar Blog 
+                                        Daftar Tentang Kami
                                     </p>
                                 </div>
                             </div>
                             <div class="w-full max-w-full px-3 text-right">
-                                <button onclick="openAddBlog()" class="bg-white text-customRed-50 py-2 px-4 rounded-lg focus:outline-none hover:shadow-xs hover:-translate-y-px active:opacity-85">
-                                    Tambah Blog
+                                <button onclick="openAddTentangKami()" class="bg-white text-red-700 py-2 px-4 rounded-lg focus:outline-none hover:shadow-xs hover:-translate-y-px active:opacity-85">
+                                    Tambah Tentang Kami
                                 </button>
                             </div>
                         </div>
@@ -28,17 +28,17 @@
 
             <div class="flex flex-wrap px-2 py-6 rounded-2xl">
                 <div class="w-full px-3">
-                    <div id="blogTabContent" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        @foreach ($blogs as $blog)
+                    <div id="tentangKamiTabContent" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        @foreach ($tentangKamis as $tentangKami)
                             <div class="p-4 bg-white rounded-lg shadow">
-                                <img src="{{ Storage::url($blog->gambar_blog) }}" class="h-48 w-full object-cover rounded-md" alt="Blog Image">
-                                <h3 class="text-lg font-semibold mt-2">{{ $blog->judul_blog }}</h3>
-                                <p class="text-gray-600 text-sm">{{ Str::limit($blog->konten_blog, 100) }}</p>
+                                <img src="{{ Storage::url($tentangKami->gambar_tK) }}" class="h-48 w-full object-cover rounded-md" alt="Tentang Kami Image">
+                                <h3 class="text-lg font-semibold mt-2">{{ $tentangKami->judul_tK }}</h3>
+                                <p class="text-gray-600 text-sm">{{ Str::limit($tentangKami->deskripsi_tK, 100) }}</p>
                                 <div class="flex justify-between mt-4">
-                                    <a href="{{ route('blog.edit', $blog->id_blog) }}" class="bg-blue-500 text-white text-sm py-2 px-3 rounded-lg hover:bg-blue-600 transition">
+                                    <a href="{{ route('tentangKami.edit', $tentangKami->id_tK) }}" class="bg-blue-500 text-white text-sm py-2 px-3 rounded-lg hover:bg-blue-600 transition">
                                         Edit
                                     </a>
-                                    <form action="{{ route('blog.destroy', $blog->id_blog) }}" method="POST" class="inline">
+                                    <form action="{{ route('tentangKami.destroy', $tentangKami->id_tK) }}" method="POST" class="inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="bg-red-500 text-white text-sm py-2 px-3 rounded-lg hover:bg-red-600 transition">
@@ -57,3 +57,4 @@
     </div>
 
 </x-app-layout>
+

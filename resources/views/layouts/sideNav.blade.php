@@ -78,6 +78,18 @@
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Blog</span>
                     </x-nav-link>
                 </li>
+
+                {{-- Tentang Kami --}}
+                <li class="mt-0.5 w-full">
+                    <x-nav-link :href="route('tentangKami.index')" :active="request()->routeIs('tentangKami.index')">
+                        <div
+                            class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                            <i class="fa-solid fa-info-circle fa-lg"></i>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Tentang Kami</span>
+                    </x-nav-link>
+                </li>
+
                 <li class="w-full mt-4">
                     <h6 class="pl-3 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">Pengaturan</h6>
                 </li>
