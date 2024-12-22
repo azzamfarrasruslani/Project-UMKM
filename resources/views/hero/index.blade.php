@@ -6,6 +6,7 @@
     <div class="w-full mx-auto">
         <div class="w-full px-4 py-6">
             <div class="flex-none w-full max-w-full">
+                @include('layouts.flash')
                 @include('layouts.deleteModal')
                 <!-- Card Judul -->
                 <div class="w-full max-w-full px-3">
@@ -39,6 +40,19 @@
                                             <img src="{{ Storage::url($item->gambar_hero) }}"
                                                 class="w-full h-48 object-cover rounded-t-xl" alt="Gambar Menu">
                                             <div class="p-4">
+                                                <div class="flex justify-between mb-2">
+                                                    <p class="text-slate-700">{{ $item->nama_hero }}</p>
+                                                    @if ($item->status_hero == 'aktif')
+                                                        <div
+                                                            class="flex items-center text-white bg-green-500  max-h-8 px-2 rounded-lg">
+                                                            {{ $item->status_hero }}</div>
+                                                    @else
+                                                        <div
+                                                            class="flex items-center text-white bg-red-500  max-h-8 px-2 rounded-lg">
+                                                            {{ $item->status_hero }}</div>
+                                                    @endif
+
+                                                </div>
                                                 <div class="flex justify-between gap-2">
                                                     <a href="{{ route('hero.edit', $item->id_hero) }}"
                                                         class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 border border-blue-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700">
