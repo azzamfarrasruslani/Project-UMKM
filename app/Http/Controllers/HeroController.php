@@ -110,6 +110,6 @@ class HeroController extends Controller
             Storage::delete('public/' . $hero->gambar_hero);
         }
         $hero->delete();
-        return redirect()->route('hero.index')->with('Success', 'Menu berhasil dihapus!');
+        return redirect()->route('hero.index')->with('success', 'Data berhasil dihapus!');
     }
 }
