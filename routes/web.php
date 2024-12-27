@@ -26,21 +26,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-
 Route::resource('promo', PromoController::class)
     ->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
 
 
-
-
 Route::resource('menu', MenuController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
-
-Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
-->middleware(['auth','verified']);
 
 Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
 ->middleware(['auth','verified']);
@@ -72,16 +64,12 @@ Route::resource('hero', HeroController::class)->only(['index','create','store','
 
 
 
-
-
-
-
-
-
-Route::resource('tentangKami', TentangKamiController::class)->only(['index','create','store','edit','destroy','update'])
+Route::resource('tentangKami', TentangKamiController::class)->only(['index','indexHome','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
-
+Route::controller(TentangKamiController::class)->group(function () {
+    Route::get('home/tentangKami', 'indexHome')->name('tentangKami.indexHome');
+});
 // Route untuk Google login
 // Route::get('auth/google', function () {
 //     return Socialite::driver('google')->redirect();
