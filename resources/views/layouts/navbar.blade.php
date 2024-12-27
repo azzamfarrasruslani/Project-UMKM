@@ -28,13 +28,13 @@
                             class="flex flex-col pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto lg:space-x-7 ">
                             <li>
                                 <a class="relative flex items-center text-xl text-customBlack-50 hover:text-customRed-50  px-4 py-2 mr-2 font-extrabold font-notoSans transition-all ease-in-out lg-max:opacity-0 duration-250 lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:before:w-full hover:before:scale-x-100"
-                                    aria-current="page" href="">
+                                    aria-current="page" href="{{ route('home') }}">
                                     Beranda
                                 </a>
                             </li>
                             <li>
                                 <a class="relative flex items-center text-xl text-customBlack-50 hover:text-customRed-50 px-4 py-2 mr-2 font-extrabold transition-all ease-in-out lg-max:opacity-0 duration-250 lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:before:w-full hover:before:scale-x-100"
-                                    aria-current="page" href="#menu">
+                                    aria-current="page" href="{{ route('tentangKami.indexHome')}}">
                                     Tentang Kami
                                 </a>
                             </li>
