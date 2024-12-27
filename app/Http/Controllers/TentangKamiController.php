@@ -10,8 +10,14 @@ class TentangKamiController extends Controller
 
     public function index()
     {
-        $tentangKamis = TentangKami::all();  
-        return view('tentangkami.index', compact('tentangKamis'));
+        $tentangKami = TentangKami::all();
+        return view('tentangkami.index', compact('tentangKami'));
+    }
+
+
+    public function indexHome() {
+        $tentangKami = TentangKami::all();
+        return view('homePage.tentangKami.index', compact('tentangKami'));
     }
 
     public function create()
