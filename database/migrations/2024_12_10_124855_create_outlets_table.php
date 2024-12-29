@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('no_hp')->unique();
             $table->string('email_outlet')->nullable();
             $table->date('tanggal_berdiri');
-            $table->enum('status', ['aktif', 'non-aktif'])->default('aktif');
+            $table->enum('status_outlet', ['aktif', 'non-aktif'])->default('aktif');
             $table->text('iframe_map')->nullable();
             $table->timestamps();
         });

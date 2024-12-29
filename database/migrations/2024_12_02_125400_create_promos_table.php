@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('promo', function (Blueprint $table) {
             $table->id('id_promo');
             $table->string('judul'); // Judul promo
-            $table->text('deskripsi'); // Deskripsi promo
-            $table->decimal('diskon', 5, 2)->nullable(); // Diskon dalam persen
+            $table->text('deskripsi_promo'); // Deskripsi promo
+            $table->decimal('diskon_promo', 5, 2)->nullable(); // Diskon dalam persen
             $table->date('tanggal_mulai'); // Tanggal mulai promo
             $table->date('tanggal_akhir'); // Tanggal akhir promo
-            $table->string('gambar')->nullable(); // Gambar promo
-            $table->enum('status', ['aktif', 'tidak aktif'])->default('aktif')->nullable();
+            $table->string('gambar_promo')->nullable(); // Gambar promo
+            $table->enum('status_promo', ['aktif', 'tidak aktif'])->default('aktif')->nullable();
             $table->timestamps(); // Kolom created_at dan updated_at
         });
     }

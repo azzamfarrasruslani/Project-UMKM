@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('judul_blog');
             $table->text('konten_blog');
             $table->string('gambar_blog')->nullable();
-            $table->boolean('status_blog')->default(true);
+            $table->enum('status_blog', ['aktif', 'non-aktif'])->default('aktif');
             $table->timestamps();
         });
     }

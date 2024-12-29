@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('deskripsi_menu');
             $table->integer('harga_menu');
             $table->string('gambar_menu')->nullable();
-            $table->boolean('status_menu')->default(true);
+            $table->enum('status_menu', ['aktif', 'non-aktif'])->default('aktif');
             $table->timestamps();
         });
     }
