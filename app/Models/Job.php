@@ -10,17 +10,18 @@ class Job extends Model
     protected $table = 'job';
 
     // Aktifkan timestamps jika menggunakan kolom created_at dan updated_at
-    public $timestamps = true;
+    public $timestamps = false;
 
     // Kolom yang dapat diisi (mass assignable)
     protected $fillable = [
         'nama_posisi',
-        'lokasi_kerja',
+        'lokasi',
         'tipe_kerja',
         'kualifikasi',
         'deskripsi_tugas',
         'gaji',
         'benefit',
-        'status', // Dibuka/Ditutup
+        'status',
+        'gambar',
     ];
 }
