@@ -37,7 +37,10 @@
         <!-- Main Visual Section -->
 
             @include('layouts.navbar')
-            {{ $slot }}
+            <div class="mt-10">
+                {{ $slot }}
+            </div>
+
 
 
 
