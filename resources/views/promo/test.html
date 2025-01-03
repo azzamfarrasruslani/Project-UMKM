@@ -1,32 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Animation with GSAP</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <style>
-        #testCounter {
-            font-size: 3rem;
-            text-align: center;
-            margin-top: 50px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div id="testCounter">0</div>
+<body class="bg-white text-gray-800">
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const counter = { value: 0 }; // Initial value as an object
-            gsap.to(counter, {
-                value: 100, // Target value
-                duration: 2, // Animation duration in seconds
-                onUpdate: () => {
-                    document.getElementById("testCounter").textContent = Math.floor(counter.value);
-                }
-            });
-        });
-    </script>
+  <!-- Navbar -->
+  <div class="bg-white border-b shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        <h1 class="text-xl font-bold">MENU</h1>
+        <div class="flex space-x-4 items-center">
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Menu -->
+  <div class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex space-x-6 py-3">
+        <a href="#" class="text-red-600 border-b-2 border-red-600 pb-2 text-sm font-semibold">Limited Time Only</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 pb-2 text-sm font-semibold">Egg Tarts</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 pb-2 text-sm font-semibold">Family Buckets</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 pb-2 text-sm font-semibold">Box Meals</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 pb-2 text-sm font-semibold">Chicken Meals</a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 pb-2 text-sm font-semibold">Rice Meals</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Section -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+    <h2 class="text-xl font-bold mb-6">LIMITED TIME ONLY</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="border rounded-lg shadow-sm overflow-hidden">
+        <img src="image1.jpg" alt="3-pc Spicy Mala Crunch Combo" class="w-full">
+        <div class="p-4">
+          <h3 class="text-lg font-bold">3-pc Spicy Mala Crunch Combo</h3>
+          <span class="inline-block bg-gray-200 text-xs font-medium px-2 py-1 rounded mt-2">New!</span>
+          <p class="text-red-600 font-semibold mt-2">RM27.99</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="border rounded-lg shadow-sm overflow-hidden">
+        <img src="image2.jpg" alt="2-pc Spicy Mala Crunch" class="w-full">
+        <div class="p-4">
+          <h3 class="text-lg font-bold">2-pc Spicy Mala Crunch</h3>
+          <span class="inline-block bg-gray-200 text-xs font-medium px-2 py-1 rounded mt-2">New!</span>
+          <p class="text-red-600 font-semibold mt-2">RM22.49</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="border rounded-lg shadow-sm overflow-hidden">
+        <img src="image3.jpg" alt="Spicy Mala Burger Box Meal" class="w-full">
+        <div class="p-4">
+          <h3 class="text-lg font-bold">Spicy Mala Burger Box Meal</h3>
+          <span class="inline-block bg-gray-200 text-xs font-medium px-2 py-1 rounded mt-2">New!</span>
+          <p class="text-red-600 font-semibold mt-2">RM25.49</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="border rounded-lg shadow-sm overflow-hidden">
+        <img src="image4.jpg" alt="Spicy Mala Burger Combo" class="w-full">
+        <div class="p-4">
+          <h3 class="text-lg font-bold">Spicy Mala Burger Combo</h3>
+          <span class="inline-block bg-gray-200 text-xs font-medium px-2 py-1 rounded mt-2">New!</span>
+          <p class="text-red-600 font-semibold mt-2">RM20.49</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

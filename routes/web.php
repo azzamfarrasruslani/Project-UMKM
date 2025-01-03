@@ -15,7 +15,7 @@ use App\Http\Controllers\TentangKamiController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
+// Dahshboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -26,14 +26,23 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+// Promo
 Route::resource('promo', PromoController::class)
     ->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
 
 
+// Menu
 Route::resource('menu', MenuController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
 
+Route::controller(MenuController::class)->group(function () {
+    Route::get('home/menu', 'indexHome')->name('menu.indexHome');
+});
+
+
+// Outlet
 Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
 ->middleware(['auth','verified']);
 
@@ -46,30 +55,27 @@ Route::get('/outlet/{id_outlet}/updateStatus', [OutletController::class, 'update
     ->middleware(['auth', 'verified']);
 
 
-Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
-->middleware(['auth','verified']);
-
-Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
-->middleware(['auth','verified']);
-
-Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
-    ->name('outlet.detail')
-    ->middleware(['auth', 'verified']);
-
+// Blog
 Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
+// Hero
 Route::resource('hero', HeroController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
 
-
+// Tentang Kami
 Route::resource('tentangKami', TentangKamiController::class)->only(['index','indexHome','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
 Route::controller(TentangKamiController::class)->group(function () {
     Route::get('home/tentangKami', 'indexHome')->name('tentangKami.indexHome');
 });
+
+
+
+
+
 // Route untuk Google login
 // Route::get('auth/google', function () {
 //     return Socialite::driver('google')->redirect();
