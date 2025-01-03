@@ -15,6 +15,12 @@ class MenuController extends Controller
     {
         $menu = Menu::all();
         return view('menu.index', compact('menu'));
+
+    }
+
+    public function indexHome() {
+        $menu = Menu::all();
+        return view('homePage.menu.index', compact('menu'));
     }
 
 
@@ -112,6 +118,6 @@ class MenuController extends Controller
         }
 
         $menu -> delete();
-        return redirect() -> route('menu.index') -> with('Success', 'Menu berhasil dihapus!');
+        return redirect() -> route('menu.index') -> with('success', 'Menu berhasil dihapus!');
     }
 }
