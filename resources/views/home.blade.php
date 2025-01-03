@@ -145,7 +145,7 @@
 
 
             <section id="outlet">
-                <div class="mx-2 lg:mx-30 py-16 bg-Outlet-bg bg-red-700 bg-cover bg-no-repeat rounded-3xl">
+                <div class="mx-2 lg:mx-30 py-16 bg-Outlet-bg bg-red-700 bg-cover bg-no-repeat rounded-3xl mb-10">
                     <div class="container mx-auto px-6">
                         <div class="flex flex-wrap mx-6">
                             <!-- Left Column -->
@@ -175,7 +175,7 @@
                         <div
                             class="mt-10 mx-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center text-white">
                             <!-- Total Cabang -->
-                            <div  data-aos="zoom-in" class="py-6 rounded-lg ">
+                            <div data-aos="zoom-in" class="py-6 rounded-lg ">
                                 <h3 class="text-xl font-semibold text-white">TOTAL CABANG</h3>
                                 <div class="text-5xl font-bold text-yellow-400"id="totalCabang">0</div>
                                 <p class="text-lg font-semibold">AYAM GEPREK KEYSIA</p>
@@ -191,7 +191,7 @@
                             </div>
 
                             <!-- Tanggal Berdiri -->
-                            <div data-aos="zoom-in"  n class="py-6 rounded-lg ">
+                            <div data-aos="zoom-in" n class="py-6 rounded-lg ">
                                 <h3 class="text-xl font-semibold text-white">BERDIRI SEJAK</h3>
                                 <div class="text-5xl font-bold text-yellow-400" id="berdiriSejak">0</div>
                                 <p class="text-lg font-semibold">AYAM GEPREK KEYSIA</p>
@@ -205,7 +205,9 @@
             <script>
                 // Fungsi untuk menginisialisasi animasi counter
                 function animateCounter(id, targetValue, duration) {
-                    const counter = { value: 0 };
+                    const counter = {
+                        value: 0
+                    };
                     gsap.to(counter, {
                         value: targetValue,
                         duration: duration,
@@ -223,10 +225,21 @@
                         threshold: 0.5 // 50% elemen terlihat
                     };
 
-                    const counters = [
-                        { id: "totalCabang", targetValue: 3, duration: 2 },
-                        { id: "totalKaryawan", targetValue: 6, duration: 2 },
-                        { id: "berdiriSejak", targetValue: 2019, duration: 2 }
+                    const counters = [{
+                            id: "totalCabang",
+                            targetValue: 3,
+                            duration: 2
+                        },
+                        {
+                            id: "totalKaryawan",
+                            targetValue: 6,
+                            duration: 2
+                        },
+                        {
+                            id: "berdiriSejak",
+                            targetValue: 2019,
+                            duration: 2
+                        }
                     ];
 
                     const observer = new IntersectionObserver((entries, observer) => {
@@ -235,8 +248,10 @@
                                 const target = entry.target;
                                 const counterData = counters.find(c => c.id === target.id);
                                 if (counterData) {
-                                    animateCounter(counterData.id, counterData.targetValue, counterData.duration);
-                                    observer.unobserve(target); // Hentikan pengamatan setelah animasi selesai
+                                    animateCounter(counterData.id, counterData.targetValue, counterData
+                                        .duration);
+                                    observer.unobserve(
+                                        target); // Hentikan pengamatan setelah animasi selesai
                                 }
                             }
                         });
@@ -249,112 +264,6 @@
                             observer.observe(element);
                         }
                     });
-                });
-            </script>
-
-
-
-
-
-
-            <section id="menu" class="menu-section py-8 px-6 min-h-screen">
-                <div class="flex flex-row justify-between mb-8 mx-5 mt-20">
-                    <h2 class="text-start  text-4xl font-extrabold font-notoSans ">Menu Kami</h2>
-                    <div class="ml-10 flex">
-                        <button id="swiper-button-prev"
-                            class="border border-solid border-red-500 py-2 px-4 rounded-lg">
-                            <i class="fa-solid fa-chevron-left text-red-500"></i>
-                        </button>
-                        <button id="swiper-button-next"
-                            class="border border-solid border-red-500 py-2 px-4 rounded-lg ml-2">
-                            <i class="fa-solid fa-chevron-right text-red-500"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper-container overflow-x-hidden mx-4">
-                    <div class="swiper-wrapper flex w-1/2">
-                        <div class="swiper-slide bg-white shadow-3xl rounded-xl mb-5 ">
-                            <a href="/delivery/detail/N/2342857" class="block">
-                                <div
-                                    class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
-                                    <img src="{{ asset('assets/images/menu/menu1.png') }}" alt="버터 비스켓"
-                                        class="w-full h-75 object-cover">
-                                </div>
-                                <div class="text-center mt-2">
-                                    <h3 class="font-bold text-xl">Ayam Geprek Saus Keju</h3>
-                                    <p class="text-gray-600"></p>
-                                    <p class="font-bold text-lg">2,600₩</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
-                            <a href="/delivery/detail/N/1345860" class="block">
-                                <div
-                                    class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
-                                    <img src="{{ asset('assets/images/menu/menu2.png') }}" alt="코울슬로"
-                                        class="w-full h-75 object-cover">
-                                </div>
-                                <div class="text-center mt-2">
-                                    <h3 class="font-bold text-xl">Ayam Geprek Saus Terasi</h3>
-                                    <p class="text-gray-600"></p>
-                                    <p class="font-bold text-lg">2,100₩</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
-                            <a href="/delivery/detail/N/1345860" class="block">
-                                <div
-                                    class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
-                                    <img src="{{ asset('assets/images/menu/menu3.png') }}" alt="코울슬로"
-                                        class="w-full h-75 object-cover">
-                                </div>
-                                <div class="text-center mt-2">
-                                    <h3 class="font-bold text-xl">Ayam Geprek Mozarella</h3>
-                                    <p class="text-gray-600"></p>
-                                    <p class="font-bold text-lg">2,100₩</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide bg-white shadow-2xl rounded-xl mb-5 ">
-                            <a href="/delivery/detail/N/1345860" class="block">
-                                <div
-                                    class="relative transform hover:scale-110 transition duration-300 ease-in-out hover:opacity-80">
-                                    <img src="{{ asset('assets/images/menu/menu4.png') }}" alt="코울슬로"
-                                        class="w-full h-75 object-cover">
-                                </div>
-                                <div class="text-center mt-2">
-                                    <h3 class="font-bold text-xl">Ayam Geprek Original</h3>
-                                    <p class="text-gray-600"></p>
-                                    <p class="font-bold text-lg">2,100₩</p>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Tambahkan slide lainnya di sini -->
-                    </div>
-                </div>
-            </section>
-
-            <script>
-                var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 1, // Default untuk semua ukuran
-                    spaceBetween: 10, // Default jarak antar card
-                    navigation: {
-                        nextEl: '#swiper-button-next',
-                        prevEl: '#swiper-button-prev',
-                    },
-                    breakpoints: {
-                        641: { // Ukuran 641 ke atas
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        1024: { // Ukuran 1024 ke atas
-                            slidesPerView: 3,
-                            spaceBetween: 30,
-                        },
-                    },
-                    touchEventsTarget: 'container',
-                    simulateTouch: true,
-                    grabCursor: true,
                 });
             </script>
     </div>
