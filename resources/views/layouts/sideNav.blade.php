@@ -84,9 +84,20 @@
                     <x-nav-link :href="route('tentangKami.index')" :active="request()->routeIs('tentangKami.index')">
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
-                            <i class="fa-solid fa-info-circle fa-lg"></i> 
+                            <i class="fa-solid fa-info-circle fa-lg"></i>
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Tentang Kami</span>
+                    </x-nav-link>
+                </li>
+
+                {{-- Kontak --}}
+                <li class="mt-0.5 w-full">
+                    <x-nav-link :href="route('kontak.index')" :active="request()->routeIs('kontak.index')">
+                        <div
+                            class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                            <i class="fa-solid fa-address-book fa-lg"></i>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Kontak</span>
                     </x-nav-link>
                 </li>
 
