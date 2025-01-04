@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TentangKamiController;
+use App\Http\Controllers\KontakController;
 
 
 Route::get('/', function () {
@@ -58,6 +59,9 @@ Route::resource('blog', BlogController::class)->only(['index','create','store','
 Route::resource('tentangKami', TentangKamiController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
+Route::resource('kontak', KontakController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
 
 // Route untuk Google login
 // Route::get('auth/google', function () {
