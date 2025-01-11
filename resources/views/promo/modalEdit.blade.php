@@ -24,7 +24,7 @@
                                 <!-- Diskon -->
                                 <div>
                                     <label for="edit_diskon" class="block text-sm font-medium">Diskon (%)</label>
-                                    <input type="number" name="diskon" id="edit_diskon"
+                                    <input type="number" name="diskon_promo" id="edit_diskon"
                                         class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                                         step="0.01" min="0" max="100" />
                                 </div>
@@ -52,7 +52,7 @@
                             <!-- Status -->
                             <div class="mb-4">
                                 <label for="edit_status" class="block text-sm font-medium">Status</label>
-                                <select name="status" id="edit_status"
+                                <select name="status_menu" id="edit_status"
                                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                                     <option value="aktif">Aktif</option>
                                     <option value="tidak aktif">Nonaktif</option>
@@ -61,12 +61,12 @@
 
                             <div class="mb-4">
                                 <label for="edit_deskripsi" class="block text-sm font-medium">Deskripsi</label>
-                                <textarea name="deskripsi" id="edit_deskripsi" rows="5"
+                                <textarea name="deskripsi_menu" id="edit_deskripsi" rows="5"
                                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
                             </div>
                             <div class="mb-4">
                                 <label for="edit_gambar" class="block text-sm font-medium">Gambar Promo</label>
-                                <input type="file" name="gambar" id="edit_gambar"
+                                <input type="file" name="gambar_menu" id="edit_gambar"
                                     class="mt-1 block w-full border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                                     accept="image/*" />
                             </div>

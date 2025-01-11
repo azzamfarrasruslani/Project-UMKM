@@ -24,6 +24,16 @@
                             class="text-slate-600 opacity-75 hover:opacity-100 after:content-['/'] after:p-2">Hero
                         </a> @yield('title')
                     </li>
+                    </li>
+                @elseif (Route::currentRouteName() == 'promo.edit')
+                    <li class="text-sm capitalize leading-normal text-slate-700 before:text-gray-DEFAULT-400">
+                        <a href="{{ route('dashboard') }}"
+                            class="text-slate-600 opacity-75 hover:opacity-100 after:content-['/'] after:p-2"> <i
+                                class="fa-solid fa-house text-slate-600 hover:opacity-100"></i> </a>
+                        <a href="{{ route('promo.index') }}"
+                            class="text-slate-600 opacity-75 hover:opacity-100 after:content-['/'] after:p-2">Promo
+                        </a> @yield('title')
+                    </li>
                 @elseif (Route::currentRouteName() == 'tentangKami.edit')
                     <li class="text-sm capitalize leading-normal text-slate-700 before:text-gray-DEFAULT-400">
                         <a href="{{ route('dashboard') }}"

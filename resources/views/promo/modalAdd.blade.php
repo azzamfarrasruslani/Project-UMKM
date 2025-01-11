@@ -25,10 +25,10 @@
                                 <!-- Diskon -->
                                 <div>
                                     <label for="diskon" class="block text-sm font-medium">Diskon (%)</label>
-                                    <input type="number" name="diskon" id="diskon"
+                                    <input type="number" name="deskripsi_promo" id="deskripsi_promo"
                                         class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                                        value="{{ old('diskon') }}" step="0.01" min="0" max="100" />
-                                    @error('diskon')
+                                        value="{{ old('deskripsi_promo') }}" step="0.01" min="0" max="100" />
+                                    @error('deskripsi_promo')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>
@@ -59,19 +59,19 @@
                                 </div>
                             </div>
                             <div class="mb-4">
-                                <label for="deskripsi" class="block text-sm font-medium">Deskripsi</label>
-                                <textarea name="deskripsi" id="deskripsi" rows="5"
+                                <label for="deskripsi_promo" class="block text-sm font-medium">Deskripsi</label>
+                                <textarea name="deskripsi_promo" id="deskripsi_promo" rows="5"
                                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>{{ old('deskripsi') }}</textarea>
-                                @error('deskripsi')
+                                @error('deskripsi_promo')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="mb-4">
-                                <label for="gambar" class="block text-sm font-medium">Gambar Promo</label>
-                                <input type="file" name="gambar" id="gambar"
+                                <label for="gambar_promo" class="block text-sm font-medium">Gambar Promo</label>
+                                <input type="file" name="gambar_promo" id="gambar_promo"
                                     class="mt-1 block w-full border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                                     accept="image/*" />
-                                @error('gambar')
+                                @error('gambar_promo')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
