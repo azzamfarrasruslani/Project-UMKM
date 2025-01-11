@@ -1,80 +1,87 @@
 <x-guest-layout>
     @section('title', 'Menu')
 
-    <!-- Section Menu -->
-<section id="menu" class="menu-section py-8 px-6 min-h-screen bg-gray-100">
-    <!-- Header Menu -->
-    <div class="flex flex-row justify-between mb-8 mx-5 mt-20">
-        <h2 class="text-start text-4xl font-extrabold font-notoSans text-red-600">Menu Kami</h2>
-        <div class="ml-10 flex">
-            <button id="swiper-button-prev" class="border border-solid border-red-500 py-2 px-4 rounded-lg hover:bg-red-500 hover:text-white transition duration-300">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button id="swiper-button-next" class="border border-solid border-red-500 py-2 px-4 rounded-lg ml-2 hover:bg-red-500 hover:text-white transition duration-300">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </div>
-    </div>
+    <section class="flex flex-col  mt-40  w-full tracking-tight max-md:max-w-full " aria-labelledby="delivery-menu-title">
 
-    <!-- Menu Content -->
-    @if (!empty($menu) && !is_array($menu))
-        <div class="swiper-container">
-            <div id="kandangTabContent" class="swiper-wrapper">
-                @foreach ($menu as $index => $item)
-                    <div class="swiper-slide bg-white shadow-lg rounded-xl mb-5 transition-transform transform hover:scale-105">
-                        <a href="/delivery/detail/N/{{ $item->id_menu }}" class="block">
-                            <div class="relative">
-                                <img src="{{ Storage::url($item->gambar_menu) }}" alt="{{ $item->nama_menu }}"
-                                    class="w-full h-64 object-cover rounded-t-xl">
-                                <div class="absolute inset-0 bg-black opacity-20 hover:opacity-0 transition duration-300"></div>
-                            </div>
-                            <div class="text-center mt-2 p-4">
-                                <h3 class="font-bold text-xl text-gray-800">{{ $item->nama_menu }}</h3>
-                                <p class="text-gray-600">{{ $item->status_menu }}</p>
-                                <p class="font-bold text-lg text-red-600">Rp. {{ number_format($item->harga_menu, 2, ',', '.') }}</p>
-                            </div>
-                        </a>
-                    </div>
+        <!-- Header Section -->
+        <div class="relative bg-black text-white">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 z-0">
+                <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="Background Pattern"
+                    class="w-full h-full object-cover opacity-30" />
+            </div>
+            <!-- Content -->
+            <div class="relative flex flex-col px-10 py-12 max-w-screen-xl mx-auto max-md:px-5 z-10">
+                <p class="text-xl font-light leading-5">Ayam Geprek Keysia</p>
+                <h1 id="delivery-menu-title" class="mt-1 text-6xl font-bold leading-[60px] text-white max-md:text-4xl">
+                    MENU KAMI
+                </h1>
+            </div>
+        </div>
+
+
+        <!-- Navigation Section -->
+        <nav class="flex flex-coltext-center text-neutral-800 text-xs leading-5 mt-10 whitespace-nowrap max-md:mt-10">
+            <div class="flex flex-wrap justify-center gap-5 px-5 mx-auto max-w-[950px]">
+                @foreach ([['#recommended', '추천메뉴', 'https://cdn.builder.io/api/v1/image/assets/TEMP/ff3f83445d266905934e371c45e917394285a4330cdd2aa70cd4f63e8bc899d4'], ['#chicken', '치킨&세트', 'https://cdn.builder.io/api/v1/image/assets/TEMP/3da48486f65dd7ac10976b81fcf2feb155cf6917f863bb84e341767ae29295cb'], ['#burger', '버거&세트', 'https://cdn.builder.io/api/v1/image/assets/TEMP/330496e3983dbb13c81d0dfc889b5a5d0b2fbd2ce585bc2a73af9bd86d32464f'], ['#snacks', '스낵&사이드', 'https://cdn.builder.io/api/v1/image/assets/TEMP/7d279a76c2749a8e13a0583dec4e776316b90fa41711d276db35d1789918889e'], ['#drinks', '음료', 'https://cdn.builder.io/api/v1/image/assets/TEMP/5b876dcc9eb515b17d9cfe761b01b34b55b59079d42857fbdd9dd6ad4bfa8d23']] as $menu)
+                    <a href="{{ $menu[0] }}"
+                        class="flex flex-col items-center p-4 text-red-700 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-red-600">
+                        <img loading="lazy" src="{{ $menu[2] }}" class="object-contain aspect-square w-[81px]"
+                            alt="{{ $menu[1] }}" />
+                        <div class="mt-1.5">{{ $menu[1] }}</div>
+                    </a>
                 @endforeach
             </div>
+        </nav>
 
-            <!-- Navigation Buttons -->
-            <div class="swiper-button-prev" id="swiper-button-prev"></div>
-            <div class="swiper-button-next" id="swiper-button-next"></div>
-        </div>
-    @else
-        <p class="text-gray-600 text-center mt-10">Tidak ada data yang tersedia.</p>
-    @endif
-</section>
+        <!-- Recommended Menu Section -->
+        <section id="recommended" class="flex flex-col px-5 mt-15 max-w-[1280px] mx-auto"
+            aria-labelledby="recommended-menu">
+            <h2 id="recommended-menu" class="text-2xl font-bold text-neutral-800 mb-5">추천 메뉴</h2>
+            <div class="flex flex-wrap justify-between gap-5">
+                @foreach ([['https://cdn.builder.io/api/v1/image/assets/TEMP/73904e44428fbafbb1782c2fad1ca113e058337ed55bf5389cdde1171212a065', '켄치밥징거타워팩', 'Zinger Tower Pack dengan Kentang dan Nasi', '₩9,000'], ['https://cdn.builder.io/api/v1/image/assets/TEMP/d681376f6022daf1271aec545f4b2f5beee9ff7358b85899048dd3d00b23edc4', '갓양념켄치밥징거팩', 'Zinger Pack dengan Saus Spesial', '₩8,500'], ['https://cdn.builder.io/api/v1/image/assets/TEMP/b49b3c0a0b21facbba517b7c80b7648a879d4ec5bd691114cd2a25c9d96a0ea5', '데리야끼켄치밥징거팩', 'Zinger Pack dengan Teriyaki', '₩8,000'], ['https://cdn.builder.io/api/v1/image/assets/TEMP/9f8ebd306aeb6f258f4b37ca7244408321f9d24ade6ab78c6447d1a7a12c3beb', '꿀조합파티팩', 'Party Pack dengan Kombinasi Madu', '₩12,000']] as $menu)
+                    <article class="flex flex-col w-full sm:w-[23%] border rounded-lg shadow-md overflow-hidden">
+                        <img loading="lazy" src="{{ $menu[0] }}" class="object-contain w-full aspect-[1.51]"
+                            alt="{{ $menu[1] }}" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-neutral-800">{{ $menu[1] }}</h3>
+                            <p class="text-sm text-neutral-600 mt-2">{{ $menu[2] }}</p>
+                            <p class="text-lg font-semibold text-red-700 mt-2">{{ $menu[3] }}</p>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </section>
+        <section id="chicken" class="flex flex-col px-5 mt-10 max-w-[1280px] mx-auto"
+            aria-labelledby="recommended-menu">
+            <h2 id="recommended-menu" class="text-2xl font-bold text-neutral-800 mb-5">추천 메뉴</h2>
+            <div class="flex flex-wrap justify-between gap-5">
+                @foreach ([['https://cdn.builder.io/api/v1/image/assets/TEMP/73904e44428fbafbb1782c2fad1ca113e058337ed55bf5389cdde1171212a065', '켄치밥징거타워팩', 'Zinger Tower Pack dengan Kentang dan Nasi', '₩9,000'], ['https://cdn.builder.io/api/v1/image/assets/TEMP/d681376f6022daf1271aec545f4b2f5beee9ff7358b85899048dd3d00b23edc4', '갓양념켄치밥징거팩', 'Zinger Pack dengan Saus Spesial', '₩8,500'], ['https://cdn.builder.io/api/v1/image/assets/TEMP/b49b3c0a0b21facbba517b7c80b7648a879d4ec5bd691114cd2a25c9d96a0ea5', '데리야끼켄치밥징거팩', 'Zinger Pack dengan Teriyaki', '₩8,000'], ['https://cdn.builder.io/api/v1/image/assets/TEMP/9f8ebd306aeb6f258f4b37ca7244408321f9d24ade6ab78c6447d1a7a12c3beb', '꿀조합파티팩', 'Party Pack dengan Kombinasi Madu', '₩12,000']] as $menu)
+                    <article class="flex flex-col w-full sm:w-[23%] border rounded-lg shadow-md overflow-hidden">
+                        <img loading="lazy" src="{{ $menu[0] }}" class="object-contain w-full aspect-[1.51]"
+                            alt="{{ $menu[1] }}" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-neutral-800">{{ $menu[1] }}</h3>
+                            <p class="text-sm text-neutral-600 mt-2">{{ $menu[2] }}</p>
+                            <p class="text-lg font-semibold text-red-700 mt-2">{{ $menu[3] }}</p>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </section>
+    </section>
 
-
-
-
-<!-- Swiper.js -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1, // Default untuk semua ukuran
-        spaceBetween: 10, // Default jarak antar card
-        navigation: {
-            nextEl: '#swiper-button-next',
-            prevEl: '#swiper-button-prev',
-        },
-        breakpoints: {
-            641: { // Ukuran 641 ke atas
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            1024: { // Ukuran 1024 ke atas
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-        },
-        touchEventsTarget: 'container',
-        simulateTouch: true,
-        grabCursor: true,
-    });
-</script>
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
 </x-guest-layout>
