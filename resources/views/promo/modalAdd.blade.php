@@ -25,7 +25,7 @@
                                 <!-- Diskon -->
                                 <div>
                                     <label for="diskon" class="block text-sm font-medium">Diskon (%)</label>
-                                    <input type="number" name="deskripsi_promo" id="deskripsi_promo"
+                                    <input type="number" name="diskon_promo" id="diskon_promo"
                                         class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                                         value="{{ old('deskripsi_promo') }}" step="0.01" min="0" max="100" />
                                     @error('deskripsi_promo')
