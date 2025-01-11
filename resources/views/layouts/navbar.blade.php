@@ -1,5 +1,5 @@
 <!-- Container Navbar -->
-<div class="w-full sticky top-0 z-sticky">
+<div class="w-full fixed top-0 z-sticky">
     <div class="flex flex-wrap">
         <div class="w-full">
             <!-- Navbar -->
@@ -24,34 +24,39 @@
 
                     <div navbar-menu
                         class="items-center flex-grow transition-all duration-500 lg-max:overflow-hidden ease lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
-                        <ul
-                            class="flex flex-col pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto lg:space-x-7 ">
+                        <ul class="flex flex-col pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto lg:space-x-7">
                             <li>
-                                <a class="relative flex items-center text-xl text-customBlack-50 hover:text-customRed-50  px-4 py-2 mr-2 font-extrabold font-notoSans transition-all ease-in-out lg-max:opacity-0 duration-250 lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:before:w-full hover:before:scale-x-100"
-                                    aria-current="page" href="{{ route('home') }}">
+                                <a class="relative flex items-center text-xl font-extrabold font-notoSans transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('home') ? 'text-customRed-50 before:w-full' : 'text-customBlack-50' }}"
+                                    href="{{ route('home') }}">
                                     Beranda
                                 </a>
                             </li>
                             <li>
-                                <a class="relative flex items-center text-xl text-customBlack-50 hover:text-customRed-50 px-4 py-2 mr-2 font-extrabold transition-all ease-in-out lg-max:opacity-0 duration-250 lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:before:w-full hover:before:scale-x-100"
-                                    aria-current="page" href="{{ route('tentangKami.indexHome')}}">
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('tentangKami.indexHome') ? 'text-customRed-50 before:w-full' : 'text-customBlack-50' }}"
+                                    href="{{ route('tentangKami.indexHome') }}">
                                     Tentang Kami
                                 </a>
                             </li>
                             <li>
-                                <a class="relative flex items-center text-xl text-customBlack-50 hover:text-customRed-50  px-4 py-2 mr-2 font-extrabold transition-all ease-in-out lg-max:opacity-0 duration-250 lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:before:w-full hover:before:scale-x-100"
-                                    aria-current="page" href="{{ route('menu.indexHome')}}">
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('menu.indexHome') ? 'text-customRed-50 before:w-full' : 'text-customBlack-50' }}"
+                                    href="{{ route('menu.indexHome') }}">
                                     Menu
                                 </a>
                             </li>
                             <li>
-                                <a class="relative flex items-center text-xl text-customBlack-50 hover:text-customRed-50 px-4 py-2 mr-2 font-extrabold transition-all ease-in-out lg-max:opacity-0 duration-250 lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:before:w-full hover:before:scale-x-100"
-                                    aria-current="page" href="#menu">
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->is('#menu') ? 'text-customRed-50 before:w-full' : 'text-customBlack-50' }}"
+                                    href="#menu">
                                     Promo
                                 </a>
                             </li>
-
+                            <li>
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->is('#menu') ? 'text-customRed-50 before:w-full' : 'text-customBlack-50' }}"
+                                    href="#menu">
+                                    Outlets
+                                </a>
+                            </li>
                         </ul>
+
                         <li class="flex items-center pr-5">
                             {{-- <a class="leading-pro bg-red-500 text-white text-sm  tracking-tight-rem bg-150 bg-x-25 rounded-3.5xl hover:border-red-500 hover:-translate-y-px hover:text-red-500 active:hover:-translate-y-px active:hover:text-red-500 active:shadow-xs mr-2 mb-0 inline-block cursor-pointer border border-solid py-2 px-8 text-center align-middle font-extrabold capitalize shadow-none transition-all hover:bg-transparent hover:opacity-75 hover:shadow-none active:scale-100 active:text-white active:hover:bg-transparent active:hover:opacity-75 active:hover:shadow-none"
                                 href="{{ 'login' }}">

@@ -1,45 +1,13 @@
 @section('title', 'Home')
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<x-guest-layout>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="">
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/LogoAyamGeprek.png') }}">
-    <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <!-- Animation on Scroll css -->
-    <link href="{{ asset('build/assets/libs/aos/aos.css') }}" rel="stylesheet" type="text/css">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Open+Sans:300,400,600,700|Baloo+Thambi+2|Barlow+Semi+Condensed:ital,wght@1,100|Montserrat:wght@200;300;500;700|Poppins:wght@100;200;300;500;700|Roboto:wght@300|Noto+Sans+JP:wght@100&display=swap"
-        rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/c23fedd423.js" crossorigin="anonymous"></script>
-    <!-- Scripts -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-</head>
-
-<body class="font-sans antialiased dark:bg-black dark:text-white/50 ">
-    {{-- Link ke WA --}}
-    <a href=""
-        class="fixed px-4 py-2 text-xl bg-white shadow-lg cursor-pointer bottom-8 right-8 z-990 rounded-circle text-green-500 transition-transform duration-300 ease-in-out hover:scale-105">
-        <i class="py-6 pointer-events-none fa-brands fa-whatsapp fa-2xl"></i>
-    </a>
     {{-- Layout Utama --}}
-    <div class="bg-customWhite-300 text-black/50 dark:bg-black dark:text-white/50">
-        @include('layouts.navbar')
+    <div class="text-black/50 dark:bg-black dark:text-white/50">
         <main class="transition-all duration-200 ease-in-out">
             <!-- Main Visual Section -->
 
-            <section class="main_visual relative h-auto overflow-hidden mt-20">
+            <section class="main_visual relative h-auto overflow-hidden mt-20 mb-50">
                 <div class="swiper-container1 visSwiper relative">
                     @if (!empty($hero) && $hero->count() > 0)
                         <!-- Wrapper -->
@@ -94,7 +62,7 @@
                 });
             </script>
             {{-- Card --}}
-            <section class="mb-20">
+            {{-- <section class="mb-20">
                 <div class="max-w-full lg:px-10 w-full flex-none top-0 left-0 right-0">
                     <div
                         class="relative flex flex-col min-w-0 break-words border-0 border-transparent dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
@@ -140,29 +108,31 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
 
 
 
-            <section id="outlet">
+            <section id="outlet" class="mb-50">
                 <div class="mx-2 lg:mx-30 py-16 bg-Outlet-bg bg-red-700 bg-cover bg-no-repeat rounded-3xl mb-10">
                     <div class="container mx-auto px-6">
                         <div class="flex flex-wrap mx-6">
                             <!-- Left Column -->
                             <div class="w-full lg:w-1/2 px-6 flex flex-col justify-center text-white">
-                                <h1 class="text-yellow-400 text-4xl font-extrabold">Ayam Geprek</h1>
-                                <h1 class="text-5xl text-white font-bold">Keysia</h1>
-                                <h1 class="text-yellow-400 text-4xl font-bold">Outlets</h1>
+                                <h1 class="text-yellowCustom-50 text-3xl md:text-6xl font-extrabold">Ayam Geprek</h1>
+                                <h1 class="text-2xl md:text-4xl text-white font-bold">Keysia</h1>
+                                <h1 class="text-yellowCustom-50 text-2xl md:text-4xl font-bold">Outlets</h1>
                                 <div class="my-4">
                                     <p>
-                                        Menyebarkan kebahagiaan di sekitar kota dengan 3 cabang Ayam Geprek Keysia dan
-                                        terus berkembang! Bergabunglah dalam perjalanan penuh cita rasa bersama kami!
+                                        Menyebarkan kebahagiaan di sekitar kota dengan 3 cabang Ayam Geprek Keysia
+                                        dan
+                                        terus berkembang! Bergabunglah dalam perjalanan penuh cita rasa bersama
+                                        kami!
                                     </p>
                                 </div>
-                                <a href="/about-us/#outlet"
+                                {{-- <a href="/about-us/#outlet"
                                     class="inline-block bg-yellow-500 text-white font-semibold py-3 px-4 rounded-lg hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                                     <i class="fa-solid fa-store mr-3"></i>Lihat Outlets Kami
-                                </a>
+                                </a> --}}
                             </div>
                             <!-- Right Column -->
                             <div data-aos="zoom-in" class="w-full lg:w-1/2 px-6 flex justify-center">
@@ -266,16 +236,124 @@
                     });
                 });
             </script>
-    </div>
-    </main>
-    <!-- Script untuk AOS -->
-    <script src="{{ asset('build/assets/libs/aos/aos.js') }}"></script>
-    <script>
-        // Animation on Scroll (Plugin)
-        AOS.init();
-    </script>
-    @include('layouts.footer')
-    </div>
-</body>
 
-</html>
+
+            <section id="onlineOrder" class="relative bg-customRed-50 py-12 mb-30">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 z-0">
+                    <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="Background Pattern"
+                        class="w-full h-full object-cover opacity-20" />
+                </div>
+
+                <!-- Content -->
+                <div class="relative z-10 container mx-auto px-6">
+                    <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+                        <!-- Left Content -->
+                        <div class="text-center md:text-left md:w-1/2">
+                            <h2 class="text-white text-2xl md:text-3xl font-bold mb-4">
+                                PESAN AYAM GEPREK KEYSIA
+                            </h2>
+
+                            <img data-aos="zoom-in-down" src="{{ asset('assets/images/grabfood-logo.png') }}" alt="GrabFood Logo"
+                                class="w-32 md:w-40 mx-auto md:mx-0" />
+
+                            <button class="mt-6 bg-black text-white py-2 px-6 rounded hover:bg-gray-800">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
+                            <div class="relative">
+                                <img data-aos="zoom-in-down" src="{{ asset('assets/images/PhoneMockup.png') }}" alt="Phone Mockup"
+                                    class=" w-100 md:w-135 " />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+
+            <section id="reviewSection" class="py-12">
+                <div class="flex flex-col justify-center text-center px-4">
+                    <h2 class="text-yellow-500 text-3xl font-bold mb-4">Our Happy Customers</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, dolore?
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+                        <!-- Card 1 -->
+                        <div class="bg-customRed-50 text-white p-6 rounded-2xl shadow-md relative">
+                            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                                <div
+                                    class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">
+                                    <span class="text-yellow-400 text-5xl mt-5">“</span>
+                                </div>
+                            </div>
+                            <p class="text-center mt-6 mb-4">
+                                "Lorem ipsum dolor sit amet consectetur. Suspendisse aliquet tellus
+                                adipiscing condimentum donec blandit."
+                            </p>
+                            <div class="text-center">
+                                <p class="font-bold">John</p>
+                                <p class="text-sm">Business Man</p>
+                                <div class="mt-2">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-customRed-50 text-white p-6 rounded-2xl  shadow-md relative">
+                            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                                <div
+                                    class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">
+                                    <span class="text-yellow-400 text-5xl mt-5">“</span>
+                                </div>
+                            </div>
+                            <p class="text-center mt-6 mb-4">
+                                "Lorem ipsum dolor sit amet consectetur. Suspendisse aliquet tellus
+                                adipiscing condimentum donec blandit."
+                            </p>
+                            <div class="text-center">
+                                <p class="font-bold">John</p>
+                                <p class="text-sm">Business Man</p>
+                                <div class="mt-2">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-customRed-50 text-white p-6 rounded-2xl  shadow-md relative">
+                            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                                <div
+                                    class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">
+                                    <span class="text-yellow-400 text-5xl mt-5">“</span>
+                                </div>
+                            </div>
+                            <p class="text-center mt-6 mb-4">
+                                "Lorem ipsum dolor sit amet consectetur. Suspendisse aliquet tellus
+                                adipiscing condimentum donec blandit."
+                            </p>
+                            <div class="text-center">
+                                <p class="font-bold">John</p>
+                                <p class="text-sm">Business Man</p>
+                                <div class="mt-2">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+        </main>
+    </div>
+</x-guest-layout>
