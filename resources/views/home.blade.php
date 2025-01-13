@@ -110,7 +110,7 @@
                 </div>
             </section> --}}
             <!-- Section Menu -->
-            <section id="menu" class="menu-section py-8 px-6 min-h-screen">
+            <section id="menu" class="menu-section py-8   min-h-screen px-20">
                 <!-- Header Menu -->
                 <div class="flex flex-row justify-between mb-8 mx-5 mt-20">
                     <h2 class="text-start text-4xl font-extrabold font-notoSans text-red-600">Menu Kami</h2>
@@ -322,7 +322,7 @@
                 <!-- Background Pattern -->
                 <div class="absolute inset-0 z-0">
                     <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="Background Pattern"
-                        class="w-full h-full object-cover opacity-20" />
+                        class="w-full h-full object-cover opacity-30" />
                 </div>
 
                 <!-- Content -->

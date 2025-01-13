@@ -1,7 +1,19 @@
 <x-guest-layout>
     @section('title', 'Menu')
 
-    <section class="flex flex-col  mt-40  w-full tracking-tight max-md:max-w-full " aria-labelledby="delivery-menu-title">
+    <section class="flex flex-col  mt-30  w-full tracking-tight max-md:max-w-full " aria-labelledby="delivery-menu-title">
+        {{-- <nav class="sm:block px-10">
+            <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
+                <!-- Icon Home yang mengarah ke dashboard.index -->
+                <!-- Link ke Data Kandang jika berada di halaman detail kandang -->
+                <li class="text-xl  capitalize leading-normal text-slate-700 before:text-gray-DEFAULT-400">
+                    <a href="{{ route('home') }}"
+                        class="text-slate-700 opacity-75 hover:opacity-100 after:content-['/'] after:p-2"> Home </a>
+                    @yield('title')
+                </li>
+            </ol>
+
+        </nav> --}}
 
         <!-- Header Section -->
         <div class="relative bg-black text-white">
@@ -12,7 +24,19 @@
             </div>
             <!-- Content -->
             <div class="relative flex flex-col px-10 py-12 max-w-screen-xl mx-auto max-md:px-5 z-10">
-                <p class="text-xl font-light leading-5">Ayam Geprek Keysia</p>
+                <nav class="mb-2">
+                    <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
+                        <!-- Icon Home yang mengarah ke dashboard.index -->
+                        <!-- Link ke Data Kandang jika berada di halaman detail kandang -->
+                        <li class="text-lg  capitalize leading-normal text-white before:text-gray-DEFAULT-400">
+                            <a href="{{ route('home') }}"
+                                class="text-white opacity-75 hover:opacity-100 after:content-['/'] after:p-2"> Home </a>
+                            @yield('title')
+                        </li>
+                    </ol>
+
+                </nav>
+                {{-- <p class="text-xl font-light leading-5">Ayam Geprek Keysia</p> --}}
                 <h1 id="delivery-menu-title" class="mt-1 text-6xl font-bold leading-[60px] text-white max-md:text-4xl">
                     MENU KAMI
                 </h1>
