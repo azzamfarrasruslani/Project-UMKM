@@ -21,8 +21,10 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/c23fedd423.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
@@ -35,7 +37,7 @@
     </a>
     {{-- Layout Utama --}}
 
-    <main class="transition-all duration-200 ease-in-out">
+    <main class="transition-all duration-200 ease-in-out bg-neutral-100">
         <!-- Main Visual Section -->
 
         @include('layouts.navbar')
@@ -45,7 +47,7 @@
 
 
 
-
+        @include('layouts.footer')
     </main>
 
     <!-- Script untuk AOS -->
@@ -56,7 +58,7 @@
             // once: true // Animasi hanya berjalan sekali per elemen
         });
     </script>
-    @include('layouts.footer')
+
     </div>
     <script src="{{ 'build/assets/js/plugins/perfect-scrollbar.min.js' }}"></script>
 

@@ -69,6 +69,7 @@ module.exports = {
                 DEFAULT: colors.black,
                 50: "#2C251E",
                 100: "#202329",
+                200: "#231F20",
             },
 
             customWhite: {
