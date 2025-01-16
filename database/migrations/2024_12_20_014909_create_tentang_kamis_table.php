@@ -11,8 +11,12 @@ return new class extends Migration
         Schema::create('tentang_kami', function (Blueprint $table) {
             $table->id('id_tK');
             $table->string('judul_tK');
-            $table->text('deskripsi_tK');
-            $table->string('gambar_tK')->nullable();
+            $table->text('sejarah_singkat');
+            $table->text('visi');
+            $table->text('misi');
+            $table->string('gambar_tK1')->nullable();
+            $table->string('gambar_tK2')->nullable();
+            $table->string('gambar_tK3')->nullable();
             $table->timestamps();
         });
     }
