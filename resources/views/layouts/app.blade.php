@@ -9,7 +9,10 @@
     <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.jpg') }}">
 
     <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
-     
+
+    {{-- Tampilan --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <!-- Fonts & Icon -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
