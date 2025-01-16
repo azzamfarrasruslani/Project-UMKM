@@ -32,10 +32,10 @@
 
 
 
-    <section class="p-10 mt-30" aria-labelledby="sejarah-heading">
+    <section data-aos="fade-up" class="p-10 mt-30" aria-labelledby="sejarah-heading">
         <div class="flex flex-col lg:flex-row items-center lg:items-start">
             <!-- Foto bagian kiri -->
-            <div class="flex items-center lg:items-end lg:w-1/2 relative gap-10 mt-10">
+            <div   class="flex items-center lg:items-end lg:w-1/2 relative gap-10 mt-10">
                 <div
                     class="px-[22px] pt-[22.50px] pb-[72px] origin-top-left rotate-[-15deg] bg-gradient-to-b from-white to-[#e9e9e9] shadow-sm flex-col justify-start items-start inline-flex">
                     <img class="w-full h-[202.5px] md:h-[405px] object-cover"

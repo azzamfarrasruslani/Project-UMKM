@@ -106,89 +106,89 @@
         </div>
     </footer> --}}
 
-    {{-- <footer class="flex flex-col gap-6 py-14 pr-40 pl-40 w-full bg-stone-800 max-md:px-5 max-md:max-w-full"
+    <footer class="flex flex-col gap-6 py-14 px-40 w-full bg-stone-800 max-md:px-5 max-md:max-w-full"
         role="contentinfo" aria-label="Footer">
-        <div class="flex gap-5 justify-between items-start pr-20 pb-6 max-w-full w-[1600px] max-md:pr-5">
-            <div class="flex flex-col">
-                <div class="flex overflow-hidden flex-col max-w-full w-[108px]">
-                    <div class="flex overflow-hidden flex-col justify-center items-center w-full min-h-[108px]">
-                        <img loading="lazy"
-                            src="{{ asset('assets/images/Logo  Keysia Hitam Putih.svg') }}"
-                            class="object-contain w-full aspect-square" alt="Pizza Hut Logo" />
-                    </div>
+    <div class="flex flex-wrap gap-5 justify-between items-start pr-20 pb-6 max-w-full w-[1600px] max-md:pr-5">
+        <div class="flex flex-col w-full md:w-auto">
+            <div class="flex overflow-hidden flex-col max-w-full w-[108px] mx-auto md:mx-0">
+                <div class="flex overflow-hidden flex-col justify-center items-center w-full min-h-[108px]">
+                    <img loading="lazy"
+                        src="{{ asset('assets/images/Logo  Keysia Hitam Putih.svg') }}"
+                        class="object-contain w-full aspect-square" alt="Pizza Hut Logo" />
                 </div>
-                <nav class="flex gap-5 mt-11 max-md:mt-10" aria-label="Social Media Links">
-                    <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Facebook">
-                        <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                            <img loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e74afb0b9578b56a59621270fc1911d6ae5fd589e62fe5a8f899ac47de6a5cb3?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                                class="object-contain w-full aspect-square" alt="" />
-                        </div>
-                    </a>
-                    <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Twitter">
-                        <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                            <img loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/643992c6ebcfbde3bada7cf1d8ac35996eca6474059397c2581b8460d6d32a9e?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                                class="object-contain w-full aspect-square" alt="" />
-                        </div>
-                    </a>
-                    <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Instagram">
-                        <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                            <img loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddc8212827513d600db4bff4b199e7a9352f3e1be190b04f54b58d066f0e9e0c?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                                class="object-contain w-full aspect-square" alt="" />
-                        </div>
-                    </a>
-                    <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="YouTube">
-                        <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                            <img loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b5cd32c0219e46a0d9e6936e9b8499d88b886bb163d991d8aa7a0e8cd1af07c?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                                class="object-contain w-full aspect-square" alt="" />
-                        </div>
-                    </a>
-                    <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="LinkedIn">
-                        <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                            <img loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e98826f059166c41293cf5141c3de6ef2991de7ba8d5f0c6fc4003f64167af75?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                                class="object-contain w-full aspect-square" alt="" />
-                        </div>
-                    </a>
-                </nav>
             </div>
-            <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white"
-                aria-label="General Links">
-                <h2 class="text-2xl leading-10 text-white">General</h2>
-                <a href="#"
-                    class="mt-11 hover:underline focus:outline-none focus:ring-2 focus:ring-white max-md:mt-10">FAQ</a>
-                <a href="#" class="mt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Live
-                    Chat</a>
-                <a href="#"
-                    class="self-stretch mt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Contact
-                    Us</a>
-            </nav>
-            <nav class="flex flex-col items-start mt-3.5 text-base font-medium leading-6 text-white"
-                aria-label="About Us Links">
-                <h2 class="text-xl leading-10 text-white">About Us</h2>
-                <a href="#"
-                    class="mt-11 hover:underline focus:outline-none focus:ring-2 focus:ring-white max-md:mt-10">Brand
-                    Story</a>
-                <a href="#"
-                    class="self-stretch mt-6 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Pizza Hut
-                    Indonesia Story</a>
-            </nav>
-            <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white"
-                aria-label="Policy Links">
-                <h2 class="text-2xl leading-10 text-white">Policy</h2>
-                <a href="#"
-                    class="self-stretch mt-10 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Terms &
-                    Conditions</a>
-                <a href="#" class="mt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Privacy
-                    Policy</a>
+            <nav class="flex gap-5 mt-11 max-md:mt-10 justify-center md:justify-start" aria-label="Social Media Links">
+                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Facebook">
+                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e74afb0b9578b56a59621270fc1911d6ae5fd589e62fe5a8f899ac47de6a5cb3?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
+                            class="object-contain w-full aspect-square" alt="" />
+                    </div>
+                </a>
+                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Twitter">
+                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/643992c6ebcfbde3bada7cf1d8ac35996eca6474059397c2581b8460d6d32a9e?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
+                            class="object-contain w-full aspect-square" alt="" />
+                    </div>
+                </a>
+                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Instagram">
+                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddc8212827513d600db4bff4b199e7a9352f3e1be190b04f54b58d066f0e9e0c?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
+                            class="object-contain w-full aspect-square" alt="" />
+                    </div>
+                </a>
+                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="YouTube">
+                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b5cd32c0219e46a0d9e6936e9b8499d88b886bb163d991d8aa7a0e8cd1af07c?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
+                            class="object-contain w-full aspect-square" alt="" />
+                    </div>
+                </a>
+                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="LinkedIn">
+                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e98826f059166c41293cf5141c3de6ef2991de7ba8d5f0c6fc4003f64167af75?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
+                            class="object-contain w-full aspect-square" alt="" />
+                    </div>
+                </a>
             </nav>
         </div>
-        <div class="mt-6 text-sm font-medium leading-5 text-gray-500" role="contentinfo">
-            © Pizza Hut Indonesia 2025. All Rights Reserved.
-        </div>
-    </footer> --}}
+        <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white w-full md:w-auto"
+            aria-label="General Links">
+            <h2 class="text-2xl leading-10 text-white">General</h2>
+            <a href="#"
+                class="mt-11 hover:underline focus:outline-none focus:ring-2 focus:ring-white max-md:mt-10">FAQ</a>
+            <a href="#" class="mt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Live
+                Chat</a>
+            <a href="#"
+                class="self-stretch mt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Contact
+                Us</a>
+        </nav>
+        <nav class="flex flex-col items-start mt-3.5 text-base font-medium leading-6 text-white w-full md:w-auto"
+            aria-label="About Us Links">
+            <h2 class="text-xl leading-10 text-white">About Us</h2>
+            <a href="#"
+                class="mt-11 hover:underline focus:outline-none focus:ring-2 focus:ring-white max-md:mt-10">Brand
+                Story</a>
+            <a href="#"
+                class="self-stretch mt-6 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Pizza Hut
+                Indonesia Story</a>
+        </nav>
+        <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white w-full md:w-auto"
+            aria-label="Policy Links">
+            <h2 class="text-2xl leading-10 text-white">Policy</h2>
+            <a href="#"
+                class="self-stretch mt-10 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Terms &
+                Conditions</a>
+            <a href="#" class="mt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Privacy
+                Policy</a>
+        </nav>
+    </div>
+    <div class="mt-6 text-sm font-medium leading-5 text-gray-500 text-center md:text-left" role="contentinfo">
+        © Pizza Hut Indonesia 2025. All Rights Reserved.
+    </div>
+</footer>
 
 </div>
