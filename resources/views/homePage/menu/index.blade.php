@@ -28,16 +28,18 @@
         </div>
 
         <!-- Navigation Section -->
-        <nav class="sticky top-24 flex flex-col text-center text-neutral-800 text-xl leading-5 mt-10 whitespace-nowrap max-md:mt-10 mb-5 border-b-2 border-solid border-neutral-300 bg-neutral-100 z-10">
+        <nav class="sticky top-20 flex flex-col text-center text-neutral-800 text-xl leading-5 mt-10 whitespace-nowrap max-md:mt-10 mb-5 border-b-2 border-solid border-neutral-300 bg-neutral-100 z-10">
             <div class="flex flex-wrap justify-center gap-5 px-5 mx-auto max-w-[950px]">
-                @foreach ([['#paket-komplit', 'Paket Komplit'], ['#makanan', 'Makanan'], ['#minuman', 'Minuman']] as $menu)
+                @foreach ([['#paket-komplit', 'PAKET KOMPLIT'], ['#makanan', 'MAKANAN'], ['#minuman', 'MINUMAN']] as $menu)
                     <a href="{{ $menu[0] }}"
-                        class="nav-link flex items-center px-4 py-2 font-extrabold text-black hover:text-customRed-50 focus:outline-none">
+                        class="nav-link flex items-center mt-5 px-4 py-2 font-extrabold hover:opacity-100 focus:outline-none active:border-b-red-500">
                         {{ $menu[1] }}
                     </a>
                 @endforeach
             </div>
         </nav>
+
+
 
 
         <!-- Recommended Menu Section -->
@@ -94,55 +96,57 @@
         </section>
     </section>
 
-    <!-- Smooth Scroll Script -->
     <script>
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                const offset = 135; // Sesuaikan jarak offset di sini
-                const targetPosition = target.offsetTop - offset;
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const offset = 135; // Sesuaikan jarak offset di sini
+        const targetPosition = target.offsetTop - offset;
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth',
-                });
-
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                });
-                this.classList.add('active');
-            });
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
         });
 
-        // Menambahkan active class pada link navigasi saat scroll
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const offset = 150; // Tambahkan offset untuk mendeteksi active class
-            const scrollPos = window.scrollY + offset;
-
-            sections.forEach(section => {
-                if (
-                    scrollPos >= section.offsetTop &&
-                    scrollPos < section.offsetTop + section.offsetHeight
-                ) {
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                    });
-                    const activeLink = document.querySelector(
-                        `nav a[href="#${section.id}"]`
-                    );
-                    if (activeLink) activeLink.classList.add('active');
-                }
-            });
+        // Hapus kelas aktif dari semua link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('text-black', 'border-b-2', 'border-red-500');
+            link.classList.add('text-opacity-50'); // Kembalikan opacity untuk semua link
         });
+
+        // Tambahkan kelas aktif pada link yang dipilih
+        this.classList.add('text-black', 'border-b-2', 'border-red-500');
+        this.classList.remove('text-opacity-50'); // Hapus opacity untuk link aktif
+    });
+});
+
+// Menambahkan active class pada link navigasi saat scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const offset = 150; // Tambahkan offset untuk mendeteksi active class
+    const scrollPos = window.scrollY + offset;
+
+    sections.forEach(section => {
+        if (
+            scrollPos >= section.offsetTop &&
+            scrollPos < section.offsetTop + section.offsetHeight
+        ) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-black', 'border-b-2', 'border-red-500');
+                link.classList.add('text-opacity-50'); // Kembalikan opacity untuk semua link
+            });
+            const activeLink = document.querySelector(
+                `nav a[href="#${section.id}"]`
+            );
+            if (activeLink) {
+                activeLink.classList.add('text-black', 'border-b-2', 'border-red-500');
+                activeLink.classList.remove('text-opacity-50'); // Hapus opacity untuk link aktif
+            }
+        }
+    });
+});
+
     </script>
 
-
-
-    <style>
-        .nav-link.active {
-            border-bottom: 2px solid red;
-        }
-    </style>
 </x-guest-layout>
