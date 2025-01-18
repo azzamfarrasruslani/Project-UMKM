@@ -16,7 +16,6 @@ return new class extends Migration
             $table->text('misi');
             $table->string('gambar_tK1')->nullable();
             $table->string('gambar_tK2')->nullable();
-            $table->string('gambar_tK3')->nullable();
             $table->timestamps();
         });
     }

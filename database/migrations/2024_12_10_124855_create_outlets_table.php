@@ -21,6 +21,8 @@ return new class extends Migration
             $table->date('tanggal_berdiri');
             $table->enum('status_outlet', ['aktif', 'non-aktif'])->default('aktif');
             $table->text('iframe_map')->nullable();
+            $table->text('link_pesan_online')->nullable();
+            $table->text('gambar_pesan_online')->nullable();
             $table->timestamps();
         });
     }
