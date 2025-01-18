@@ -24,6 +24,8 @@
     <!--Swiper.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <!-- CKeditor -->
+     <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

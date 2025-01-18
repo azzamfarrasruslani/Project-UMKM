@@ -28,7 +28,7 @@
         </div>
 
         <!-- Navigation Section -->
-        <nav class="sticky top-20 flex flex-col text-center text-neutral-800 text-xl leading-5 mt-10 whitespace-nowrap max-md:mt-10 mb-5 border-b-2 border-solid border-neutral-300 bg-neutral-100 z-10">
+        <nav class="sticky top-20 flex flex-col text-center text-neutral-800 text-lg leading-5 mt-10 whitespace-nowrap max-md:mt-10 mb-5 border-b-2 border-solid border-neutral-300 bg-neutral-100 z-10">
             <div class="flex flex-wrap justify-center gap-5 px-5 mx-auto max-w-[950px]">
                 @foreach ([['#paket-komplit', 'PAKET KOMPLIT'], ['#makanan', 'MAKANAN'], ['#minuman', 'MINUMAN']] as $menu)
                     <a href="{{ $menu[0] }}"

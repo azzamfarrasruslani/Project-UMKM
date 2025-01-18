@@ -187,7 +187,7 @@
         </nav>
     </div>
     <div class="mt-6 text-sm font-medium leading-5 text-gray-500 text-center md:text-left" role="contentinfo">
-        © Pizza Hut Indonesia 2025. All Rights Reserved.
+        © Ayam Geprek Keyisa 2025. All Rights Reserved.
     </div>
 </footer>
 

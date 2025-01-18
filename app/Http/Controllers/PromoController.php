@@ -14,6 +14,11 @@ class PromoController extends Controller
         return view('promo.index', compact('promo'));
     }
 
+    public function indexHome() {
+        $promo = Promo::all();
+        return view('homePage.promo.index', compact('promo'));
+    }
+
     public function create()
     {
         return view('promo.create');

@@ -50,7 +50,7 @@
             </div>
 
             <!-- Tulisan bagian kanan -->
-            <div class="lg:w-1/2 mt-10 lg:mt-0 lg:ml-10 text-center lg:text-left">
+            <div data-aos="fade-right" class="lg:w-1/2 mt-10 lg:mt-0 lg:ml-10 text-center lg:text-left">
                 <h1 id="sejarah-heading" class="text-4xl md:text-5xl font-bold text-yellowCustom-50">
                     Sejarah Singkat
                 </h1>
@@ -72,7 +72,7 @@
 
 
 
-    <section aria-labelledby="visi-misi-heading" class="mt-36 max-md:mt-10 mx-10 mb-10">
+    <section aria-labelledby="visi-misi-heading" class="mt-30 max-md:mt-10 mx-10 mb-10">
         <h2 id="visi-misi-heading"
             class="self-center text-5xl font-bold leading-none text-center text-yellowCustom-50 max-md:text-4xl">Visi &
             Misi

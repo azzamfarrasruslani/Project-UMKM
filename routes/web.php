@@ -32,6 +32,11 @@ Route::resource('promo', PromoController::class)
     ->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
 
+Route::controller(PromoController::class)->group(function () {
+    Route::get('home/promo', 'indexHome')->name('promo.indexHome');
+});
+
+
 
 // Menu
 Route::resource('menu', MenuController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
@@ -43,8 +48,8 @@ Route::controller(MenuController::class)->group(function () {
 
 
 // Outlet
-Route::resource('outlet', OutletController::class)->only(['index','create','store','edit','destroy','update', 'show'])
-->middleware(['auth','verified']);
+Route::resource('outlet', OutletController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update', 'show'])
+    ->middleware(['auth', 'verified']);
 
 Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
     ->name('outlet.detail')
@@ -54,19 +59,24 @@ Route::get('/outlet/{id_outlet}/updateStatus', [OutletController::class, 'update
     ->name('outlet.updateStatus')
     ->middleware(['auth', 'verified']);
 
+Route::controller(OutletController::class)->group(function () {
+    Route::get('home/outlet', 'indexHome')->name('outlet.indexHome');
+});
+
+
 
 // Blog
-Route::resource('blog', BlogController::class)->only(['index','create','store','edit','destroy','update'])
-->middleware(['auth','verified']);
+Route::resource('blog', BlogController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
 
 // Hero
-Route::resource('hero', HeroController::class)->only(['index','create','store','edit','destroy','update'])
-->middleware(['auth','verified']);
+Route::resource('hero', HeroController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
 
 
 // Tentang Kami
-Route::resource('tentangKami', TentangKamiController::class)->only(['index','indexHome','create','store','edit','destroy','update'])
-->middleware(['auth','verified']);
+Route::resource('tentangKami', TentangKamiController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
 
 Route::controller(TentangKamiController::class)->group(function () {
     Route::get('home/tentangKami', 'indexHome')->name('tentangKami.indexHome');
