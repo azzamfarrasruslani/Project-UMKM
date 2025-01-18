@@ -8,12 +8,24 @@ module.exports = {
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
+        "./src/**/*.{html,js}",
+        "./node_modules/preline/dist/*.js",
     ],
     darkMode: "class",
     theme: {
         extend: {
             backgroundImage: {
                 "custom-bg1": "url('/assets/images/login-bg.svg')", // Gunakan path relatif dari root public
+                "Outlet-bg": "url('@images/OutletBG.png')",
+            },
+            animation: {
+                scroll: "scroll 10s linear infinite",
+            },
+            keyframes: {
+                scroll: {
+                    "0%": { transform: "translateX(100%)" },
+                    "100%": { transform: "translateX(-100%)" },
+                },
             },
         },
         screens: {
@@ -57,7 +69,7 @@ module.exports = {
                 DEFAULT: colors.black,
                 50: "#2C251E",
                 100: "#202329",
-               
+                200: "#231F20",
             },
 
             customWhite: {
@@ -66,6 +78,14 @@ module.exports = {
                 100: "#FDF5DF",
                 200: "#F9FBE7",
                 300: "#F6F6F6",
+            },
+
+            customRed: {
+                DEFAULT: colors.red,
+                50: "#B4201B",
+                100: "#961916",
+                200: "#E4002B",
+                100: "#961916",
             },
 
             gray: {
@@ -184,6 +204,11 @@ module.exports = {
                 700: "#a16207",
                 800: "#854d0e",
                 900: "#713f12",
+            },
+
+            yellowCustom: {
+                DEFAULT: colors.yellow,
+                50: "#FCC725",
             },
 
             lime: {
@@ -781,13 +806,11 @@ module.exports = {
                 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
                 "serif",
             ],
-            averia: ["Averia Serif Libre", "serif"],
-            baloo: ["Baloo Thambi 2", "cursive"],
-            barlow: ["Barlow Semi Condensed", "sans-serif"],
+            mali: ["Mali", "cursive"],
+            mochiy: ["Mochiy Pop P One", "sans-serif"],
             montserrat: ["Montserrat", "sans-serif"],
+            outfit: ["Outfit", "sans-serif"],
             poppins: ["Poppins", "sans-serif"],
-            roboto: ["Roboto", "sans-serif"],
-            notoSans: ['Noto+Sans+JP'],
             body: ["Roboto", "sans-serif"],
             awesome: ["FontAwesome"],
             sans: ["Figtree", ...defaultTheme.fontFamily.sans],

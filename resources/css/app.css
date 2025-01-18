@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'preline/dist/preline.css';
+/* @layer utilities {
+    @import 'preline/dist/preline.css';
+} */

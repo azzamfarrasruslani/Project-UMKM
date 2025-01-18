@@ -1,1 +1,1 @@
-<img src="{{ asset('assets/images/logo.jpg') }}" class="w-14" alt="">
+<img src="{{ asset('assets/images/LogoAyamGeprek.png') }}" class="w-14" alt="">

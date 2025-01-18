@@ -1,16 +1,23 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PromoController;
+use App\Http\Controllers\OutletController;
 use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\JobController;
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HeroController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TentangKamiController;
 
-Route::get('/', function () {
-    return view('home');
-});
 
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Dahshboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -21,8 +28,65 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
-->middleware(['auth','verified']);
+
+// Promo
+Route::resource('promo', PromoController::class)
+    ->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
+
+Route::controller(PromoController::class)->group(function () {
+    Route::get('home/promo', 'indexHome')->name('promo.indexHome');
+});
+
+
+
+// Menu
+Route::resource('menu', MenuController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
+
+Route::controller(MenuController::class)->group(function () {
+    Route::get('home/menu', 'indexHome')->name('menu.indexHome');
+});
+
+
+// Outlet
+Route::resource('outlet', OutletController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update', 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::get('/outlet/{id_outlet}/detail', [OutletController::class, 'detail'])
+    ->name('outlet.detail')
+    ->middleware(['auth', 'verified']);
+
+Route::get('/outlet/{id_outlet}/updateStatus', [OutletController::class, 'updateStatus'])
+    ->name('outlet.updateStatus')
+    ->middleware(['auth', 'verified']);
+
+Route::controller(OutletController::class)->group(function () {
+    Route::get('home/outlet', 'indexHome')->name('outlet.indexHome');
+});
+
+
+
+// Blog
+Route::resource('blog', BlogController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
+
+// Hero
+Route::resource('hero', HeroController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
+
+
+// Tentang Kami
+Route::resource('tentangKami', TentangKamiController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
+    ->middleware(['auth', 'verified']);
+
+Route::controller(TentangKamiController::class)->group(function () {
+    Route::get('home/tentangKami', 'indexHome')->name('tentangKami.indexHome');
+});
+
+
+
+
 
 Route::resource('job', JobController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
