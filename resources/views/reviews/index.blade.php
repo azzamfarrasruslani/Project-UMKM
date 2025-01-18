@@ -28,7 +28,7 @@
                     </div>
                     <!-- Pekerjaan Reviewer -->
                     <div class="text-sm text-gray-200 mb-4">
-                        {{ $review->pekerjaan ?? 'User' }}
+                    {{ $review->occupation ?? 'Status tidak tersedia' }}
                     </div>
                     <!-- Menampilkan Rating dengan Bintang -->
                     <div class="flex justify-center mb-4">
