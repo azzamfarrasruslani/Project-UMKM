@@ -5,11 +5,11 @@
 
 ## 1.1 Tujuan
 
-Dokumen Software Requirement Specification (SRS) merupakan dokumen spesifikasi perangkat lunak untuk membangun “Website profil Ayam Geprek Keysia”. Dokumen ini dibangun untuk membuat website profil yang informatif, menarik dan mudah digunakan. Membantu pelanggan dalam mengakses informasi seputar Ayam Geprek Keysia. Menyediakan fitur utama yang mendukung promosi produk, seperti menu, informasi perusahaan, lokasi, kontak dan testimoni dari pelanggan. Sehingga dokumen ini dapat dijadikan acuan teknis untuk membangun perangkat lunak “WEBSITE PROFIL AYAM GEPREK KEYSIA”.
+Dokumen Software Requirement Specification (SRS) merupakan dokumen spesifikasi perangkat lunak untuk membangun “Website profil Ayam Geprek Keysia”. Dokumen ini dibangun untuk membuat website profil yang informatif, menarik dan mudah digunakan. Membantu pelanggan dalam mengakses informasi seputar Ayam Geprek Keysia. Menyediakan fitur utama yang mendukung promosi produk, seperti menu, informasi perusahaan, outlets, kontak dan testimoni dari pelanggan. Sehingga dokumen ini dapat dijadikan acuan teknis untuk membangun perangkat lunak “WEBSITE PROFIL AYAM GEPREK KEYSIA”.
 
 
 ## 1.2 Lingkup
-Website Profil Ayam Geprek Keysia adalah sistem informasi berbasis web yang dibangun untuk mempermudah pelanggan dalam mengakses informasi tentang menu, profil perusahaan, lokasi, kontak, dan testimoni pelanggan. Website ini dirancang untuk mendukung promosi produk Ayam Geprek Keysia dengan tampilan yang informatif, menarik, dan mudah digunakan.
+Website Profil Ayam Geprek Keysia adalah sistem informasi berbasis web yang dibangun untuk mempermudah pelanggan dalam mengakses informasi tentang menu, profil perusahaan, outlets, kontak, dan testimoni pelanggan. Website ini dirancang untuk mendukung promosi produk Ayam Geprek Keysia dengan tampilan yang informatif, menarik, dan mudah digunakan.
 
 ## 1.3 Akronim, singkatan, definisi
 | Istilah | Definisi |
@@ -49,7 +49,7 @@ Berikut ini fungsi admin yaitu:
 - Input tentang kami
 - Input menu
 - Input promo
-- Input lokasi
+- Input outlets
 - Input kontak
 - Input blog
 - Input karir
@@ -119,7 +119,7 @@ tidak ada
 | ------ | ------ |
 |   Login  | Digunakan untuk mengakses aplikasi    |
 |    Input Data    |    Digunakan untuk memasukkan data-data    |
-| Logout |  Digunakan untuk kembali ke halaman sebelumnya |
+| Logout |  Digunakan untuk keluar dari aplikasi |
 | Hapus | Digunakan untuk menghapus data|
 | Edit       |   Digunakan untuk mengubah data     |
 | View      |   Digunakan untuk menampilkan data     |
