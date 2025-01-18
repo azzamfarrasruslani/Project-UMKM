@@ -206,7 +206,8 @@ Deskripsi Langkah- langkah:
 3. Admin mengisi atau mengubah data seperti nama menu, deskripsi, kategori, harga, gambar, dan status menu.
 4. Sistem akan menyimpan ke database.
 5. Sistem memberikan konfirmasi setelah data berhasil disimpan.
-Xref: Bagian 3.2.3,data tentang B3AM
+   
+Xref: Bagian 3.2.4, Input Data Menu
 
 **2.2.5 Admin Input Data Outlet**
 
@@ -224,7 +225,7 @@ Deskripsi Langkah- langkah:
 4. Sistem akan menyimpan ke database.
 5. Sistem memberikan konfirmasi setelah data berhasil disimpan atau dimodifikasi.
 
-Xref: Bagian 3.2.3,data contact B3AM
+Xref: Bagian 3.2.5, Input Data Outlet
 
 **2.2.6 Admin Input Data Kontak**
 
@@ -242,7 +243,7 @@ Deskripsi Langkah- langkah:
 4. Sistem akan menyimpan ke database.
 5. Sistem memberikan konfirmasi setelah data berhasil disimpan atau dimodifikasi.
 
-Xref: Bagian 3.2.3,data team B3AM
+Xref: Bagian 3.2.6, Input Data Kontak
 
 **2.2.7 Admin Input Data Blog**
 
@@ -260,7 +261,7 @@ Deskripsi Langkah- langkah:
 4. Sistem akan menyimpan ke database.
 5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau peringatan.
 
-Xref: Bagian 3.2.3,data team B3AM
+Xref: Bagian 3.2.7, Input Data Blog
 
 **2.2.8 Admin Input Data Karir**
 
@@ -278,7 +279,7 @@ Deskripsi Langkah- langkah:
 4. Sistem akan menyimpan ke database.
 5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau peringatan jika ada kesalahan.
 
-Xref: Bagian 3.2.3,data team B3AM
+Xref: Bagian 3.2.8, Input Data Karir
 
 **2.2.9 Admin Input data Hero Section**
 
@@ -296,7 +297,7 @@ Deskripsi Langkah- langkah:
 4. Sistem akan menyimpan ke database.
 5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau menampilkan peringatan jika ada kesalahan.
 
-Xref: Bagian 3.2.3,data team B3AM
+Xref: Bagian 3.2.9,  Input data Hero Section
 
 **2.2.10 Admin Input data Pesan Saran**
 
@@ -313,7 +314,7 @@ Deskripsi Langkah- langkah:
 3. Sistem akan menyimpan ke database.
 4. Setelah data tersimpan, sistem memberikan konfirmasi atau peringatan.
 
-Xref: Bagian 3.2.3,data team B3AM
+Xref: Bagian 3.2.10, Input data Pesan Saran
 
 **2.2.11 pengunjung Mengunjungi website**
 
@@ -330,7 +331,7 @@ Deskripsi Langkah-Langkah
 2. pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia 
 3. pengunjung dapat mengklik tombol kembali ke halaman sebelumnya jika ingin keluar pada halaman konten yang telah dilihat.
 
-Xref: Bagian 3.2.7, Login pengunjung
+Xref: Bagian 3.2.11, pengunjung Mengunjungi website
 
 **2.2.12 pengunjung Menginputkan Pesan Saran**
 
@@ -347,7 +348,7 @@ Deskripsi Langkah-Langkah
 2. pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia 
 3. pengunjung dapat mengklik tombol kembali ke halaman sebelumnya jika ingin keluar pada halaman konten yang telah dilihat.
 
-Xref: Bagian 3.2.7, Login pengunjung
+Xref: Bagian 3.2.12, inputkan Pesan Saran
 
 ## 2.3 Spesifikasi kebutuhan non-fungsional
 - tabel kebutuhan non-fungsional
