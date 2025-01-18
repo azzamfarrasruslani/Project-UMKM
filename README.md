@@ -244,20 +244,21 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data team B3AM
 
-**2.2.7 Admin Input data team B3AM**
+**2.2.7 Admin Input data blog**
 
-Use Case: Input data team B3AM
+Use Case: Input data blogteam B3AM
 
 Diagram:![alt text](Images/Ablog.png?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Sistem ini memungkinkan Admin untuk mengelola data blog dengan fitur menambah, mengubah, menghapus, atau melihat data blog. Data blog meliputi judul, konten, gambar, dan status blog.
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data team B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+1. Sistem menampilkan halaman utama untuk pengelolaan data blog.
+2. Admin dapat memilih untuk: menambah blog baru, mengedit blog yang sudah ada, menghapus blog tertentu, melihat daftar blog yang tersedia.
+3. Admin mengisi atau memodifikasi informasi blog, seperti judul, konten, gambar, dan status.
+4. Sistem akan menyimpan ke database.
+5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau peringatan.
 
 Xref: Bagian 3.2.3,data team B3AM
 
