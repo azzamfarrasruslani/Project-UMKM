@@ -208,20 +208,21 @@ Deskripsi Langkah- langkah:
 5. Sistem memberikan konfirmasi setelah data berhasil disimpan.
 Xref: Bagian 3.2.3,data tentang B3AM
 
-**2.2.5 Admin Input data contact B3AM**
+**2.2.5 Admin Input data Outlet**
 
-Use Case: Input data contact B3AM 
+Use Case: Mengelola Data Outlet
 
 Diagram:![alt text](Images/Aoutlet.png?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data contact B3AM dan Admin mengInput data contact B3AM.
+Sistem dapat menampilkan halaman untuk mengelola data outlet. Admin dapat menambah, melihat, mengubah, atau menghapus informasi tentang outlet
 Deskripsi Langkah- langkah:
 1. Sistem akan menampilkan tampilan data contact B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data contact B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+2. Admin dapat memilih untuk Menambahkan outlet baru,Mengedit informasi outlet, Menghapus data outlet yang sudah tidak relevan.
+3. Admin mengisi atau memperbarui data seperti nama outlet, alamat, jumlah karyawan, tanggal berdiri, status outlet, iframe map, link pesan online, dan gambar pesan online.
+4. Sistem akan menyimpan ke database.
+5. Sistem memberikan konfirmasi setelah data berhasil disimpan atau dimodifikasi.
 
 Xref: Bagian 3.2.3,data contact B3AM
 
