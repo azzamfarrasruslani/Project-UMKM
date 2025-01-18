@@ -1,0 +1,18 @@
+/* CSS untuk lingkaran border */
+.circle-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%; /* Sesuaikan ukuran lingkaran */
+    height: 120%;
+    border: 5px solid white; /* Warna dan ketebalan border */
+    border-radius: 50%; /* Membuat elemen berbentuk lingkaran */
+    z-index: 0; /* Pastikan lingkaran di belakang konten */
+}
+
+/* Pastikan elemen lainnya di dalam card memiliki z-index lebih tinggi */
+.relative > *:not(.circle-border) {
+    position: relative;
+    z-index: 1;
+}

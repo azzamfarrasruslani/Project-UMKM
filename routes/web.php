@@ -13,6 +13,8 @@ use App\Http\Controllers\HeroController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TentangKamiController;
 
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\ReviewController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -89,6 +91,9 @@ Route::controller(TentangKamiController::class)->group(function () {
 
 
 Route::resource('job', KarirController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
+Route::resource('reviews', ReviewController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
 // Route untuk Google login
