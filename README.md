@@ -191,21 +191,21 @@ Deskripsi promo, Syarat dan ketentuan, Tanggal mulai, Tanggal berakhir, Gambar p
 
 Xref: Bagian 3.2.3, Input data Dokumentasi kegiatan
 
-**2.2.4 Admin Input data tentang B3AM**
+**2.2.4 Admin input data menu**
 
-Use Case: Input data tentang B3AM
+Use Case: Mengelola data menu
 
 Diagram:![alt text](Images/Amenu.png?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data tentang B3AM dan Admin mengInput data tentang B3AM.
+Sistem dapat menampilkan halaman untuk mengelola data menu, di mana admin dapat menambah, melihat, mengubah, atau menghapus data menu.
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data tentang B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data tentang B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
-
+1. Sistem akan menampilkan daftar menu yang sudah ada.
+2. Admin dapat memilih untuk Menambahkan menu baru, Mengedit informasi menu, Menghapus menu yang tidak diperlukan
+3. Admin mengisi atau mengubah data seperti nama menu, deskripsi, kategori, harga, gambar, dan status menu.
+4. Sistem akan menyimpan ke database.
+5. Sistem memberikan konfirmasi setelah data berhasil disimpan.
 Xref: Bagian 3.2.3,data tentang B3AM
 
 **2.2.5 Admin Input data contact B3AM**
