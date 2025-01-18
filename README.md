@@ -64,7 +64,10 @@ Berikut ini fungsi admin yaitu:
 Website Ayam Geprek Keysia adalah sebuah sistem informasi yang diaplikasikan pada platform web. Terdapat dua jenis aktor, yaitu admin dan pengunjung. Admin bertanggung jawab untuk mengelola data, seperti menu dan informasi promosi, sedangkan pengunjung hanya dapat melihat informasi yang disediakan di website.
 
 **2.1.1 Antarmuka Sistem**
+
+
 ![alt text](Images/antarmuka.png?raw=true)
+
 
 Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung. Admin memiliki fungsi untuk mengelola data, seperti menu dan informasi promosi, sementara pengunjung dapat melihat informasi yang tersedia dan memberikan komentar pada bagian yang disediakan.
 
