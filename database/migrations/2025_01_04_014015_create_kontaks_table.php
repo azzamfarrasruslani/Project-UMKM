@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('kontak', function (Blueprint $table) {
             $table->id('id_kontak');
             $table->string('social_media');
-            $table->string('link');
+            $table->text('link');
             $table->timestamps();
         });
     }

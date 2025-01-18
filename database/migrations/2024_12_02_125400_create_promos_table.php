@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id('id_promo');
             $table->string('judul'); // Judul promo
             $table->text('deskripsi_promo'); // Deskripsi promo
-            $table->decimal('diskon_promo', 5, 2)->nullable(); // Diskon dalam persen
             $table->decimal('syarat_ketentuan', 5, 2)->nullable(); // Diskon dalam persen
             $table->date('tanggal_mulai'); // Tanggal mulai promo
             $table->date('tanggal_akhir'); // Tanggal akhir promo

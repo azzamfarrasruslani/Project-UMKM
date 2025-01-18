@@ -21,7 +21,6 @@ return new class extends Migration
             $table->decimal('gaji', 15, 2)->nullable(); // Kolom gaji (dapat null)
             $table->text('benefit')->nullable(); // Kolom benefit tambahan
             $table->enum('status', ['aktif', 'non-aktif'])->default('aktif'); // Kolom status dengan enum
-            $table->string('gambar')->nullable(); // Kolom gambar (opsional)
             $table->timestamps(); // Kolom created_at dan updated_at
         });
     }

@@ -13,16 +13,15 @@ return new class extends Migration
     {
         Schema::create('outlet', function (Blueprint $table) {
             $table->id('id_outlet');
-            $table->string('kode_outlet')->unique();
             $table->string('nama_outlet')->index();
-            $table->string('lokasi_outlet');
+            $table->string('alamat_outlet');
+            $table->integer('jumlah_karyawan');
             $table->string('no_hp')->unique();
-            $table->string('email_outlet')->nullable();
             $table->date('tanggal_berdiri');
             $table->enum('status_outlet', ['aktif', 'non-aktif'])->default('aktif');
             $table->text('iframe_map')->nullable();
             $table->text('link_pesan_online')->nullable();
-            $table->text('gambar_pesan_online')->nullable();
+            $table->string('gambar_pesan_online')->nullable();
             $table->timestamps();
         });
     }
