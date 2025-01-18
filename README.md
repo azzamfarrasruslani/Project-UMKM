@@ -191,9 +191,9 @@ Deskripsi promo, Syarat dan ketentuan, Tanggal mulai, Tanggal berakhir, Gambar p
 
 Xref: Bagian 3.2.3, Input data Dokumentasi kegiatan
 
-**2.2.4 Admin input data menu**
+**2.2.4 Admin input Data Menu**
 
-Use Case: Mengelola data menu
+Use Case: Mengelola Data Menu
 
 Diagram:![alt text](Images/Amenu.png?raw=true)
 
@@ -208,7 +208,7 @@ Deskripsi Langkah- langkah:
 5. Sistem memberikan konfirmasi setelah data berhasil disimpan.
 Xref: Bagian 3.2.3,data tentang B3AM
 
-**2.2.5 Admin Input data Outlet**
+**2.2.5 Admin Input Data Outlet**
 
 Use Case: Mengelola Data Outlet
 
@@ -226,9 +226,9 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data contact B3AM
 
-**2.2.6 Admin Input data Kontak**
+**2.2.6 Admin Input Data Kontak**
 
-Use Case: Input data Kontak
+Use Case: Input Data Kontak
 
 Diagram:![alt text](Images/Akontak.png?raw=true)
 
@@ -244,7 +244,7 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data team B3AM
 
-**2.2.7 Admin Input data blog**
+**2.2.7 Admin Input Data Blog**
 
 Use Case: Input data blogteam B3AM
 
@@ -262,9 +262,9 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data team B3AM
 
-**2.2.8 Admin Input data karir**
+**2.2.8 Admin Input Data Karir**
 
-Use Case: Input data karir
+Use Case: Input Data Karir
 
 Diagram:![alt text](Images/Akarir.png?raw=true)
 
@@ -280,9 +280,9 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data team B3AM
 
-**2.2.9 Admin Input data hero section**
+**2.2.9 Admin Input data Hero Section**
 
-Use Case: Input data hero section
+Use Case: Input data Hero Section
 
 Diagram:![alt text](Images/Ahero.png?raw=true)
 
@@ -298,9 +298,9 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data team B3AM
 
-**2.2.10 Admin Input data pesan saran**
+**2.2.10 Admin Input data Pesan Saran**
 
-Use Case: Input data pesan saran
+Use Case: Input data Pesan Saran
 
 Diagram:![alt text](Images/ApesanSaran.png?raw=true)
 
