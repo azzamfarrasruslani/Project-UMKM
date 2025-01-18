@@ -1,12 +1,12 @@
 <?php
 
+use App\Http\Controllers\PesanSaranController;
 use App\Http\Controllers\ProfileController;
 use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ReviewController;
-use App\Http\Controllers\PesanSaranController;
 
 Route::get('/', function () {
     return view('home');
@@ -22,8 +22,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-    Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
-    ->middleware(['auth','verified']);
+Route::resource('menu', MenuController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
 
 Route::resource('job', JobController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
@@ -31,8 +31,11 @@ Route::resource('job', JobController::class)->only(['index','create','store','ed
 Route::resource('reviews', ReviewController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
-Route::resource('pesansaran', PesanSaranController::class)->middleware(['auth', 'verified']);
-Route::get('/dashboard', [PesanSaranController::class, 'index'])->name('dashboard');
+Route::resource('pesansaran', PesanSaranController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
+// Route::resource('pesansaran', PesanSaranController::class)->middleware(['auth', 'verified']);
+// Route::get('/dashboard', [PesanSaranController::class, 'index'])->name('dashboard');
 
 
 // Route untuk Google login

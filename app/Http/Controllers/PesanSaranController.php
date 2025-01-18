@@ -12,8 +12,8 @@ class PesanSaranController extends Controller
      */
     public function index()
     {
-        $pesansarans = PesanSaran::all(); // Mengambil semua data dari tabel 'pesansaran'
-        return view('dashboard', compact('pesansarans')); // Mengirim data ke view
+        $pesansarans = PesanSaran::all();
+        return view('pesansaran.index', compact('pesansarans'));
     }
 
     /**
