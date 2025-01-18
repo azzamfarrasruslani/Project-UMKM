@@ -343,14 +343,14 @@ Use Case: Mengunjungi website
 Diagram:
 ![alt text](Images/Ppesan.png?raw=true)
 
-Deskripsi Singkat 
-pengunjung mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia, pengunjung juga dapat memberikan komentar pada konten parenting yang tersedia 
+Deskripsi Singkat
+Sistem dapat menampilkan halaman kelola pesan saran, di mana pengunjung dapat mengelola data pesan saran.
 
-Deskripsi Langkah-Langkah
-1. Sistem akan menampilkan halaman-halaman konten.
-2. pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia 
-3. pengunjung dapat mengklik tombol kembali ke halaman sebelumnya jika ingin keluar pada halaman konten yang telah dilihat.
-
+Deskripsi Langkah- langkah:
+1. Sistem akan menampilkan daftar pesan saran yang ada.
+2. Pengunjung dapat menambahkan pesan saran.
+3. Sistem akan menyimpan ke database.
+4. Setelah data tersimpan, sistem memberikan konfirmasi atau peringatan.
 Xref: Bagian 3.2.12, inputkan Pesan Saran
 
 ## 2.3 Spesifikasi kebutuhan non-fungsional
@@ -492,82 +492,127 @@ Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database ya
 **Tabel Admin**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
-|Id_Admin|int|Auto-increment dari Id_Admin|
+|id_admin|int|Auto-increment dari Id_Admin|
 |username|varchar|Berisi username admin untuk mengakses sistem|
-|Password|varchar|Berisi password admin untuk mengakses sistem|
-|level|varchar|untuk membedakan level saat login antara admin dan pengunjung|
+|password|varchar|Berisi password admin untuk mengakses sistem|
 
-**Tabel Artikel**
+**Tabel Hero**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
-|id_Artikel|int|Auto-increment dari Id_artikel|
-|gambar|varchar|Berisi gambar didalam artikel sistem|
-|deskripsi|text|Berisi deskripsi artikel sistem|
-|judul|varchar|Berisi judul pada artikel sistem|
-|kategori|varchar|Berisi kategori pada artikel sistem|
+|id_hero|int|Auto-increment dari id_hero|
+|status|varchar|Berisi status didalam Hero |
+|gambar|text|Berisi deskripsi Hero |
+|nama|varchar|Berisi judul pada Hero |
 
-**Tabel Kegiatan**
+**Tabel Tentang_Kami**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
-|id_kegiatan|int|Auto-increment dari Id_kegiatan|
-|gambar|varchar|Berisi gambar didalam kegiatan sistem|
-|deskripsi|text|Berisi deskripsi kegiatan sistem|
-|judul|varchar|Berisi judul pada kegiatan sistem|
-|tanggal|varchar|Berisi tanggal pada kegiatan sistem|
+|id_Tentang_Kami|int|Auto-increment dari id_Tentang_Kami|
+|judul|varchar|Berisi judul didalam Tentang_Kami |
+|sejarah|text|Berisi sejarah Tentang_Kami |
+|misi|text|Berisi misi pada Tentang_Kami |
+|visi|text|Berisi visi Tentang_Kami |
+|gambar|text|Berisi gambar pada Tentang_Kami |
 
-**Tabel about**
+**Tabel Menu**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
-|id_about|int|Auto-increment dari id_about|
-|gambar|varchar|Berisi gambar didalam about sistem|
-|deskripsi|text|Berisi deskripsi about sistem|
+|id_menu|int|Auto-increment dari id_menu|
+|harga|int|Berisi harga didalam menu |
+|gambar|text|Berisi gambar menu |
+|status|varchar|Berisi status pada menu |
+|deskripsi|text|Berisi deskripsi menu |
+|kategori|varchar|Berisi gambar pada menu |
 
-**Tabel contact**
+**Tabel Blog**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
-|id_contact|int|Auto-increment dari id_contact|
-|judul|varchar|Berisi judul pada contact sistem|
-|isi|text|Berisi isi contact sistem|
+|id_blog|int|Auto-increment dari id_blog|
+|gambar|text|Berisi gambar blog |
+|status|varchar|Berisi status pada blog |
+|judul|varchar|Berisi judul blog |
+|konten|text|Berisi konten pada blog |
 
-**Tabel team**
+**Tabel Karir**
 |Data Item|Tipe Data|Deskripsi|
 |--|--|--|
-|id_team|int|Auto-increment dari Id_team|
-|gambar|varchar|Berisi gambar didalam team sistem|
-|nama|text|Berisi nama team sistem|
-|jabatan|varchar|Berisi jabatan pada team sistem|
+|id_karir|int|Auto-increment dari id_karir|
+|tipe_kerja|varchar|Berisi tipe_kerja karir |
+|deskripsi|text|Berisi deskripsi pada karir |
+|kualifikasi|text|Berisi kualifikasi karir |
+|lokasi_kerja|varchar|Berisi lokasi_kerja pada karir |
+|nama|varchar|Berisi nama pada karir |
+|status|varchar|Berisi status pada karir |
+|benefit|text|Berisi benefit pada karir |
+|gaji|int|Berisi gaji pada karir |
+
+**Tabel Testimoni**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_testimoni|int|Auto-increment dari id_testimoni|
+|rating|int|Berisi rating didalam testimoni|
+|pesan|text|Berisi pesan testimoni|
+|nama|varchar|Berisi nama pada testimoni|
+|asal_testimoni|varchar|Berisi asal_testimoni pada testimoni|
+
+**Tabel Outlet**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_outlet|int|Auto-increment dari id_outlet|
+|nama|varchar|Berisi nama didalam outlet|
+|jumlah_karyawan|int|Berisi jumlah_karyawan outlet|
+|map|text|Berisi map pada outlet|
+|link|text|Berisi link pada outlet|
+|gambar|text|Berisi gambar pada outlet|
+|tanggal_berdiri|date|Berisi tanggal_berdiri pada outlet|
+
+**Tabel Kontak**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_kontak|int|Auto-increment dari id_kontak|
+|social_media|varchar|Berisi social_media didalam kontak|
+|no_hp|int|Berisi no_hp kontak|
+|link|text|Berisi link pada kontak|
+
+**Tabel Promo**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_promo|int|Auto-increment dari id_promo|
+|deskripsi|text|Berisi deskripsi promo |
+|judul|varchar|Berisi judul pada promo |
+|syarat|text|Berisi syarat promo |
+|status|varchar|Berisi status pada promo |
+|tanggal_mulai|date|Berisi tanggal_mulai pada promo |
+|tanggal_berakhir|date|Berisi tanggal_berakhir pada promo |
+|gambar|text|Berisi gambar pada promo |
+
+**Tabel Pesan_Saran**
+|Data Item|Tipe Data|Deskripsi|
+|--|--|--|
+|id_pesan_saran|int|Auto-increment dari id_pesan_saran|
+|nama|varchar|Berisi nama didalam pesan_saran|
+|email|varchar|Berisi email pesan_saran|
+|subjek|varchar|Berisi subjek pada pesan_saran|
+|pesan|text|Berisi pesan pada pesan_saran|
 
 
-
-## Pembagian tugas
-BAB 1 ->Nindy
+## Pembagian tugas di Laporan
+BAB 1 -> Sari
 
 BAB 2 
-2.1
-  
-  2.1.1 -> Nindy
-  
-  2.1.2 -> Nindy
-  
-  2.1.3 -> Ariyan
-  
-  2.1.4 -> Ariyan
- 
-  2.1.5 -> Ariyan
-  
-  2.1.6 -> Raditya
-  
-  2.1.7 -> Raditya
-  
-  2.1.8 -> Raditya
-
-2.2 semua poin-poin (nindy)
+2.1  
+  2.1.1 -> Sari  
+  2.1.2 -> Sari  
+  2.1.3 -> Azzam 
+  2.1.4 -> Sari
+  2.1.5 -> Sari 
+  2.1.6 -> Sari 
+  2.1.7 -> Sari 
+  2.1.8 -> Sari
+2.2 semua poin-poin (Dion), gambar umum use case (Sari), gambar use case per poin (Azzam)
 
 BAB 3 
-
-3.1 nindy
-
-3.2 nindy
-
-3.3 Nindy
+3.1 Sari
+3.2 Sari
+3.3 Gambar erd (Sari), tabel dan isian(Dion)
 
