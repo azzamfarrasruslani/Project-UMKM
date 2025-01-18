@@ -64,7 +64,7 @@ Berikut ini fungsi admin yaitu:
 Website Ayam Geprek Keysia adalah sebuah sistem informasi yang diaplikasikan pada platform web. Terdapat dua jenis aktor, yaitu admin dan pengunjung. Admin bertanggung jawab untuk mengelola data, seperti menu dan informasi promosi, sedangkan pengunjung hanya dapat melihat informasi yang disediakan di website.
 
 **2.1.1 Antarmuka Sistem**
-![alt text](Images/revisi1.jpg?raw=true)
+![alt text](Images/antarmuka.png?raw=true)
 
 Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung. Admin memiliki fungsi untuk mengelola data, seperti menu dan informasi promosi, sementara pengunjung dapat melihat informasi yang tersedia dan memberikan komentar pada bagian yang disediakan.
 
@@ -83,11 +83,11 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 **Halaman User**
 |  |  |
 |--|--|
-| ![alt text](revisi/dashboardUser.png) Pada halaman pengunjung terdapat beranda yang berisi tampilan scrolling yang berisi seluruh konten seperti tampilan home, kegiatan, artikel about ,team dan contact.|![alt text](revisi/Kegiatan.png?raw=true) Pada halaman pengunjung terdapat halaman kegiatan yang berisi judul, gambar, tanggal dan deskripsi kegiatan.
+| ![alt text](Images/home.jpg?raw=true) Pada halaman pengunjung terdapat beranda yang berisi tampilan scrolling yang berisi seluruh konten seperti tampilan home, kegiatan, artikel about ,team dan contact.|![alt text](Images/menu.jpg?raw=true) Pada halaman pengunjung terdapat halaman kegiatan yang berisi judul, gambar, tanggal dan deskripsi kegiatan.
 |  |  |
-| ![alt text](revisi/detailKegiatan.png?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Kegiatan, jika pengunjung telah mengklik satu kegiatan yang akan dilihat, maka pada halaman ini akan tampil deskripsi dari kegiatan tersebut.|![alt text](revisi/artikel.png?raw=true) Pada halaman pengunjung terdapat halaman artikel yang berisi cover dan deskripsi singkat mengenai artikel.
+| ![alt text](Images/tentangkami.jpg?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Kegiatan, jika pengunjung telah mengklik satu kegiatan yang akan dilihat, maka pada halaman ini akan tampil deskripsi dari kegiatan tersebut.|![alt text](Images/blog.jpg?raw=true) Pada halaman pengunjung terdapat halaman artikel yang berisi cover dan deskripsi singkat mengenai artikel.
 |  |  |
-| ![alt text](revisi/Detailartikel.png?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Artikel jika pengunjung telah mengklik satu judul yang akan dibaca, maka pada halaman ini akan tampil deskripsi dari artikel tersebut, pada halaman ini pengunjung dapat meninggalkan komentar.|![alt text](revisi/tentang.png?raw=true) Pada halaman pengunjung terdapat halaman about yang berisi informasi website seputar pengelola.
+| ![alt text](Images/outlets.jpg?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Artikel jika pengunjung telah mengklik satu judul yang akan dibaca, maka pada halaman ini akan tampil deskripsi dari artikel tersebut, pada halaman ini pengunjung dapat meninggalkan komentar.|![alt text](Images/karir.jpg?raw=true) Pada halaman pengunjung terdapat halaman about yang berisi informasi website seputar pengelola.
 |  |  |
 | ![alt text](revisi/kontak.png?raw=true) Pada halaman pengunjung terdapat halaman about yang berisi informasi website seputar Alamat dan Contact Person.|![alt text](revisi/team.png?raw=true) Pada halaman pengunjung terdapat halaman team yang berisi team dari dinas pemberdayaan perempuan dan Perlindungan anak masyarakat kota pekanbaru.
 
