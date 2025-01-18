@@ -207,7 +207,7 @@ Xref: Bagian 3.2.3,data tentang B3AM
 
 **2.2.5 Admin Input data contact B3AM**
 
-Use Case: Input data contact B3AM
+Use Case: Input data contact B3AM 
 
 Diagram:![alt text](revisi/revisi4.jpg?raw=true)
 
