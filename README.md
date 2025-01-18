@@ -738,7 +738,7 @@ BAB 3
 
 3.3 Gambar erd (Sari), tabel dan isian(Sari)
 
-## Pembagian tugas di 
+## Pembagian tugas di Website
 -CRUD HomePage, promo, outlet, tetimoni (Azzam Farras Ruslani)
 
 -CRUD menu, karir , PesanSaran (Dion)
