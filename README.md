@@ -28,36 +28,35 @@ Referensi yang digunakan dalam pembuatan website ini adalah:
 
 
 ## 1.5 Overview
-Bab selanjutnya yaitu menjelaskan sistem yang di terapkan pada aplikasi. Menjelaskan gambaran umum dari aplikasi, sistem interface aplikasi dan alur sistemnya. Bab terakhir menjelaskan tentang setiap fungsi yang digunakan secara teknisnya. Pada bab 2 dan 3 merupakan deskripsi dari aplikasi yang akan diterapkan pada aplikasi yang dibuat.
+Bab selanjutnya menjelaskan sistem yang diterapkan pada website. Penjelasan mencakup gambaran umum dari website, antarmuka sistem, dan alur kerja sistem. Bab terakhir menjelaskan secara teknis setiap fungsi utama yang digunakan dalam pengembangan website. Bab 2 dan 3 secara khusus berisi deskripsi detail tentang fitur dan implementasi yang akan diterapkan pada Website Ayam Geprek Keysia.
 
 
 ## BAB II GAMBARAN UMUM
-Ilmu parenting merupakan ilmu yang sangat dibutuhkan para orang tua agar dapat melaksanakan tugas sebagai orang tua dengan baik dan benar, pada zaman era globalisasi perkembangan teknologi begitu sangat pesat, salah satunya ialah perkembangan teknologi di bidang software engineering dimana software engineering dapat digunakan dalam kehidupan sehari - hari .dalam studi kasus project ini kami menganalisis kebutuhan suatu Dinas Perlindungan Anak di Pekanbaru, kasus yang kami peroleh yaitu pembuatan informasi dan edukasi seputar parenting yang bisa diakses dimana saja dan kapan saja oleh para orang tua. Maka dari itu kami merancang Sebuah sistem informasi parenting, platform atau aplikasi yang dirancang untuk membantu orangtua dalam mengelola, mendidik, dan merawat anak-anak mereka. Sistem yang kami buat menyediakan  fitur dan fungsionalitas untuk membantu orangtua dalam mengatasi tugas-tugas sehari-hari yang terkait dengan mengasuh anak-anak mereka. Berikut akan kami jelaskan sistem software kami, pengunjung fungsi utama yaitu:
-
-- View artikel parenting
-- View dokumentasi kegiatan
-- View tentang BP3AM
-- View Contact BP3AM
-- View Team BP3AM
+UMKM adalah singkatan dari Usaha Mikro, Kecil, dan Menengah yang memiliki peran penting dalam perekonomian di Indonesia. Salah satu tantangan utama yang dihadapi UMKM adalah meningkatkan daya saing dan menjangkau pasar yang lebih luas agar usaha mereka dapat dikenal oleh masyarakat secara luas. Ayam Geprek Keysia, sebagai salah satu UMKM yang bergerak di bidang kuliner, memerlukan media promosi serta informasi yang efektif dan efisien untuk meningkatkan daya tarik usahanya di era digital. Website profil perusahaan merupakan salah satu solusi yang dapat memberikan informasi tentang produk dan layanan secara komprehensif. Oleh karena itu, pembuatan website ini diharapkan dapat membantu Ayam Geprek Keysia agar lebih dikenal oleh masyarakat secara luas. Berikut akan kami jelaskan sistem website kami, termasuk fitur dan fungsi utamanya:
+- View tentang kami
+- View menu
+- View promo
+- View lokasi
+- View kontak
 
 Berikut ini fungsi admin yaitu:
 - Login
-- Input artikel parenting
-- Input dokumentasi kegiatan
-- Input data tentang BP3AM
-- Input data contact BP3AM
-- Input data team BP3AM
+- Input tentang kami
+- Input menu
+- Input promo
+- Input lokasi
+- Input kontak
 - Update data
 - Delete data
 - Edit data
 
 ## 2.1 Perspektif produk
-Sistem Informasi Parenting adalah sebuah sistem informasi yang diaplikasikan pada website. Terdapat 2 jenis aktor yaitu admin dan pengunjung. Pengolahan data dilakukan oleh admin pada website dan pengunjung hanya melihat informasi pada website.
+Website Ayam Geprek Keysia adalah sebuah sistem informasi yang diaplikasikan pada platform web. Terdapat dua jenis aktor, yaitu admin dan pengunjung. Admin bertanggung jawab untuk mengelola data, seperti menu dan informasi promosi, sedangkan pengunjung hanya dapat melihat informasi yang disediakan di website.
 
 **2.1.1 Antarmuka Sistem**
 ![alt text](revisi/revisi1.jpg?raw=true)
 
-Sistem Informasi Parenting memiliki 2 pengunjung yaitu admin dan pengunjung. Admin mempunyai fungsi mengelola data informasi dan Pengunjung bisa melihat informasi serta memberikan komentar.
+Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung. Admin memiliki fungsi untuk mengelola data, seperti menu dan informasi promosi, sementara pengunjung dapat melihat informasi yang tersedia dan memberikan komentar pada bagian yang disediakan.
 
 **2.1.2 Antarmuka Pengguna**
 
@@ -85,7 +84,7 @@ Sistem Informasi Parenting memiliki 2 pengunjung yaitu admin dan pengunjung. Adm
 
 **2.1.3 Antarmuka perangkat keras**
 ![alt text](Image/perangkatKeras.png?raw=true)
-Antarmuka perangkat keras yang digunakan untuk mengoperasikan Perangkat Lunak Sistem Parenting antara lain :
+Antarmuka perangkat keras yang digunakan untuk mengoperasikan Website Ayam Geprek Keysia antara lain:
 
 PC / Laptop Untuk menjalankan Aplikasi ini.
 
@@ -95,7 +94,7 @@ tidak ada
 
 **2.1.5 Antarmuka Komunikasi**
 
-Antarmuka komunikasi yang digunakan untuk mengoperasikan Perangkat Lunak Sistem Informasi Parenting antara lain :
+Antarmuka komunikasi yang digunakan untuk mengoperasikan Website Ayam Geprek Keysia antara lain:
 
 - PC
 
