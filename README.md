@@ -98,7 +98,7 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 ![alt text](Image/perangkatKeras.png?raw=true)
 Antarmuka perangkat keras yang digunakan untuk mengoperasikan Website Ayam Geprek Keysia antara lain:
 
-PC / Laptop Untuk menjalankan Aplikasi ini.
+PC / Laptop Untuk menjalankan website ini.
 
 **2.1.4 Antarmuka perangkat lunak**
 
