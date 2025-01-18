@@ -1,4 +1,4 @@
-![alt text](Images/cover.png?raw=true)
+![alt text](Images/Cover.png?raw=true)
 
 ## BAB I Pendahuluan
 
