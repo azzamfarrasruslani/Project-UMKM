@@ -12,6 +12,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TentangKamiController;
+use App\Http\Controllers\KontakController;
 
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ReviewController;
@@ -95,6 +96,10 @@ Route::resource('job', KarirController::class)->only(['index','create','store','
 
 Route::resource('reviews', ReviewController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
+
+Route::resource('kontak', KontakController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
 
 // Route untuk Google login
 // Route::get('auth/google', function () {
