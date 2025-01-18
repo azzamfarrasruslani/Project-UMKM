@@ -134,13 +134,13 @@ tidak ada
 tidak ada
 
 ## 2.2 Spesifikasi kebutuhan fungsional
-![alt text](Image/2.2.png?raw=true)
+![alt text](Images/UseCase.png?raw=true)
 **2.2.1 Admin Login**
 
 Use Case: Login
 
 Diagram:
-![alt text](Image/adminLogin.png?raw=true)
+![alt text](Images/Alogin.png?raw=true)
 
 Deskripsi Singkat 
 Admin melakukan login terlebih dahulu sebelum masuk ke tampilan home admin, apabila gagal login akan muncul pesan alert error login. 
@@ -153,13 +153,13 @@ Deskripsi Langkah-Langkah
 
 Xref: Bagian 3.2.1, Login Admin
 
-**2.2.2 Admin Input Artikel Parenting**
+**2.2.2 Admin Input Tentang kami**
 
 Use Case: Input Artikel Parenting
 
 Diagram:
 
-![alt text](Image/2.2.2.png?raw=true)
+![alt text](Images/Aabout.png?raw=true)
 
 Deskripsi Singkat
 Admin menginputkan kategori parenting lalu menambahkan judul dan deskripsi sesuain kategori.
@@ -177,7 +177,7 @@ Xref: Bagian 3.2.2, Input data Artikel Parenting
 Use Case: Input Dokumentasi kegiatan
 
 Diagram:
-![alt text](Image/2.2.3.png?raw=true)
+![alt text](Images/Apromo.png?raw=true)
 
 Deskripsi Singkat
 Sistem dapat menampilkan halaman input dokumentasi kegiatan dan Admin menginputkan dokumentasi kegiatan.
@@ -194,7 +194,7 @@ Xref: Bagian 3.2.3, Input data Dokumentasi kegiatan
 
 Use Case: Input data tentang B3AM
 
-Diagram:![alt text](revisi/revisi2.jpg?raw=true)
+Diagram:![alt text](Images/Amenu.png?raw=true)
 
 
 Deskripsi Singkat
@@ -211,7 +211,7 @@ Xref: Bagian 3.2.3,data tentang B3AM
 
 Use Case: Input data contact B3AM 
 
-Diagram:![alt text](revisi/revisi4.jpg?raw=true)
+Diagram:![alt text](Images/Aoutlet.png?raw=true)
 
 
 Deskripsi Singkat
@@ -228,7 +228,7 @@ Xref: Bagian 3.2.3,data contact B3AM
 
 Use Case: Input data team B3AM
 
-Diagram:![alt text](revisi/revisi3.jpg?raw=true)
+Diagram:![alt text](Images/Akontak.png?raw=true)
 
 
 Deskripsi Singkat
@@ -241,13 +241,97 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data team B3AM
 
+**2.2.7 Admin Input data team B3AM**
 
-**2.2.7 pengunjung Mengunjungi website**
+Use Case: Input data team B3AM
+
+Diagram:![alt text](Images/Ablog.png?raw=true)
+
+
+Deskripsi Singkat
+Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Deskripsi Langkah- langkah:
+1. Sistem akan menampilkan tampilan data team B3AM.
+2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
+3. Sistem akan menyimpan ke database.
+4. sudah disimpan sistem akan menampilkan peringatan.
+
+Xref: Bagian 3.2.3,data team B3AM
+
+**2.2.8 Admin Input data team B3AM**
+
+Use Case: Input data team B3AM
+
+Diagram:![alt text](Images/Akarir.png?raw=true)
+
+
+Deskripsi Singkat
+Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Deskripsi Langkah- langkah:
+1. Sistem akan menampilkan tampilan data team B3AM.
+2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
+3. Sistem akan menyimpan ke database.
+4. sudah disimpan sistem akan menampilkan peringatan.
+
+Xref: Bagian 3.2.3,data team B3AM
+
+**2.2.9 Admin Input data team B3AM**
+
+Use Case: Input data team B3AM
+
+Diagram:![alt text](Images/Ahero.png?raw=true)
+
+
+Deskripsi Singkat
+Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Deskripsi Langkah- langkah:
+1. Sistem akan menampilkan tampilan data team B3AM.
+2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
+3. Sistem akan menyimpan ke database.
+4. sudah disimpan sistem akan menampilkan peringatan.
+
+Xref: Bagian 3.2.3,data team B3AM
+
+**2.2.10 Admin Input data team B3AM**
+
+Use Case: Input data team B3AM
+
+Diagram:![alt text](Images/ApesanSaran.png?raw=true)
+
+
+Deskripsi Singkat
+Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Deskripsi Langkah- langkah:
+1. Sistem akan menampilkan tampilan data team B3AM.
+2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
+3. Sistem akan menyimpan ke database.
+4. sudah disimpan sistem akan menampilkan peringatan.
+
+Xref: Bagian 3.2.3,data team B3AM
+
+**2.2.11 pengunjung Mengunjungi website**
 
 Use Case: Mengunjungi website
 
 Diagram:
-![alt text](Image/pengunjungMengunjungiWeb.png?raw=true)
+![alt text](Images/Pengunjung.png?raw=true)
+
+Deskripsi Singkat 
+pengunjung mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia, pengunjung juga dapat memberikan komentar pada konten parenting yang tersedia 
+
+Deskripsi Langkah-Langkah
+1. Sistem akan menampilkan halaman-halaman konten.
+2. pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia 
+3. pengunjung dapat mengklik tombol kembali ke halaman sebelumnya jika ingin keluar pada halaman konten yang telah dilihat.
+
+Xref: Bagian 3.2.7, Login pengunjung
+
+**2.2.12 pengunjung Menginputkan Pesan Saran**
+
+Use Case: Mengunjungi website
+
+Diagram:
+![alt text](Images/PpesanSaran.png?raw=true)
 
 Deskripsi Singkat 
 pengunjung mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia, pengunjung juga dapat memberikan komentar pada konten parenting yang tersedia 
