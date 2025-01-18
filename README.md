@@ -155,20 +155,20 @@ Xref: Bagian 3.2.1, Login Admin
 
 **2.2.2 Admin Input Tentang kami**
 
-Use Case: Input Artikel Parenting
+Use Case: Mengelola Halaman Tentang Kami
 
 Diagram:
 
 ![alt text](Images/Aabout.png?raw=true)
 
 Deskripsi Singkat
-Admin menginputkan kategori parenting lalu menambahkan judul dan deskripsi sesuain kategori.
+Admin mengelola informasi pada halaman "Tentang Kami" termasuk menambahkan, mengedit, atau menghapus data seperti judul, deskripsi singkat, visi, misi, dan gambar.
 
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan input Tentang Kami.
-2. Admin Dapat melihat,menambahkan, dan mengupload Tentang Kami.
-3. Sistem akan menyimpan ke database.
-4. Jika sudah disimpan sistem akan menampilkan peringatan.
+1. Sistem akan menampilkan tampilan input halaman "Tentang Kami."
+2. Admin dapat menambahkan, mengedit, atau menghapus data seperti judul, deskripsi singkat, visi, misi, dan gambar.
+3. Sistem akan menyimpan data yang dimasukkan ke dalam database.
+4. Jika data berhasil disimpan, sistem akan menampilkan pesan konfirmasi.
 
 Xref: Bagian 3.2.2, Input data Artikel Parenting
 
@@ -180,7 +180,7 @@ Diagram:
 ![alt text](Images/Apromo.png?raw=true)
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman input dokumentasi kegiatan dan Admin menginputkan dokumentasi kegiatan.
+Sistem dapat menampilkan halaman input dokumentasi kegiatan dan Admin dapat menginputkan dokumentasi kegiatan.
 
 Deskripsi Langkah- langkah:
 1. Sistem akan menampilkan tampilan publikasi kegiatan.
