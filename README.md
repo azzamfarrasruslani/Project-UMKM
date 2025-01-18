@@ -36,11 +36,13 @@ UMKM adalah singkatan dari Usaha Mikro, Kecil, dan Menengah yang memiliki peran 
 - View tentang kami
 - View menu
 - View promo
-- View lokasi
+- View outlets
 - View kontak
 - View blog
 - View karir
-- Input Testimoni
+- View testimoni
+- View hero section
+- Input pesan saran
 
 Berikut ini fungsi admin yaitu:
 - Login
@@ -51,6 +53,9 @@ Berikut ini fungsi admin yaitu:
 - Input kontak
 - Input blog
 - Input karir
+- Input testimoni
+- Input hero section
+- View pesan saran
 - Update data
 - Delete data
 - Edit data
@@ -59,7 +64,7 @@ Berikut ini fungsi admin yaitu:
 Website Ayam Geprek Keysia adalah sebuah sistem informasi yang diaplikasikan pada platform web. Terdapat dua jenis aktor, yaitu admin dan pengunjung. Admin bertanggung jawab untuk mengelola data, seperti menu dan informasi promosi, sedangkan pengunjung hanya dapat melihat informasi yang disediakan di website.
 
 **2.1.1 Antarmuka Sistem**
-![alt text](revisi/revisi1.jpg?raw=true)
+![alt text](Images/revisi1.jpg?raw=true)
 
 Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung. Admin memiliki fungsi untuk mengelola data, seperti menu dan informasi promosi, sementara pengunjung dapat melihat informasi yang tersedia dan memberikan komentar pada bagian yang disediakan.
 
@@ -114,7 +119,7 @@ tidak ada
 | ------ | ------ |
 |   Login  | Digunakan untuk mengakses aplikasi    |
 |    Input Data    |    Digunakan untuk memasukkan data-data    |
-| Kembali |  Digunakan untuk kembali ke halaman sebelumnya |
+| Logout |  Digunakan untuk kembali ke halaman sebelumnya |
 | Hapus | Digunakan untuk menghapus data|
 | Edit       |   Digunakan untuk mengubah data     |
 | View      |   Digunakan untuk menampilkan data     |
@@ -274,7 +279,7 @@ tidak ada
 
 
 ## 3.1 Persyaratan Antarmuka Eksternal
-Salah satu cara mengakses website ini yaitu dengan registrasi, setelah registrasi akan login dengan memasukkan username dan password, kemudian sistem akan validasi login. setelah login berhasil pengunjung dapat melihat konten yang ada di website tersebut.
+tidak ada
 
 ## 3.2 Functional Requirement
 **3.2.1 Login Admin**
@@ -384,7 +389,7 @@ Salah satu cara mengakses website ini yaitu dengan registrasi, setelah registras
 ## 3.3 Struktur Detail Kebutuhan Non-Fungsional
 ![alt text](Image/3.3.png?raw=true)
 **3.3.1 Logika Struktur Data**
-Struktur data logika pada sistem informasi parenting terdapat struktur Database yang dijelaskan menggunakan ERD.
+Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database yang dijelaskan menggunakan ERD.
 
 **Tabel Admin**
 |Data Item|Tipe Data|Deskripsi|
