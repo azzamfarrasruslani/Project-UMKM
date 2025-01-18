@@ -38,6 +38,9 @@ UMKM adalah singkatan dari Usaha Mikro, Kecil, dan Menengah yang memiliki peran 
 - View promo
 - View lokasi
 - View kontak
+- View blog
+- View karir
+- Input Testimoni
 
 Berikut ini fungsi admin yaitu:
 - Login
@@ -46,6 +49,8 @@ Berikut ini fungsi admin yaitu:
 - Input promo
 - Input lokasi
 - Input kontak
+- Input blog
+- Input karir
 - Update data
 - Delete data
 - Edit data
