@@ -17,7 +17,11 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             @foreach ($reviews as $review)
                 <div class="bg-[#b2231c] text-white shadow-md rounded-lg overflow-hidden text-center p-6">
-
+                    
+                    <!-- Border Bulat di Atas -->
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#b2231c] w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                        <span class="text-white text-xl font-bold">"</span>
+                    </div>
                     <!-- Pesan Review -->
                     <div class="mb-4">
                         <p class="text-lg italic">"{{ $review->message }}"</p>
