@@ -86,13 +86,13 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 **Halaman User**
 |  |  |
 |--|--|
-| ![alt text](Images/home.jpg?raw=true) Pada halaman pengunjung terdapat beranda yang berisi tampilan scrolling yang berisi seluruh konten seperti tampilan home, kegiatan, artikel about ,team dan contact.|![alt text](Images/menu.jpg?raw=true) Pada halaman pengunjung terdapat halaman kegiatan yang berisi judul, gambar, tanggal dan deskripsi kegiatan.
+| ![alt text](Images/home.jpg?raw=true) 
+Pada halaman pengunjung terdapat beranda yang berisi tampilan scrolling yang berisi seluruh konten seperti tampilan home, hero section, promo, outlets, testimoni, pesan saran dan kontak.|![alt text](Images/menu.jpg?raw=true) Pada halaman pengunjung terdapat halaman menu yang berisi gambar, deskripsi dan harganya.
 |  |  |
-| ![alt text](Images/tentangkami.jpg?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Kegiatan, jika pengunjung telah mengklik satu kegiatan yang akan dilihat, maka pada halaman ini akan tampil deskripsi dari kegiatan tersebut.|![alt text](Images/blog.jpg?raw=true) Pada halaman pengunjung terdapat halaman artikel yang berisi cover dan deskripsi singkat mengenai artikel.
+| ![alt text](Images/tentangkami.jpg?raw=true) Pada halaman pengunjung terdapat halaman tentang kami, yang berisi gambar, sejarah singkat serta visi dan misi.|![alt text](Images/blog.jpg?raw=true) Pada halaman pengunjung terdapat halaman blog atau berita yang berisi gambar serta deskripsi.
 |  |  |
-| ![alt text](Images/outlets.jpg?raw=true) Pada halaman pengunjung terdapat halaman lanjutan Artikel jika pengunjung telah mengklik satu judul yang akan dibaca, maka pada halaman ini akan tampil deskripsi dari artikel tersebut, pada halaman ini pengunjung dapat meninggalkan komentar.|![alt text](Images/karir.jpg?raw=true) Pada halaman pengunjung terdapat halaman about yang berisi informasi website seputar pengelola.
+| ![alt text](Images/outlets.jpg?raw=true) Pada halaman pengunjung terdapat halaman outlets atau cabang yang berisi lokasi dari cabang yang dimiliki umkm ayam geprek keysia.|![alt text](Images/karir.jpg?raw=true) Pada halaman pengunjung terdapat halaman karir atau job yang berisi informasi mengenai lowongan pekerjaan.
 |  |  |
-| ![alt text](revisi/kontak.png?raw=true) Pada halaman pengunjung terdapat halaman about yang berisi informasi website seputar Alamat dan Contact Person.|![alt text](revisi/team.png?raw=true) Pada halaman pengunjung terdapat halaman team yang berisi team dari dinas pemberdayaan perempuan dan Perlindungan anak masyarakat kota pekanbaru.
 
 
 **2.1.3 Antarmuka perangkat keras**
