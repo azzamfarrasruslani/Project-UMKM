@@ -1,4 +1,4 @@
-![alt text](Image/p1.png?raw=true)
+![alt text](Images/p1.png?raw=true)
 
 ## BAB I Pendahuluan
 
