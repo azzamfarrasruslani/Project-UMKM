@@ -145,7 +145,7 @@
                         <li>
                             <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
                                 href="{{ route('outlet.indexHome') }}">
-                                News
+                                Blog
                             </a>
                         </li>
                         <li>

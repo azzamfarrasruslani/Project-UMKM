@@ -6,35 +6,25 @@
             <!-- card1 -->
             <div class="w-full max-w-full px-3 mb-6 xl:mb-0 xl:w-1/2">
                 <div
-                    class="relative flex flex-col min-w-0 break-words bg-red-500 shadow-2xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+                    class="relative flex flex-col min-w-0 break-words bg-customRed-50 shadow-2xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
                     <!-- Gambar -->
                     <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="pattern"
-                        class="absolute inset-0 w-full h-full object-cover rounded-2xl z-0 opacity-50">
+                        class="absolute inset-0 w-full h-full object-cover rounded-2xl z-0 opacity-70">
 
                     <!-- Konten -->
                     <div class="relative z-10 flex-auto p-9">
                         <div class="flex flex-row -mx-3">
                             <div class="flex-none w-2/3 max-w-full px-3">
                                 <div>
-                                    <p
-                                        class="mb-0 font-sans font-extrabold text-4xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
+                                    <p class="mb-0 font-sans font-extrabold text-4xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
                                         Selamat Datang
                                     </p>
-                                    <h5 class="mb-2 font-bold dark:text-white">
-                                        <!-- Tambahkan isi jika ada -->
-                                    </h5>
-                                    <p class="mb-0 dark:text-white dark:opacity-60">
-                                        <span class="text-sm font-bold leading-normal text-red-600">%</span>
-
+                                    <p class="mb-0 font-sans font-extrabold text-2xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
+                                         {{ Auth::user()->name }}
                                     </p>
+
                                 </div>
                             </div>
-                            {{-- <div class="px-3 text-right basis-1/3">
-                                <div
-                                    class="inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-blue-500 to-violet-500">
-                                    <i class="leading-none fa-solid fa-egg text-xl relative top-3.5 text-white"></i>
-                                </div>
-                            </div> --}}
                         </div>
                     </div>
                 </div>

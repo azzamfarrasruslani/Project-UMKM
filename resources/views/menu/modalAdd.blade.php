@@ -12,62 +12,96 @@
                         <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data">
                             {{-- CSRF --}}
                             @csrf
-                            {{-- nama menu --}}
-                            <div class="mb-4">
-                                <label for="nama_menu" class="block text-sm font-medium">Nama Menu</label>
-                                <input type="text" name="nama_menu" id="nama_menu"
-                                    class="mt-1 block w-full border-gray-800 rounded-md" value="{{ old('judul') }}"
-                                    required />
-                                @error('judul')
-                                    <span class="text-red-500 text-sm">{{ $message }}</span>
-                                @enderror
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                              {{-- Nama Menu --}}
+                                <div>
+                                    <label for="nama_menu" class="block text-sm font-medium">Nama Menu</label>
+                                    <input type="text" name="nama_menu" id="nama_menu"
+                                        class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500"
+                                        value="{{ old('nama_menu') }}" required />
+                                    @error('nama_menu')
+                                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                               {{-- Harga Menu --}}
+                                <div>
+                                    <label for="harga_menu" class="block text-sm font-medium">Harga Menu</label>
+                                    <input type="number" name="harga_menu" id="harga_menu"
+                                        class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500"
+                                        value="{{ old('harga_menu') }}" />
+                                    @error('harga_menu')
+                                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                                    @enderror
+                                </div>
                             </div>
-                            {{-- deskirpsi menu --}}
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                {{-- Kategori Menu --}}
+                                <div>
+                                    <label for="kategori_menu" class="block text-sm font-medium">Kategori Menu</label>
+                                    <select name="kategori_menu" id="kategori_menu"
+                                        class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                        <option value="" disabled selected>Pilih Kategori</option>
+                                        <option value="Paket Komplit">Paket Komplit</option>
+                                        <option value="Makanan">Makanan</option>
+                                        <option value="Minuman">Minuman</option>
+                                    </select>
+                                    @error('kategori_menu')
+                                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                {{-- Status Menu --}}
+                                <div>
+                                    <label for="status_menu" class="block text-sm font-medium">Status Menu</label>
+                                    <select name="status_menu" id="status_menu"
+                                        class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                        <option value="aktif" {{ old('status_menu') === 'aktif' ? 'selected' : '' }}>
+                                            Aktif</option>
+                                        <option value="non-aktif"
+                                            {{ old('status_menu') === 'non-aktif' ? 'selected' : '' }}>Non-Aktif
+                                        </option>
+                                    </select>
+                                    @error('status_menu')
+                                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            {{-- Deskripsi Menu --}}
                             <div class="mb-4">
                                 <label for="deskripsi_menu" class="block text-sm font-medium">Deskripsi Menu</label>
-                                <textarea name="deskripsi_menu" id="deskripsi_menu" rows="5" class="mt-1 block w-full border-gray-800 rounded-md"
-                                    required>{{ old('deskripsi') }}</textarea>
+                                <textarea name="deskripsi_menu" id="deskripsi_menu" rows="5"
+                                    class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500" required>{{ old('deskripsi_menu') }}</textarea>
                                 @error('deskripsi_menu')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
-                            {{-- harga menu --}}
-                            <div class="mb-4">
-                                <label for="harga_menu" class="block text-sm font-medium">Harga Menu</label>
-                                <input type="number" name="harga_menu" id="harga_menu"
-                                    class="mt-1 block w-full border-gray-800 rounded-md" value="{{ old('diskon') }}" />
-                                @error('harga_menu')
-                                    <span class="text-red-500 text-sm">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            {{-- gambar menu --}}
+                            {{-- Gambar Menu --}}
                             <div class="mb-4">
                                 <label for="gambar_menu" class="block text-sm font-medium">Gambar Menu</label>
-                                <input type="file" name="gambar_menu" id="gambar_menu" class="mt-1 block w-full"
+                                <input type="file" name="gambar_menu" id="gambar_menu"
+                                    class="mt-1 block w-full border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                                     accept="image/*" />
                                 @error('gambar_menu')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
-                    </div>
-                    <!-- Button -->
-                    <div class="flex justify-end mb-4 gap-2">
-                        <button type="button" onclick="closeAddMenu()"
-                            class="justify-items-start mb-4 rounded-md border border-transparent shadow-sm px-6 py-2 bg-gradient-to-tl from-red-600 to-orange-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none border-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto sm:text-sm hover:shadow-xs hover:-translate-y-px active:opacity-85">
-                            Batal
-                        </button>
-                        <button type="submit"
-                            class="justify-items-start mb-4 rounded-md border border-transparent shadow-sm px-6 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none border-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto sm:text-sm hover:shadow-xs hover:-translate-y-px active:opacity-85">
-                            Simpan
-                        </button>
-                    </div>
-                    </form>
+                            <div class="flex justify-end gap-2">
+                                <button type="button" onclick="closeAddMenu()"
+                                    class="rounded-md shadow-sm px-6 py-2 bg-gradient-to-tl from-red-600 to-orange-600 text-white hover:bg-orange-500 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+                                    Batal
+                                </button>
+                                <button type="submit"
+                                    class="rounded-md shadow-sm px-6 py-2 bg-blue-500 text-white hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    Simpan
+                                </button>
+                            </div>
+                        </form>
 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 

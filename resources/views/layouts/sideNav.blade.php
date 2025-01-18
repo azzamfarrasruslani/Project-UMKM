@@ -36,7 +36,7 @@
                 </li>
                 <!-- Menu -->
                 <li class="mt-0.5 w-full">
-                    <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
+                    <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index') ||   request()->routeIs('menu.edit')">
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                             <i class="fa-solid fa-utensils fa-lg"></i>

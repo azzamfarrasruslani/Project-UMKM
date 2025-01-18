@@ -87,16 +87,15 @@ Route::controller(TentangKamiController::class)->group(function () {
     Route::get('home/tentangKami', 'indexHome')->name('tentangKami.indexHome');
 });
 
-
-
-
-
-Route::resource('job', KarirController::class)->only(['index','create','store','edit','destroy','update'])
+// Karir
+Route::resource('karir', KarirController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
+// Review
 Route::resource('reviews', ReviewController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
+// Kontak
 Route::resource('kontak', KontakController::class)
     ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);

@@ -18,6 +18,5 @@ class TentangKami extends Model
         'misi',
         'gambar_tK1',
         'gambar_tK2',
-        'gambar_tK3',
     ];
 }

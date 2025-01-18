@@ -33,7 +33,6 @@ class TentangKamiController extends Controller
             'misi' => 'nullable|string',
             'gambar_tK1' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'gambar_tK2' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'gambar_tK3' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         if ($request->hasFile('gambar_tK1')) {
@@ -42,9 +41,7 @@ class TentangKamiController extends Controller
         if ($request->hasFile('gambar_tK2')) {
             $validated['gambar_tK2'] = $request->file('gambar_tK2')->store('uploads', 'public');
         }
-        if ($request->hasFile('gambar_tK3')) {
-            $validated['gambar_tK3'] = $request->file('gambar_tK3')->store('uploads', 'public');
-        }
+
 
         TentangKami::create($validated);
 
@@ -70,7 +67,6 @@ class TentangKamiController extends Controller
             'misi' => 'nullable|string',
             'gambar_tK1' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'gambar_tK2' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'gambar_tK3' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         if ($request->hasFile('gambar_tK')) {
@@ -78,9 +74,6 @@ class TentangKamiController extends Controller
         }
         if ($request->hasFile('gambar_tK2')) {
             $validated['gambar_tK2'] = $request->file('gambar_tK2')->store('uploads', 'public');
-        }
-        if ($request->hasFile('gambar_tK3')) {
-            $validated['gambar_tK3'] = $request->file('gambar_tK3')->store('uploads', 'public');
         }
 
         $tentangKami->update($validated);

@@ -16,7 +16,7 @@
                                 <div>
                                     <label for="judul" class="block text-sm font-medium">Judul Promo</label>
                                     <input type="text" name="judul" id="judul"
-                                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                        class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500"
                                         value="{{ old('judul') }}" required />
                                     @error('judul')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -26,7 +26,7 @@
                                 <div>
                                     <label for="diskon" class="block text-sm font-medium">Diskon (%)</label>
                                     <input type="number" name="diskon_promo" id="diskon_promo"
-                                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                        class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500"
                                         value="{{ old('deskripsi_promo') }}" step="0.01" min="0" max="100" />
                                     @error('deskripsi_promo')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -40,7 +40,7 @@
                                     <label for="tanggal_mulai" class="block text-sm font-medium">Tanggal Awal
                                         Promo</label>
                                     <input type="date" name="tanggal_mulai" id="tanggal_mulai"
-                                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                        class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500"
                                         value="{{ old('tanggal_mulai') }}" required />
                                     @error('tanggal_mulai')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -51,7 +51,7 @@
                                     <label for="tanggal_akhir" class="block text-sm font-medium">Tanggal Akhir
                                         Promo</label>
                                     <input type="date" name="tanggal_akhir" id="tanggal_akhir"
-                                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                        class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500"
                                         value="{{ old('tanggal_akhir') }}" required />
                                     @error('tanggal_akhir')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -61,7 +61,7 @@
                             <div class="mb-4">
                                 <label for="deskripsi_promo" class="block text-sm font-medium">Deskripsi</label>
                                 <textarea name="deskripsi_promo" id="deskripsi_promo" rows="5"
-                                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>{{ old('deskripsi') }}</textarea>
+                                    class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500" required>{{ old('deskripsi') }}</textarea>
                                 @error('deskripsi_promo')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
