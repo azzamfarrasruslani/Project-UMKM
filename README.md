@@ -172,21 +172,22 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.2, Input data Artikel Parenting
 
-**2.2.3 Admin Input Dokumentasi kegiatan**
+**2.2.3 Admin Input Data Promo**
 
-Use Case: Input Dokumentasi kegiatan
+Use Case: Admin dapat mengelola promo.
 
 Diagram:
 ![alt text](Images/Apromo.png?raw=true)
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman input dokumentasi kegiatan dan Admin dapat menginputkan dokumentasi kegiatan.
+Sistem memungkinkan admin untuk menginput data promo, termasuk informasi-informasi utama seperti judul, deskripsi, syarat dan ketentuan, tanggal mulai dan berakhir, gambar promo, serta status promo.
 
 Deskripsi Langkah- langkah:
 1. Sistem akan menampilkan tampilan publikasi kegiatan.
-2. Admin dapat melihat,menambahkan, dan mengupload kegiatan.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+2.Admin dapat menambahkan, mengedit, atau menghapus data promo termasuk :Judul promo
+Deskripsi promo, Syarat dan ketentuan, Tanggal mulai, Tanggal berakhir, Gambar promo, Status promo
+3. Sistem akan menyimpan data yang diinput ke dalam database.
+4. Jika data berhasil disimpan, sistem akan menampilkan pesan konfirmasi.
 
 Xref: Bagian 3.2.3, Input data Dokumentasi kegiatan
 
