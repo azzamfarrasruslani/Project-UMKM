@@ -16,11 +16,13 @@
                         <div class="flex flex-row -mx-3">
                             <div class="flex-none w-2/3 max-w-full px-3">
                                 <div>
-                                    <p class="mb-0 font-sans font-extrabold text-4xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
+                                    <p
+                                        class="mb-0 font-sans font-extrabold text-4xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
                                         Selamat Datang
                                     </p>
-                                    <p class="mb-0 font-sans font-extrabold text-2xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
-                                         {{ Auth::user()->name }}
+                                    <p
+                                        class="mb-0 font-sans font-extrabold text-2xl leading-normal capitalize dark:text-white dark:opacity-60 text-white">
+                                        {{ Auth::user()->name }}
                                     </p>
 
                                 </div>
@@ -33,39 +35,39 @@
         </div>
 
 
-        <div class="flex flex-wrap mt-6 -mx-3">
-            <!--Chart Produksi Telur -->
-            <div class="w-full max-w-full px-3 mt-0 lg:w-7/12 lg:flex-none mb-4">
-                <div
-                    class="border-black/12.5 dark:bg-slate-850 dark:shadow-dark-xl shadow-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
-                    <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid p-6 pt-4 pb-0">
-                        <h6 class="capitalize dark:text-white"></h6>
-                        <!-- <p class="mb-0 text-sm leading-normal dark:text-white dark:opacity-60">
-                        <i class="fa fa-arrow-up text-emerald-500"></i>
-                        <span class="font-semibold">4% more</span> in 2021
-                    </p> -->
-                    </div>
-                    <div class="flex-auto p-4">
-                        <div>
-                            <canvas id="chart-line2" height="300"></canvas>
-                        </div>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-4">
+            <!-- Total Cabang -->
+            <div class="p-6 bg-white rounded-lg shadow-md dark:bg-slate-850 flex items-center">
+                <i class="fas fa-store-alt text-customRed-50 text-4xl mr-6"></i>
+                <div>
+                    <h5 class="text-slate-700 dark:text-white">Total Cabang</h5>
+                    <p class="text-3xl font-bold text-slate-700">3</p>
                 </div>
             </div>
-            <!-- Chart Penjualan Telur -->
-            <div class="w-full max-w-full px-3 lg:w-5/12 lg:flex-none">
-                <div
-                    class="border-black/12.5 dark:bg-slate-850 dark:shadow-dark-xl shadow-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
-                    <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid p-6 pt-4 pb-0">
-                        <h6 class="capitalize dark:text-white"></h6>
+            <!-- Total Menu -->
+            <div class="p-6 bg-white rounded-lg shadow-md dark:bg-slate-850 flex items-center">
+                <i class="fas fa-utensils text-customRed-50 text-4xl mr-6"></i>
+                <div>
+                    <h5 class="text-slate-700 dark:text-white">Total Menu</h5>
+                    <p class="text-3xl font-bold text-slate-700">10</p>
+                </div>
+            </div>
+            <!-- Total Karyawan -->
+            <div class="p-6 bg-white rounded-lg shadow-md dark:bg-slate-850 flex items-center">
+                <i class="fas fa-user text-customRed-50 text-4xl mr-6"></i>
+                <div>
+                    <h5 class="text-slate-700 dark:text-white">Total Karyawan</h5>
+                    <p class="text-3xl font-bold text-slate-700">10</p>
+                </div>
+            </div>
+            <!-- Rating Rata-rata -->
+            <div class="p-6 bg-white rounded-lg shadow-md dark:bg-slate-850 flex items-center">
+                <i class="fas fa-star text-customRed-50 text-4xl mr-6"></i>
+                <div>
+                    <h5 class="text-slate-700 dark:text-white">Rating Rata-rata</h5>
+                    <p class="text-3xl font-bold text-slate-700">4.8/5</p>
+                </div>
+            </div>
 
-                    </div>
-                    <div class="flex-auto p-4">
-                        <div>
-                            <canvas id="" height=""></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </x-app-layout>
+</x-app-layout>

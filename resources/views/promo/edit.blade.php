@@ -13,11 +13,11 @@
                         </div>
                     </div>
                     <div class="px-8 mt-6 text-slate-700 lg:mt-0 bg-white">
-                        <form action="{{ route('hero.update', $promo->id_promo) }}" method="POST"
+                        <form action="{{ route('promo.update', $promo->id_promo) }}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="grid grid-cols-1gap-4 mb-4">
                                 {{-- Judul Promo --}}
                                 <div>
                                     <label for="judul" class="block text-sm font-medium">Judul</label>
@@ -28,17 +28,7 @@
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>
-                                {{-- Judul Promo --}}
-                                <div>
-                                    <label for="diskon_promo" class="block text-sm font-medium">Diskon</label>
-                                    <input value="{{ $promo->diskon_promo }}" type="text" name="diskon_promo"
-                                        id="diskon_promo"
-                                        class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                                        value="{{ old('diskon_promo') }}" required />
-                                    @error('diskon_promo')
-                                        <span class="text-red-500 text-sm">{{ $message }}</span>
-                                    @enderror
-                                </div>
+
 
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -94,8 +84,16 @@
                             {{-- Dekripsi Promo --}}
                             <div class="grid grid-cols-1  gap-4 mb-4">
                                 <label class="block text-sm font-medium">Deskripsi Promo</label>
-                                <textarea  name="deskripsi_promo" id="editor" rows="5" class="mt-1 block w-full border-gray-300 rounded-md"
-                                    required>{{ $promo->deskripsi_promo }}</textarea>
+                                <textarea name="deskripsi_promo" id="deskripsi_promo" rows="5"
+                                    class="mt-1 block w-full border-gray-300 rounded-md" required>{{ $promo->deskripsi_promo }}</textarea>
+                                @error('deksripsi_promo')
+                                    <span class="text-red-500 text-sm">Deskripsi Promo tidak boleh melebhi 255
+                                        Karakter</span>
+                                @enderror
+
+                                <label class="block text-sm font-medium">Syarat & Ketentuan</label>
+                                <textarea name="syarat_ketentuan" id="syarat_ketentuan" rows="5"
+                                    class="mt-1 block w-full border-gray-300 rounded-md" required>{{ $promo->syarat_ketentuan }}</textarea>
                                 @error('deksripsi_promo')
                                     <span class="text-red-500 text-sm">Deskripsi Promo tidak boleh melebhi 255
                                         Karakter</span>
@@ -106,7 +104,7 @@
                                     <label for="gambar_promo" class="block text-sm font-medium">Gambar Promo</label>
                                     @if ($promo->gambar_promo)
                                         <img src="{{ Storage::url($promo->gambar_promo) }}"
-                                            class="w-full h-48 object-cover rounded-t-xl" alt="Gambar Promo">
+                                            class="w-60 h-50 object-cover rounded-t-xl" alt="Gambar Promo">
                                     @else
                                         <p class="text-gray-500 text-sm">Belum ada gambar.</p>
                                     @endif
@@ -138,11 +136,23 @@
         </div>
         <script>
             ClassicEditor
-                .create(document.querySelector('#editor'))
+                .create(document.querySelector('#deskripsi_promo'))
                 .then(editor => {
                     editor.model.document.on('change:data', () => {
                         // Update the textarea value when the content changes
                         document.querySelector('textarea[name="deskripsi_promo"]').value = editor.getData();
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+            ClassicEditor
+                .create(document.querySelector('#syarat_ketentuan'))
+                .then(editor => {
+                    editor.model.document.on('change:data', () => {
+                        // Update the textarea value when the content changes
+                        document.querySelector('textarea[name="syarat_ketentuan"]').value = editor.getData();
                     });
                 })
                 .catch(error => {

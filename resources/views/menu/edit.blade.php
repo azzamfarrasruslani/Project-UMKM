@@ -12,11 +12,12 @@
                         </div>
                     </div>
                     <div class="px-8 mt-6 text-slate-700 lg:mt-0 bg-white">
-                        <form action="{{ route('hero.update', $menu->id_menu) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('menu.update', $menu->id_menu) }}" method="POST"
+                            enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                               {{-- Nama Menu --}}
+                                {{-- Nama Menu --}}
                                 <div>
                                     <label for="nama_menu" class="block text-sm font-medium">Nama Menu</label>
                                     <input type="text" name="nama_menu" id="nama_menu" value="{{ $menu->nama_menu }}"
@@ -29,7 +30,8 @@
                                 {{-- Harga Menu --}}
                                 <div>
                                     <label for="diskon" class="block text-sm font-medium">Harga Menu</label>
-                                    <input type="number" name="harga_menu" id="harga_menu" value="{{ $menu->harga_menu }}"
+                                    <input type="number" name="harga_menu" id="harga_menu"
+                                        value="{{ $menu->harga_menu }}"
                                         class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500"
                                         value="{{ old('harga_menu') }}" />
                                     @error('harga_menu')
@@ -44,8 +46,8 @@
                                     <label for="kategori_menu" class="block text-sm font-medium">Kategori Menu</label>
                                     <select name="kategori_menu" id="kategori_menu"
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                        <option selected value="{{ $menu->status_menu }}"
-                                            {{ old('status') === 'aktif' ? 'selected' : '' }}>{{ $menu->status_menu}}
+                                        <option selected value="{{ $menu->kategori_menu }}"
+                                            {{ old('status') === 'aktif' ? 'selected' : '' }}>{{ $menu->kategori_menu }}
                                         <option value="Paket Komplit">Paket Komplit</option>
                                         <option value="Makanan">Makanan</option>
                                         <option value="Minuman">Minuman</option>
@@ -60,7 +62,7 @@
                                     <select name="status_menu" id="status_menu"
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
                                         <option selected value="{{ $menu->status_menu }}"
-                                            {{ old('status') === 'aktif' ? 'selected' : '' }}>{{ $menu->status_menu}}
+                                            {{ old('status') === 'aktif' ? 'selected' : '' }}>{{ $menu->status_menu }}
                                         <option value="aktif" {{ old('status_menu') === 'aktif' ? 'selected' : '' }}>
                                             Aktif</option>
                                         <option value="non-aktif"
@@ -76,7 +78,7 @@
                             <div class="mb-4">
                                 <label for="deskripsi_menu" class="block text-sm font-medium">Deskripsi Menu</label>
                                 <textarea name="deskripsi_menu" id="deskripsi_menu" rows="5"
-                                    class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500" required>{{$menu->deskripsi_menu}}</textarea>
+                                    class="mt-1 block w-full border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500" required>{{ $menu->deskripsi_menu }}</textarea>
                                 @error('deskripsi_menu')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
@@ -86,10 +88,14 @@
 
                             <div class="mb-4">
                                 <label for="gambar_hero" class="block text-sm font-medium">Gambar Menu</label>
+                                @if ($menu->gambar_menu)
                                 <img src="{{ Storage::url($menu->gambar_menu) }}"
                                 class="w-60 object-cover rounded-t-xl" alt="Gambar Menu">
-
-                                <input value="{{ $menu->gambar_menu}}" type="file" name="gambar_hero" id="gambar_hero"
+                                @else
+                                    <p class="text-gray-500 text-sm">Belum ada gambar.</p>
+                                @endif
+                                <input value="{{ $menu->gambar_menu }}" type="file" name="gambar_menu"
+                                    id="gambar_menu"
                                     class="mt-1 block w-full border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                                     accept="image/*" />
                                 @error('gambar_hero')

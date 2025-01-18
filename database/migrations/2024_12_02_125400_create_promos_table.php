@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('tanggal_mulai');
             $table->date('tanggal_akhir');
             $table->string('gambar_promo')->nullable();
-            $table->enum('status_promo', ['aktif', 'tidak aktif'])->default('aktif')->nullable();
+            $table->enum('status_promo', ['aktif','non-aktif'])->default('aktif')->nullable();
             $table->timestamps();
         });
     }

@@ -30,11 +30,10 @@
                             <table id="example" class="stripe hover w-full">
                                 <thead>
                                     <tr class="capitalize ">
-                                        <th>Kode Outlet</th>
                                         <th>Nama Outlet</th>
-                                        <th>Lokasi Outlet</th>
+                                        <th>Alamat Outlet</th>
                                         <th>No HP</th>
-                                        <th>Email </th>
+                                        <th>Jumlah Karyawan </th>
                                         <th>Tanggal Berdiri</th>
                                         <th>Status</th>
                                         <th>Actions</th>
@@ -43,14 +42,13 @@
                                 <tbody>
                                     @foreach ($outlet as $index => $item)
                                         <tr>
-                                            <td>{{ $item->kode_outlet }}</td>
                                             <td>{{ $item->nama_outlet }}</td>
-                                            <td>{{ $item->lokasi_outlet }}</td>
+                                            <td>{{ $item->alamat_outlet }}</td>
                                             <td>{{ $item->no_hp }}</td>
-                                            <td>{{ $item->email_outlet }}</td>
+                                            <td>{{ $item->jumlah_karyawan }}</td>
                                             <td>{{ date('d-m-Y', strtotime($item->tanggal_berdiri)) }}</td>
                                             <td class="text-xs px-4">
-                                                @if ($item['status'] == 'aktif')
+                                                @if ($item['status_outlet'] == 'aktif')
                                                     <span
                                                         class="bg-gradient-to-tl from-emerald-500 to-teal-400 text-white px-2 py-2 rounded-1 whitespace-nowrap">
                                                         Aktif
@@ -119,32 +117,7 @@
 
 
                                                         </div>
-                                                        <div class="p-1 space-y-0.5">
-                                                            <span
-                                                                class="block pt-2 pb-1 px-3 text-xs font-medium uppercase text-gray-400 dark:text-neutral-500">
-                                                                Pengaturan
-                                                            </span>
-                                                            @if ($item->status === 'aktif')
-                                                            <form action="{{route('outlet.updateStatus', $item->id_outlet)}}">
-                                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                                                                    href="javascript:;">
-                                                                    <i class="fa-solid fa-ban fa-lg text-red-500"></i>
-                                                                    Matikan Outlet
-                                                                </a>
-                                                            </form>
-                                                            @else
-                                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                                                                    href="javascript:;"
-                                                                    onclick="openConfirmationModal(<?= $item['id_item'] ?>, 'dataInventori/deleteData')">
-                                                                    <i
-                                                                        class="fa-solid fa-power-off fa-lg text-green-500"></i>
-                                                                    Hidupkan Outlet
-                                                                </a>
-                                                            @endif
-
-
-
-                                                        </div>
+                                                        
                                                     </div>
 
                                                 </div>

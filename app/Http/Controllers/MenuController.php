@@ -40,6 +40,7 @@ class MenuController extends Controller
        $request -> validate([
         'nama_menu' => 'required|string|max:255',
         'deskripsi_menu' => 'required|string|max:255',
+        'kategori_menu' => 'required|string|max:255',
         'harga_menu' => 'required|string|max:255',
         'gambar_menu' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
        ]);
@@ -47,6 +48,7 @@ class MenuController extends Controller
        $menu = new Menu();
        $menu -> nama_menu = $request -> nama_menu;
        $menu -> deskripsi_menu = $request -> deskripsi_menu;
+       $menu -> kategori_menu = $request -> kategori_menu;
        $menu -> harga_menu = $request -> harga_menu;
 
        if ($request -> hasFile('gambar_menu')) {
@@ -85,19 +87,23 @@ class MenuController extends Controller
         $request -> validate( [
         'nama_menu' => 'required|string|max:255',
         'deskripsi_menu' => 'required|string|max:255',
-        'harga_menu' => 'required|string|max:255',
+        'kategori_menu' => 'required|string|max:255',
+        'status_menu' => 'required|in:aktif,non-aktif',
+        'harga_menu' => 'required|numeric',
         'gambar_menu' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
-       $menu -> nama = $request -> nama;
-       $menu -> deskripsi = $request -> deskripsi;
-       $menu -> harga = $request -> harga;
+       $menu -> nama_menu = $request -> nama_menu;
+       $menu -> deskripsi_menu = $request -> deskripsi_menu;
+       $menu -> kategori_menu = $request -> kategori_menu;
+       $menu->status_menu = $request->status_menu;
+       $menu -> harga_menu = $request -> harga_menu;
 
        if ($request -> hasFile('gambar_menu')) {
             if ($menu -> gambar) {
                 Storage::delete('public/' . $menu->gambar );
             }
-        $menu -> gambar = $request -> file ('gambar_menu') -> store ('images', 'public');
+        $menu -> gambar_menu = $request -> file ('gambar_menu') -> store ('images', 'public');
 
        }
 
@@ -113,8 +119,8 @@ class MenuController extends Controller
      */
     public function destroy(Menu $menu)
     {
-        if ($menu -> gambar) {
-            Storage::delete($menu->gambar);
+        if ($menu -> gambar_menu) {
+            Storage::delete($menu->gambar_menu);
         }
 
         $menu -> delete();

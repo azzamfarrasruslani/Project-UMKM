@@ -5,14 +5,14 @@
         <div class="w-full px-6 py-6 mx-auto">
             <!-- Card Judul -->
             <div class="w-full max-w-full px-3 xl:mb-0">
-                <div class="relative flex flex-col min-w-0 break-words bg-red-500 shadow-2xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+                <div class="relative flex flex-col min-w-0 break-words bg-customRed-50 shadow-2xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
                     <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="pattern" class="absolute inset-0 w-full h-full object-cover rounded-2xl z-0 opacity-50">
                     <div class="relative z-10 flex-auto p-9">
                         <div class="flex flex-row -mx-3">
                             <div class="flex-none w-2/3 max-w-full px-3">
                                 <div>
                                     <p class="mb-0 font-sans font-extrabold text-4xl leading-normal uppercase dark:text-white dark:opacity-60 text-white">
-                                        Daftar Blog 
+                                        Daftar Blog
                                     </p>
                                 </div>
                             </div>

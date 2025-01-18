@@ -10,7 +10,7 @@
             <!-- Card Judul -->
             <div class="w-full max-w-full px-3">
                 <div
-                    class="relative flex flex-col min-w-0 break-words bg-red-500 shadow-2xl rounded-2xl overflow-hidden">
+                    class="relative flex flex-col min-w-0 break-words bg-customRed-50 shadow-2xl rounded-2xl overflow-hidden">
                     <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="pattern"
                         class="absolute inset-0 w-full h-full object-cover opacity-50 z-0">
                     <div class="relative z-10 p-9">

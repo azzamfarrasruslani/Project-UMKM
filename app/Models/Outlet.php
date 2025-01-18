@@ -14,13 +14,14 @@ class Outlet extends Model
     protected $primaryKey = 'id_outlet';
 
     protected $fillable = [
-        'kode_outlet',
         'nama_outlet',
-        'lokasi_outlet',
+        'alamat_outlet',
+        'jumlah_karyawan',
         'no_hp',
-        'email_outlet',
         'tanggal_berdiri',
-        'status',
+        'status_outlet',
         'iframe_map',
+        'link_pesan_online',
+        'gambar_pesan_online',
     ];
 }

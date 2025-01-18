@@ -90,11 +90,11 @@
                         </div>
                     </div> --}}
                     <a href="javascript:;"
-                        class="relative w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-green-900 transition duration-300 ease-nav-brand">
+                        class="relative w-10 h-10 bg-customRed-50  text-white rounded-full flex items-center justify-center hover:bg-green-900 transition duration-300 ease-nav-brand">
                         <i fixed-plugin-button-nav class="fa fa-cog"></i>
                     </a>
                     <a href="javascript:;" dropdown-trigger aria-expanded="false"
-                        class="relative w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-green-900 transition duration-300 sm:mr-4">
+                        class="relative w-10 h-10 bg-customRed-50  text-white rounded-full flex items-center justify-center hover:bg-green-900 transition duration-300 sm:mr-4">
                         <i class="fa-regular fa-bell"></i>
                         <span
                             class="absolute top-0 right-0 inline-block w-3 h-3 bg-red-600 rounded-full border-2 border-white"></span>

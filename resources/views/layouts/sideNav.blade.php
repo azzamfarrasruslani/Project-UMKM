@@ -36,7 +36,7 @@
                 </li>
                 <!-- Menu -->
                 <li class="mt-0.5 w-full">
-                    <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index') ||   request()->routeIs('menu.edit')">
+                    <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index') || request()->routeIs('menu.edit')">
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                             <i class="fa-solid fa-utensils fa-lg"></i>
@@ -47,7 +47,7 @@
                 </li>
                 {{-- Promo --}}
                 <li class="mt-0.5 w-full">
-                    <x-nav-link :href="route('promo.index')" :active="request()->routeIs('promo.index')">
+                    <x-nav-link :href="route('promo.index')" :active="request()->routeIs('promo.index')|| request()->routeIs('promo.edit')">
                         <div
                             class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                             <i class="fa-solid fa-ticket fa-lg"></i>
@@ -88,6 +88,29 @@
                             <i class="fa-solid fa-address-book fa-lg"></i>
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Kontak</span>
+                    </x-nav-link>
+                </li>
+
+                {{-- Hero Section --}}
+                <li class="mt-0.5 w-full">
+                    <x-nav-link :href="route('hero.index')" :active="request()->routeIs('hero.index')">
+                        <div
+                            class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Hero
+                            Section</span>
+                    </x-nav-link>
+                </li>
+                {{-- Tentang Kami --}}
+                <li class="mt-0.5 w-full">
+                    <x-nav-link :href="route('tentangKami.index')" :active="request()->routeIs('tentangKami.index')">
+                        <div
+                            class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                            <i class="fa-solid fa-info-circle fa-lg"></i>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Tentang
+                            Kami</span>
                     </x-nav-link>
                 </li>
 

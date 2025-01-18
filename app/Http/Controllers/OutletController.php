@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Outlet;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class OutletController extends Controller
 {
     /**
@@ -16,7 +16,8 @@ class OutletController extends Controller
         return view('outlet.index', compact('outlet'));
     }
 
-    public function indexHome() {
+    public function indexHome()
+    {
         $outlet = Outlet::all();
         return view('homePage.outlet.index', compact('outlet'));
     }
@@ -29,25 +30,33 @@ class OutletController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'kode_outlet' => 'required|unique:outlet,kode_outlet',
-            'nama_outlet' => 'required',
-            'lokasi_outlet' => 'required',
-            'no_hp' => 'required',
-            'email_outlet' => 'nullable|email',
+            'nama_outlet' => 'required|string|max:255',
+            'alamat_outlet' => 'required|string|max:255',
+            'jumlah_karyawan' => 'required|numeric',
+            'no_hp' => 'required|string|max:15',
             'tanggal_berdiri' => 'required|date',
-            'status' => 'required|in:aktif,non-aktif',
+            'status_outlet' => 'required|in:aktif,non-aktif',
             'iframe_map' => 'nullable',
+            'link_pesan_online' => 'required',
+            'gambar_pesan_online' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
+
+
+
         $outlet = new Outlet();
-        $outlet->kode_outlet = $request->kode_outlet;
         $outlet->nama_outlet = $request->nama_outlet;
-        $outlet->lokasi_outlet = $request->lokasi_outlet;
+        $outlet->alamat_outlet = $request->alamat_outlet;
+        $outlet->jumlah_karyawan = $request->jumlah_karyawan;
         $outlet->no_hp = $request->no_hp;
-        $outlet->email_outlet = $request->email_outlet;
         $outlet->tanggal_berdiri = $request->tanggal_berdiri;
-        $outlet->status = $request->status;
+        $outlet->status_outlet = $request->status_outlet;
         $outlet->iframe_map = $request->iframe_map;
+        $outlet->link_pesan_online = $request->link_pesan_online;
+
+        if ($request->hasFile('gambar_pesan_online')) {
+            $outlet->gambar_pesan_online = $request->file('gambar_pesan_online')->store('images', 'public');
+        }
 
         $outlet->save();
 
@@ -80,52 +89,46 @@ class OutletController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id_outlet)
+    public function update(Request $request, Outlet $outlet)
     {
-        // Mengambil berita berdasarkan ID yang diberikan
-        $outlet = Outlet::findOrFail($id_outlet);
+
 
         // Validasi
         $request->validate([
-            'kode_outlet' => 'required',
-            'nama_outlet' => 'required',
-            'lokasi_outlet' => 'required',
-            'no_hp' => 'required',
-            'email_outlet' => 'nullable|email',
+            'nama_outlet' => 'required|string|max:255',
+            'alamat_outlet' => 'required|string|max:255',
+            'jumlah_karyawan' => 'required|numeric',
+            'no_hp' => 'required|string|max:15',
             'tanggal_berdiri' => 'required|date',
-            'status' => 'required|in:aktif,non-aktif',
+            'status_outlet' => 'required|in:aktif,non-aktif',
             'iframe_map' => 'nullable',
+            'link_pesan_online' => 'required',
+            'gambar_pesan_online' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         // Mengupdate data berita
-        $outlet->kode_outlet = $request->kode_outlet;
         $outlet->nama_outlet = $request->nama_outlet;
-        $outlet->lokasi_outlet = $request->lokasi_outlet;
+        $outlet->alamat_outlet = $request->alamat_outlet;
+        $outlet->jumlah_karyawan = $request->jumlah_karyawan;
         $outlet->no_hp = $request->no_hp;
-        $outlet->email_outlet = $request->email_outlet;
         $outlet->tanggal_berdiri = $request->tanggal_berdiri;
-        $outlet->status = $request->status;
+        $outlet->status_outlet = $request->status_outlet;
         $outlet->iframe_map = $request->iframe_map;
+        $outlet->link_pesan_online = $request->link_pesan_online;
+
+
+        if ($request->hasFile('gambar_pesan_online')) {
+            if ( $outlet -> gambar_pesan_online) {
+                Storage::delete('public/' .  $outlet->gambar_pesan_online);
+            }
+            $outlet->gambar_pesan_online = $request->file('gambar_pesan_online')->store('images', 'public');
+        }
+
         $outlet->save();
+
         return redirect()->route('outlet.index')->with('success', 'Outlet berhasil diperbaharui');
     }
 
-
-    public function updateStatus(Request $request, $id_outlet)
-    {
-        // Mengambil berita berdasarkan ID yang diberikan
-        $outlet = Outlet::findOrFail($id_outlet);
-
-        // Validasi
-        $request->validate([
-            'status' => 'required|in:aktif,non-aktif',
-        ]);
-
-        // Mengupdate data berita
-        $outlet->status = $request->status;
-        $outlet->save();
-        return redirect()->route('outlet.index')->with('success', 'Status berhasil diperbaharui');
-    }
 
     /**
      * Remove the specified resource from storage.

@@ -6,7 +6,7 @@
         <div class="w-full px-6 py-6 mx-auto">
 
             <div class="w-full max-w-full px-3 xl:mb-0">
-                <div class="relative flex flex-col min-w-0 break-words bg-red-500 shadow-2xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+                <div class="relative flex flex-col min-w-0 break-words bg-customRed-50  shadow-2xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
                     <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="pattern" class="absolute inset-0 w-full h-full object-cover rounded-2xl z-0 opacity-50">
                     <div class="relative z-10 flex-auto p-9">
                         <div class="flex flex-row -mx-3">
@@ -29,7 +29,7 @@
             <div class="flex flex-wrap px-2 py-6 rounded-2xl">
                 <div class="w-full px-3">
                     <div id="tentangKamiTabContent" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        @foreach ($tentangKamis as $tentangKami)
+                        @foreach ($tentangKami as $index => $item)
                             <div class="p-4 bg-white rounded-lg shadow">
                                 <img src="{{ Storage::url($tentangKami->gambar_tK1) }}" class="h-48 w-full object-cover rounded-md" alt="Gambar Utama">
                                 <div class="grid grid-cols-2 gap-2 mt-4">
@@ -66,9 +66,7 @@
                                     </form>
                                 </div>
                             </div>
-                        @else
-                            <p class="text-gray-600">Tidak ada data yang tersedia.</p>
-                        @endif
+                        @endforeach
                         <!-- Pagination -->
                         <div class="flex justify-center  items-center mt-6  space-x-2">
                             <button

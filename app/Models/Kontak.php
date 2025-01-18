@@ -8,5 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Kontak extends Model
 {
     use HasFactory;
-    protected $fillable = ['social_media', 'link'];
+    protected $table = 'kontak';
+    protected $primaryKey = 'id_kontak';
+
+    protected $fillable = [
+        'socila_media',
+        'link',
+
+    ];
 }

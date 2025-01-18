@@ -15,12 +15,12 @@ class Promo extends Model
     protected $fillable = [
         'judul',         // Sesuai dengan kolom di tabel
         'deskripsi_promo',
-        'diskon_promo',
+        'syarat_ketentuan',
         'tanggal_mulai',
         'tanggal_akhir',
         'gambar_promo',
         'status_promo',
     ];
 
-    
+
 }

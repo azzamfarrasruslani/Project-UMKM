@@ -1,6 +1,6 @@
 <?php if (session()->has('success')): ?>
     <div id="success-alert"
-        class="w-full mb-2 max-w-full bg-teal-50 border-t-2 border-teal-500 rounded-lg py-4 px-2 dark:bg-teal-800/30"
+        class="w-full mb-5 max-w-full bg-teal-50 border-t-2 border-teal-500 rounded-lg py-4 px-2 dark:bg-teal-800/30 "
         role="alert" tabindex="-1" aria-labelledby="hs-bordered-success-style-label">
         <div class="flex">
             <div class="shrink-0">
@@ -27,7 +27,7 @@
     </div>
 
 <?php elseif (session()->has('error')): ?>
-    <div id="error-alert" class="w-full mb-2 max-w-full bg-red-50 border-s-4 border-red-500 p-4 dark:bg-red-800/30" role="alert"
+    <div id="error-alert" class="w-full mb-5 max-w-full bg-red-50 border-s-4 border-red-500 p-4 dark:bg-red-800/30" role="alert"
         tabindex="-1" aria-labelledby="hs-bordered-red-style-label">
         <div class="flex">
             <div class="shrink-0">
