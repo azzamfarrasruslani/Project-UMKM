@@ -262,20 +262,21 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data team B3AM
 
-**2.2.8 Admin Input data team B3AM**
+**2.2.8 Admin Input data karir**
 
-Use Case: Input data team B3AM
+Use Case: Input data karir
 
 Diagram:![alt text](Images/Akarir.png?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Sistem ini memungkinkan Admin untuk mengelola data karir, termasuk menambah, mengedit, menghapus, atau melihat informasi terkait lowongan pekerjaan.
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data team B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+1. Sistem menampilkan halaman utama untuk pengelolaan data karir.
+2. Admin dapat memilih untuk: menambah data lowongan kerja baru, mengedit informasi lowongan yang sudah ada, menghapus data lowongan tertentu, melihat daftar lowongan kerja yang tersedia.
+3. Admin mengisi atau memodifikasi informasi terkait: Nama posisi, Lokasi penempatan, Tipe kerja, Kualifikasi, Deskripsi tugas, Gaji, Benefit.Status lowongan.
+4. Sistem akan menyimpan ke database.
+5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau peringatan jika ada kesalahan.
 
 Xref: Bagian 3.2.3,data team B3AM
 
