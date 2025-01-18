@@ -38,14 +38,14 @@
             <div   class="flex items-center lg:items-end lg:w-1/2 relative gap-10 mt-10">
                 <div
                     class="px-[22px] pt-[22.50px] pb-[72px] origin-top-left rotate-[-15deg] bg-gradient-to-b from-white to-[#e9e9e9] shadow-sm flex-col justify-start items-start inline-flex">
-                    <img class="w-full h-[202.5px] md:h-[405px] object-cover"
-                        src="https://www.pizzahut.co.id/assets/party-1-BVA393nO.jpg" />
+                    <img class="w-full h-[80px] md:h-[300px] object-cover"
+                        src="{{ asset('assets/images/fotoAboutUs3.jpeg') }}" />
                 </div>
 
                 <div
                     class="px-[22.50px] pt-[22.50px] pb-[72px] origin-top-left rotate-[4.61deg] bg-gradient-to-b from-white to-[#e9e9e9] shadow-lg flex-col justify-start items-start inline-flex absolute top-0 right-0">
                     <img class="w-full h-[161.675px] md:h-[323.35px] object-cover"
-                        src="https://www.pizzahut.co.id/assets/party-3-D0eSiv0P.jpg" />
+                        src="{{ asset('assets/images/fotoAboutUs2.jpg') }}" />
                 </div>
             </div>
 

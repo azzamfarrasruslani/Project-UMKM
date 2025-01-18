@@ -490,7 +490,7 @@
                 <div
                     class="flex flex-col items-center justify-center w-full lg:w-1/3 p-6 bg-white rounded-lg shadow-lg text-center max-md:px-4 max-md:py-6">
                     <h3 class="text-2xl font-semibold text-yellow-500 mb-6">Hubungi Kami</h3>
-                    <p class="text-gray-700 mb-6">
+                    <p class="text-gray-700 text-sm mb-6">
                         Jika memiliki pertanyaan mendesak, hubungi kami melalui salah satu platform berikut:
                     </p>
 
