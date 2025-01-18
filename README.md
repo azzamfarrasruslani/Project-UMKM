@@ -226,20 +226,21 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data contact B3AM
 
-**2.2.6 Admin Input data team B3AM**
+**2.2.6 Admin Input data Kontak**
 
-Use Case: Input data team B3AM
+Use Case: Input data Kontak
 
 Diagram:![alt text](Images/Akontak.png?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Sistem memungkinkan admin untuk mengelola data kontak, termasuk menambah, melihat, mengubah, atau menghapus data kontak
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data team B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+1. Sistem menampilkan daftar data kontak yang tersedia.
+2. Admin dapat memilih untuk: Menambahkan data kontak baru, mengedit data kontak yang sudah ada, menghapus data kontak yang tidak relevan.
+3. Admin mengisi atau memperbarui informasi seperti media sosial, link, dan nomor telepon.
+4. Sistem akan menyimpan ke database.
+5. Sistem memberikan konfirmasi setelah data berhasil disimpan atau dimodifikasi.
 
 Xref: Bagian 3.2.3,data team B3AM
 
