@@ -165,8 +165,8 @@ Deskripsi Singkat
 Admin menginputkan kategori parenting lalu menambahkan judul dan deskripsi sesuain kategori.
 
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan input artikel.
-2. Admin Dapat melihat,menambahkan, dan mengupload artikel.
+1. Sistem akan menampilkan tampilan input Tentang Kami.
+2. Admin Dapat melihat,menambahkan, dan mengupload Tentang Kami.
 3. Sistem akan menyimpan ke database.
 4. Jika sudah disimpan sistem akan menampilkan peringatan.
 
