@@ -76,12 +76,15 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 **Halaman Admin**
 |  |  |
 |--|--|
-| ![alt text](Images/Login.png?raw=true) halaman login admin diminta untuk mengisi username dan password.| ![alt text](revisi/Dashboard.png?raw=true) Setelah login admin akan masuk ke tampilan Dashboard admin.
+| ![alt text](Images/Login.png?raw=true) Halaman login admin diminta untuk mengisi username dan password.| ![alt text](Images/dashboard.jpg?raw=true) Setelah login admin akan masuk ke tampilan Dashboard admin.
 |  |  |
-| ![alt text](revisi/DataKegiatan.png?raw=true) Pada halaman admin akan terdapat halaman unutk mengelola data kegiatan, namun tidak hanya dat kegiatan tapi admin juga dapat mengelola data artikel, data kontak, data about dan data team dengan tamnpilan yang sama di halaman yang berbeda.| ![alt text](revisi/TambahDataKegiatan.png?raw=true) Pada halaman mengelola data kegiatan, admin juga dapat menambahkan data kegiatan, begitu juga dengan pengelolaan data di tabel lainnya.
+| ![alt text](Images/menuA.jpg?raw=true) Terdapat halaman menu yang berisikan gambar dan detailnya.|![alt text](Images/promoA.jpg?raw=true) Ada juga halaman promo yang bisa di modifikasi oleh admin.
 |  |  |
-| ![alt text](revisi/DataKegiatan.png?raw=true) Pada halaman mengelola data kegiatan juga terdapat aksi untuk mengedit data kegiatan.|![alt text](revisi/DataKegiatan.png?raw=true) Pada halaman mengelola data kegiatan, selain menambahkan dan mengedit, admin juga dapat menghapus data kegiatan yang mana ketika button hapus di klik akan muncul pop up untuk memastikan admin benar-benar ingin menghapus atau tidak.
-
+| ![alt text](Images/tentangA.jpg?raw=true) Ada halaman tentang kami yang bisa menginputkan sejarah, gambar, visi dan misi.|![alt text](Images/hero.jpg?raw=true) Di halaman ini berisi gambar yang nantinya berada di tampilan awal home.
+|--|--|
+| ![alt text](Images/outletA.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang.| ![alt text](Images/blogA.jpg?raw=true) Terdapat juga blog atau berita agar admin bisa menambahkan gambar dan informasi berita.
+|--|--|
+| ![alt text](Images/karirA.jpg?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.| ![alt text](Images/kontak.jpg?raw=true) Ada kontak yang bisa di tambah agar pengunjung bisa menghubungi pihak admin.
 
 **Halaman User**
 |  |  |
@@ -482,7 +485,7 @@ tidak ada
 | Exception Push     |    Jika ada kesalahan server atau gangguan teknis, sistem akan menampilkan pesan kesalahan kepada pengguna. Pengguna dapat mencoba kembali atau menghubungi dukungan teknis.    |
 
 ## 3.3 Struktur Detail Kebutuhan Non-Fungsional
-![alt text](Image/3.3.png?raw=true)
+![alt text](Images/erd.png?raw=true)
 **3.3.1 Logika Struktur Data**
 Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database yang dijelaskan menggunakan ERD.
 
