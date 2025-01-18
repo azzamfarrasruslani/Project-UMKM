@@ -13,19 +13,26 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             @foreach ($pesansarans as $pesansaran)
-                <div class="bg-white shadow-md rounded-lg overflow-hidden p-4">
-                    <h2 class="text-lg font-bold">{{ $pesansaran->nama }}</h2>
-                    <p class="text-gray-600 mt-2">{{ $pesansaran->subjek }}</p>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden p-4 text-center">
+                    <!-- Nama -->
+                    <h2 class="text-lg font-bold text-red-500">{{ $pesansaran->nama }}</h2>
+
+                    <!-- Subjek -->
+                    <p class="text-xl font-extrabold text-gray-800 mt-2">{{ $pesansaran->subjek }}</p>
+
+                    <!-- Pesan -->
                     <p class="text-gray-600 mt-2 text-sm">{{ Str::limit($pesansaran->pesan, 100) }}</p>
 
-                    <div class="mt-4">
-                        <a href="{{ route('pesansaran.edit', $pesansaran->id) }}" class="text-white bg-blue-500 px-4 py-1 rounded-lg hover:shadow-xs">
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="{{ route('pesansaran.edit', $pesansaran->id) }}"
+                           class="text-white bg-blue-500 px-4 py-1 rounded-lg hover:shadow-xs">
                             <i class="fa-solid fa-pen-to-square"></i> Edit
                         </a>
-                        <form action="{{ route('pesansaran.destroy', $pesansaran->id) }}" method="POST" class="inline">
+                        <form action="{{ route('pesansaran.destroy', $pesansaran->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="px-4 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">
+                            <button type="submit"
+                                    class="px-4 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">
                                 <i class="fa-solid fa-trash"></i> Hapus
                             </button>
                         </form>
