@@ -16,13 +16,12 @@ class OutletController extends Controller
         return view('outlet.index', compact('outlet'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-
+    public function indexHome() {
+        $outlet = Outlet::all();
+        return view('homePage.outlet.index', compact('outlet'));
     }
+
+
 
     /**
      * Store a newly created resource in storage.

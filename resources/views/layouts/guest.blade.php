@@ -14,18 +14,24 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Open+Sans:300,400,600,700|Baloo+Thambi+2|Barlow+Semi+Condensed:ital,wght@1,100|Montserrat:wght@200;300;500;700|Poppins:wght@100;200;300;500;700|Roboto:wght@300|Noto+Sans+JP:wght@100&display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Mochiy+Pop+P+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/c23fedd423.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <!-- CKeditor -->
+     <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
-<body class="font-sans antialiased dark:bg-black dark:text-white/50 ">
+<body class="font-outfit antialiased dark:bg-black dark:text-white/50 ">
     {{-- Link ke WA --}}
     <a href=""
         class="fixed px-4 py-2 text-xl bg-white shadow-lg cursor-pointer bottom-8 right-8 z-990 rounded-circle text-green-500 transition-transform duration-300 ease-in-out hover:scale-105">
@@ -33,26 +39,28 @@
     </a>
     {{-- Layout Utama --}}
 
-    <main class="transition-all duration-200 ease-in-out">
+    <main class="transition-all duration-200 ease-in-out bg-neutral-100">
         <!-- Main Visual Section -->
 
-            @include('layouts.navbar')
-            <div class="mt-10">
-                {{ $slot }}
-            </div>
+        @include('layouts.navbar')
+        <div class="mt-10">
+            {{ $slot }}
+        </div>
 
 
 
-
+        @include('layouts.footer')
     </main>
 
     <!-- Script untuk AOS -->
     <script src="{{ asset('build/assets/libs/aos/aos.js') }}"></script>
     <script>
         // Animation on Scroll (Plugin)
-        AOS.init();
+        AOS.init({
+            // once: true // Animasi hanya berjalan sekali per elemen
+        });
     </script>
-    @include('layouts.footer')
+
     </div>
     <script src="{{ 'build/assets/js/plugins/perfect-scrollbar.min.js' }}"></script>
 

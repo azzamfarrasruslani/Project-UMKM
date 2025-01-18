@@ -32,7 +32,7 @@ class HeroController extends Controller
 
         $request->validate([
             'nama_hero' => 'required|string|max:255',
-            'gambar_hero' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'gambar_hero' => 'nullable|image|mimes:jpeg,png,jpg',
             'status_hero' => 'required|in:aktif,non-aktif',
             'jenis_tampilan' => 'required|in:mobile,desktop',
         ]);
@@ -77,7 +77,7 @@ class HeroController extends Controller
     {
         $request->validate([
             'nama_hero' => 'required|string|max:255',
-            'gambar_hero' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'gambar_hero' => 'nullable|image|mimes:jpeg,png,jpg',
             'status_hero' => 'required|in:aktif,non-aktif',
             'jenis_tampilan' => 'required|in:mobile,desktop',
         ]);
