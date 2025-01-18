@@ -66,7 +66,7 @@ Website Ayam Geprek Keysia adalah sebuah sistem informasi yang diaplikasikan pad
 **2.1.1 Antarmuka Sistem**
 
 
-![alt text](Images/Antarmuka_perangkat_keras.png?raw=true)
+![alt text](Images/antarmuka.png?raw=true)
 
 
 Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung. Admin memiliki fungsi untuk mengelola data, seperti menu dan informasi promosi, sementara pengunjung dapat melihat informasi yang tersedia dan memberikan komentar pada bagian yang disediakan.
@@ -95,7 +95,9 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 
 
 **2.1.3 Antarmuka perangkat keras**
-![alt text](Image/perangkatKeras.png?raw=true)
+
+![alt text](Images/Antarmuka_perangkat_keras.png?raw=true)
+
 Antarmuka perangkat keras yang digunakan untuk mengoperasikan Website Ayam Geprek Keysia antara lain:
 
 PC / Laptop Untuk menjalankan website ini.
