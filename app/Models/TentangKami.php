@@ -13,7 +13,11 @@ class TentangKami extends Model
 
     protected $fillable = [
         'judul_tK',
-        'deskripsi_tK',
-        'gambar_tK',
+        'sejarah_singkat',
+        'visi',
+        'misi',
+        'gambar_tK1',
+        'gambar_tK2',
+        'gambar_tK3',
     ];
 }

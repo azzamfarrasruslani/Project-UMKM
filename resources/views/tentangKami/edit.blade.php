@@ -62,18 +62,85 @@
                 </div>
             </div>
 
-        </div>
+            {{-- Input Sejarah Singkat --}}
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Sejarah Singkat</label>
+                <textarea name="sejarah_singkat" id="editor-sejarah" rows="5" class="mt-1 block w-full border-gray-300 rounded-md" required>{{ $tentangKami->sejarah_singkat }}</textarea>
+                @error('sejarah_singkat')
+                    <span class="text-red-500 text-sm">Sejarah singkat wajib diisi</span>
+                @enderror
+            </div>
 
-        <script>
-            ClassicEditor
-                .create(document.querySelector('#editor'))
-                .then(editor => {
-                    editor.model.document.on('change:data', () => {
-                        document.querySelector('textarea[name="deskripsi_tK"]').value = editor.getData();
-                    });
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-        </script>
+            {{-- Input Visi --}}
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Visi</label>
+                <textarea name="visi" id="editor-visi" rows="5" class="mt-1 block w-full border-gray-300 rounded-md">{{ $tentangKami->visi }}</textarea>
+                @error('visi')
+                    <span class="text-red-500 text-sm">Visi wajib diisi</span>
+                @enderror
+            </div>
+
+            {{-- Input Misi --}}
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Misi</label>
+                <textarea name="misi" id="editor-misi" rows="5" class="mt-1 block w-full border-gray-300 rounded-md">{{ $tentangKami->misi }}</textarea>
+                @error('misi')
+                    <span class="text-red-500 text-sm">Misi wajib diisi</span>
+                @enderror
+            </div>
+
+            {{-- Input Gambar Utama --}}
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Gambar Utama</label>
+                <input type="file" name="gambar_tK1" class="mt-1 block w-full" accept="image/*" />
+                <p class="text-sm text-gray-600">Gambar saat ini:</p>
+                <img src="{{ Storage::url($tentangKami->gambar_tK1) }}" alt="Gambar Utama" class="h-24 mt-2 rounded-md">
+                @error('gambar_tK1')
+                    <span class="text-red-500 text-sm">Gambar tidak boleh melebihi 2MB</span>
+                @enderror
+            </div>
+
+            {{-- Input Gambar Kedua --}}
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Gambar Kedua</label>
+                <input type="file" name="gambar_tK2" class="mt-1 block w-full" accept="image/*" />
+                @if ($tentangKami->gambar_tK2)
+                    <p class="text-sm text-gray-600">Gambar saat ini:</p>
+                    <img src="{{ Storage::url($tentangKami->gambar_tK2) }}" alt="Gambar Kedua" class="h-24 mt-2 rounded-md">
+                @endif
+                @error('gambar_tK2')
+                    <span class="text-red-500 text-sm">Gambar tidak boleh melebihi 2MB</span>
+                @enderror
+            </div>
+
+            {{-- Input Gambar Ketiga --}}
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Gambar Ketiga</label>
+                <input type="file" name="gambar_tK3" class="mt-1 block w-full" accept="image/*" />
+                @if ($tentangKami->gambar_tK3)
+                    <p class="text-sm text-gray-600">Gambar saat ini:</p>
+                    <img src="{{ Storage::url($tentangKami->gambar_tK3) }}" alt="Gambar Ketiga" class="h-24 mt-2 rounded-md">
+                @endif
+                @error('gambar_tK3')
+                    <span class="text-red-500 text-sm">Gambar tidak boleh melebihi 2MB</span>
+                @enderror
+            </div>
+
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Simpan Perubahan</button>
+        </form>
+    </div>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor-sejarah'))
+            .catch(error => console.error(error));
+
+        ClassicEditor
+            .create(document.querySelector('#editor-visi'))
+            .catch(error => console.error(error));
+
+        ClassicEditor
+            .create(document.querySelector('#editor-misi'))
+            .catch(error => console.error(error));
+    </script>
 </x-app-layout>
