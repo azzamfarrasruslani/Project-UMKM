@@ -319,7 +319,24 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.10, Input data Pesan Saran
 
-**2.2.11 pengunjung Mengunjungi website**
+**2.2.11 Admin Input data Testimoni**
+
+Use Case: Input data Testimoni
+
+Diagram:![alt text](Images/Atestimoni.png?raw=true)
+
+
+Deskripsi Singkat
+Sistem dapat menampilkan halaman kelola Testimoni , di mana admin dapat mengelola data Testimoni.
+Deskripsi Langkah- langkah:
+1. Sistem akan menampilkan daftar Testimoni yang ada.
+2. Admin dapat menambahkan, mengedit, atau menghapus Testimoni.
+3. Sistem akan menyimpan ke database.
+4. Setelah data tersimpan, sistem memberikan konfirmasi atau peringatan.
+
+Xref: Bagian 3.2.11, Input data Testimoni
+
+**2.2.12 pengunjung Mengunjungi website**
 
 Use Case: Mengunjungi website
 
@@ -334,9 +351,9 @@ Deskripsi Langkah-Langkah
 2. pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia 
 3. pengunjung dapat mengklik tombol kembali ke halaman sebelumnya jika ingin keluar pada halaman konten yang telah dilihat.
 
-Xref: Bagian 3.2.11, pengunjung Mengunjungi website
+Xref: Bagian 3.2.12, pengunjung Mengunjungi website
 
-**2.2.12 pengunjung Menginputkan Pesan Saran**
+**2.2.13 pengunjung Menginputkan Pesan Saran**
 
 Use Case: Mengunjungi website
 
@@ -351,7 +368,7 @@ Deskripsi Langkah- langkah:
 2. Pengunjung dapat menambahkan pesan saran.
 3. Sistem akan menyimpan ke database.
 4. Setelah data tersimpan, sistem memberikan konfirmasi atau peringatan.
-Xref: Bagian 3.2.12, inputkan Pesan Saran
+Xref: Bagian 3.2.13, inputkan Pesan Saran
 
 ## 2.3 Spesifikasi kebutuhan non-fungsional
 - tabel kebutuhan non-fungsional
@@ -385,54 +402,54 @@ tidak ada
 | Nama Fungsi         | Login                                  |
 | ------------------- | -------------------------------------- |
 | Xref                | Bagian 2.2.1 Login               |
-| Trigger             | Admin Membuka Website Sistem Informasi Parenting |
+| Trigger             | Admin Membuka Website profil ayam geprek keysia |
 | Precondition        | Halaman login                          |
 | Basic Path          | 1. Admin melakukan login dengan username dan password.
 |        |         2. Sistem melakukan validasi login. |
 |        | 3. Bila sukses, sistem akan mengarahkan ke home admin.  |
 |        | 4. Bila gagal, sistem akan menampilkan peringatan. |
 |     Alternative       |                   Tidak Ada                   |
-| Post Condition     |                  admin dapat login dan mengakses webiste sistem informasi parenting                   |
+| Post Condition     |                  admin dapat login dan mengakses webiste profil ayam geprek keysia                  |
 |         Exception Push          |                  Username dan password salah                   |
 
-**3.2.2 Admin Input Informasi Artikel Parenting**
-| Nama Fungsi | Input Informasi Parenting |
+**3.2.2 Admin Input Tentang Kami**
+| Nama Fungsi | Input Informasi Website |
 | ------ | ------ |
-| Xref       | Bagian 3.2.2, Input data artikel parenting       |
-| Triger       | Membuka website sistem informasi parenting        |
-| Precondition | Menginput data artikel parenting |
-| Basic Path | 1. Sistem akan menampilkan tampilan input artikel. |
-|            | 2. Admin dapat melihat,menambahkan, dan mengupload kegiatan. |
+| Xref       | Bagian 3.2.2, Input data tentang kami      |
+| Triger       | Membuka Website profil ayam geprek keysia        |
+| Precondition | Menginput data tentang kami |
+| Basic Path | 1. Sistem akan menampilkan tampilan input tentang kami. |
+|            | 2. Admin dapat melihat,menambahkan, dan mengupload tentang kami. |
 |            | 3. Sistem akan menyimpan ke database. |
 |            | 4. Jika sudah disimpan sistem akan menampilkan peringatan. |
 | Alternative | Tidak ada |     
-| Post Condition | Admin mengelola artikel
+| Post Condition | Admin mengelola tentang kami. |
 | Exception Push | Tidak ada koneksi |
 
 
-**3.2.3 Input Dokumentasi Kegiatan**
+**3.2.3 Admin Input Promo**
 
-| Nama Fungsi        | Input Informasi Website                              |
+| Nama Fungsi        | Input Informasi Website                             |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.3 Admin Input Dokumentasi Kegiatan                     |
-| Trigger            | admin dapat menginputkan data Dokumentasi Kegiatan |
-| Precondition       | Admin menginputkan Data dokumentasi Kegiatan ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan publikasi kegiatan. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload kegiatan.   |
+| Xref               | Bagian 2.2.3 Admin Input Promo                    |
+| Trigger            | admin dapat menginputkan data Promo |
+| Precondition       | Admin menginputkan Data Promo ke website |
+| Basic Path         | 1. Sistem akan menampilkan promo. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload promo.   |
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.4 Input data tentang BP3AM**
+**3.2.4 Admin input Menu**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.4 Admin Input data tentang BP3AM                     |
-| Trigger            | admin dapat menginputkan data tentang BP3AM |
-| Precondition       | Admin menginputkan data tentang BP3AM ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data tentang BP3AM. |
+| Xref               | Bagian 2.2.4 Admin Input data Menu                    |
+| Trigger            | admin dapat menginputkan data Menu |
+| Precondition       | Admin menginputkan data Menu ke website |
+| Basic Path         | 1. Sistem akan menampilkan data Menu. |
 |                    | 2. Admin dapat melihat,menambahkan, dan mengupload data tentang BP3AM.   |
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
@@ -440,41 +457,116 @@ tidak ada
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.5 Input data contact BP3AM**
+**3.2.5 Admin Input Data Outlet**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.5 Admin Input data contact BP3AM                     |
-| Trigger            | admin dapat menginputkan data contact BP3AM |
-| Precondition       | Admin menginputkan data contact BP3AM ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data contact BP3AM. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data contact BP3AM.   |
+| Xref               | Bagian 2.2.5 Admin Input Data Outlet                     |
+| Trigger            | admin dapat menginputkan data outlet |
+| Precondition       | Admin menginputkan data outlet ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data outlet. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data outlet.   |
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.6 Input data team BP3AM**
+**3.2.6 Admin Input Data Kontak**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.6 Admin Input data team BP3AM                     |
-| Trigger            | admin dapat menginputkan data team BP3AM |
-| Precondition       | Admin menginputkan data team BP3AM ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data team BP3AM. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data team BP3AM.   |
+| Xref               | Bagian 2.2.6 Admin Input Data kontak                     |
+| Trigger            | admin dapat menginputkan data kontak|
+| Precondition       | Admin menginputkan data kontak ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data kontak. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data kontak.   |
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.6 Mengunjungi website**
+**3.2.7 Admin Input Data Blog**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.7 Admin Input Data Blog                     |
+| Trigger            | admin dapat menginputkan data blog|
+| Precondition       | Admin menginputkan data blog ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data blog. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data blog.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.8 Admin Input Data Karir**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.8 Admin Input Data karir                     |
+| Trigger            | admin dapat menginputkan data karir|
+| Precondition       | Admin menginputkan data karir ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data karir. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data karir.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.9 Admin Input Data Hero Section**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.9 Admin Input Data Hero Section                     |
+| Trigger            | admin dapat menginputkan data Hero Section|
+| Precondition       | Admin menginputkan data Hero Section ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data Hero Section. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data Hero Section.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.10 Admin Input Data Pesan Saran**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.10 Admin Input Data Pesan Saran                     |
+| Trigger            | admin dapat menginputkan data Pesan Saran|
+| Precondition       | Admin menginputkan data Pesan Saran ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data Pesan Saran. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data Pesan Saran.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.11 Admin Input Data Testimoni**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.10 Admin Input Data Testimoni                     |
+| Trigger            | admin dapat menginputkan data Testimoni |
+| Precondition       | Admin menginputkan data Testimoni ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data Testimoni. |
+|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data Testimoni.   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Exception Push     | Tidak Ada        |
+
+**3.2.12 Pengnjung Mengunjungi website**
 
 | Nama Fungsi        |    pengunjung  Mengunjungi website             |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.6 Pengunjung Mengunjungi website             |
+| Xref               | Bagian 2.2.12 Pengunjung Mengunjungi website             |
 | Trigger            |pengunjung Dapat mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia |
 | Precondition       |pengunjung Mengunjungi website |
 | Basic Path         | 1. Sistem akan menampilkan halaman-halaman konten. |
@@ -483,6 +575,22 @@ tidak ada
 | Alternative        |   Halaman Konten    |
 | Post Condition     |   pengunjung mengunjungi website dan melihat informasi yang ada pada website     |
 | Exception Push     |    Jika ada kesalahan server atau gangguan teknis, sistem akan menampilkan pesan kesalahan kepada pengguna. Pengguna dapat mencoba kembali atau menghubungi dukungan teknis.    |
+
+**3.2.13 Pengunjung Input Data Pesan Saran**
+
+| Nama Fungsi        | Input Informasi Website                              |
+| ------------------- | ---------------------------------- |
+| Xref               | Bagian 2.2.13 Pengunjung Input Data Pesan Saran                     |
+| Trigger            | Pengunjung dapat menginputkan data Pesan Saran|
+| Precondition       | Pengunjung menginputkan data Pesan Saran ke website |
+| Basic Path         | 1. Sistem akan menampilkan tampilan data Pesan Saran. |
+|                    | 2. Pengunjung dapat melihat,menambahkan, dan mengupload data Pesan Saran   |
+|                    | 3. Sistem akan menyimpan ke database.   |
+|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Alternative        |  Tidak Ada                                 |
+| Post Condition     |  pengunjung mengunjungi website dan melihat informasi yang ada pada website      |
+| Exception Push     | Tidak Ada        |
+
 
 ## 3.3 Struktur Detail Kebutuhan Non-Fungsional
 ![alt text](Images/erd.png?raw=true)
@@ -600,19 +708,39 @@ Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database ya
 BAB 1 -> Sari
 
 BAB 2 
+
 2.1  
+
   2.1.1 -> Sari  
+  
   2.1.2 -> Sari  
+  
   2.1.3 -> Azzam 
+  
   2.1.4 -> Sari
+  
   2.1.5 -> Sari 
+  
   2.1.6 -> Sari 
+  
   2.1.7 -> Sari 
+  
   2.1.8 -> Sari
-2.2 semua poin-poin (Dion), gambar umum use case (Sari), gambar use case per poin (Azzam)
+  
+2.2 
+semua poin-poin (Dion), gambar umum use case (Sari), gambar use case per poin (Azzam)
 
 BAB 3 
-3.1 Sari
-3.2 Sari
-3.3 Gambar erd (Sari), tabel dan isian(Dion)
 
+3.1 Sari
+
+3.2 Dion
+
+3.3 Gambar erd (Sari), tabel dan isian(Sari)
+
+## Pembagian tugas di 
+-CRUD HomePage, promo, outlet, tetimoni (Azzam Farras Ruslani)
+
+-CRUD menu, karir , PesanSaran (Dion)
+
+-CRUD About, blog/news, kontak (Tri Wulandari Junita Sari)
