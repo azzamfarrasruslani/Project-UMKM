@@ -15,15 +15,15 @@ Website Profil Ayam Geprek Keysia adalah sistem informasi berbasis web yang diba
 | Istilah | Definisi |
 | ------ | ------ |
 |   SRS     |    Software Requirement Specification    |
-|    Login    | Digunakan untuk mengakses aplikasi       |
-|   Software Requirement Specification     | perangkat lunak yang akan dibuat dan sebagai penyembatani komunikasi pembuat dengan pengguna       |
-|    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
-|   SRS     |    Software Requirement Specification    |
+|   Software Requirement Specification     | Dokumen yang mendefinisikan perangkat lunak yang akan dibangun dan menjadi penghubung antara pengembang dan pengguna      |
+|    Login    | Proses untuk masuk dan mengakses website       |
+|    Use Case    | Deskripsi situasi saat sistem digunakan untuk memenuhi kebutuhan tertentu       |
+
 
 ## 1.4 Referensi
 Referensi yang digunakan dalam pembuatan website ini adalah:
-https://ayamgepreksai.com/menu-kami/ 
-https://www.kfckorea.com/ 
+1. https://ayamgepreksai.com/menu-kami/
+2. https://www.kfckorea.com/ 
 
 
 
