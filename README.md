@@ -5,11 +5,11 @@
 
 ## 1.1 Tujuan
 
-Dokumen Software Requirement Specification (SRS) merupakan dokumen spesifikasi perangkat lunak untuk membangun “Sistem Informasi Parenting”. Dokumen ini dibangun untuk memudahkan Dinas Perlindungan Anak memberikan informasi dan edukasi terkait Ilmu Parenting kepada calon orang tua dan para orang tua. Sehingga dokumen ini dapat dijadikan acuan teknis untuk membangun perangkat lunak “SISTEM INFORMASI PARENTING”.
+Dokumen Software Requirement Specification (SRS) merupakan dokumen spesifikasi perangkat lunak untuk membangun “Website profil Ayam Geprek Keysia”. Dokumen ini dibangun untuk membuat website profil yang informatif, menarik dan mudah digunakan. Membantu pelanggan dalam mengakses informasi seputar Ayam Geprek Keysia. Menyediakan fitur utama yang mendukung promosi produk, seperti menu, informasi perusahaan, lokasi, kontak dan testimoni dari pelanggan. Sehingga dokumen ini dapat dijadikan acuan teknis untuk membangun perangkat lunak “WEBSITE PROFIL AYAM GEPREK KEYSIA”.
 
 
 ## 1.2 Lingkup
-Sistem Informasi Parenting merupakan aplikasi yang kami bangun untuk mempermudah Dinas Perlindungan Anak dalam memberikan infromasi dan edukasi kepada para calon orang tua dan orang tua seputar Ilmu Parenting seperti perkembangan anak, kesehatan anak, pendidikan anak, kesejahteraan mental anak, dan lain-lainnya.
+Website Profil Ayam Geprek Keysia adalah sistem informasi berbasis web yang dibangun untuk mempermudah pelanggan dalam mengakses informasi tentang menu, profil perusahaan, lokasi, kontak, dan testimoni pelanggan. Website ini dirancang untuk mendukung promosi produk Ayam Geprek Keysia dengan tampilan yang informatif, menarik, dan mudah digunakan.
 
 ## 1.3 Akronim, singkatan, definisi
 | Istilah | Definisi |
@@ -18,11 +18,12 @@ Sistem Informasi Parenting merupakan aplikasi yang kami bangun untuk mempermudah
 |    Login    | Digunakan untuk mengakses aplikasi       |
 |   Software Requirement Specification     | perangkat lunak yang akan dibuat dan sebagai penyembatani komunikasi pembuat dengan pengguna       |
 |    Use Case    | situasi dimana sistem anda digunakan untuk memenuhi satu atau lebih kebutuhan pemakaian anda       |
+|   SRS     |    Software Requirement Specification    |
 
 ## 1.4 Referensi
-Referensi yang digunakan dalam pengembangan perangkat lunak ini adalah :
-
--https://schoolofparenting.id/
+Referensi yang digunakan dalam pembuatan website ini adalah:
+https://ayamgepreksai.com/menu-kami/ 
+https://www.kfckorea.com/ 
 
 
 
