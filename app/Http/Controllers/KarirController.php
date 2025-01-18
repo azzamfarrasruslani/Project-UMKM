@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Job;
+use App\Models\Karir;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
-class JobController extends Controller
+
+
+class KarirController extends Controller
 {
     public function index()
     {
-        $jobs = Job::all();
-        return view('job.index', compact('jobs'));
+        $karir = Karir::all();
+        return view('karir.index', compact('karir'));
     }
 
     public function create()
     {
-        return view('job.create');
+        return view('karir.create');
     }
 
     public function store(Request $request)
@@ -42,13 +45,13 @@ class JobController extends Controller
         $data['gambar'] = $filePath; // Simpan path gambar ke database
     }
 
-    Job::create($data);
+    Karir::create($data);
 
-    return redirect()->route('job.index')->with('success', 'Lowongan berhasil ditambahkan!');
+    return redirect()->route('karir.index')->with('success', 'Lowongan berhasil ditambahkan!');
 }
 
 
-    public function show(Job $job)
+    public function show(Karir $job)
     {
         //
     }
@@ -57,13 +60,13 @@ class JobController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Job $job)
+    public function edit(Karir $job)
     {
-        return view ('job.edit', compact('job'));
+        return view ('karir.edit', compact('karir'));
     }
 
 
-    public function update(Request $request, Job $job)
+    public function update(Request $request, Karir $job)
     {
         $request->validate([
             'nama_posisi' => 'required|string|max:255',
@@ -85,8 +88,8 @@ class JobController extends Controller
         $filePath = $file->store('uploads', 'public'); // Simpan gambar baru
 
         // Hapus gambar lama jika ada
-        if ($job->gambar && \Storage::exists('public/' . $job->gambar)) {
-            \Storage::delete('public/' . $job->gambar);
+        if ($job->gambar && Storage::exists('public/' . $job->gambar)) {
+            Storage::delete('public/' . $job->gambar);
         }
 
         $data['gambar'] = $filePath; // Simpan path gambar baru ke database
@@ -94,14 +97,14 @@ class JobController extends Controller
 
     $job->update($data);
 
-    return redirect()->route('job.index')->with('success', 'Lowongan berhasil diperbarui!');
+    return redirect()->route('karir.index')->with('success', 'Lowongan berhasil diperbarui!');
 }
 
 
 
-    public function destroy(Job $job)
+    public function destroy(Karir $job)
     {
         $job->delete();
-        return redirect()->route('job.index')->with('success', 'Lowongan berhasil dihapus!');
+        return redirect()->route('karir.index')->with('success', 'Lowongan berhasil dihapus!');
     }
 }

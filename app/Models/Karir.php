@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Job extends Model
+class Karir extends Model
 {
     // Nama tabel dalam database
-    protected $table = 'job';
+    protected $table = 'karir';
 
     // Aktifkan timestamps jika menggunakan kolom created_at dan updated_at
+    protected $primaryKey = 'id_karir';
     public $timestamps = false;
 
     // Kolom yang dapat diisi (mass assignable)

@@ -6,7 +6,7 @@ use App\Http\Controllers\OutletController;
 use App\Models\User; // Pastikan model User di-import
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
-use App\Http\Controllers\JobController;
+use App\Http\Controllers\KarirController;
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HeroController;
@@ -88,7 +88,7 @@ Route::controller(TentangKamiController::class)->group(function () {
 
 
 
-Route::resource('job', JobController::class)->only(['index','create','store','edit','destroy','update'])
+Route::resource('job', KarirController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
 // Route untuk Google login

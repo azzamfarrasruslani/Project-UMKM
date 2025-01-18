@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_menu');
             $table->string('nama_menu');
             $table->text('deskripsi_menu');
+            $table->string('kategori_menu');
             $table->integer('harga_menu');
             $table->string('gambar_menu')->nullable();
             $table->enum('status_menu', ['aktif', 'non-aktif'])->default('aktif');
