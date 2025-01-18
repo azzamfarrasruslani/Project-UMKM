@@ -280,37 +280,38 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.3,data team B3AM
 
-**2.2.9 Admin Input data team B3AM**
+**2.2.9 Admin Input data hero section**
 
-Use Case: Input data team B3AM
+Use Case: Input data hero section
 
 Diagram:![alt text](Images/Ahero.png?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Sistem ini memungkinkan Admin untuk mengelola data pada bagian Hero Section dari website. 
 Deskripsi Langkah- langkah:
 1. Sistem akan menampilkan tampilan data team B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
-3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+2. Admin dapat memilih untuk: menambah data hero baru, mengedit data hero yang sudah ada, menghapus data hero tertentu, melihat daftar data hero yang tersedia.
+3. Admin mengisi atau memodifikasi informasi terkait: Nama hero, Gambar hero, Status hero (aktif/nonaktif).
+4. Sistem akan menyimpan ke database.
+5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau menampilkan peringatan jika ada kesalahan.
 
 Xref: Bagian 3.2.3,data team B3AM
 
-**2.2.10 Admin Input data team B3AM**
+**2.2.10 Admin Input data pesan saran**
 
-Use Case: Input data team B3AM
+Use Case: Input data pesan saran
 
 Diagram:![alt text](Images/ApesanSaran.png?raw=true)
 
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman Input data team B3AM dan Admin mengInput data team B3AM.
+Sistem dapat menampilkan halaman kelola pesan saran, di mana admin dapat mengelola data pesan saran.
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data team B3AM.
-2. Admin dapat melihat,menambahkan, dan mengupload data team B3AM.
+1. Sistem akan menampilkan daftar pesan saran yang ada.
+2. Admin dapat menambahkan, mengedit, atau menghapus pesan saran.
 3. Sistem akan menyimpan ke database.
-4. sudah disimpan sistem akan menampilkan peringatan.
+4. Setelah data tersimpan, sistem memberikan konfirmasi atau peringatan.
 
 Xref: Bagian 3.2.3,data team B3AM
 
