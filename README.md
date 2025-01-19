@@ -38,7 +38,6 @@ UMKM adalah singkatan dari Usaha Mikro, Kecil, dan Menengah yang memiliki peran 
 - View promo
 - View outlets
 - View kontak
-- View blog
 - View karir
 - View testimoni
 - View hero section
@@ -51,7 +50,6 @@ Berikut ini fungsi admin yaitu:
 - Input promo
 - Input outlets
 - Input kontak
-- Input blog
 - Input karir
 - Input testimoni
 - Input hero section
@@ -66,7 +64,7 @@ Website Ayam Geprek Keysia adalah sebuah sistem informasi yang diaplikasikan pad
 **2.1.1 Antarmuka Sistem**
 
 
-![alt text](Images/antarmuka.png?raw=true)
+![alt text](Image/antarmuka.png?raw=true)
 
 
 Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung. Admin memiliki fungsi untuk mengelola data, seperti menu dan informasi promosi, sementara pengunjung dapat melihat informasi yang tersedia dan memberikan komentar pada bagian yang disediakan.
@@ -78,22 +76,22 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 |--|--|
 | ![alt text](Images/Login.png?raw=true) Halaman login admin diminta untuk mengisi username dan password.| ![alt text](Images/dashboard.jpg?raw=true) Setelah login admin akan masuk ke tampilan Dashboard admin.
 |  |  |
-| ![alt text](Images/menuA.jpg?raw=true) Terdapat halaman menu yang berisikan gambar dan detailnya.|![alt text](Images/promoA.jpg?raw=true) Ada juga halaman promo yang bisa di modifikasi oleh admin.
+| ![alt text](Images/menuA.jpg?raw=true) Terdapat halaman menu yang berisikan gambar dan detailnya.|![alt text](Images/promoA.jpg?raw=true) Ada juga halaman promo yang bisa memuat promosi atau diskon usaha.
 |  |  |
 | ![alt text](Images/tentangA.jpg?raw=true) Ada halaman tentang kami yang bisa menginputkan sejarah, gambar, visi dan misi.|![alt text](Images/hero.jpg?raw=true) Di halaman ini berisi gambar yang nantinya berada di tampilan awal home.
 |--|--|
-| ![alt text](Images/outletA.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang.| ![alt text](Images/blogA.jpg?raw=true) Terdapat juga blog atau berita agar admin bisa menambahkan gambar dan informasi berita.
+| ![alt text](Images/outletA.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang. | ![alt text](Images/karirA.jpg?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.
 |--|--|
-| ![alt text](Images/karirA.jpg?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.| ![alt text](Images/kontak.jpg?raw=true) Ada kontak yang bisa di tambah agar pengunjung bisa menghubungi pihak admin.
+| ![alt text](Images/kontak.jpg?raw=true) Ada kontak yang bisa di tambah agar pengunjung bisa menghubungi pihak admin.
 
 **Halaman User**
 |  |  |
 |--|--|
 | ![alt text](Images/home.jpg?raw=true)  Pada halaman pengunjung terdapat beranda yang berisi tampilan scrolling yang berisi seluruh konten seperti tampilan home, hero section, promo, outlets, testimoni, pesan saran dan kontak.|![alt text](Images/menu.jpg?raw=true) Pada halaman pengunjung terdapat halaman menu yang berisi gambar, deskripsi dan harganya.
 |  |  |
-| ![alt text](Images/tentangkami.jpg?raw=true) Pada halaman pengunjung terdapat halaman tentang kami, yang berisi gambar, sejarah singkat serta visi dan misi.|![alt text](Images/blog.jpg?raw=true) Pada halaman pengunjung terdapat halaman blog atau berita yang berisi gambar serta deskripsi.
+| ![alt text](Images/tentangkami.jpg?raw=true) Pada halaman pengunjung terdapat halaman tentang kami, yang berisi gambar, sejarah singkat serta visi dan misi. |![alt text](Images/karir.jpg?raw=true) Pada halaman pengunjung terdapat halaman karir atau job yang berisi informasi mengenai lowongan pekerjaan.
 |  |  |
-| ![alt text](Images/outlets.jpg?raw=true) Pada halaman pengunjung terdapat halaman outlets atau cabang yang berisi lokasi dari cabang yang dimiliki umkm ayam geprek keysia.|![alt text](Images/karir.jpg?raw=true) Pada halaman pengunjung terdapat halaman karir atau job yang berisi informasi mengenai lowongan pekerjaan.
+| ![alt text](Images/outlets.jpg?raw=true) Pada halaman pengunjung terdapat halaman outlets atau cabang yang berisi lokasi dari cabang yang dimiliki umkm ayam geprek keysia.
 |  |  |
 
 
@@ -137,7 +135,7 @@ tidak ada
 tidak ada
 
 ## 2.2 Spesifikasi kebutuhan fungsional
-![alt text](Images/UseCase.png?raw=true)
+![alt text](Image/usecase.png?raw=true)
 **2.2.1 Admin Login**
 
 Use Case: Login
@@ -173,7 +171,7 @@ Deskripsi Langkah- langkah:
 3. Sistem akan menyimpan data yang dimasukkan ke dalam database.
 4. Jika data berhasil disimpan, sistem akan menampilkan pesan konfirmasi.
 
-Xref: Bagian 3.2.2, Input data Artikel Parenting
+Xref: Bagian 3.2.2, Input Data Tentang Kami
 
 **2.2.3 Admin Input Data Promo**
 
@@ -192,7 +190,7 @@ Deskripsi promo, Syarat dan ketentuan, Tanggal mulai, Tanggal berakhir, Gambar p
 3. Sistem akan menyimpan data yang diinput ke dalam database.
 4. Jika data berhasil disimpan, sistem akan menampilkan pesan konfirmasi.
 
-Xref: Bagian 3.2.3, Input data Dokumentasi kegiatan
+Xref: Bagian 3.2.3, Input Data Promo
 
 **2.2.4 Admin input Data Menu**
 
@@ -222,7 +220,7 @@ Diagram:![alt text](Images/Aoutlet.png?raw=true)
 Deskripsi Singkat
 Sistem dapat menampilkan halaman untuk mengelola data outlet. Admin dapat menambah, melihat, mengubah, atau menghapus informasi tentang outlet
 Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan tampilan data contact B3AM.
+1. Sistem akan menampilkan tampilan data outlet.
 2. Admin dapat memilih untuk Menambahkan outlet baru,Mengedit informasi outlet, Menghapus data outlet yang sudah tidak relevan.
 3. Admin mengisi atau memperbarui data seperti nama outlet, alamat, jumlah karyawan, tanggal berdiri, status outlet, iframe map, link pesan online, dan gambar pesan online.
 4. Sistem akan menyimpan ke database.
@@ -248,25 +246,7 @@ Deskripsi Langkah- langkah:
 
 Xref: Bagian 3.2.6, Input Data Kontak
 
-**2.2.7 Admin Input Data Blog**
-
-Use Case: Input data blogteam B3AM
-
-Diagram:![alt text](Images/Ablog.png?raw=true)
-
-
-Deskripsi Singkat
-Sistem ini memungkinkan Admin untuk mengelola data blog dengan fitur menambah, mengubah, menghapus, atau melihat data blog. Data blog meliputi judul, konten, gambar, dan status blog.
-Deskripsi Langkah- langkah:
-1. Sistem menampilkan halaman utama untuk pengelolaan data blog.
-2. Admin dapat memilih untuk: menambah blog baru, mengedit blog yang sudah ada, menghapus blog tertentu, melihat daftar blog yang tersedia.
-3. Admin mengisi atau memodifikasi informasi blog, seperti judul, konten, gambar, dan status.
-4. Sistem akan menyimpan ke database.
-5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau peringatan.
-
-Xref: Bagian 3.2.7, Input Data Blog
-
-**2.2.8 Admin Input Data Karir**
+**2.2.7 Admin Input Data Karir**
 
 Use Case: Input Data Karir
 
@@ -282,11 +262,11 @@ Deskripsi Langkah- langkah:
 4. Sistem akan menyimpan ke database.
 5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau peringatan jika ada kesalahan.
 
-Xref: Bagian 3.2.8, Input Data Karir
+Xref: Bagian 3.2.7, Input Data Karir
 
-**2.2.9 Admin Input data Hero Section**
+**2.2.8 Admin Input data Hero Section**
 
-Use Case: Input data Hero Section
+Use Case: Input Data Hero Section
 
 Diagram:![alt text](Images/Ahero.png?raw=true)
 
@@ -300,28 +280,27 @@ Deskripsi Langkah- langkah:
 4. Sistem akan menyimpan ke database.
 5. Setelah berhasil disimpan, sistem memberikan konfirmasi atau menampilkan peringatan jika ada kesalahan.
 
-Xref: Bagian 3.2.9,  Input data Hero Section
+Xref: Bagian 3.2.8,  Input data Hero Section
 
-**2.2.10 Admin Input data Pesan Saran**
+**2.2.9 Admin Melihat data Pesan Saran**
 
-Use Case: Input data Pesan Saran
+Use Case: Melihat Data Pesan Saran
 
 Diagram:![alt text](Images/ApesanSaran.png?raw=true)
 
 
-Deskripsi Singkat
-Sistem dapat menampilkan halaman kelola pesan saran, di mana admin dapat mengelola data pesan saran.
-Deskripsi Langkah- langkah:
-1. Sistem akan menampilkan daftar pesan saran yang ada.
-2. Admin dapat menambahkan, mengedit, atau menghapus pesan saran.
-3. Sistem akan menyimpan ke database.
-4. Setelah data tersimpan, sistem memberikan konfirmasi atau peringatan.
+Deskripsi Singkat 
+Admin bisa melihat data Pesan saran yang di inputkan oleh pengunjung, data pesan saran yang positif akan di jadikan Testimoni.
 
-Xref: Bagian 3.2.10, Input data Pesan Saran
+Deskripsi Langkah-Langkah
+1. Sistem akan menampilkan halaman-halaman konten.
+2. Admin melihat informasi yang ada pada website mengenai data pesan saran yang masuk.
 
-**2.2.11 Admin Input data Testimoni**
+Xref: Bagian 3.2.9, Melihat Data Pesan Saran
 
-Use Case: Input data Testimoni
+**2.2.10 Admin Input data Testimoni**
+
+Use Case: Input Data Testimoni
 
 Diagram:![alt text](Images/Atestimoni.png?raw=true)
 
@@ -334,9 +313,9 @@ Deskripsi Langkah- langkah:
 3. Sistem akan menyimpan ke database.
 4. Setelah data tersimpan, sistem memberikan konfirmasi atau peringatan.
 
-Xref: Bagian 3.2.11, Input data Testimoni
+Xref: Bagian 3.2.10, Input Data Testimoni
 
-**2.2.12 pengunjung Mengunjungi website**
+**2.2.11 pengunjung Mengunjungi website**
 
 Use Case: Mengunjungi website
 
@@ -344,31 +323,30 @@ Diagram:
 ![alt text](Images/Pengunjung.png?raw=true)
 
 Deskripsi Singkat 
-pengunjung mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia, pengunjung juga dapat memberikan komentar pada konten parenting yang tersedia 
+pengunjung mengunjungi website dan melihat informasi profil perusahaan seperti menu, promo, tentang kami, karir dan kontak.
 
 Deskripsi Langkah-Langkah
 1. Sistem akan menampilkan halaman-halaman konten.
-2. pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia 
-3. pengunjung dapat mengklik tombol kembali ke halaman sebelumnya jika ingin keluar pada halaman konten yang telah dilihat.
+2. pengunjung melihat informasi yang ada pada website.
 
-Xref: Bagian 3.2.12, pengunjung Mengunjungi website
+Xref: Bagian 3.2.11, pengunjung mengunjungi website
 
-**2.2.13 pengunjung Menginputkan Pesan Saran**
+**2.2.12 pengunjung Menginputkan Pesan Saran**
 
-Use Case: Mengunjungi website
+Use Case: Input pesan saran
 
 Diagram:
 ![alt text](Images/Ppesan.png?raw=true)
 
 Deskripsi Singkat
-Sistem dapat menampilkan halaman kelola pesan saran, di mana pengunjung dapat mengelola data pesan saran.
+Sistem dapat menampilkan halaman kelola pesan saran, di mana pengunjung dapat menginputkan data pesan saran.
 
 Deskripsi Langkah- langkah:
 1. Sistem akan menampilkan daftar pesan saran yang ada.
 2. Pengunjung dapat menambahkan pesan saran.
 3. Sistem akan menyimpan ke database.
 4. Setelah data tersimpan, sistem memberikan konfirmasi atau peringatan.
-Xref: Bagian 3.2.13, inputkan Pesan Saran
+Xref: Bagian 3.2.12, inputkan Pesan Saran
 
 ## 2.3 Spesifikasi kebutuhan non-fungsional
 - tabel kebutuhan non-fungsional
@@ -439,7 +417,7 @@ tidak ada
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti tentang kami dan kontak.        |
 | Exception Push     | Tidak Ada        |
 
 **3.2.4 Admin input Menu**
@@ -454,7 +432,7 @@ tidak ada
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti menu, tentang kami dan promo.        |
 | Exception Push     | Tidak Ada        |
 
 **3.2.5 Admin Input Data Outlet**
@@ -469,7 +447,7 @@ tidak ada
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti menu, tentang kami dan kontak.        |
 | Exception Push     | Tidak Ada        |
 
 **3.2.6 Admin Input Data Kontak**
@@ -484,29 +462,14 @@ tidak ada
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti menu, promo dan tentang kami.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.7 Admin Input Data Blog**
+**3.2.7 Admin Input Data Karir**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.7 Admin Input Data Blog                     |
-| Trigger            | admin dapat menginputkan data blog|
-| Precondition       | Admin menginputkan data blog ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data blog. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data blog.   |
-|                    | 3. Sistem akan menyimpan ke database.   |
-|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
-| Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
-| Exception Push     | Tidak Ada        |
-
-**3.2.8 Admin Input Data Karir**
-
-| Nama Fungsi        | Input Informasi Website                              |
-| ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.8 Admin Input Data karir                     |
+| Xref               | Bagian 2.2.7 Admin Input Data karir                     |
 | Trigger            | admin dapat menginputkan data karir|
 | Precondition       | Admin menginputkan data karir ke website |
 | Basic Path         | 1. Sistem akan menampilkan tampilan data karir. |
@@ -514,14 +477,14 @@ tidak ada
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti menu, promo dan kontak.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.9 Admin Input Data Hero Section**
+**3.2.8 Admin Input Data Hero Section**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.9 Admin Input Data Hero Section                     |
+| Xref               | Bagian 2.2.8 Admin Input Data Hero Section                     |
 | Trigger            | admin dapat menginputkan data Hero Section|
 | Precondition       | Admin menginputkan data Hero Section ke website |
 | Basic Path         | 1. Sistem akan menampilkan tampilan data Hero Section. |
@@ -529,25 +492,23 @@ tidak ada
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat menginputkan data seputar website seperti menu, promo dan kontak.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.10 Admin Input Data Pesan Saran**
+**3.2.9 Admin Melihat Data Pesan Saran**
 
-| Nama Fungsi        | Input Informasi Website                              |
+| Nama Fungsi        | Melihat Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.10 Admin Input Data Pesan Saran                     |
-| Trigger            | admin dapat menginputkan data Pesan Saran|
-| Precondition       | Admin menginputkan data Pesan Saran ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data Pesan Saran. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data Pesan Saran.   |
-|                    | 3. Sistem akan menyimpan ke database.   |
-|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
+| Xref               | Bagian 2.2.9 Admin Melihat Data Pesan Saran                     |
+| Trigger            | admin dapat melihat data Pesan Saran|
+| Precondition       | Tidak ada |
+| Basic Path         | 1. Sistem akan menampilkan halaman-halaman konten. |
+|                    | 2. Admin dapat melihat data Pesan Saran.   |
 | Alternative        |  Tidak Ada                                 |
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.11 Admin Input Data Testimoni**
+**3.2.10 Admin Input Data Testimoni**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
@@ -559,28 +520,27 @@ tidak ada
 |                    | 3. Sistem akan menyimpan ke database.   |
 |                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
 | Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
+| Post Condition     |  Admin Dapat melihat data pesan saran yang di inputkan oleh pengunjung.       |
 | Exception Push     | Tidak Ada        |
 
-**3.2.12 Pengnjung Mengunjungi website**
+**3.2.11 Pengnjung Mengunjungi website**
 
 | Nama Fungsi        |    pengunjung  Mengunjungi website             |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.12 Pengunjung Mengunjungi website             |
-| Trigger            |pengunjung Dapat mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia |
-| Precondition       |pengunjung Mengunjungi website |
-| Basic Path         | 1. Sistem akan menampilkan halaman-halaman konten. |
-|                    |  2.pengunjung melihat informasi yang ada pada website seperti informasi seputar website atau informasi parenting serta juga dapat memberikan komentar pada konten parenting yang tersedia    |
-|                    | 3.pengunjung dapat mengklik tombol kembali ke halaman sebelumnya jika ingin keluar pada halaman konten yang telah dilihat.    |
+| Xref               | Bagian 2.2.11 Pengunjung Mengunjungi website             |
+| Trigger            | Pengunjung Dapat mengunjungi website dan melihat informasi dan seluruh fitur yang tersedia pada website. |
+| Precondition       | Pengunjung Mengunjungi website |
+| Basic Path         |  1. Sistem akan menampilkan halaman-halaman konten. |
+|                    |  2. Pengunjung melihat informasi yang ada pada website seperti menu, promo, kontak dan fitur lainnya   |
 | Alternative        |   Halaman Konten    |
 | Post Condition     |   pengunjung mengunjungi website dan melihat informasi yang ada pada website     |
-| Exception Push     |    Jika ada kesalahan server atau gangguan teknis, sistem akan menampilkan pesan kesalahan kepada pengguna. Pengguna dapat mencoba kembali atau menghubungi dukungan teknis.    |
+| Exception Push     |   Tidak Ada    |
 
-**3.2.13 Pengunjung Input Data Pesan Saran**
+**3.2.12 Pengunjung Input Data Pesan Saran**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.13 Pengunjung Input Data Pesan Saran                     |
+| Xref               | Bagian 2.2.12 Pengunjung Input Data Pesan Saran                     |
 | Trigger            | Pengunjung dapat menginputkan data Pesan Saran|
 | Precondition       | Pengunjung menginputkan data Pesan Saran ke website |
 | Basic Path         | 1. Sistem akan menampilkan tampilan data Pesan Saran. |
@@ -593,7 +553,7 @@ tidak ada
 
 
 ## 3.3 Struktur Detail Kebutuhan Non-Fungsional
-![alt text](Images/erd.png?raw=true)
+![alt text](Image/erd.png?raw=true)
 **3.3.1 Logika Struktur Data**
 Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database yang dijelaskan menggunakan ERD.
 
@@ -631,15 +591,6 @@ Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database ya
 |status|varchar|Berisi status pada menu |
 |deskripsi|text|Berisi deskripsi menu |
 |kategori|varchar|Berisi gambar pada menu |
-
-**Tabel Blog**
-|Data Item|Tipe Data|Deskripsi|
-|--|--|--|
-|id_blog|int|Auto-increment dari id_blog|
-|gambar|text|Berisi gambar blog |
-|status|varchar|Berisi status pada blog |
-|judul|varchar|Berisi judul blog |
-|konten|text|Berisi konten pada blog |
 
 **Tabel Karir**
 |Data Item|Tipe Data|Deskripsi|
@@ -709,38 +660,17 @@ BAB 1 -> Sari
 
 BAB 2 
 
-2.1  
-
-  2.1.1 -> Sari  
-  
-  2.1.2 -> Sari  
-  
-  2.1.3 -> Azzam 
-  
-  2.1.4 -> Sari
-  
-  2.1.5 -> Sari 
-  
-  2.1.6 -> Sari 
-  
-  2.1.7 -> Sari 
-  
-  2.1.8 -> Sari
+2.1
+semua Sari kecuali 2.1.3(Azzam)
   
 2.2 
 semua poin-poin (Dion), gambar umum use case (Sari), gambar use case per poin (Azzam)
 
-BAB 3 
-
-3.1 Sari
-
-3.2 Dion
-
-3.3 Gambar erd (Sari), tabel dan isian(Sari)
+BAB 3 -> Sari
 
 ## Pembagian tugas di Website
 -CRUD HomePage, promo, outlet, tetimoni (Azzam Farras Ruslani)
 
--CRUD menu, karir , PesanSaran (Dion)
+-CRUD Menu, karir , PesanSaran (Dion)
 
--CRUD About, blog/news, kontak (Tri Wulandari Junita Sari)
+-CRUD About dan Kontak (Tri Wulandari Junita Sari)
