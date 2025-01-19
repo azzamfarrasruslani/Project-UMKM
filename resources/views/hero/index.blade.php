@@ -27,11 +27,11 @@
                 </div>
 
                 <!-- Data Hero -->
-                <div class="flex flex-wrap px-2 py-6 rounded-2xl">
+                <div class="flex flex-wrap px-2 py-6 mt-5 bg-white rounded-2xl">
                     <div class="w-full px-3">
                         @if (!empty($hero) && !is_array($hero))
                             <div id="kandangTabContent"
-                                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 bg-white px-5 py-10 rounded-2xl">
+                                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  px-5 py-10 rounded-2xl">
 
                                 @foreach ($hero as $index => $item)
                                     <div class="card-kandang hidden" data-tab="tab-{{ ceil(($index + 1) / 6) }}">
