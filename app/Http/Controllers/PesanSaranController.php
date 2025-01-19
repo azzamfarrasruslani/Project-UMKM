@@ -12,23 +12,36 @@ class PesanSaranController extends Controller
      */
     public function index()
     {
-        //
+        $pesanSaran = PesanSaran::all();
+        return view('pesanSaran.index', compact('pesanSaran'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+
+
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subjek' => 'required|string|max:255',
+            'pesan' => 'required|string|max:1000',
+        ]);
+
+
+        $pesanSaran = new PesanSaran();
+        $pesanSaran->nama = $request->nama;
+        $pesanSaran->email = $request->email;
+        $pesanSaran->subjek = $request->subjek;
+        $pesanSaran->pesan = $request->pesan;
+
+        $pesanSaran->save();
+
+        return redirect()->route('home')->with('success', 'Menu berhasil ditambahkan!');
     }
 
     /**
