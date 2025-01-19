@@ -74,16 +74,16 @@
                         <h6 class="pl-3 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">Informasi</h6>
                     </li>
                     <ul class="mb-4">
-                        <li class="mt-0.5 w-full">
+                        {{-- <li class="mt-0.5 w-full">
                             <x-nav-link :href="route('blog.index')" :active="request()->routeIs('blog.index')">
                                 <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg xl:p-2.5">
                                     <i class="fa-solid fa-newspaper fa-lg"></i>
                                 </div>
                                 <span class="ml-1">Blog</span>
                             </x-nav-link>
-                        </li>
+                        </li> --}}
                         <li class="mt-0.5 w-full">
-                            <x-nav-link :href="route('kontak.index')" :active="request()->routeIs('kontak.index')">
+                            <x-nav-link :href="route('kontak.index')" :active="request()->routeIs('kontak.index')  || request()->routeIs('kontak.edit') ">
                                 <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg xl:p-2.5">
                                     <i class="fa-solid fa-address-book fa-lg"></i>
                                 </div>
@@ -91,7 +91,7 @@
                             </x-nav-link>
                         </li>
                         <li class="mt-0.5 w-full">
-                            <x-nav-link :href="route('karir.index')" :active="request()->routeIs('karir.index')">
+                            <x-nav-link :href="route('karir.index')" :active="request()->routeIs('karir.index')  || request()->routeIs('karir.edit')">
                                 <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg xl:p-2.5">
                                     <i class="fa-solid fa-briefcase fa-lg"></i>
                                 </div>
@@ -138,7 +138,7 @@
                                     </x-nav-link>
                                 </li>
                                 <li class="mt-0.5 w-full">
-                                    <x-nav-link>
+                                    <x-nav-link :href="route('testimoni.index')" :active="request()->routeIs('testimoni.edit')">
                                         <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg xl:p-2.5">
                                             <i class="fa-solid fa-users-rectangle fa-lg"></i>
                                         </div>

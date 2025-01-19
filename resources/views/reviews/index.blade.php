@@ -37,7 +37,7 @@
                         @endfor
                     </div>
                     <!-- Tombol Aksi -->
-                    <div class="flex justify-center space-x-2">
+                    <div class="flex text-center space-x-2">
                         <a href="{{ route('reviews.edit', $review->id) }}" class="text-white bg-blue-500 px-4 py-1 rounded-lg hover:bg-blue-600">
                             <i class="fa-solid fa-pen-to-square"></i> Edit
                         </a>

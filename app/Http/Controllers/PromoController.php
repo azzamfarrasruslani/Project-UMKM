@@ -88,11 +88,11 @@ class PromoController extends Controller
         $promo->tanggal_akhir = $request->tanggal_akhir;
 
         // Perbarui gambar jika ada file baru
-        if ($request->hasFile('gambar_menu')) {
+        if ($request->hasFile('gambar_promo')) {
             if ($promo->gambar_promo) {
                 Storage::delete('public/' . $promo->gambar_promo);
             }
-            $promo->gambar_promo = $request->file('gambar_menu')->store('images', 'public');
+            $promo->gambar_promo = $request->file('gambar_promo')->store('images', 'public');
 
         }
 

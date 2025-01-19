@@ -14,6 +14,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TentangKamiController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\PesanSaranController;
+use App\Http\Controllers\TestimoniController;
 
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ReviewController;
@@ -105,6 +106,11 @@ Route::controller(KarirController::class)->group(function () {
 
 // Review
 Route::resource('reviews', ReviewController::class)->only(['index','create','store','edit','destroy','update'])
+->middleware(['auth','verified']);
+
+
+// Testimoni
+Route::resource('testimoni', TestimoniController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
 // Kontak

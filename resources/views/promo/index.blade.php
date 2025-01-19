@@ -84,7 +84,7 @@
 
                         </div>
                     @else
-                        <p class="text-gray-600">Tidak ada data yang tersedia.</p>
+                        <p class="justify-center text-gray-600">Tidak ada data yang tersedia.</p>
                     @endif
                     <!-- Pagination -->
                     <div class="flex justify-center  items-center mt-6  space-x-2">

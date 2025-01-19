@@ -368,8 +368,29 @@
                 <!-- Right Content -->
                 <div class="md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
                     <div class="relative">
-                        <img data-aos="zoom-in-down" src="{{ asset('assets/images/PhoneMockup.png') }}"
-                            alt="Phone Mockup" class=" w-100 md:w-135 " />
+                        {{-- <img data-aos="zoom-in-down" src="{{ asset('assets/images/PhoneMockup.png') }}"
+                            alt="Phone Mockup" class=" w-100 md:w-135 " /> --}}
+
+                        <!-- Foto bagian kiri -->
+                        <div class="flex items-center lg:items-end lg:w-1/2 relative gap-10 mt-10">
+                            <div  data-aos="zoom-in"
+                                class="px-[22px] pt-[22.50px] pb-[72px] origin-top-left  flex-col justify-start items-start inline-flex">
+                                <img class="w-100 md:w-135 object-cover"
+                                    src="{{ asset('assets/images/Phone.png') }}" />
+                            </div>
+
+                            <div data-aos="zoom-in-left"
+                                class="pt-[22.50px] pb-[72px] origin-top-left rotate-[6deg]  flex-col justify-start items-start inline-flex absolute top-10 right-1 ">
+                                <img class="w-90 h-full md:h-full object-cover"
+                                    src="{{ asset('assets/images/Teh.png') }}" />
+                            </div>
+                            <div data-aos="zoom-in-right"
+                                class="px-[22.50px] pt-[22.50px] pb-[72px] origin-top-left rotate-[5deg]  flex-col justify-start items-start inline-flex absolute top-20 left-72">
+                                <img class="w-80 h-full md:h-full object-cover"
+                                    src="{{ asset('assets/images/Ayam Geprek.png') }}" />
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -479,16 +500,16 @@
                         @csrf <!-- Menambahkan token CSRF untuk keamanan -->
                         <div class="flex flex-col md:flex-row gap-6">
                             <input type="text" name="nama" placeholder="Nama"
-                                class="flex-1 p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                                class="flex-1 p-4 placeholder-slate-700 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                                 title="Masukkan nama lengkap Anda" required>
                             <input type="email" name="email" placeholder="Email"
-                                class="flex-1 p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                                class="flex-1 p-4 placeholder-slate-700 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                                 title="Masukkan email aktif Anda" required>
                         </div>
                         <select name="subjek"
                             class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                             title="Pilih subjek pesan Anda" required>
-                            <option value="" disabled selected>—Silakan pilih subjek—</option>
+                            <option class="text-slate-700" value="" disabled selected>—Silakan pilih subjek—</option>
                             <option value="pertanyaan">Pertanyaan?</option>
                             <option value="keluhan">Keluhan!</option>
                             <option value="pujian">Pujian 😊</option>
@@ -497,7 +518,7 @@
                         </select>
 
                         <textarea id="pesan" name="pesan" placeholder="Pesan" rows="5"
-                            class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                            class="w-full p-4 placeholder-slate-700 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                             title="Ketik pesan Anda di sini" required></textarea>
                         <button type="submit"
                             class="w-full bg-yellow-500 text-white font-bold py-4 px-6 rounded-md hover:bg-yellow-600 focus:outline-none transition duration-300 ease-in-out shadow-lg">

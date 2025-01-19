@@ -25,7 +25,7 @@
                 <label class="block text-gray-700">Rating</label>
                 <div class="flex items-center space-x-2">
                     @for ($i = 1; $i <= 5; $i++)
-                        <span onclick="rate({{ $i }})" class="star text-3xl cursor-pointer">&#9733;</span>
+                        <span onclick="rate({{ $i }})" class="star text-3xl cursor-pointer"><i class="fa-solid fa-star"></i></span>
                     @endfor
                 </div>
                 <input type="hidden" id="rating" name="rating" value="0" required>
