@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::all();
-        return view('blog.index', compact('blogs'));
+        $blog = Blog::all();
+        return view('blog.index', compact('blog'));
     }
 
     public function create()
@@ -46,7 +46,7 @@ class BlogController extends Controller
 
     public function edit(Blog $blog)
     {
-        return view('blog.edit', compact('blog')); 
+        return view('blog.edit', compact('blog'));
     }
 
     public function update(Request $request, Blog $blog)
@@ -57,11 +57,19 @@ class BlogController extends Controller
             'gambar_blog' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
+
+        $blog->judul_blog = $request->judul_blog;
+        $blog->konten_blog = $request->konten_blog;
+
         if ($request->hasFile('gambar_blog')) {
+            if ($blog->gambar_blog) {
+                Storage::delete('public/' . $blog->gambar_blog);
+            }
             $blog->gambar_blog = $request->file('gambar_blog')->store('images', 'public');
+
         }
 
-        $blog->update($validated);
+        $blog->save();
 
         return redirect()->route('blog.index')->with('success', 'Blog berhasil diperbarui!');
     }
