@@ -74,15 +74,17 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 **Halaman Admin**
 |  |  |
 |--|--|
-| ![alt text](Images/Login.png?raw=true) Halaman login admin diminta untuk mengisi username dan password.| ![alt text](Images/dashboard.jpg?raw=true) Setelah login admin akan masuk ke tampilan Dashboard admin.
+| ![alt text](Images/Login.png?raw=true) Halaman login admin diminta untuk mengisi username dan password.| ![alt text](Image/Pdashboard.jpg?raw=true) Setelah login admin akan masuk ke tampilan Dashboard admin.
 |  |  |
-| ![alt text](Images/menuA.jpg?raw=true) Terdapat halaman menu yang berisikan gambar dan detailnya.|![alt text](Images/promoA.jpg?raw=true) Ada juga halaman promo yang bisa memuat promosi atau diskon usaha.
+| ![alt text](Image/Amenu.jpg?raw=true) Terdapat halaman menu yang berisikan gambar dan detailnya.|![alt text](Image/Apromo.jpg?raw=true) Ada juga halaman promo yang bisa memuat promosi atau diskon usaha.
 |  |  |
-| ![alt text](Images/tentangA.jpg?raw=true) Ada halaman tentang kami yang bisa menginputkan sejarah, gambar, visi dan misi.|![alt text](Images/hero.jpg?raw=true) Di halaman ini berisi gambar yang nantinya berada di tampilan awal home.
+| ![alt text](Image/Aabout.jpg?raw=true) Ada halaman tentang kami yang bisa menginputkan sejarah, gambar, visi dan misi.|![alt text](Image/Ahero.jpg?raw=true) Di halaman ini berisi gambar yang nantinya berada di tampilan awal home.
 |--|--|
-| ![alt text](Images/outletA.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang. | ![alt text](Images/karirA.jpg?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.
+| ![alt text](Image/Aoutlet.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang. | ![alt text](Image/Akarir.jpg?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.
 |--|--|
-| ![alt text](Images/kontak.jpg?raw=true) Ada kontak yang bisa di tambah agar pengunjung bisa menghubungi pihak admin.
+| ![alt text](Image/Akontak.jpg?raw=true) Ada kontak yang bisa di tambah agar pengunjung bisa menghubungi pihak admin. | ![alt text](Image/Apesan.jpg?raw=true) Ada kontak yang bisa di lihat admin yang diinputkan pengunjung, admin juga bisa hapus.
+|--|--|
+| ![alt text](Image/Aprofil.jpg?raw=true) Tempat yang bisa di mengatur username dan password admin. | ![alt text](Image/Atestimoni.jpg?raw=true) Admin akan menyeleksi pesan saran dan pesan positif akan di jadikan testimoni dan di tampilkan pada halaman website.
 
 **Halaman User**
 |  |  |
