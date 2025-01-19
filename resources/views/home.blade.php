@@ -1,12 +1,12 @@
 @section('title', 'Home')
 <x-guest-layout>
-
+    @include('homePage.promo.modalDetail')
     <section class="main_visual relative h-auto overflow-hidden mt-24 mb-40">
         <div class="swiper-container1 visSwiper relative">
             @if (!empty($hero) && $hero->count() > 0)
                 <!-- Wrapper -->
                 <div class="swiper-wrapper">
-                    @foreach ($hero as $item)
+                    @foreach ($hero->sortByDesc('created_at')->take(5) as $item)
                         @if ($item->status_hero == 'aktif')
                             <div class="swiper-slide">
                                 <a data-promotion-id="606" data-promotion-location="top-main" data-promotion-title=""
@@ -143,12 +143,26 @@
         <div data-aos="fade-up" class="mt-10 w-full swiper">
             <!-- Wrapper -->
             <div class="swiper-wrapper">
-                <div
+                @if (!empty($promo) && !is_array($promo))
+                    @foreach ($promo as $index => $item)
+                        <a href="javascript:;"
+                            onclick="openDetailPromo(`{{ $item->judul }}`, `{{ $item->deskripsi_promo }}`, `{{ $item->syarat_ketentuan }}`, `{{ $item->tanggal_mulai }}`, `{{ $item->tanggal_akhir }}`, `{{ Storage::url($item->gambar_promo) }}`)"
+                            class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                            <img loading="lazy" src="{{ Storage::url($item->gambar_promo) }}"
+                                alt="Special promotional deal offer"
+                                class="object-contain grow w-full aspect-[1.97] max-md:mt-4 max-md:max-w-full" />
+                        </a>
+                    @endforeach
+                @else
+                    <p class="text-gray-600">Tidak ada data yang tersedia.</p>
+                @endif
+
+                {{-- <div
                     class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                     <img loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/628538ce5b04549fd46bc5bc0490c83b6b9ebf1ad055ca14be51c583ad8d7fca?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                        alt="Special promotional deal offer"
-                        class="object-contain grow w-full aspect-[1.97] max-md:mt-4 max-md:max-w-full" />
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9a4ed6d77de8b6d7a3b4e53b27d94e2b1ec6039ea269e1f74e7cbcbc73213c2?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
+                        alt="Featured discount promotion"
+                        class="object-contain grow w-full aspect-[1.96] max-md:mt-4 max-md:max-w-full" />
                 </div>
                 <div
                     class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
@@ -164,14 +178,7 @@
                         alt="Featured discount promotion"
                         class="object-contain grow w-full aspect-[1.96] max-md:mt-4 max-md:max-w-full" />
                 </div>
-                <div
-                    class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
-                    <img loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9a4ed6d77de8b6d7a3b4e53b27d94e2b1ec6039ea269e1f74e7cbcbc73213c2?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                        alt="Featured discount promotion"
-                        class="object-contain grow w-full aspect-[1.96] max-md:mt-4 max-md:max-w-full" />
-                </div>
-                <!-- Tambahkan slide lain sesuai kebutuhan -->
+                <!-- Tambahkan slide lain sesuai kebutuhan --> --}}
             </div>
         </div>
         <div class="flex mt-5 justify-center gap-2">

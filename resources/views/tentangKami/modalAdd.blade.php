@@ -41,11 +41,6 @@
                                     <label for="gambar_tK2" class="block text-sm font-medium">Gambar Kedua</label>
                                     <input type="file" name="gambar_tK2" id="gambar_tK2" class="mt-1 block w-full" accept="image/*" />
                                 </div>
-                                <!-- Gambar Ketiga -->
-                                <div class="col-span-2">
-                                    <label for="gambar_tK3" class="block text-sm font-medium">Gambar Ketiga</label>
-                                    <input type="file" name="gambar_tK3" id="gambar_tK3" class="mt-1 block w-full" accept="image/*" />
-                                </div>
                             </div>
                             <!-- Buttons -->
                             <div class="flex justify-end mt-4 gap-2">
