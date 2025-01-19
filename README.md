@@ -671,8 +671,12 @@ semua poin-poin (Dion), gambar umum use case (Sari), gambar use case per poin (A
 BAB 3 -> Sari
 
 ## Pembagian tugas di Website
--CRUD HomePage, promo, outlet, tetimoni (Azzam Farras Ruslani)
+- CRUD Home Page, hero section, promo, outlet, tetimoni (Azzam Farras Ruslani)
 
--CRUD Menu, karir , PesanSaran (Dion)
+- CRUD Menu, Karir , Pesan Saran (Dion)
 
--CRUD About dan Kontak (Tri Wulandari Junita Sari)
+- CRUD About dan Kontak (Tri Wulandari Junita Sari)
+
+- Tampilan, Penggabungan code (Azzam)
+
+- Pencarian informasi dan gambar di web dikerjakan bersama
