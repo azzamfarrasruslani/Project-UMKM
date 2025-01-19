@@ -3,7 +3,7 @@
 
     <section class="flex flex-col mt-30 w-full tracking-tight max-md:max-w-full" aria-labelledby="delivery-menu-title">
         <!-- Header Section -->
-        <div class="relative bg-black text-white">
+        <div class="relative  bg-gradient-to-r from-red-500 to-red-900 text-white">
             <!-- Background Pattern -->
             <div class="absolute inset-0 z-0">
                 <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="Background Pattern"

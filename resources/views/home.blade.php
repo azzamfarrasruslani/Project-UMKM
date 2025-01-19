@@ -54,83 +54,10 @@
         });
     </script>
 
-    {{-- Menu Section --}}
-    {{-- <section id="menu" class="mb-50 px-10">
-        <!-- Heading -->
-        <div class="flex items-center justify-between">
-            <h2 id="best-menu-heading" class="mt-5 text-4xl font-bold text-stone-800">Menu Pilihan</h2>
-            <div class="flex">
-                <button id="swiper-button-prev"
-                    class="border border-solid border-red-500 text-red-500 py-2 px-4 rounded-lg hover:bg-red-500 hover:text-white transition duration-300">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button id="swiper-button-next"
-                    class="border border-solid border-red-500 text-red-500 py-2 px-4 rounded-lg ml-2 hover:bg-red-500 hover:text-white transition duration-300">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Menu Slider -->
-        @if (!empty($menu) && is_iterable($menu))
-            <div class="swiper relative">
-                <div class="swiper-wrapper">
-                    @foreach ($menu as $item)
-                        <div class="swiper-slide flex justify-center items-center py-10">
-                            <article
-                                class="menu-item bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-2 flex flex-col items-center">
-                                <div class="max-w-[500px] w-full aspect-[4/3] overflow-hidden rounded-lg">
-                                    <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
-                                        alt="{{ $item->nama_menu }}" class="w-full h-full object-cover">
-                                </div>
-
-                                <h3 class="overflow-hidden mt-8 text-2xl font-bold leading-6 text-neutral-800">
-                                    BARU Paket Komplit</h3>
-                                <p class="overflow-hidden mt-1 text-base leading-5 text-stone-500 ">Ayam +
-                                    Teh</p>
-                                <p class="mt-2 text-xl font-medium text-red-700 text-center">
-                                    Rp {{ number_format($item->harga_menu, 2, ',', '.') }}
-                                </p>
-                            </article>
-                        </div>
-                    @endforeach
-
-                </div>
-            </div>
-        @else
-            <p class="text-gray-600 text-center mt-10">Tidak ada data yang tersedia.</p>
-        @endif
-
-        <!-- View All Button -->
-        <a href="{{ route('menu.indexHome') }}"
-            class="block mt-10 mx-auto px-8 py-4 text-center text-white bg-stone-900 hover:bg-stone-700 rounded-xl text-xl font-bold max-w-xs focus:outline-none focus:ring-2 focus:ring-stone-600">
-            Lihat Menu
-        </a>
-    </section> --}}
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const swiper = new Swiper('.swiper', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                navigation: {
-                    nextEl: '#swiper-button-next',
-                    prevEl: '#swiper-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                    },
-                },
-            });
-        });
-    </script>
+
+
 
     <section aria-label="Promotional Deals Section mb-20" class="mx-20">
         <div class="flex flex-wrap gap-5 justify-between font-bold max-md:mr-2.5 max-md:max-w-full">
@@ -140,13 +67,13 @@
                 View All
             </a>
         </div>
-        <div data-aos="fade-up" class="mt-10 w-full swiper">
+        <div data-aos="zoom-in" class="mt-10 w-full swiper">
             <!-- Wrapper -->
             <div class="swiper-wrapper">
                 @if (!empty($promo) && !is_array($promo))
                     @foreach ($promo as $index => $item)
                         <a href="javascript:;"
-                            onclick="openDetailPromo(`{{ $item->judul }}`, `{{ $item->deskripsi_promo }}`, `{{ $item->syarat_ketentuan }}`, `{{ $item->tanggal_mulai }}`, `{{ $item->tanggal_akhir }}`, `{{ Storage::url($item->gambar_promo) }}`)"
+                            onclick="openDetailPromo(`{{ $item->judul }}`, `{{ strip_tags($item->deskripsi_promo) }}`, `{{ strip_tags($item->syarat_ketentuan) }}`, `{{ \Carbon\Carbon::parse($item->tanggal_mulai)->format('d F Y') }}`, `{{ \Carbon\Carbon::parse($item->tanggal_akhir)->format('d F Y') }}`, `{{ Storage::url($item->gambar_promo) }}`)"
                             class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                             <img loading="lazy" src="{{ Storage::url($item->gambar_promo) }}"
                                 alt="Special promotional deal offer"
@@ -156,29 +83,6 @@
                 @else
                     <p class="text-gray-600">Tidak ada data yang tersedia.</p>
                 @endif
-
-                {{-- <div
-                    class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
-                    <img loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9a4ed6d77de8b6d7a3b4e53b27d94e2b1ec6039ea269e1f74e7cbcbc73213c2?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                        alt="Featured discount promotion"
-                        class="object-contain grow w-full aspect-[1.96] max-md:mt-4 max-md:max-w-full" />
-                </div>
-                <div
-                    class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
-                    <img loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9a4ed6d77de8b6d7a3b4e53b27d94e2b1ec6039ea269e1f74e7cbcbc73213c2?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                        alt="Featured discount promotion"
-                        class="object-contain grow w-full aspect-[1.96] max-md:mt-4 max-md:max-w-full" />
-                </div>
-                <div
-                    class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
-                    <img loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9a4ed6d77de8b6d7a3b4e53b27d94e2b1ec6039ea269e1f74e7cbcbc73213c2?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                        alt="Featured discount promotion"
-                        class="object-contain grow w-full aspect-[1.96] max-md:mt-4 max-md:max-w-full" />
-                </div>
-                <!-- Tambahkan slide lain sesuai kebutuhan --> --}}
             </div>
         </div>
         <div class="flex mt-5 justify-center gap-2">
@@ -301,17 +205,17 @@
 
             const counters = [{
                     id: "totalCabang",
-                    targetValue: 3,
+                    targetValue: {{ $totalOutlets }},
                     duration: 2
                 },
                 {
                     id: "totalKaryawan",
-                    targetValue: 6,
+                    targetValue: {{ $totalEmployees }},
                     duration: 2
                 },
                 {
                     id: "berdiriSejak",
-                    targetValue: 2019,
+                    targetValue: {{ $oldestOutletYear }},
                     duration: 2
                 }
             ];
@@ -358,11 +262,12 @@
                     </h2>
 
                     <img data-aos="zoom-in-down" src="{{ asset('assets/images/grabfood-logo.png') }}"
-                        alt="GrabFood Logo" class="w-32 md:w-40 mx-auto md:mx-0" />
+                        alt="GrabFood Logo" class="w-32 md:w-40 mx-auto md:mx-0 mb-5" />
 
-                    <button class="mt-6 bg-black text-white py-2 px-6 rounded hover:bg-gray-800 mb-5">
+                    <a href="{{ route('outlet.indexHome') }}"
+                        class="bg-black text-white  py-3 px-6 rounded hover:bg-gray-800 mb-5">
                         Pesan Sekarang
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Right Content -->
@@ -373,7 +278,7 @@
 
                         <!-- Foto bagian kiri -->
                         <div class="flex items-center lg:items-end lg:w-1/2 relative gap-10 mt-10">
-                            <div  data-aos="zoom-in"
+                            <div data-aos="zoom-in"
                                 class="px-[22px] pt-[22.50px] pb-[72px] origin-top-left  flex-col justify-start items-start inline-flex">
                                 <img class="w-100 md:w-135 object-cover"
                                     src="{{ asset('assets/images/Phone.png') }}" />
@@ -407,72 +312,67 @@
                     Kepuasan Pelanggan adalah Prioritas Kami
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-10">
-                <!-- Card 1 -->
-                <div data-aos="flip-left" class="bg-customRed-50 text-white p-6 rounded-2xl shadow-md relative mb-5">
-                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                        <div
-                            class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">
-                            <span class="text-yellow-400 text-5xl mt-5">“</span>
-                        </div>
-                    </div>
-                    <p class="text-center mt-6 mb-4">
-                        "Lorem ipsum dolor sit amet consectetur. Suspendisse aliquet tellus
-                        adipiscing condimentum donec blandit."
-                    </p>
-                    <div class="text-center">
-                        <p class="font-bold">John</p>
-                        <p class="text-sm">Business Man</p>
-                        <div class="mt-2">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div data-aos="flip-left" class="bg-customRed-50 text-white p-6 rounded-2xl  shadow-md relative mb-5">
-                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                        <div
-                            class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">
-                            <span class="text-yellow-400 text-5xl mt-5">“</span>
-                        </div>
-                    </div>
-                    <p class="text-center mt-6 mb-4">
-                        "Lorem ipsum dolor sit amet consectetur. Suspendisse aliquet tellus
-                        adipiscing condimentum donec blandit."
-                    </p>
-                    <div class="text-center">
-                        <p class="font-bold">John</p>
-                        <p class="text-sm">Business Man</p>
-                        <div class="mt-2">
-                            ⭐⭐⭐⭐⭐
-                        </div>
+            @if (!empty($testimoni) && !is_array($testimoni))
+                <div class="swiper-container2 mt-10 mb-10">
+                    <div class="swiper-wrapper">
+                        @foreach ($testimoni as $index => $item)
+                            <div class="swiper-slide">
+                                <div data-aos="flip-left"
+                                    class="bg-customRed-50 text-white p-6 rounded-2xl shadow-md relative mb-5">
+                                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                                        <div
+                                            class="w-16 h-16 bg-customRed-50 flex items-center justify-center rounded-full shadow-3xl">
+                                            <span class="text-yellow-400 text-5xl mt-5">“</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-center mt-6 mb-4 italic">
+                                        "{{ $item->pesan }}"
+                                    </p>
+                                    <div class="text-center">
+                                        <p class="font-bold">{{ $item->nama }}</p>
+                                        <p class="text-sm">{{ $item->asal_testimoni }}</p>
+                                        <div class="mt-2">
+                                            <div class="flex justify-center mb-4">
+                                                @for ($i = 1; $i <= 5; $i++)
+                                                    <span class="text-2xl"
+                                                        style="color: {{ $i <= $item->rating ? 'gold' : 'gray' }};">&#9733;</span>
+                                                @endfor
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-
-                <!-- Card 3 -->
-                <div data-aos="flip-left" class="bg-customRed-50 text-white p-6 rounded-2xl  shadow-md relative mb-5">
-                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                        <div
-                            class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">
-                            <span class="text-yellow-400 text-5xl mt-5">“</span>
-                        </div>
-                    </div>
-                    <p class="text-center mt-6 mb-4">
-                        "Lorem ipsum dolor sit amet consectetur. Suspendisse aliquet tellus
-                        adipiscing condimentum donec blandit."
-                    </p>
-                    <div class="text-center">
-                        <p class="font-bold">John</p>
-                        <p class="text-sm">Business Man</p>
-                        <div class="mt-2">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @else
+                <p class="text-gray-600 text-center">Tidak ada data yang tersedia.</p>
+            @endif
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper2 = new Swiper('.swiper-container2', {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                },
+                slidesPerView: 1,
+                spaceBetween: 10,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+        });
+    </script>
 
 
 
@@ -509,11 +409,11 @@
                         <select name="subjek"
                             class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                             title="Pilih subjek pesan Anda" required>
-                            <option class="text-slate-700" value="" disabled selected>—Silakan pilih subjek—</option>
+                            <option class="text-slate-700" value="" disabled selected>Silakan pilih subjek
+                            </option>
                             <option value="pertanyaan">Pertanyaan?</option>
                             <option value="keluhan">Keluhan!</option>
                             <option value="pujian">Pujian 😊</option>
-                            <option value="sponsorship">Sponsor</option>
                             <option value="lainnya">Lainnya</option>
                         </select>
 
@@ -536,36 +436,35 @@
                         Jika memiliki pertanyaan mendesak, hubungi kami melalui salah satu platform berikut:
                     </p>
 
-                    <!-- Kontak Utama -->
-                    <div class="flex flex-col items-center gap-4 mb-8">
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-phone-alt text-yellow-500 text-2xl"></i>
-                            <span class="text-lg text-gray-800 font-semibold">+62 812 3456 7890</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-envelope text-yellow-500 text-2xl"></i>
-                            <span class="text-lg text-gray-800 font-semibold">contact@ayamgeprek.co.id</span>
-                        </div>
-                    </div>
 
                     <!-- Ikon Media Sosial -->
                     <div class="flex gap-6 justify-center">
-                        <a href="#"
-                            class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50 transition duration-300 ease-in-out">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50transition duration-300 ease-in-out">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#"
-                            class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50 transition duration-300 ease-in-out">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50 transition duration-300 ease-in-out">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                        @foreach ($kontak as $index => $item)
+                            @if ($item->social_media == 'Facebook')
+                            <a target="0" href="{{$item->link}}"
+                                class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50 transition duration-300 ease-in-out">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            @endif
+                            @if ($item->social_media == 'WhatsApp')
+                            <a target="0" href="{{$item->link}}"
+                                class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50 transition duration-300 ease-in-out">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            @endif
+                            {{-- <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50transition duration-300 ease-in-out">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50 transition duration-300 ease-in-out">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-customRed-100 text-white rounded-full hover:bg-customRed-50 transition duration-300 ease-in-out">
+                                <i class="fab fa-whatsapp"></i>
+                            </a> --}}
+                        @endforeach
                     </div>
 
                     <!-- Catatan -->

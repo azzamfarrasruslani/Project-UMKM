@@ -41,7 +41,7 @@
                 <i class="fas fa-store-alt text-customRed-50 text-4xl mr-6"></i>
                 <div>
                     <h5 class="text-slate-700 dark:text-white">Total Cabang</h5>
-                    <p class="text-3xl font-bold text-slate-700">3</p>
+                    <p class="text-3xl font-bold text-slate-700">{{ $totalOutlets }}</p>
                 </div>
             </div>
             <!-- Total Menu -->
@@ -49,7 +49,7 @@
                 <i class="fas fa-utensils text-customRed-50 text-4xl mr-6"></i>
                 <div>
                     <h5 class="text-slate-700 dark:text-white">Total Menu</h5>
-                    <p class="text-3xl font-bold text-slate-700">10</p>
+                    <p class="text-3xl font-bold text-slate-700">{{ $totalMenus }}</p>
                 </div>
             </div>
             <!-- Total Karyawan -->
@@ -57,7 +57,7 @@
                 <i class="fas fa-user text-customRed-50 text-4xl mr-6"></i>
                 <div>
                     <h5 class="text-slate-700 dark:text-white">Total Karyawan</h5>
-                    <p class="text-3xl font-bold text-slate-700">10</p>
+                    <p class="text-3xl font-bold text-slate-700">{{ $totalEmployees }}</p>
                 </div>
             </div>
             <!-- Rating Rata-rata -->
@@ -65,7 +65,7 @@
                 <i class="fas fa-star text-customRed-50 text-4xl mr-6"></i>
                 <div>
                     <h5 class="text-slate-700 dark:text-white">Rating Rata-rata</h5>
-                    <p class="text-3xl font-bold text-slate-700">4.8/5</p>
+                    <p class="text-3xl font-bold text-slate-700"> {{ number_format($averageRating, 2) }}/5</p>
                 </div>
             </div>
 

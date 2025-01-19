@@ -1,32 +1,28 @@
 <!-- Modal -->
-<div id="detailPromoModal"
-    onclick="closeModalOnOutsideClick(event)"
+<div id="detailPromoModal" onclick="closeModalOnOutsideClick(event)"
     class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 invisible transition-opacity duration-300 z-50">
-    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg overflow-hidden"
-        onclick="event.stopPropagation()">
+    <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-lg overflow-hidden" onclick="event.stopPropagation()">
         <!-- Header -->
-        <div class="flex items-center justify-between border-b pb-3 mb-4">
-            <h2 id="modalTitle" class="text-xl font-semibold text-slate-700">Title</h2>
-            <button onclick="closeDetailPromo()"
-                class="text-red-500 hover:text-red-600 text-xl font-bold">&times;</button>
+        <div class="flex items-center border-b pb-3 mb-4">
+
+            <button onclick="closeDetailPromo()" class="text-black text-2xl font-bold"><i
+                    class="fa-solid fa-arrow-left mr-2"></i></button>
+            <h2 class="text-xl mt-2 font-semibold  text-black">Detail Promo</h2>
         </div>
 
         <!-- Content -->
-        <div id="modalContent">
-            <img id="modalImage" src="" alt="Promo Image"
-                class="w-full h-auto mb-4 rounded-lg object-contain">
-            <p id="modalDescription" class="text-slate-600 mb-4">Description</p>
-            <p id="modalTerms" class="text-sm text-slate-500">Terms & Conditions</p>
+        <div id="modalContent" class="overflow-y-auto max-h-85">
+            <img id="modalImage" src="" alt="Promo Image" class="w-full h-auto mb-4 rounded-lg object-contain">
+
+                <h2 id="modalTitle" class="text-xl font-semibold text-slate-700">Title</h2>
+                <p id="modalDate" class="text-sm text-slate-500 mb-4">Date</p>
+                <div id="modalDescription" class="text-slate-600 mb-4">Description</div>
+                <p>Syarat & Ketentuan</p>
+                <p id="modalTerms" class="text-sm text-slate-500">Terms & Conditions</p>
+
         </div>
 
-        <!-- Footer -->
-        <div class="mt-4">
-            <p id="modalDate" class="text-sm text-slate-500 mb-4">Date</p>
-            <button onclick="closeDetailPromo()"
-                class="bg-red-500 text-white py-2 px-4 rounded-lg shadow hover:bg-red-600 w-full">
-                Tutup
-            </button>
-        </div>
+
     </div>
 </div>
 

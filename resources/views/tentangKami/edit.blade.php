@@ -1,5 +1,6 @@
-@section('title', 'Edit')
 <x-app-layout>
+    @section('title', 'Edit')
+
     <div class=" w-full mx-auto ">
         <div class="w-full px-1 py-6 mx-auto">
             <div class="flex-none w-full max-w-full px-4">
@@ -16,36 +17,45 @@
                             enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-
-                            {{-- Input Judul Tentang Kami --}}
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium">Judul</label>
-                                <input type="text" name="judul_tK"
-                                    class="mt-1 block w-full border-gray-300 rounded-md"
-                                    value="{{ $tentangKami->judul_tK }}" required />
-                                @error('judul_tK')
-                                    <span class="text-red-500 text-sm">Judul tidak boleh melebihi 255 karakter</span>
-                                @enderror
+                            <!-- Layout Grid -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Judul Tentang Kami -->
+                                <div class="col-span-2">
+                                    <label for="judul_tK" class="block text-sm font-medium">Judul Tentang Kami</label>
+                                    <input type="text" name="judul_tK" id="judul_tK" value="{{$tentangKami->judul_tK}}"
+                                        class="mt-1 block w-full border-gray-300 rounded-md" required />
+                                </div>
+                                <!-- Sejarah Singkat -->
+                                <div class="col-span-2">
+                                    <label for="sejarah_singkat" class="block text-sm font-medium">Sejarah
+                                        Singkat</label>
+                                    <textarea name="sejarah_singkat" id="sejarah_singkat" rows="3"
+                                        class="mt-1 block w-full border-gray-300 rounded-md" required>{!! $tentangKami->sejarah_singkat !!}</textarea>
+                                </div>
+                                <!-- Visi -->
+                                <div>
+                                    <label for="visi" class="block text-sm font-medium">Visi</label>
+                                    <textarea name="visi" id="visi" rows="2" class="mt-1 block w-full border-gray-300 rounded-md">{!! $tentangKami->visi !!}</textarea>
+                                </div>
+                                <!-- Misi -->
+                                <div>
+                                    <label for="misi" class="block text-sm font-medium">Misi</label>
+                                    <textarea name="misi" id="misi" rows="2" class="mt-1 block w-full border-gray-300 rounded-md">{!! $tentangKami->misi !!}</textarea>
+                                </div>
+                                <!-- Gambar Utama -->
+                                <div>
+                                    <label for="gambar_tK1" class="block text-sm font-medium">Gambar Utama</label>
+                                    <input type="file" name="gambar_tK1" id="gambar_tK1" class="mt-1 block w-full"
+                                        accept="image/*" />
+                                </div>
+                                <!-- Gambar Kedua -->
+                                <div>
+                                    <label for="gambar_tK2" class="block text-sm font-medium">Gambar Kedua</label>
+                                    <input type="file" name="gambar_tK2" id="gambar_tK2" class="mt-1 block w-full"
+                                        accept="image/*" />
+                                </div>
                             </div>
 
-                            {{-- Input Deskripsi Tentang Kami --}}
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium">Deskripsi</label>
-                                <textarea name="deskripsi_tK" id="editor" rows="5" class="mt-1 block w-full border-gray-300 rounded-md"
-                                    required>{{ $tentangKami->deskripsi_tK }}</textarea>
-                                @error('deskripsi_tK')
-                                    <span class="text-red-500 text-sm">Deskripsi wajib diisi</span>
-                                @enderror
-                            </div>
-
-                            {{-- Input Gambar Tentang Kami --}}
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium">Gambar</label>
-                                <input type="file" name="gambar_tK" class="mt-1 block w-full" accept="image/*" />
-                                @error('gambar_tK')
-                                    <span class="text-red-500 text-sm">Gambar tidak boleh melebihi 2MB</span>
-                                @enderror
-                            </div>
 
                             <div class="flex justify-end gap-2">
                                 <a href="{{ route('tentangKami.index') }}" type="button"
@@ -62,85 +72,43 @@
                 </div>
             </div>
 
-            {{-- Input Sejarah Singkat --}}
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Sejarah Singkat</label>
-                <textarea name="sejarah_singkat" id="editor-sejarah" rows="5" class="mt-1 block w-full border-gray-300 rounded-md" required>{{ $tentangKami->sejarah_singkat }}</textarea>
-                @error('sejarah_singkat')
-                    <span class="text-red-500 text-sm">Sejarah singkat wajib diisi</span>
-                @enderror
-            </div>
+        </div>
+        <script>
+            ClassicEditor
+                .create(document.querySelector('#sejarah_singkat'))
+                .then(editor => {
+                    editor.model.document.on('change:data', () => {
+                        // Update the textarea value when the content changes
+                        document.querySelector('textarea[name="sejarah_singkat"]').value = editor.getData();
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
 
-            {{-- Input Visi --}}
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Visi</label>
-                <textarea name="visi" id="editor-visi" rows="5" class="mt-1 block w-full border-gray-300 rounded-md">{{ $tentangKami->visi }}</textarea>
-                @error('visi')
-                    <span class="text-red-500 text-sm">Visi wajib diisi</span>
-                @enderror
-            </div>
+            ClassicEditor
+                .create(document.querySelector('#visi'))
+                .then(editor => {
+                    editor.model.document.on('change:data', () => {
+                        // Update the textarea value when the content changes
+                        document.querySelector('textarea[name="visi"]').value = editor.getData();
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
 
-            {{-- Input Misi --}}
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Misi</label>
-                <textarea name="misi" id="editor-misi" rows="5" class="mt-1 block w-full border-gray-300 rounded-md">{{ $tentangKami->misi }}</textarea>
-                @error('misi')
-                    <span class="text-red-500 text-sm">Misi wajib diisi</span>
-                @enderror
-            </div>
+            ClassicEditor
+                .create(document.querySelector('#misi'))
+                .then(editor => {
+                    editor.model.document.on('change:data', () => {
+                        // Update the textarea value when the content changes
+                        document.querySelector('textarea[name="misi"]').value = editor.getData();
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
 
-            {{-- Input Gambar Utama --}}
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Gambar Utama</label>
-                <input type="file" name="gambar_tK1" class="mt-1 block w-full" accept="image/*" />
-                <p class="text-sm text-gray-600">Gambar saat ini:</p>
-                <img src="{{ Storage::url($tentangKami->gambar_tK1) }}" alt="Gambar Utama" class="h-24 mt-2 rounded-md">
-                @error('gambar_tK1')
-                    <span class="text-red-500 text-sm">Gambar tidak boleh melebihi 2MB</span>
-                @enderror
-            </div>
-
-            {{-- Input Gambar Kedua --}}
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Gambar Kedua</label>
-                <input type="file" name="gambar_tK2" class="mt-1 block w-full" accept="image/*" />
-                @if ($tentangKami->gambar_tK2)
-                    <p class="text-sm text-gray-600">Gambar saat ini:</p>
-                    <img src="{{ Storage::url($tentangKami->gambar_tK2) }}" alt="Gambar Kedua" class="h-24 mt-2 rounded-md">
-                @endif
-                @error('gambar_tK2')
-                    <span class="text-red-500 text-sm">Gambar tidak boleh melebihi 2MB</span>
-                @enderror
-            </div>
-
-            {{-- Input Gambar Ketiga --}}
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Gambar Ketiga</label>
-                <input type="file" name="gambar_tK3" class="mt-1 block w-full" accept="image/*" />
-                @if ($tentangKami->gambar_tK3)
-                    <p class="text-sm text-gray-600">Gambar saat ini:</p>
-                    <img src="{{ Storage::url($tentangKami->gambar_tK3) }}" alt="Gambar Ketiga" class="h-24 mt-2 rounded-md">
-                @endif
-                @error('gambar_tK3')
-                    <span class="text-red-500 text-sm">Gambar tidak boleh melebihi 2MB</span>
-                @enderror
-            </div>
-
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Simpan Perubahan</button>
-        </form>
-    </div>
-
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#editor-sejarah'))
-            .catch(error => console.error(error));
-
-        ClassicEditor
-            .create(document.querySelector('#editor-visi'))
-            .catch(error => console.error(error));
-
-        ClassicEditor
-            .create(document.querySelector('#editor-misi'))
-            .catch(error => console.error(error));
-    </script>
 </x-app-layout>

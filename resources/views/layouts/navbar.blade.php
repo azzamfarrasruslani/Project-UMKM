@@ -156,12 +156,12 @@
                         </li> --}}
 
                     </ul>
-                    <li class="flex items-center pr-5">
+                    {{-- <li class="flex items-center pr-5">
                         <a href="{{ route('login') }}"
                             class="relative w-12 h-12 bg-white  rounded-full flex items-center justify-center  sm:mr-4 shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105">
                             <img class="w-6 h-6" src="{{ asset('assets/icon/user.png') }}" alt="login">
                         </a>
-                    </li>
+                    </li> --}}
                 </div>
             </div>
         </nav>

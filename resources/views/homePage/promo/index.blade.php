@@ -46,7 +46,7 @@
                                 @if (!empty($promo) && !is_array($promo))
                                     @foreach ($promo as $index => $item)
                                         <a href="javascript:;"
-                                            onclick="openDetailPromo(`{{ $item->judul }}`, `{{ $item->deskripsi_promo }}`, `{{ $item->syarat_ketentuan }}`, `{{ $item->tanggal_mulai }}`, `{{ $item->tanggal_akhir }}`, `{{ Storage::url($item->gambar_promo) }}`)"
+                                            onclick="openDetailPromo(`{{ $item->judul }}`, `{{ strip_tags($item->deskripsi_promo) }}`, `{{ strip_tags($item->syarat_ketentuan) }}`, `{{ \Carbon\Carbon::parse($item->tanggal_mulai)->format('d F Y') }}`, `{{ \Carbon\Carbon::parse($item->tanggal_akhir)->format('d F Y') }}`, `{{ Storage::url($item->gambar_promo) }}`)"
                                             class="flex flex-col w-full rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
                                             <img src="{{ Storage::url($item->gambar_promo) }}"
                                                 alt="Pizza deal promotion"

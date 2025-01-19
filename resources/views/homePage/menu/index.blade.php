@@ -49,7 +49,7 @@
                 @if ($item->kategori_menu == 'Paket Komplit')
                     <article class="border rounded-lg shadow-md overflow-hidden">
                     <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
-                        class="object-contain w-full aspect-[1.51]" alt="{{ $item->nama_menu }}" />
+                        class="object-cover w-full aspect-[1.51]" alt="{{ $item->nama_menu }}" />
                     <div class="p-4">
                         <h3 class="text-lg font-bold text-neutral-800">{{ $item->nama_menu }}</h3>
                         <p class="text-sm text-neutral-600 mt-2">{{ $item->deskripsi_menu }}</p>
@@ -79,8 +79,8 @@
                     @foreach ($menu as $index => $item)
                     @if ($item->kategori_menu == 'Makanan')
                         <article class="border rounded-lg shadow-md overflow-hidden">
-                        <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
-                            class="object-contain w-full aspect-[1.51]" alt="{{ $item->nama_menu }}" />
+                            <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
+                            class="object-cover w-full aspect-[1.51]" alt="{{ $item->nama_menu }}" />
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-neutral-800">{{ $item->nama_menu }}</h3>
                             <p class="text-sm text-neutral-600 mt-2">{{ $item->deskripsi_menu }}</p>
@@ -106,8 +106,8 @@
                     @foreach ($menu as $index => $item)
                     @if ($item->kategori_menu == 'Minuman')
                         <article class="border rounded-lg shadow-md overflow-hidden">
-                        <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
-                            class="object-contain w-full aspect-[1.51]" alt="{{ $item->nama_menu }}" />
+                            <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
+                            class="object-cover w-full aspect-[1.51]" alt="{{ $item->nama_menu }}" />
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-neutral-800">{{ $item->nama_menu }}</h3>
                             <p class="text-sm text-neutral-600 mt-2">{{ $item->deskripsi_menu }}</p>

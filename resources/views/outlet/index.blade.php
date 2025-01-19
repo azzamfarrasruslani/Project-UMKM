@@ -43,7 +43,7 @@
                                     @foreach ($outlet as $index => $item)
                                         <tr>
                                             <td>{{ $item->nama_outlet }}</td>
-                                            <td>{{ $item->alamat_outlet }}</td>
+                                            <td class="truncate max-w-xs">{{ Str::limit($item->alamat_outlet, 50, '...') }}</td>
                                             <td>{{ $item->no_hp }}</td>
                                             <td>{{ $item->jumlah_karyawan }}</td>
                                             <td>{{ date('d-m-Y', strtotime($item->tanggal_berdiri)) }}</td>

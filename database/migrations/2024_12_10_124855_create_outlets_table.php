@@ -13,8 +13,8 @@ return new class extends Migration
             $table->id('id_outlet');
             $table->string('nama_outlet')->index();
             $table->string('alamat_outlet');
-            $table->integer('jumlah_karyawan');
-            $table->string('no_hp')->unique();
+            $table->integer('jumlah_karyawan')->nullable();
+            $table->string('no_hp')->nullable();;
             $table->date('tanggal_berdiri');
             $table->enum('status_outlet', ['aktif', 'non-aktif'])->default('aktif');
             $table->text('iframe_map')->nullable();

@@ -24,4 +24,9 @@ class Outlet extends Model
         'link_pesan_online',
         'gambar_pesan_online',
     ];
+
+      // Pastikan tanggal_berdiri dikonversi menjadi objek Carbon
+      protected $casts = [
+        'tanggal_berdiri' => 'datetime', // Pastikan kolom ini dikonversi menjadi objek Carbon
+    ];
 }

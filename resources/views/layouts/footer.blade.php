@@ -117,43 +117,6 @@
                         class="object-contain w-full aspect-square" alt="Pizza Hut Logo" />
                 </div>
             </div>
-            <nav class="flex gap-5 mt-11 max-md:mt-10 justify-center md:justify-start" aria-label="Social Media Links">
-                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Facebook">
-                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                        <img loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e74afb0b9578b56a59621270fc1911d6ae5fd589e62fe5a8f899ac47de6a5cb3?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                            class="object-contain w-full aspect-square" alt="" />
-                    </div>
-                </a>
-                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Twitter">
-                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                        <img loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/643992c6ebcfbde3bada7cf1d8ac35996eca6474059397c2581b8460d6d32a9e?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                            class="object-contain w-full aspect-square" alt="" />
-                    </div>
-                </a>
-                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="Instagram">
-                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                        <img loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddc8212827513d600db4bff4b199e7a9352f3e1be190b04f54b58d066f0e9e0c?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                            class="object-contain w-full aspect-square" alt="" />
-                    </div>
-                </a>
-                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="YouTube">
-                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                        <img loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b5cd32c0219e46a0d9e6936e9b8499d88b886bb163d991d8aa7a0e8cd1af07c?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                            class="object-contain w-full aspect-square" alt="" />
-                    </div>
-                </a>
-                <a href="#" class="flex overflow-hidden flex-col flex-1" aria-label="LinkedIn">
-                    <div class="flex overflow-hidden flex-col justify-center items-center min-h-[27px] w-[27px]">
-                        <img loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e98826f059166c41293cf5141c3de6ef2991de7ba8d5f0c6fc4003f64167af75?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                            class="object-contain w-full aspect-square" alt="" />
-                    </div>
-                </a>
-            </nav>
         </div>
         <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white w-full md:w-auto"
             aria-label="General Links">

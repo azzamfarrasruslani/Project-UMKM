@@ -2,7 +2,7 @@
     @section('title', 'Tentang Kami')
 
     <!-- Header Section -->
-    <div class="relative bg-black text-white mt-30">
+    <div class="relative  bg-gradient-to-r from-red-500 to-red-900 text-white mt-30">
         <!-- Background Pattern -->
         <div class="absolute inset-0 z-0">
             <img src="{{ asset('assets/images/pattern/Pattern1.png') }}" alt="Background Pattern"
@@ -98,7 +98,7 @@
                             <ul class="w-full list-none">
                                 <!-- Misi 1 -->
                                 <li class="flex gap-8 mt-14 max-md:mt-6 max-md:flex-col max-md:gap-4">
-                                    
+
                                     <div class="flex flex-col grow shrink-0 mt-0 basis-0">
 
                                         <div class="mt-0 text-base leading-7 text-black text-opacity-50 max-md:text-sm">
