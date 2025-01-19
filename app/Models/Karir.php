@@ -6,14 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Karir extends Model
 {
-    // Nama tabel dalam database
+
     protected $table = 'karir';
 
-    // Aktifkan timestamps jika menggunakan kolom created_at dan updated_at
-    protected $primaryKey = 'id_karir';
-    public $timestamps = false;
 
-    // Kolom yang dapat diisi (mass assignable)
+    protected $primaryKey = 'id_karir';
+
     protected $fillable = [
         'nama_posisi',
         'lokasi',
@@ -23,6 +21,5 @@ class Karir extends Model
         'gaji',
         'benefit',
         'status',
-        'gambar',
     ];
 }

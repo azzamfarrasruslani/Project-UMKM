@@ -380,14 +380,15 @@
     {{-- Testimoni Section --}}
     <section id="reviewSection" class="py-12">
         <div class="flex flex-col justify-center text-center px-4">
-            <h2 class="text-yellow-500 text-3xl font-bold mb-4">Apa Kata Pelanggan Kami</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto mb-8">
-                Kepuasan Pelanggan adalah Prioritas Kami
-            </p>
-
+            <div data-aos="zoom-in">
+                <h2 class="text-yellow-500 text-3xl font-bold mb-4">Apa Kata Pelanggan Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                    Kepuasan Pelanggan adalah Prioritas Kami
+                </p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-10">
                 <!-- Card 1 -->
-                <div data-aos="zoom-in" class="bg-customRed-50 text-white p-6 rounded-2xl shadow-md relative mb-5">
+                <div data-aos="flip-left" class="bg-customRed-50 text-white p-6 rounded-2xl shadow-md relative mb-5">
                     <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                         <div
                             class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">
@@ -408,7 +409,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div data-aos="zoom-in" class="bg-customRed-50 text-white p-6 rounded-2xl  shadow-md relative mb-5">
+                <div data-aos="flip-left" class="bg-customRed-50 text-white p-6 rounded-2xl  shadow-md relative mb-5">
                     <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                         <div
                             class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">
@@ -429,7 +430,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div data-aos="zoom-in" class="bg-customRed-50 text-white p-6 rounded-2xl  shadow-md relative mb-5">
+                <div data-aos="flip-left" class="bg-customRed-50 text-white p-6 rounded-2xl  shadow-md relative mb-5">
                     <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                         <div
                             class="w-16 h-16 bg-customRed-50  flex items-center justify-center rounded-full shadow-3xl">

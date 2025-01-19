@@ -30,7 +30,7 @@
             <div class="flex flex-wrap h-full" role="main" aria-labelledby="deals-heading">
                 <div class="flex flex-col grow shrink text-black min-w-[240px] w-[248px]">
                     <div class="flex flex-col pt-3.5 w-full">
-                        <h1 id="deals-heading" class="pb-px w-full text-4xl leading-[77.5px]">
+                        <h1 id="deals-heading" class="pb-px w-full font-bebas uppercase text-4xl leading-[77.5px]">
                             Promo yang Tersedia
                         </h1>
                         <p class="mt-2 text-lg text-gray-600">

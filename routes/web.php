@@ -99,6 +99,10 @@ Route::controller(TentangKamiController::class)->group(function () {
 Route::resource('karir', KarirController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
 
+Route::controller(KarirController::class)->group(function () {
+    Route::get('home/karir', 'indexHome')->name('karir.indexHome');
+});
+
 // Review
 Route::resource('reviews', ReviewController::class)->only(['index','create','store','edit','destroy','update'])
 ->middleware(['auth','verified']);
