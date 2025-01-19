@@ -66,7 +66,7 @@ Website Ayam Geprek Keysia adalah sebuah sistem informasi yang diaplikasikan pad
 **2.1.1 Antarmuka Sistem**
 
 
-![alt text](Images/antarmuka.png?raw=true)
+![alt text](Image/antarmuka.png?raw=true)
 
 
 Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung. Admin memiliki fungsi untuk mengelola data, seperti menu dan informasi promosi, sementara pengunjung dapat melihat informasi yang tersedia dan memberikan komentar pada bagian yang disediakan.
@@ -137,7 +137,7 @@ tidak ada
 tidak ada
 
 ## 2.2 Spesifikasi kebutuhan fungsional
-![alt text](Images/UseCase.png?raw=true)
+![alt text](Image/usecase.png?raw=true)
 **2.2.1 Admin Login**
 
 Use Case: Login
@@ -487,26 +487,11 @@ tidak ada
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.7 Admin Input Data Blog**
+**3.2.7 Admin Input Data Karir**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.7 Admin Input Data Blog                     |
-| Trigger            | admin dapat menginputkan data blog|
-| Precondition       | Admin menginputkan data blog ke website |
-| Basic Path         | 1. Sistem akan menampilkan tampilan data blog. |
-|                    | 2. Admin dapat melihat,menambahkan, dan mengupload data blog.   |
-|                    | 3. Sistem akan menyimpan ke database.   |
-|                    | 4. Jika sudah disimpan sistem akan menampilkan peringatan.   |
-| Alternative        |  Tidak Ada                                 |
-| Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
-| Exception Push     | Tidak Ada        |
-
-**3.2.8 Admin Input Data Karir**
-
-| Nama Fungsi        | Input Informasi Website                              |
-| ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.8 Admin Input Data karir                     |
+| Xref               | Bagian 2.2.7 Admin Input Data karir                     |
 | Trigger            | admin dapat menginputkan data karir|
 | Precondition       | Admin menginputkan data karir ke website |
 | Basic Path         | 1. Sistem akan menampilkan tampilan data karir. |
@@ -517,11 +502,11 @@ tidak ada
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.9 Admin Input Data Hero Section**
+**3.2.8 Admin Input Data Hero Section**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.9 Admin Input Data Hero Section                     |
+| Xref               | Bagian 2.2.8 Admin Input Data Hero Section                     |
 | Trigger            | admin dapat menginputkan data Hero Section|
 | Precondition       | Admin menginputkan data Hero Section ke website |
 | Basic Path         | 1. Sistem akan menampilkan tampilan data Hero Section. |
@@ -532,11 +517,11 @@ tidak ada
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.10 Admin Input Data Pesan Saran**
+**3.2.9 Admin Input Data Pesan Saran**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.10 Admin Input Data Pesan Saran                     |
+| Xref               | Bagian 2.2.9 Admin Input Data Pesan Saran                     |
 | Trigger            | admin dapat menginputkan data Pesan Saran|
 | Precondition       | Admin menginputkan data Pesan Saran ke website |
 | Basic Path         | 1. Sistem akan menampilkan tampilan data Pesan Saran. |
@@ -547,7 +532,7 @@ tidak ada
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.11 Admin Input Data Testimoni**
+**3.2.10 Admin Input Data Testimoni**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
@@ -562,11 +547,11 @@ tidak ada
 | Post Condition     |  Admin Dapat menginputkan data seputar website seperti alamat, pengelola, dan contact person.        |
 | Exception Push     | Tidak Ada        |
 
-**3.2.12 Pengnjung Mengunjungi website**
+**3.2.11 Pengnjung Mengunjungi website**
 
 | Nama Fungsi        |    pengunjung  Mengunjungi website             |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.12 Pengunjung Mengunjungi website             |
+| Xref               | Bagian 2.2.11 Pengunjung Mengunjungi website             |
 | Trigger            |pengunjung Dapat mengunjungi website dan melihat informasi yang ada pada website seperti informasi seputar website serta informasi parenting yang telah tersedia |
 | Precondition       |pengunjung Mengunjungi website |
 | Basic Path         | 1. Sistem akan menampilkan halaman-halaman konten. |
@@ -576,11 +561,11 @@ tidak ada
 | Post Condition     |   pengunjung mengunjungi website dan melihat informasi yang ada pada website     |
 | Exception Push     |    Jika ada kesalahan server atau gangguan teknis, sistem akan menampilkan pesan kesalahan kepada pengguna. Pengguna dapat mencoba kembali atau menghubungi dukungan teknis.    |
 
-**3.2.13 Pengunjung Input Data Pesan Saran**
+**3.2.12 Pengunjung Input Data Pesan Saran**
 
 | Nama Fungsi        | Input Informasi Website                              |
 | ------------------- | ---------------------------------- |
-| Xref               | Bagian 2.2.13 Pengunjung Input Data Pesan Saran                     |
+| Xref               | Bagian 2.2.12 Pengunjung Input Data Pesan Saran                     |
 | Trigger            | Pengunjung dapat menginputkan data Pesan Saran|
 | Precondition       | Pengunjung menginputkan data Pesan Saran ke website |
 | Basic Path         | 1. Sistem akan menampilkan tampilan data Pesan Saran. |
@@ -593,7 +578,7 @@ tidak ada
 
 
 ## 3.3 Struktur Detail Kebutuhan Non-Fungsional
-![alt text](Images/erd.png?raw=true)
+![alt text](Image/erd.png?raw=true)
 **3.3.1 Logika Struktur Data**
 Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database yang dijelaskan menggunakan ERD.
 
@@ -631,15 +616,6 @@ Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database ya
 |status|varchar|Berisi status pada menu |
 |deskripsi|text|Berisi deskripsi menu |
 |kategori|varchar|Berisi gambar pada menu |
-
-**Tabel Blog**
-|Data Item|Tipe Data|Deskripsi|
-|--|--|--|
-|id_blog|int|Auto-increment dari id_blog|
-|gambar|text|Berisi gambar blog |
-|status|varchar|Berisi status pada blog |
-|judul|varchar|Berisi judul blog |
-|konten|text|Berisi konten pada blog |
 
 **Tabel Karir**
 |Data Item|Tipe Data|Deskripsi|
@@ -708,39 +684,17 @@ Struktur data logika pada Website Ayam Geprek Keysia mencakup desain database ya
 BAB 1 -> Sari
 
 BAB 2 
-
-2.1  
-
-  2.1.1 -> Sari  
-  
-  2.1.2 -> Sari  
-  
-  2.1.3 -> Azzam 
-  
-  2.1.4 -> Sari
-  
-  2.1.5 -> Sari 
-  
-  2.1.6 -> Sari 
-  
-  2.1.7 -> Sari 
-  
-  2.1.8 -> Sari
+2.1
+semua sari kecuali 2.1.3(Azzam)
   
 2.2 
 semua poin-poin (Dion), gambar umum use case (Sari), gambar use case per poin (Azzam)
 
-BAB 3 
-
-3.1 Sari
-
-3.2 Dion
-
-3.3 Gambar erd (Sari), tabel dan isian(Sari)
+BAB 3 -> Sari
 
 ## Pembagian tugas di Website
 -CRUD HomePage, promo, outlet, tetimoni (Azzam Farras Ruslani)
 
--CRUD menu, karir , PesanSaran (Dion)
+-CRUD Menu, karir , PesanSaran (Dion)
 
--CRUD About, blog/news, kontak (Tri Wulandari Junita Sari)
+-CRUD About dan Kontak (Tri Wulandari Junita Sari)
