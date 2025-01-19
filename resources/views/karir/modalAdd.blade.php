@@ -1,27 +1,25 @@
-@section('title', 'Edit')
-<x-app-layout>
-    <div class=" w-full mx-auto ">
-        <div class="w-full px-1 py-6 mx-auto">
-            <div class="flex-none w-full max-w-full px-4">
-                <div class="relative flex flex-col min-w-0 mb-6 pb-5 bg-white border-0 shadow-xl rounded-2xl">
-                    <div class="p-6 pb-3 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
-                        <div class="flex flex-wrap -mx-3">
-                            <div class="flex items-center w-full max-w-full px-3">
-                                <h6 class="text-xl md:text-2xl font-bold mb-4">Edit</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-8 mt-6 text-slate-700 lg:mt-0 bg-white">
-                        <form action="{{ route('karir.update', $karir->id_karir) }}" method="POST"
+<div id="addKarirModal"
+    class="w-full fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75 opacity-0 invisible transition-opacity duration-300"
+    onclick="closeModalOnOutsideClick(event)">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-xl px-8 py-6 text-slate-700 w-full max-w-4xl max-h-screen overflow-y-auto"
+            id="modalKarir">
+            <div class="sm:flex sm:items-start">
+                <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                    <h1 class="text-start mb-5 text-xl leading-10 font-bold" id="modal-title">
+                        Form Karir
+                    </h1>
+                    <div class="mt-2">
+                        <form id="karirForm" action="{{ route('karir.store') }}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
-                            @method('PUT')
+                            <!-- Layout Grid -->
                             <div class="grid grid-cols-2 gap-4">
 
                                 <!-- Posisi -->
                                 <div>
                                     <label for="nama_posisi" class="block text-sm font-medium">Posisi</label>
-                                    <input type="text" name="nama_posisi" id="nama_posisi" value="{{ $karir->nama_posisi }}"
+                                    <input type="text" name="nama_posisi" id="nama_posisi"
                                         class="mt-1 block w-full border-gray-300 rounded-md" required />
                                     @error('nama_posisi')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -30,7 +28,7 @@
                                 <!-- Lokasi -->
                                 <div>
                                     <label for="lokasi" class="block text-sm font-medium">Lokasi Penempatan</label>
-                                    <input type="text" name="lokasi" id="lokasi" value="{{ $karir->lokasi }}"
+                                    <input type="text" name="lokasi" id="lokasi"
                                         class="mt-1 block w-full border-gray-300 rounded-md" required />
                                     @error('lokasi')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -41,7 +39,7 @@
                                     <label for="tipe_kerja" class="block text-sm font-medium">Tipe Kerja</label>
                                     <select name="tipe_kerja" id="tipe_kerja"
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                        <option value="{{ $karir->tipe_kerja }}" selected>{{ $karir->tipe_kerja }}</option>
+                                        <option value="" disabled selected>Pilih Posisi</option>
                                         <option value="Paket Komplit">Paket Komplit</option>
                                         <option value="Makanan">Makanan</option>
                                         <option value="Minuman">Minuman</option>
@@ -50,27 +48,26 @@
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>
+
                                 <!-- Gaji -->
                                 <div>
                                     <label for="gaji" class="block text-sm font-medium">Gaji</label>
-                                    <input type="number" name="gaji" id="gaji" value="{{ $karir->gaji }}"
+                                    <input type="number" name="gaji" id="gaji"
                                         class="mt-1 block w-full border-gray-300 rounded-md" required />
                                     @error('gaji')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>
 
-                                 <!-- Status -->
-                                 <div class="col-span-2">
-                                    <label for="status" class="block text-sm font-medium">Status Karir</label>
+                                <!-- Status -->
+                                <div class="col-span-2">
+                                    <label for="status_menu" class="block text-sm font-medium">Status Karir</label>
                                     <select name="status" id="status"
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                        <option selected value="{{ $karir->status }}"
-                                            {{ old('status') === 'aktif' ? 'selected' : '' }}>{{ $karir->status }}
-                                        <option value="aktif" {{ old('status') === 'aktif' ? 'selected' : '' }}>
+                                        <option value="aktif" {{ old('status_menu') === 'aktif' ? 'selected' : '' }}>
                                             Aktif</option>
                                         <option value="non-aktif"
-                                            {{ old('status') === 'non-aktif' ? 'selected' : '' }}>Non-Aktif
+                                            {{ old('status_menu') === 'non-aktif' ? 'selected' : '' }}>Non-Aktif
                                         </option>
                                     </select>
                                 </div>
@@ -79,8 +76,8 @@
                                 <div class="col-span-2">
                                     <label for="kualifikasi" class="block text-sm font-medium">Kualifikasi</label>
                                     <textarea name="kualifikasi" id="kualifikasi" rows="3" class="mt-1 block w-full border-gray-300 rounded-md"
-                                        required> {{ $karir->kualifikasi }}</textarea>
-                                    @error('kualifikasi')
+                                        required></textarea>
+                                    @error('iframe_map')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>
@@ -89,29 +86,29 @@
                                     <label for="deskripsi_tugas" class="block text-sm font-medium">Deskripsi
                                         Tugas</label>
                                     <textarea name="deskripsi_tugas" id="deskripsi_tugas" rows="3"
-                                        class="mt-1 block w-full border-gray-300 rounded-md" required>{{ $karir->deskripsi_tugas }}</textarea>
-                                    @error('deskripsi_tugas')
+                                        class="mt-1 block w-full border-gray-300 rounded-md" required></textarea>
+                                    @error('iframe_map')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <!-- Benefit -->
                                 <div>
                                     <label for="benefit" class="block text-sm font-medium">Benefits</label>
-                                    <textarea name="benefit" id="benefit" rows="3" class="mt-1 block w-full border-gray-300 rounded-md" required>{{ $karir->benefit }}</textarea>
-                                    @error('benefit')
+                                    <textarea name="benefit" id="benefit" rows="3" class="mt-1 block w-full border-gray-300 rounded-md" required></textarea>
+                                    @error('iframe_map')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>
 
                             </div>
-
-                            <div class="flex justify-end gap-2 mt-4">
-                                <a href="{{ route('karir.index') }}" type="button"
-                                    class="rounded-md shadow-sm px-6 py-2 bg-gradient-to-tl from-red-600 to-orange-600 text-white hover:bg-orange-500 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+                            <!-- Buttons -->
+                            <div class="flex justify-end mt-4 gap-2">
+                                <button type="button" onclick="closeAddKarir()"
+                                    class="rounded-md border border-transparent shadow-sm px-6 py-2 bg-red-600 text-white">
                                     Batal
-                                </a>
+                                </button>
                                 <button type="submit"
-                                    class="rounded-md shadow-sm px-6 py-2 bg-blue-500 text-white hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    class="rounded-md border border-transparent shadow-sm px-6 py-2 bg-blue-500 text-white">
                                     Simpan
                                 </button>
                             </div>
@@ -119,45 +116,64 @@
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
+</div>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#kualifikasi'))
+        .then(editor => {
+            editor.model.document.on('change:data', () => {
+                // Update the textarea value when the content changes
+                document.querySelector('textarea[name="kualifikasi"]').value = editor.getData();
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    ClassicEditor
+        .create(document.querySelector('#benefit'))
+        .then(editor => {
+            editor.model.document.on('change:data', () => {
+                // Update the textarea value when the content changes
+                document.querySelector('textarea[name="benefit"]').value = editor.getData();
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    ClassicEditor
+        .create(document.querySelector('#deskripsi_tugas'))
+        .then(editor => {
+            editor.model.document.on('change:data', () => {
+                // Update the textarea value when the content changes
+                document.querySelector('textarea[name="deskripsi_tugas"]').value = editor.getData();
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
 
 
-        <script>
-            ClassicEditor
-                .create(document.querySelector('#kualifikasi'))
-                .then(editor => {
-                    editor.model.document.on('change:data', () => {
-                        // Update the textarea value when the content changes
-                        document.querySelector('textarea[name="kualifikasi"]').value = editor.getData();
-                    });
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+    function openAddKarir() {
+        const modal = document.getElementById("addKarirModal");
+        modal.classList.remove("opacity-0", "invisible");
+        modal.classList.add("opacity-100", "visible");
+    }
 
-            ClassicEditor
-                .create(document.querySelector('#benefit'))
-                .then(editor => {
-                    editor.model.document.on('change:data', () => {
-                        // Update the textarea value when the content changes
-                        document.querySelector('textarea[name="benefit"]').value = editor.getData();
-                    });
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+    function closeAddKarir() {
+        const modal = document.getElementById("addKarirModal");
+        modal.classList.add("opacity-0", "invisible");
+        modal.classList.remove("opacity-100", "visible");
+    }
 
-            ClassicEditor
-                .create(document.querySelector('#deskripsi_tugas'))
-                .then(editor => {
-                    editor.model.document.on('change:data', () => {
-                        // Update the textarea value when the content changes
-                        document.querySelector('textarea[name="deskripsi_tugas"]').value = editor.getData();
-                    });
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-        </script>
-</x-app-layout>
+    function closeModalOnOutsideClick(event) {
+        const modalContent = document.getElementById("modalKarir");
+        if (!modalContent.contains(event.target)) {
+            closeAddKarir();
+        }
+    }
+</script>
