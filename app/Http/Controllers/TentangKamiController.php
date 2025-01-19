@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TentangKami;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TentangKamiController extends Controller
 {
@@ -14,7 +15,8 @@ class TentangKamiController extends Controller
     }
 
 
-    public function indexHome() {
+    public function indexHome()
+    {
         $tentangKami = TentangKami::all();
         return view('homePage.tentangKami.index', compact('tentangKami'));
     }
@@ -26,7 +28,7 @@ class TentangKamiController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'judul_tK' => 'required|string|max:255',
             'sejarah_singkat' => 'required',
             'visi' => 'nullable|string',
@@ -35,17 +37,26 @@ class TentangKamiController extends Controller
             'gambar_tK2' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
+
+        $tentangKami = new TentangKami();
+        $tentangKami->judul_tK = $request->judul_tK;
+        $tentangKami->sejarah_singkat = $request->sejarah_singkat;
+        $tentangKami->visi = $request->visi;
+        $tentangKami->misi = $request->misi;
+
         if ($request->hasFile('gambar_tK1')) {
-            $validated['gambar_tK1'] = $request->file('gambar_tK1')->store('uploads', 'public');
+            $tentangKami->gambar_tK1 = $request->file('gambar_tK1')->store('images', 'public');
+
         }
         if ($request->hasFile('gambar_tK2')) {
-            $validated['gambar_tK2'] = $request->file('gambar_tK2')->store('uploads', 'public');
+            $tentangKami->gambar_tK2 = $request->file('gambar_tK2')->store('images', 'public');
+
         }
 
+        $tentangKami->save();
 
-        TentangKami::create($validated);
 
-        return redirect()->route('tentangKami.index')->with('success', 'Data berhasil ditambahkan.');
+        return redirect()->route('tentangKami.index')->with('success', 'Data Tentang Kami berhasil ditambahkan.');
     }
 
     public function show(TentangKami $tentangKami)
@@ -83,6 +94,14 @@ class TentangKamiController extends Controller
 
     public function destroy(TentangKami $tentangKami)
     {
+
+        if ($tentangKami -> gambar_tK1) {
+            Storage::delete($tentangKami->gambar_tK2);
+        }
+        if ($tentangKami -> gambar_tK2) {
+            Storage::delete($tentangKami->gambar_tK2);
+        }
+
         $tentangKami->delete();
         return redirect()->route('tentangKami.index')->with('success', 'Data berhasil dihapus.');
     }
