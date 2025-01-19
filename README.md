@@ -79,21 +79,21 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 | ![alt text](Image/Amenu.jpg?raw=true) Terdapat halaman menu yang berisikan gambar dan detailnya.|![alt text](Image/Apromo.jpg?raw=true) Ada juga halaman promo yang bisa memuat promosi atau diskon usaha.
 |  |  |
 | ![alt text](Image/Aabout.jpg?raw=true) Ada halaman tentang kami yang bisa menginputkan sejarah, gambar, visi dan misi.|![alt text](Image/Ahero.jpg?raw=true) Di halaman ini berisi gambar yang nantinya berada di tampilan awal home.
-|--|--|
-| ![alt text](Image/Aoutlet.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang. | ![alt text](Image/Akarir.jpg?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.
-|--|--|
+|  |  |
+| ![alt text](Image/Aoulet.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang. | ![alt text](Image/Akarir.jpg?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.
+|  |  |
 | ![alt text](Image/Akontak.jpg?raw=true) Ada kontak yang bisa di tambah agar pengunjung bisa menghubungi pihak admin. | ![alt text](Image/Apesan.jpg?raw=true) Ada kontak yang bisa di lihat admin yang diinputkan pengunjung, admin juga bisa hapus.
-|--|--|
+|  |  |
 | ![alt text](Image/Aprofil.jpg?raw=true) Tempat yang bisa di mengatur username dan password admin. | ![alt text](Image/Atestimoni.jpg?raw=true) Admin akan menyeleksi pesan saran dan pesan positif akan di jadikan testimoni dan di tampilkan pada halaman website.
 
 **Halaman User**
 |  |  |
 |--|--|
-| ![alt text](Images/home.jpg?raw=true)  Pada halaman pengunjung terdapat beranda yang berisi tampilan scrolling yang berisi seluruh konten seperti tampilan home, hero section, promo, outlets, testimoni, pesan saran dan kontak.|![alt text](Images/menu.jpg?raw=true) Pada halaman pengunjung terdapat halaman menu yang berisi gambar, deskripsi dan harganya.
+| ![alt text](Image/home.jpg?raw=true)  Pada halaman pengunjung terdapat beranda yang berisi tampilan scrolling yang berisi seluruh konten seperti tampilan home terdiri dari hero section, menu, promo, outlets, testimoni, pesan saran dan kontak.|![alt text](Image/Pmenu.jpg?raw=true) Pada halaman pengunjung terdapat halaman menu yang berisi gambar, deskripsi dan harganya.
 |  |  |
-| ![alt text](Images/tentangkami.jpg?raw=true) Pada halaman pengunjung terdapat halaman tentang kami, yang berisi gambar, sejarah singkat serta visi dan misi. |![alt text](Images/karir.jpg?raw=true) Pada halaman pengunjung terdapat halaman karir atau job yang berisi informasi mengenai lowongan pekerjaan.
+| ![alt text](Image/Pabout.jpg?raw=true) Pada halaman pengunjung terdapat halaman tentang kami, yang berisi gambar, sejarah singkat serta visi dan misi. |![alt text](Image/Pkarir.jpg?raw=true) Pada halaman pengunjung terdapat halaman karir atau job yang berisi informasi mengenai lowongan pekerjaan.
 |  |  |
-| ![alt text](Images/outlets.jpg?raw=true) Pada halaman pengunjung terdapat halaman outlets atau cabang yang berisi lokasi dari cabang yang dimiliki umkm ayam geprek keysia.
+| ![alt text](Image/Poutlet.jpg?raw=true) Pada halaman pengunjung terdapat halaman outlets atau cabang yang berisi lokasi dari cabang yang dimiliki umkm ayam geprek keysia.
 |  |  |
 
 
