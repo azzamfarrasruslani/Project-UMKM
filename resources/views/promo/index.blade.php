@@ -26,7 +26,7 @@
             </div>
 
             <!-- Data Hero -->
-            <div class="flex flex-wrap px-2 py-6 rounded-2xl">
+            <div class="flex flex-wrap px-2 py-6 mt-5 bg-white rounded-2xl">
                 <div class="w-full px-3">
                     @if (!empty($promo) && !is_array($promo))
                         <div id="kandangTabContent"
