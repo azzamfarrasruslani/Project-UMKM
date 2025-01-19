@@ -660,7 +660,7 @@ BAB 1 -> Sari
 
 BAB 2 
 2.1
-semua sari kecuali 2.1.3(Azzam)
+semua Sari kecuali 2.1.3(Azzam)
   
 2.2 
 semua poin-poin (Dion), gambar umum use case (Sari), gambar use case per poin (Azzam)
