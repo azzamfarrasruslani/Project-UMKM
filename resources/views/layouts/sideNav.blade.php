@@ -30,7 +30,7 @@
                         </x-nav-link>
                     </li>
 
-    
+
                     <!-- Menu Utama -->
                     <li class="w-full mt-4">
                         <h6 class="pl-3 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">Menu Utama</h6>
@@ -122,7 +122,7 @@
                                     </x-nav-link>
                                 </li>
                                 <li class="mt-0.5 w-full">
-                                    <x-nav-link>
+                                    <x-nav-link :href="route('pesanSaran.index')" :active="request()->routeIs('pesanSaran.index')">
                                         <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg xl:p-2.5">
                                             <i class="fa-solid fa-comments fa-lg"></i>
                                         </div>

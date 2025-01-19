@@ -13,6 +13,7 @@ use App\Http\Controllers\HeroController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TentangKamiController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\PesanSaranController;
 
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ReviewController;
@@ -78,6 +79,12 @@ Route::resource('blog', BlogController::class)->only(['index', 'create', 'store'
 // Hero
 Route::resource('hero', HeroController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
+
+// Pesan Saran
+Route::resource('pesanSaran', PesanSaranController::class)->only(['index','destroy'])
+    ->middleware(['auth', 'verified']);
+// Route store tanpa middleware
+Route::post('pesanSaran', [PesanSaranController::class, 'store'])->name('pesanSaran.store');
 
 
 // Tentang Kami

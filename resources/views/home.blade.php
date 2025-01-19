@@ -1,7 +1,7 @@
 @section('title', 'Home')
 <x-guest-layout>
 
-    <section class="main_visual relative h-auto overflow-hidden mt-20 mb-40">
+    <section class="main_visual relative h-auto overflow-hidden mt-24 mb-40">
         <div class="swiper-container1 visSwiper relative">
             @if (!empty($hero) && $hero->count() > 0)
                 <!-- Wrapper -->
@@ -12,7 +12,7 @@
                                 <a data-promotion-id="606" data-promotion-location="top-main" data-promotion-title=""
                                     href="">
                                     <span class="img block">
-                                        <img class="w-full object-cover  h-[300px] max-h-[690px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[660px]"
+                                        <img class="w-full object-cover  h-[300px] max-h-[690px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[770px]"
                                             src="{{ Storage::url($item->gambar_hero) }}" alt="Promotion Image">
                                     </span>
                                 </a>
@@ -55,7 +55,7 @@
     </script>
 
     {{-- Menu Section --}}
-    <section id="menu" class="mb-50 px-10">
+    {{-- <section id="menu" class="mb-50 px-10">
         <!-- Heading -->
         <div class="flex items-center justify-between">
             <h2 id="best-menu-heading" class="mt-5 text-4xl font-bold text-stone-800">Menu Pilihan</h2>
@@ -76,7 +76,7 @@
             <div class="swiper relative">
                 <div class="swiper-wrapper">
                     @foreach ($menu as $item)
-                        {{-- <div class="swiper-slide flex justify-center items-center py-10">
+                        <div class="swiper-slide flex justify-center items-center py-10">
                             <article
                                 class="menu-item bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-2 flex flex-col items-center">
                                 <div class="max-w-[500px] w-full aspect-[4/3] overflow-hidden rounded-lg">
@@ -92,8 +92,7 @@
                                     Rp {{ number_format($item->harga_menu, 2, ',', '.') }}
                                 </p>
                             </article>
-                        </div> --}}
-                       
+                        </div>
                     @endforeach
 
                 </div>
@@ -107,7 +106,7 @@
             class="block mt-10 mx-auto px-8 py-4 text-center text-white bg-stone-900 hover:bg-stone-700 rounded-xl text-xl font-bold max-w-xs focus:outline-none focus:ring-2 focus:ring-stone-600">
             Lihat Menu
         </a>
-    </section>
+    </section> --}}
 
 
     <script>
@@ -136,34 +135,37 @@
     <section aria-label="Promotional Deals Section mb-20" class="mx-20">
         <div class="flex flex-wrap gap-5 justify-between font-bold max-md:mr-2.5 max-md:max-w-full">
             <h2 class="text-4xl text-stone-800 max-md:max-w-full">Promo</h2>
-            <a href="{{ route('promo.indexHome') }}"
-                class="my-auto text-lg text-rose-700 hover:underline "
+            <a href="{{ route('promo.indexHome') }}" class="my-auto text-lg text-rose-700 hover:underline "
                 tabindex="0">
                 View All
             </a>
         </div>
         <div data-aos="fade-up" class="mt-10 w-full swiper">
             <!-- Wrapper -->
-            <div  class="swiper-wrapper">
-                <div class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+            <div class="swiper-wrapper">
+                <div
+                    class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                     <img loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/628538ce5b04549fd46bc5bc0490c83b6b9ebf1ad055ca14be51c583ad8d7fca?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
                         alt="Special promotional deal offer"
                         class="object-contain grow w-full aspect-[1.97] max-md:mt-4 max-md:max-w-full" />
                 </div>
-                <div class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                <div
+                    class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                     <img loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9a4ed6d77de8b6d7a3b4e53b27d94e2b1ec6039ea269e1f74e7cbcbc73213c2?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
                         alt="Featured discount promotion"
                         class="object-contain grow w-full aspect-[1.96] max-md:mt-4 max-md:max-w-full" />
                 </div>
-                <div class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                <div
+                    class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                     <img loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9a4ed6d77de8b6d7a3b4e53b27d94e2b1ec6039ea269e1f74e7cbcbc73213c2?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
                         alt="Featured discount promotion"
                         class="object-contain grow w-full aspect-[1.96] max-md:mt-4 max-md:max-w-full" />
                 </div>
-                <div class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
+                <div
+                    class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                     <img loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9a4ed6d77de8b6d7a3b4e53b27d94e2b1ec6039ea269e1f74e7cbcbc73213c2?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
                         alt="Featured discount promotion"
@@ -370,13 +372,13 @@
 
     {{-- Testimoni Section --}}
     <section id="reviewSection" class="py-12">
-        <div  class="flex flex-col justify-center text-center px-4">
+        <div class="flex flex-col justify-center text-center px-4">
             <h2 class="text-yellow-500 text-3xl font-bold mb-4">Apa Kata Pelanggan Kami</h2>
             <p class="text-gray-600 max-w-2xl mx-auto mb-8">
                 Kepuasan Pelanggan adalah Prioritas Kami
             </p>
 
-            <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-10">
                 <!-- Card 1 -->
                 <div data-aos="zoom-in" class="bg-customRed-50 text-white p-6 rounded-2xl shadow-md relative mb-5">
                     <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
@@ -465,26 +467,36 @@
                 class="flex flex-col lg:flex-row w-full max-w-[1200px] gap-8 m-10 px-6 max-md:flex-col max-md:m-0 max-md:gap-6">
                 <!-- Form Section -->
                 <div class="flex flex-col w-full lg:w-2/3 p-6 bg-white rounded-lg shadow-md max-md:px-4 max-md:py-6">
-                    <form class="space-y-6">
+                    <form class="space-y-6" method="POST" action="{{ route('pesanSaran.store') }}">
+                        @csrf <!-- Menambahkan token CSRF untuk keamanan -->
                         <div class="flex flex-col md:flex-row gap-6">
-                            <input type="text" placeholder="Nama"
+                            <input type="text" name="nama" placeholder="Nama"
                                 class="flex-1 p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
-                                title="Masukkan nama lengkap Anda">
-                            <input type="email" placeholder="Email"
+                                title="Masukkan nama lengkap Anda" required>
+                            <input type="email" name="email" placeholder="Email"
                                 class="flex-1 p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
-                                title="Masukkan email aktif Anda">
+                                title="Masukkan email aktif Anda" required>
                         </div>
-                        <input type="text" placeholder="Subjek"
+                        <select name="subjek"
                             class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
-                            title="Subjek pesan Anda">
+                            title="Pilih subjek pesan Anda" required>
+                            <option value="" disabled selected>—Silakan pilih subjek—</option>
+                            <option value="pertanyaan">Pertanyaan?</option>
+                            <option value="keluhan">Keluhan!</option>
+                            <option value="pujian">Pujian 😊</option>
+                            <option value="sponsorship">Sponsor</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+
                         <textarea id="pesan" name="pesan" placeholder="Pesan" rows="5"
                             class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:outline-none"
-                            title="Ketik pesan Anda di sini"></textarea>
+                            title="Ketik pesan Anda di sini" required></textarea>
                         <button type="submit"
                             class="w-full bg-yellow-500 text-white font-bold py-4 px-6 rounded-md hover:bg-yellow-600 focus:outline-none transition duration-300 ease-in-out shadow-lg">
                             Kirim
                         </button>
                     </form>
+
                 </div>
 
                 <!-- Info Section -->

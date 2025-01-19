@@ -83,7 +83,7 @@
 
                                 {{-- Embed Map (iframe) --}}
                                 <div class="mb-4 sm:col-span-2">
-                                    <label for="iframe_map" class="block text-sm font-medium">Embed Map (iframe)</label>
+                                    <label for="iframe_map" class="block text-sm font-medium">Embed Map (iframe) (400x300)</label>
                                     <textarea name="iframe_map" id="iframe_map"
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">{{ old('iframe_map') }}</textarea>
                                     @error('iframe_map')

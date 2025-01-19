@@ -97,7 +97,7 @@
 
                                 {{-- Embed Map (iframe) --}}
                                 <div class="mb-4 sm:col-span-2">
-                                    <label for="iframe_map" class="block text-sm font-medium">Embed Map (iframe)</label>
+                                    <label for="iframe_map" class="block text-sm font-medium">Embed Map (iframe) (400x300)</label>
                                     <textarea name="iframe_map" id="iframe_map"
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">{{ $outlet->iframe_map}}</textarea>
                                     @error('iframe_map')
@@ -134,8 +134,8 @@
                             </div>
 
                             <div class="flex justify-end mt-6 gap-2">
-                                <button type="button" onclick="closeAddOutlet()"
-                                    class="rounded-md px-6 py-2 bg-red-600 text-white hover:bg-red-700 transition">Batal</button>
+                                <a href="{{ route('outlet.index') }}" type="button"
+                                    class="rounded-md px-6 py-2 bg-red-600 text-white hover:bg-red-700 transition">Batal</a>
                                 <button type="submit"
                                     class="rounded-md px-6 py-2 bg-blue-500 text-white hover:bg-blue-600 transition">Simpan</button>
                             </div>

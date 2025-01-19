@@ -87,11 +87,13 @@
                                                                 Aksi
                                                             </span>
 
-                                                            <a href="{{ route('outlet.detail', $item->id_outlet) }}"
-                                                                class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700">
-                                                                <i class="fa-solid fa-circle-info fa-lg text-yellow-500"></i>
-                                                                Detail Outlet
-                                                             </a>
+                                                            <a href="javascript:;"
+                                                            onclick="openDetailOutlet(`{{ $item->iframe_map }}`, `{{ Storage::url($item->gambar_pesan_online) }}`)"
+                                                            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700">
+                                                            <i class="fa-solid fa-circle-info fa-lg text-yellow-500"></i>
+                                                            Detail Outlet
+                                                        </a>
+
 
                                                             <a href="{{ route('outlet.edit', $item->id_outlet) }}"
                                                                 class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700">
@@ -109,15 +111,14 @@
                                                                     data-id="{{ $item->id_outlet }}"
                                                                     data-url="{{ route('outlet.destroy', $item->id_outlet) }}"
                                                                     class="delete-button flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700">
-                                                                    <i
-                                                                        class="fa-solid fa-trash fa-lg text-red-500"></i>
+                                                                    <i class="fa-solid fa-trash fa-lg text-red-500"></i>
                                                                     Hapus
                                                                 </a>
                                                             </form>
 
 
                                                         </div>
-                                                        
+
                                                     </div>
 
                                                 </div>
@@ -132,6 +133,7 @@
                         @endif
                     </div>
                 </div>
+                @include('outlet.modalDetail')
             </div>
         </div>
 
