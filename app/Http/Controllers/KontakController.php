@@ -12,8 +12,8 @@ class KontakController extends Controller
      */
     public function index()
     {
-        $kontaks = Kontak::all();
-        return view('kontak.index', compact('kontaks'));
+        $kontak = Kontak::all();
+        return view('kontak.index', compact('kontak'));
     }
 
     /**
@@ -27,14 +27,19 @@ class KontakController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Kontak $kontak)
     {
         $request->validate([
             'social_media' => 'required|string',
             'link' => 'required|url',
         ]);
 
-        Kontak::create($request->all());
+        $kontak = new Kontak();
+        $kontak->social_media = $request->social_media;
+        $kontak->link = $request->link;
+
+        $kontak->save();
+
         return redirect()->route('kontak.index')->with('success', 'Kontak berhasil ditambahkan.');
     }
 
@@ -64,7 +69,12 @@ class KontakController extends Controller
             'link' => 'required|url',
         ]);
 
-        $kontak->update($request->all());
+        $kontak->social_media = $request->social_media;
+        $kontak->link = $request->link;
+
+
+        $kontak->save();
+        
         return redirect()->route('kontak.index')->with('success', 'Kontak berhasil diperbarui.');
     }
 

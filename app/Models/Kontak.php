@@ -12,7 +12,7 @@ class Kontak extends Model
     protected $primaryKey = 'id_kontak';
 
     protected $fillable = [
-        'socila_media',
+        'social_media',
         'link',
 
     ];
