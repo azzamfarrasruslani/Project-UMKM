@@ -34,12 +34,10 @@ class HeroController extends Controller
             'nama_hero' => 'required|string|max:255',
             'gambar_hero' => 'nullable|image|mimes:jpeg,png,jpg',
             'status_hero' => 'required|in:aktif,non-aktif',
-            'jenis_tampilan' => 'required|in:mobile,desktop',
         ]);
         $hero = new Hero();
         $hero->nama_hero = $request->nama_hero;
         $hero->status_hero = $request->status_hero;
-        $hero->jenis_tampilan = $request->jenis_tampilan;
 
         if ($request->hasFile('gambar_hero')) {
             if ($hero->gambar_hero) {
@@ -79,12 +77,10 @@ class HeroController extends Controller
             'nama_hero' => 'required|string|max:255',
             'gambar_hero' => 'nullable|image|mimes:jpeg,png,jpg',
             'status_hero' => 'required|in:aktif,non-aktif',
-            'jenis_tampilan' => 'required|in:mobile,desktop',
         ]);
 
         $hero->nama_hero = $request->nama_hero;
         $hero->status_hero = $request->status_hero;
-        $hero->jenis_tampilan = $request->jenis_tampilan;
 
         if ($request->hasFile('gambar_hero')) {
             // Hapus file lama jika ada

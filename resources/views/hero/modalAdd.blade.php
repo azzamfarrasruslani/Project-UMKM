@@ -11,7 +11,7 @@
                     <div class="mt-2">
                         <form action="{{ route('hero.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="grid grid-cols-1  gap-4 mb-4">
                                 <!-- Nama Hero -->
                                 <div>
                                     <label for="judul" class="block text-sm font-medium">Nama Hero</label>
@@ -19,21 +19,6 @@
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                                         value="{{ old('nama_hero') }}" required />
                                     @error('nama_hero')
-                                        <span class="text-red-500 text-sm">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <!-- Jenis Tampilan -->
-                                <div>
-                                    <label for="jenis_tampilan" class="block text-sm font-medium">Jenis Tampilan</label>
-                                    <select name="jenis_tampilan" id="jenis_tampilan"
-                                        class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                        <option value="desktop"
-                                            {{ old('jenis_tampilan') === 'dekstop' ? 'selected' : '' }}>Desktop</option>
-                                        <option value="mobile"
-                                            {{ old('jenis_tampilan') === 'mobile' ? 'selected' : '' }}>Mobile</option>
-
-                                    </select>
-                                    @error('diskon')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>

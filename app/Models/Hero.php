@@ -16,6 +16,5 @@ class Hero extends Model
         'nama_hero',
         'gambar_hero',
         'status_hero',
-        'jenis_tampilan'
     ];
 }
