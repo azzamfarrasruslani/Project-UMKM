@@ -100,6 +100,15 @@ Route::resource('kontak', KontakController::class)
     ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
+
+
+
+
+
+
+
+    
+
 // Route untuk Google login
 // Route::get('auth/google', function () {
 //     return Socialite::driver('google')->redirect();
