@@ -812,6 +812,7 @@ module.exports = {
             outfit: ["Outfit", "sans-serif"],
             poppins: ["Poppins", "sans-serif"],
             body: ["Roboto", "sans-serif"],
+            bebas: ["Bebas Neue", "cursive"],
             awesome: ["FontAwesome"],
             sans: ["Figtree", ...defaultTheme.fontFamily.sans],
         },
@@ -1449,6 +1450,7 @@ module.exports = {
     ],
 
     plugins: [
+        require('tailwindcss-text-stroke'),
         forms,
         plugin(function ({ addComponents, addUtilities }) {
             addUtilities({

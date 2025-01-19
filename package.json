@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "preline": "^2.6.0",
-        "swiper": "^11.1.15"
+        "swiper": "^11.1.15",
+        "tailwindcss-text-stroke": "^0.0.5"
     }
 }
