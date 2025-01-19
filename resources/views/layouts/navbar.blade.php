@@ -119,7 +119,7 @@
                     <ul
                         class="flex flex-col pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto lg:space-x-7 capitalize">
                         <li>
-                            <a class="relative flex items-center text-xl font-extrabold font-notoSans transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('home') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
+                            <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('home') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
                                 aria-current="page" href="{{ route('home') }}">
                                 Home
                             </a>
@@ -143,26 +143,21 @@
                             </a>
                         </li>
                         <li>
+                            <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('karir.indexHome') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
+                                  href="{{ route('karir.indexHome') }}">
+                                Karir
+                            </a>
+                        </li>
+                        {{-- <li>
                             <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
                                 href="{{ route('outlet.indexHome') }}">
                                 Blog
                             </a>
-                        </li>
-                        <li>
-                            <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->is('#menu') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
-                                href="#menu">
-                                Karir
-                            </a>
-                        </li>
+                        </li> --}}
+
                     </ul>
                     <li class="flex items-center pr-5">
-                        <a href="javascript:;" dropdown-trigger aria-expanded="false"
-                            class="relative w-12 h-12 bg-white  rounded-full flex items-center justify-center sm:mr-4 shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105">
-                            <img class="w-6 h-6" src="{{ asset('assets/icon/shop.png') }}" alt="login">
-                            <span
-                                class="absolute top-0 right-0 inline-block w-3 h-3 bg-red-600 rounded-full border-2 border-white"></span>
-                        </a>
-                        <a href="{{ 'login' }}"
+                        <a href="{{ route('login') }}"
                             class="relative w-12 h-12 bg-white  rounded-full flex items-center justify-center  sm:mr-4 shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105">
                             <img class="w-6 h-6" src="{{ asset('assets/icon/user.png') }}" alt="login">
                         </a>

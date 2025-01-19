@@ -90,6 +90,14 @@
                                 <span class="ml-1">Kontak</span>
                             </x-nav-link>
                         </li>
+                        <li class="mt-0.5 w-full">
+                            <x-nav-link :href="route('karir.index')" :active="request()->routeIs('karir.index')">
+                                <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg xl:p-2.5">
+                                    <i class="fa-solid fa-briefcase fa-lg"></i>
+                                </div>
+                                <span class="ml-1">Karir</span>
+                            </x-nav-link>
+                        </li>
                     </ul>
 
                     <!-- Pengaturan Lainnya -->
