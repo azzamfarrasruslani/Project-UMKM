@@ -55,7 +55,7 @@
     </script>
 
     {{-- Menu Section --}}
-    {{-- <section id="menu" class="mb-50 px-10">
+    <section id="menu" class="mb-50 px-10">
         <!-- Heading -->
         <div class="flex items-center justify-between">
             <h2 id="best-menu-heading" class="mt-5 text-4xl font-bold text-stone-800">Menu Pilihan</h2>
@@ -76,7 +76,7 @@
             <div class="swiper relative">
                 <div class="swiper-wrapper">
                     @foreach ($menu as $item)
-                        <div class="swiper-slide flex justify-center items-center py-10">
+                        {{-- <div class="swiper-slide flex justify-center items-center py-10">
                             <article
                                 class="menu-item bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-2 flex flex-col items-center">
                                 <div class="max-w-[500px] w-full aspect-[4/3] overflow-hidden rounded-lg">
@@ -92,7 +92,8 @@
                                     Rp {{ number_format($item->harga_menu, 2, ',', '.') }}
                                 </p>
                             </article>
-                        </div>
+                        </div> --}}
+                       
                     @endforeach
 
                 </div>
@@ -130,7 +131,7 @@
                 },
             });
         });
-    </script> --}}
+    </script>
 
     <section aria-label="Promotional Deals Section mb-20" class="mx-20">
         <div class="flex flex-wrap gap-5 justify-between font-bold max-md:mr-2.5 max-md:max-w-full">

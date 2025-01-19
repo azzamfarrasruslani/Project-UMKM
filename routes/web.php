@@ -47,6 +47,7 @@ Route::controller(PromoController::class)->group(function () {
 Route::resource('menu', MenuController::class)->only(['index', 'create', 'store', 'edit', 'destroy', 'update'])
     ->middleware(['auth', 'verified']);
 
+
 Route::controller(MenuController::class)->group(function () {
     Route::get('home/menu', 'indexHome')->name('menu.indexHome');
 });
@@ -107,7 +108,7 @@ Route::resource('kontak', KontakController::class)
 
 
 
-    
+
 
 // Route untuk Google login
 // Route::get('auth/google', function () {

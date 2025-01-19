@@ -14,4 +14,11 @@ class HomeController extends Controller
         $menu = Menu::all();
         return view('home', compact('hero', 'menu'));
     }
+
+
+    // public function indexMenu()
+    // {
+    //     $menu = Menu::all();
+    //     return view('homePage.menu.index', compact('menu'));
+    // }
 }
