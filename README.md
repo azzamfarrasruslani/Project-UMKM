@@ -80,7 +80,7 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 |  |  |
 | ![alt text](Image/Aabout.jpg?raw=true) Ada halaman tentang kami yang bisa menginputkan sejarah, gambar, visi dan misi.|![alt text](Image/Ahero.jpg?raw=true) Di halaman ini berisi gambar yang nantinya berada di tampilan awal home.
 |  |  |
-| ![alt text](Image/Aoulet.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang. | ![alt text](Image/Akarir.jpg?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.
+| ![alt text](Image/Aoulet.jpg?raw=true) Halaman yang berisi detail informasi dari setiap cabang. | ![alt text](Image/Akarirr.png?raw=true) Halaman karir atau job sebagai tempat untuk memberikan informasi jika ada lowongan pekerjaan.
 |  |  |
 | ![alt text](Image/Akontak.jpg?raw=true) Ada kontak yang bisa di tambah agar pengunjung bisa menghubungi pihak admin. | ![alt text](Image/Apesan.jpg?raw=true) Ada kontak yang bisa di lihat admin yang diinputkan pengunjung, admin juga bisa hapus.
 |  |  |
@@ -91,7 +91,7 @@ Website Ayam Geprek Keysia memiliki 2 jenis pengguna, yaitu admin dan pengunjung
 |--|--|
 | ![alt text](Image/home.jpg?raw=true)  Pada halaman pengunjung terdapat beranda yang berisi tampilan scrolling yang berisi seluruh konten seperti tampilan home terdiri dari hero section, menu, promo, outlets, testimoni, pesan saran dan kontak.|![alt text](Image/Pmenu.jpg?raw=true) Pada halaman pengunjung terdapat halaman menu yang berisi gambar, deskripsi dan harganya.
 |  |  |
-| ![alt text](Image/Pabout.jpg?raw=true) Pada halaman pengunjung terdapat halaman tentang kami, yang berisi gambar, sejarah singkat serta visi dan misi. |![alt text](Image/Pkarir.jpg?raw=true) Pada halaman pengunjung terdapat halaman karir atau job yang berisi informasi mengenai lowongan pekerjaan.
+| ![alt text](Image/Pabout.jpg?raw=true) Pada halaman pengunjung terdapat halaman tentang kami, yang berisi gambar, sejarah singkat serta visi dan misi. |![alt text](Image/Pkarirr.png?raw=true) Pada halaman pengunjung terdapat halaman karir atau job yang berisi informasi mengenai lowongan pekerjaan.
 |  |  |
 | ![alt text](Image/Poutlet.jpg?raw=true) Pada halaman pengunjung terdapat halaman outlets atau cabang yang berisi lokasi dari cabang yang dimiliki umkm ayam geprek keysia.
 |  |  |
