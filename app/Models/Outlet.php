@@ -26,7 +26,7 @@ class Outlet extends Model
     ];
 
       // Pastikan tanggal_berdiri dikonversi menjadi objek Carbon
-      protected $casts = [
-        'tanggal_berdiri' => 'datetime', // Pastikan kolom ini dikonversi menjadi objek Carbon
-    ];
+    //   protected $casts = [
+    //     'tanggal_berdiri' => 'datetime', // Pastikan kolom ini dikonversi menjadi objek Carbon
+    // ];
 }
