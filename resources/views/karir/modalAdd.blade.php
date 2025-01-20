@@ -40,9 +40,8 @@
                                     <select name="tipe_kerja" id="tipe_kerja"
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
                                         <option value="" disabled selected>Pilih Posisi</option>
-                                        <option value="Paket Komplit">Paket Komplit</option>
-                                        <option value="Makanan">Makanan</option>
-                                        <option value="Minuman">Minuman</option>
+                                        <option value="Part Time">Part Time</option>
+                                        <option value="Full Time">Full Time</option>
                                     </select>
                                     @error('tipe_kerja')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>

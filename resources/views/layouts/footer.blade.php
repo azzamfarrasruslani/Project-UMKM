@@ -118,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white w-full md:w-auto"
+        {{-- <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white w-full md:w-auto"
             aria-label="General Links">
             <h2 class="text-2xl leading-10 text-white">General</h2>
             <a href="#"
@@ -128,18 +128,27 @@
             <a href="#"
                 class="self-stretch mt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Contact
                 Us</a>
-        </nav>
+        </nav> --}}
         <nav class="flex flex-col items-start mt-3.5 text-base font-medium leading-6 text-white w-full md:w-auto"
             aria-label="About Us Links">
-            <h2 class="text-xl leading-10 text-white">About Us</h2>
-            <a href="#"
-                class="mt-11 hover:underline focus:outline-none focus:ring-2 focus:ring-white max-md:mt-10">Brand
-                Story</a>
-            <a href="#"
-                class="self-stretch mt-6 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Pizza Hut
-                Indonesia Story</a>
+            <h2 class="text-xl leading-10 text-white">Akses Cepat</h2>
+            <a href="{{ route('home') }}"
+                class="mt-11 hover:underline focus:outline-none focus:ring-2 focus:ring-white max-md:mt-10">
+                Home</a>
+            <a href="{{ route('menu.indexHome') }}"
+                class="mt-11 hover:underline focus:outline-none focus:ring-2 focus:ring-white max-md:mt-10">
+                Menu</a>
+            <a href="{{ route('tentangKami.indexHome') }}"
+                class="mt-11 hover:underline focus:outline-none focus:ring-2 focus:ring-white max-md:mt-10">
+                Tentang Kami</a>
+            <a href="{{ route('outlet.indexHome') }}"
+                class="self-stretch mt-6 hover:underline focus:outline-none focus:ring-2 focus:ring-white">
+                Outlet</a>
+            <a href="{{ route('karir.indexHome') }}"
+                class="self-stretch mt-6 hover:underline focus:outline-none focus:ring-2 focus:ring-white">
+                Karir</a>
         </nav>
-        <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white w-full md:w-auto"
+        {{-- <nav class="flex flex-col items-start mt-3 text-base font-medium leading-6 text-white w-full md:w-auto"
             aria-label="Policy Links">
             <h2 class="text-2xl leading-10 text-white">Policy</h2>
             <a href="#"
@@ -147,7 +156,7 @@
                 Conditions</a>
             <a href="#" class="mt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-white">Privacy
                 Policy</a>
-        </nav>
+        </nav> --}}
     </div>
     <div class="mt-6 text-sm font-medium leading-5 text-gray-500 text-center md:text-left" role="contentinfo">
         © Ayam Geprek Keyisa 2025. All Rights Reserved.

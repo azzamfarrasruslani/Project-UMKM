@@ -193,10 +193,6 @@
                         <a href="#tentang" class="mb-4 text-lg font-bold text-green-900">Tentang Kami</a>
                         <a href="#contact" class="mb-4 text-lg font-bold text-green-900">Artikel</a>
                         <a href="#contact" class="mb-4 text-lg font-bold text-green-900">Kontak</a>
-                        <a href="{{'login'}}"
-                            class="mt-auto mb-2 py-2 px-4 bg-green-900 text-white rounded-full text-center">Login</a>
-                        <a href="{{'register'}}"
-                            class="py-2 px-4 bg-green-600 text-white rounded-full text-center">Register</a>
                     </div>
                 </div>
 

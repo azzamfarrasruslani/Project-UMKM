@@ -76,7 +76,7 @@
         </footer> --}}
         </div>
         <!-- Footer End -->
-        <div fixed-plugin>
+        {{-- <div fixed-plugin>
             <a fixed-plugin-button
                 class="fixed px-4 py-2 text-xl bg-white shadow-lg cursor-pointer bottom-8 right-8 z-990 rounded-circle text-slate-700">
                 <i class="py-2 pointer-events-none fa fa-cog"> </i>
@@ -167,7 +167,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </main>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>

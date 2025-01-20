@@ -116,7 +116,7 @@
                                 placeholder="Search" />
                         </div>
                     </div> --}}
-                    <a href="javascript:;"
+                    {{-- <a href="javascript:;"
                         class="relative w-10 h-10 bg-customRed-50  text-white rounded-full flex items-center justify-center hover:bg-green-900 transition duration-300 ease-nav-brand">
                         <i fixed-plugin-button-nav class="fa fa-cog"></i>
                     </a>
@@ -152,7 +152,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
 
 
                 </div>

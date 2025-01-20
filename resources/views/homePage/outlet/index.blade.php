@@ -32,7 +32,7 @@
         <div class="flex flex-col min-h-[945px]" role="region" aria-label="Store Locations">
             <div data-aos="zoom-in" class="flex flex-col items-center text-center pt-6 w-full">
                 <h1 id="deals-heading"
-                    class="pb-2 text-4xl font-extrabold leading-[1.2] text-yellowCustom-50 uppercase tracking-wide">
+                    class="pb-2 text-4xl font-extrabold leading-[1.2] text-black  font-bebas uppercase tracking-widest">
                     Kunjungi Outlets Kami
                 </h1>
                 <div class="w-20 h-1 bg-yellowCustom-50 mt-2 rounded"></div>
@@ -55,12 +55,14 @@
                                     </div>
                                     <div class="p-6">
                                         <h2 class="text-lg font-bold text-neutral-800">{{ $item->nama_outlet }}</h2>
-                                        <p class="text-sm text-green-600 font-semibold mt-1">Tersedia</p>
-
-                                        <div class="flex gap-4 items-center mt-4">
-                                            <img loading="lazy" src="{{ Storage::url($item->gambar_pesan_online) }}"
-                                                class="object-contain h-12 rounded-sm" alt="GrabFood Logo">
-                                        </div>
+                                        @if ($item->gambar_pesan_online)
+                                            <p class="text-sm text-green-600 font-semibold mt-1">Tersedia</p>
+                                            <div class="flex gap-4 items-center mt-4">
+                                                <a target="0" href="{{$item->link_pesan_online}}">
+                                                <img loading="lazy" src="{{ Storage::url($item->gambar_pesan_online) }}"
+                                                    class="object-contain h-12 rounded-sm" alt="GrabFood Logo"></a>
+                                            </div>
+                                        @endif
 
                                         <address class="mt-4 text-sm text-neutral-600">
                                             {{ $item->alamat_outlet }}

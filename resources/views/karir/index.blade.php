@@ -54,7 +54,7 @@
                                             @endif
                                         </p>
 
-                                        <p class="text-gray-600 text-sm"><strong>Benefit:</strong> {{ $item->benefit }}
+                                        <p class="text-gray-600 text-sm"><strong>Benefit:</strong> {!! $item->benefit !!}
                                         </p>
 
                                         {{-- Status --}}

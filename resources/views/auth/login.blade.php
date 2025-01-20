@@ -90,7 +90,7 @@
                                             </label>
                                         </div>
 
-                                        <div class="flex items-center justify-end mt-4">
+                                        {{-- <div class="flex items-center justify-end mt-4">
                                             @if (Route::has('password.request'))
                                                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                                     href="{{ route('password.request') }}">
@@ -99,7 +99,7 @@
                                             @endif
 
 
-                                        </div>
+                                        </div> --}}
 
                                         <div class="text-center">
                                             <!-- <button type="button"
@@ -114,13 +114,13 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div
+                                {{-- <div
                                     class="border-black/12.5 rounded-b-2xl  border-t-0 border-solid p-6 text-center pt-0 px-1 sm:px-6">
                                     <p class="mx-auto mb-6 leading-normal text-sm">Don't have an account? <a
                                             href="{{ route('register') }}"
                                             class="font-semibold text-transparent bg-clip-text bg-gradient-to-tl from-blue-500 to-violet-500">Sign
                                             up</a></p>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <!-- <div
@@ -141,7 +141,7 @@
                                 style="background-image: url('/assets/images/login-bg.svg');">
                                 <span
                                     class="absolute top-0 left-0 w-full h-full bg-gradient-to-tl from-blue-500 to-violet-500 opacity-20"></span>
-                                <h4 class="relative z-10 -mt-68 font-bold text-white">"Attention is the new menu"
+                                <h4 class="relative z-10 -mt-68 font-bold text-white">"Login"
                                 </h4>
                                 <p class="relative z-10 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing
                                     elit. Dignissimos nisi fugiat omnis?</p>

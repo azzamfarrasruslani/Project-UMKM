@@ -74,7 +74,7 @@ class KontakController extends Controller
 
 
         $kontak->save();
-        
+
         return redirect()->route('kontak.index')->with('success', 'Kontak berhasil diperbarui.');
     }
 

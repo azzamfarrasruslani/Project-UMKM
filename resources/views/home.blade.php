@@ -77,7 +77,7 @@
                             class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
                             <img loading="lazy" src="{{ Storage::url($item->gambar_promo) }}"
                                 alt="Special promotional deal offer"
-                                class="object-contain grow w-full aspect-[1.97] max-md:mt-4 max-md:max-w-full" />
+                                class="object-contain grow rounded-xl w-full aspect-[1.97] max-md:mt-4 max-md:max-w-full" />
                         </a>
                     @endforeach
                 @else
