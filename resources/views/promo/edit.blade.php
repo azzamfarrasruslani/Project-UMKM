@@ -48,7 +48,7 @@
                                 <div>
                                     <label for="tanggal_akhir" class="block text-sm font-medium">Tanggal Akhir
                                         Promo</label>
-                                    <input value="{{ $promo->tanggal_akhir }}" type="text" name="tanggal_akhir"
+                                    <input value="{{ $promo->tanggal_akhir }}" type="date" name="tanggal_akhir"
                                         id="tanggal_akhir"
                                         class="mt-1 block w-full border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                                         value="{{ old('tanggal_akhir') }}" required />
