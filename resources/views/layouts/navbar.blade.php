@@ -110,7 +110,8 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="#">
-                        <img src="{{asset('assets/images/LogoAyamGeprek.png')}}" alt="logo" class="inline-flex items-center justify-center text-sm text-white transition-all duration-200 ease-in-out w-19 rounded-xl object-cover pr-2">
+                        <img src="{{ asset('assets/images/LogoAyamGeprek.png') }}" alt="logo"
+                            class="inline-flex items-center justify-center text-sm text-white transition-all duration-200 ease-in-out w-19 rounded-xl object-cover pr-2">
                     </a>
                 </div>
 
@@ -144,7 +145,7 @@
                         </li>
                         <li>
                             <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('karir.indexHome') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
-                                  href="{{ route('karir.indexHome') }}">
+                                href="{{ route('karir.indexHome') }}">
                                 Karir
                             </a>
                         </li>
@@ -167,12 +168,12 @@
         </nav>
         <!-- Navbar -->
         <nav id=""
-            class="w-full absolute top-0 left-0 right-0 z-30 flex flex-wrap items-center py-3 lg:py-2 px-4 mb-0 transition-all duration-300 ease-in-out lg:flex-nowrap lg:justify-start   bg-customWhite-200 lg:hidden">
+            class="w-full absolute top-0 left-0 right-0 z-30 flex flex-wrap items-center py-3 lg:py-2 px-4 mb-0 transition-all duration-300 ease-in-out lg:flex-nowrap lg:justify-start   bg-customWhite-50 lg:hidden">
             <div class="flex items-center justify-between w-full p-0 mx-auto flex-wrap-inherit">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="#">
-                        <img src="{{asset('build/assets/images/FanatisLogo.png')}}" alt="logo" class="w-24">
+                        <img src="{{ asset('assets/images/LogoAyamGeprek.png') }}" alt="logo" class="w-24">
                     </a>
                 </div>
                 <!-- Navbar Trigger Button -->
@@ -189,10 +190,46 @@
                 <div id="navbar-menu"
                     class="fixed top-0 right-0 h-full w-64 bg-white rounded-xl shadow-lg transform translate-x-full transition-transform duration-300 ">
                     <div class="p-5 flex flex-col h-full">
-                        <a href="#" class="mb-4 text-lg font-bold text-green-900">Home</a>
-                        <a href="#tentang" class="mb-4 text-lg font-bold text-green-900">Tentang Kami</a>
-                        <a href="#contact" class="mb-4 text-lg font-bold text-green-900">Artikel</a>
-                        <a href="#contact" class="mb-4 text-lg font-bold text-green-900">Kontak</a>
+                        <ul
+                            class="flex flex-col pl-0 mx-auto mb-0 list-none lg:flex-row xl:ml-auto lg:space-x-7 capitalize">
+                            <li>
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('home') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
+                                    aria-current="page" href="{{ route('home') }}">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('menu.indexHome') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
+                                    href="{{ route('menu.indexHome') }}">
+                                    Menu
+                                </a>
+                            </li>
+                            <li>
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('tentangKami.indexHome') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
+                                    href="{{ route('tentangKami.indexHome') }}">
+                                    Tentang Kami
+                                </a>
+                            </li>
+                            <li>
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('outlet.indexHome') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
+                                    href="{{ route('outlet.indexHome') }}">
+                                    Outlets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('karir.indexHome') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
+                                    href="{{ route('karir.indexHome') }}">
+                                    Karir
+                                </a>
+                            </li>
+                            {{-- <li>
+                            <a class="relative flex items-center text-xl font-extrabold transition-all ease-in-out lg:px-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-red-500 before:transition-all before:duration-300 before:transform before:-translate-x-1/2 hover:text-customRed-50 hover:before:w-full {{ request()->routeIs('') ? 'text-customRed-50 before:w-full' : 'text-slate-850' }}"
+                                href="{{ route('outlet.indexHome') }}">
+                                Blog
+                            </a>
+                        </li> --}}
+
+                        </ul>
                     </div>
                 </div>
 
