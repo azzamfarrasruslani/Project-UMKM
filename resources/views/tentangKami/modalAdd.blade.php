@@ -1,4 +1,4 @@
-<div id="addTentangKModal"
+<div id="addTentangKamiModal"
     class="w-full fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75 opacity-0 invisible transition-opacity duration-300"
     onclick="closeModalOnOutsideClick(event)">
     <div class="flex items-center justify-center min-h-screen px-4">
@@ -70,6 +70,27 @@
 </div>
 
 <script>
+
+function openAddTentangKami() {
+        const modal = document.getElementById("addTentangKamiModal");
+        modal.classList.remove("opacity-0", "invisible");
+        modal.classList.add("opacity-100", "visible");
+    }
+
+    function closeAddTentangKami() {
+        const modal = document.getElementById("addTentangKamiModal");
+        modal.classList.add("opacity-0", "invisible");
+        modal.classList.remove("opacity-100", "visible");
+    }
+
+    function closeModalOnOutsideClick(event) {
+        const modalContent = document.getElementById("modalTentangKami");
+        if (!modalContent.contains(event.target)) {
+            closeAddTentangKami();
+        }
+    }
+
+
     ClassicEditor
         .create(document.querySelector('#sejarah_singkat'))
         .then(editor => {
@@ -107,22 +128,4 @@
         });
 
 
-    function openAddTentangKami() {
-        const modal = document.getElementById("addTentangKamiModal");
-        modal.classList.remove("opacity-0", "invisible");
-        modal.classList.add("opacity-100", "visible");
-    }
-
-    function closeAddTentangKami() {
-        const modal = document.getElementById("addTentangKamiModal");
-        modal.classList.add("opacity-0", "invisible");
-        modal.classList.remove("opacity-100", "visible");
-    }
-
-    function closeModalOnOutsideClick(event) {
-        const modalContent = document.getElementById("modalTentangKami");
-        if (!modalContent.contains(event.target)) {
-            closeAddTentangKami();
-        }
-    }
 </script>
