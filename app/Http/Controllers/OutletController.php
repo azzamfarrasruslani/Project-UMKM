@@ -74,7 +74,7 @@ class OutletController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Outlet $outlet, )
+    public function edit(Outlet $outlet)
     {
         return view('outlet.edit', compact('outlet'));
     }
