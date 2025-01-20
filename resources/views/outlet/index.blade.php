@@ -27,6 +27,7 @@
 
                     <div class="px-8 mt-6 lg:mt-0 bg-white">
                         @if (!empty($outlet))
+
                             <table id="example" class="stripe hover w-full">
                                 <thead>
                                     <tr class="capitalize ">
@@ -41,6 +42,8 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($outlet as $index => $item)
+
+                                  
                                         <tr>
                                             <td>{{ $item->nama_outlet }}</td>
                                             <td class="truncate max-w-xs">{{ Str::limit($item->alamat_outlet, 50, '...') }}</td>
