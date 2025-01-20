@@ -44,40 +44,46 @@
 
 
             <div class="mt-6 w-full">
-                <div data-aos="fade-up" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" role="list">
+                <div data-aos="fade-up" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+                    role="list">
                     <!-- Outlet Card 1 -->
                     @if (!empty($outlet) && !is_array($outlet))
                         @foreach ($outlet as $index => $item)
-                            <div class="flex flex-col w-full" role="listitem">
-                                <div class="flex flex-col w-full max-w-md bg-white rounded-lg shadow-lg border border-gray-300 transform transition-transform hover:scale-105 hover:shadow-xl">
-                                    <div class="p-6">
-                                        {!! $item->iframe_map !!}
-                                    </div>
-                                    <div class="p-6">
-                                        <h2 class="text-lg font-bold text-neutral-800">{{ $item->nama_outlet }}</h2>
-                                        @if ($item->gambar_pesan_online)
-                                            <p class="text-sm text-green-600 font-semibold mt-1">Tersedia</p>
-                                            <div class="flex gap-4 items-center mt-4">
-                                                <a target="0" href="{{$item->link_pesan_online}}">
-                                                <img loading="lazy" src="{{ Storage::url($item->gambar_pesan_online) }}"
-                                                    class="object-contain h-12 rounded-sm" alt="GrabFood Logo"></a>
+                            @if ($item->status_outlet === 'aktif')
+                                <div class="flex flex-col w-full" role="listitem">
+                                    <div
+                                        class="flex flex-col w-full max-w-md bg-white rounded-lg shadow-lg border border-gray-300 transform transition-transform hover:scale-105 hover:shadow-xl">
+                                        <div class="p-6">
+                                            {!! $item->iframe_map !!}
+                                        </div>
+                                        <div class="p-6">
+                                            <h2 class="text-lg font-bold text-neutral-800">{{ $item->nama_outlet }}</h2>
+                                            @if ($item->gambar_pesan_online)
+                                                <p class="text-sm text-green-600 font-semibold mt-1">Tersedia</p>
+                                                <div class="flex gap-4 items-center mt-4">
+                                                    <a target="0" href="{{ $item->link_pesan_online }}">
+                                                        <img loading="lazy"
+                                                            src="{{ Storage::url($item->gambar_pesan_online) }}"
+                                                            class="object-contain h-12 rounded-sm"
+                                                            alt="GrabFood Logo"></a>
+                                                </div>
+                                            @endif
+
+                                            <address class="mt-4 text-sm text-neutral-600">
+                                                {{ $item->alamat_outlet }}
+                                            </address>
+
+                                            <div class="flex items-center gap-2 mt-4 text-sm text-neutral-600">
+                                                <img loading="lazy"
+                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c637fb5f78e80254421989d79bdcf482413c481db8e820adcda68323030da347?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
+                                                    class="w-4 h-4" alt="Phone icon">
+                                                <a href="tel:{{ $item->no_hp }}" class="hover:underline">
+                                                    {{ $item->no_hp }}</a>
                                             </div>
-                                        @endif
-
-                                        <address class="mt-4 text-sm text-neutral-600">
-                                            {{ $item->alamat_outlet }}
-                                        </address>
-
-                                        <div class="flex items-center gap-2 mt-4 text-sm text-neutral-600">
-                                            <img loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c637fb5f78e80254421989d79bdcf482413c481db8e820adcda68323030da347?placeholderIfAbsent=true&apiKey=f781ef58ccc745818b538ded84512a35"
-                                                class="w-4 h-4" alt="Phone icon">
-                                            <a href="tel:{{ $item->no_hp }}" class="hover:underline">
-                                                {{ $item->no_hp }}</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
                         @endforeach
                     @else
                         <p class="text-gray-600">Tidak ada data yang tersedia.</p>
