@@ -45,7 +45,7 @@
             <h2 id="recommended-menu" class="text-3xl font-bold text-neutral-800 mb-5">Paket Komplit</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             @if (!empty($menu) && !is_array($menu))
-                @foreach ($menu as $index => $item)
+            @foreach ($menu->sortByDesc('updated_at') as $index => $item)
                 @if ($item->kategori_menu == 'Paket Komplit')
                     <article class="border rounded-lg shadow-md overflow-hidden">
                     <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
@@ -76,7 +76,7 @@
             <h2 id="recommended-menu" class="text-3xl font-bold text-neutral-800 mb-5">Makanan</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 @if (!empty($menu) && !is_array($menu))
-                    @foreach ($menu as $index => $item)
+                @foreach ($menu->sortByDesc('updated_at') as $index => $item)
                     @if ($item->kategori_menu == 'Makanan')
                         <article class="border rounded-lg shadow-md overflow-hidden">
                             <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
@@ -103,7 +103,7 @@
             <h2 id="recommended-menu" class="text-3xl font-bold text-neutral-800 mb-5">Minuman</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 @if (!empty($menu) && !is_array($menu))
-                    @foreach ($menu as $index => $item)
+                @foreach ($menu->sortByDesc('updated_at') as $index => $item)
                     @if ($item->kategori_menu == 'Minuman')
                         <article class="border rounded-lg shadow-md overflow-hidden">
                             <img loading="lazy" src="{{ Storage::url($item->gambar_menu) }}"
