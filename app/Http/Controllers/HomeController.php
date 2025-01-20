@@ -7,8 +7,6 @@ use App\Models\Promo;
 use App\Models\Testimoni;
 use App\Models\Kontak;
 use App\Models\Outlet;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -34,11 +32,9 @@ class HomeController extends Controller
 
         // Pastikan tanggal_berdiri adalah objek Carbon dan ambil tahun
         if ($oldestOutlet && $oldestOutlet->tanggal_berdiri) {
-            return $oldestOutlet->tanggal_berdiri->year; // Ambil tahun dari objek Carbon
+            return \Carbon\Carbon::parse($oldestOutlet->tanggal_berdiri)->year; // Ambil tahun dari objek Carbon
         }
 
-        return null; // Jika tidak ada outlet atau tanggal_berdiri tidak ada
+
     }
-
-
 }
