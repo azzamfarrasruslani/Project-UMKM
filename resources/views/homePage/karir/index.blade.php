@@ -54,22 +54,24 @@
                                         class="inline-block px-2 py-1 text-xs font-semibold text-white bg-customRed-100 rounded">{{ $item->tipe_kerja }}</span>
                                 </div>
                                 <h3 class="mt-4 text-2xl font-bold text-gray-900">{{ $item->nama_posisi }}</h3>
-                                <p class="mt-2 text-gray-600">{!! $item->deskripsi_tugas !!}</p>
-                                <div class="mt-2 flex space-x-4 text-sm text-gray-500">
+                                <div class="mt-2 space-x-4 text-sm text-gray-500">
                                     <p><i class="fa-solid fa-location-dot mr-2"></i> Location: {{ $item->lokasi }}</p>
-                                    <p><i class="fa-regular fa-clock mr-2"></i> Posted on:
-                                        {{ $item->created_at->format('M d, Y') }}</p>
+
                                 </div>
+                                <p class="mt-2 text-gray-600"><i class="fa-solid fa-briefcase mr-2"></i> Tugas :{!! $item->deskripsi_tugas !!}</p>
+
                                 @if ($item->gaji)
                                     <p class="mt-2 text-gray-600"><i class="fa-solid fa-money-bill-wave mr-2"></i> Gaji:
                                         Rp{{ number_format($item->gaji, 0, ',', '.') }}</p>
                                 @endif
                                 @if ($item->benefit)
                                     <p class="mt-2 text-gray-600"><i class="fa-solid fa-gift mr-2"></i> Benefit:
-                                        {{ $item->benefit }}</p>
+                                        {!! $item->benefit !!}</p>
                                 @endif
                                 <p class="mt-2 text-gray-600"><i class="fa-solid fa-info-circle mr-2"></i> Status:
                                     {{ ucfirst($item->status) }}</p>
+                                <p><i class="fa-regular fa-clock mr-2"></i> Posted on:
+                                    {{ $item->created_at->format('M d, Y') }}</p>
                             </div>
 
                         </article>
