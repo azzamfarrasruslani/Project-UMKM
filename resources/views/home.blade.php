@@ -71,7 +71,8 @@
             <!-- Wrapper -->
             <div class="swiper-wrapper">
                 @if (!empty($promo) && !is_array($promo))
-                    @foreach ($promo as $index => $item)
+                @foreach ($promo->sortByDesc('updated_at') as $index => $item)
+                @if (\Carbon\Carbon::parse($item->tanggal_akhir)->isFuture())
                         <a href="javascript:;"
                             onclick="openDetailPromo(`{{ $item->judul }}`, `{{ strip_tags($item->deskripsi_promo) }}`, `{{ strip_tags($item->syarat_ketentuan) }}`, `{{ \Carbon\Carbon::parse($item->tanggal_mulai)->format('d F Y') }}`, `{{ \Carbon\Carbon::parse($item->tanggal_akhir)->format('d F Y') }}`, `{{ Storage::url($item->gambar_promo) }}`)"
                             class="swiper-slide hover:shadow-xs hover:-translate-y-px active:opacity-85 transition-transform duration-300 ease-in-out hover:scale-105">
@@ -79,6 +80,7 @@
                                 alt="Special promotional deal offer"
                                 class="object-contain grow rounded-xl w-full aspect-[1.97] max-md:mt-4 max-md:max-w-full" />
                         </a>
+                        @endif
                     @endforeach
                 @else
                     <p class="text-gray-600">Tidak ada data yang tersedia.</p>
@@ -468,12 +470,12 @@
                     </div>
 
                     <!-- Catatan -->
-                    <div class="mt-6">
+                    {{-- <div class="mt-6">
                         <p class="text-sm text-gray-600">
                             Kami akan merespons pesan Anda sesegera mungkin pada jam kerja: <br />
                             <span class="font-medium">Senin - Jumat, 09:00 - 17:00 WIB</span>
                         </p>
-                    </div>
+                    </div> --}}
                 </div>
 
             </div>
